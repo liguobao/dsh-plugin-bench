@@ -125,6 +125,12 @@ def main():
     P(f"category pre-pass (NEEDS MANUAL CORRECTION via digest.txt):")
     for c, n in Counter(r["cat"] for r in results).most_common():
         P(f"  {c:20s} {n}")
+    if anchor:
+        P("category x anchor cross-tab (maintenance discipline by category):")
+        for c, n in Counter(r["cat"] for r in results).most_common():
+            g = [r for r in results if r["cat"] == c]
+            a = sum(1 for r in g if r["pushed"] >= anchor)
+            P(f"  {c:20s} {a}/{n} = {a/n*100:.0f}%")
 
     with open(os.path.join(args.audit_dir, "analysis.json"), "w") as f:
         json.dump(results, f, ensure_ascii=False, indent=1)
