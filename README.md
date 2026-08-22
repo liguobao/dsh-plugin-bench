@@ -30,13 +30,15 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 
 | 图 | 内容 |
 |---|---|
-| ![daily creation](charts/01_daily_creation.png) | 每日新建仓库数 + 累计曲线（2026-07-15 起；更早的 300+ 个为蹭 tag 的老仓库） |
-| ![star pyramid](charts/02_star_pyramid.png) | 星标金字塔（对数轴）：86% 的仓库 star < 5 |
-| ![rc.1 activity](charts/03_rc1_activity.png) | 各星级段的 rc.1 破坏性变更跟进率：头部也仅 59% |
-| ![languages](charts/04_languages.png) | 语言构成：JS+TS 合计 90% |
-| ![lifecycle](charts/05_lifecycle.png) | 生命周期拆分：48% 一次性仓库 / 31% rc.1 前停滞 / 21% 真活跃 |
+| ![每日新建仓库](charts/01_daily_creation.png) | 每日新建仓库数 + 3 日移动平均，并标注峰值与 rc.1 发布位置 |
+| ![星标分层](charts/02_star_pyramid.png) | 星标金字塔：86% 的仓库 star < 5，全部使用诚实的零基线 |
+| ![rc.1 跟进率](charts/03_rc1_activity.png) | 各星级段的 rc.1 破坏性变更跟进率：头部也仅 59.4% |
+| ![语言构成](charts/04_languages.png) | 语言构成：JavaScript + TypeScript 合计 89.6% |
+| ![生命周期交叉](charts/05_lifecycle.png) | 「一次性推送」与「rc.1 跟进」2×2 交叉，避免旧环图重复计算 |
+| ![活跃品类](charts/06_active_categories.png) | 「活跃 × 有星」1,150 个仓库的前 12 大品类 |
+| ![原生与适配对比](charts/07_native_adapted.png) | 原生 / 适配 / 无关三桶的仓库数量与星标总量对比 |
 
-图表由 `scripts/make_charts.py` 从 `data/repos.jsonl` 重新生成：`python3 scripts/make_charts.py`
+图表由 `scripts/make_charts.py` 从 `data/repos.jsonl`、`data/analysis.json`、`data/active_inventory.json` 重新生成：`python3 scripts/make_charts.py`
 
 ## 仓库结构
 
