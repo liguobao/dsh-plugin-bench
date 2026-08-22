@@ -1,0 +1,39 @@
+total unique repos: 9393
+stars 100+: 180
+stars 20-99: 249
+stars 5-19: 869
+stars 1-4: 3592
+stars 0: 4503
+languages: [('JavaScript', 5440), ('TypeScript', 2975), ('Python', 378), ('Rust', 78), ('PowerShell', 64), ('HTML', 62)]
+one-shot (pushed only on creation day): 4533/9393 = 48.3%
+no description: 976/9393
+archived: 25
+
+activity anchor (breaking change @ 2026-08-21T07:12:39Z):
+  100+: 107/180 = 59.4%
+  20-99: 108/249 = 43.4%
+  5-19: 226/869 = 26.0%
+  1-4: 709/3592 = 19.7%
+  0: 782/4503 = 17.4%
+  OVERALL: 1932/9393 = 20.6%
+
+README-read repos: 700
+category pre-pass (NEEDS MANUAL CORRECTION via digest.txt):
+  eng-quality          304
+  model-provider       113
+  ui-theme             40
+  desktop-client       34
+  context-search       27
+  market-curation      27
+  usage-billing        27
+  remote-mobile        24
+  security             19
+  office-docs          18
+  memory-knowledge     15
+  vision               14
+  notify-im            12
+  orchestration        8
+  skills-pack          8
+  fun-novelty          6
+  voice-audio          3
+  vertical-domain      1
