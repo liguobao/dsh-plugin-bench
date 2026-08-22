@@ -24,6 +24,18 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 3. **最强四条产品线**：记忆/知识库、视觉桥接（DeepSeek V4 纯文本 → 配眼睛）、订阅/Provider 接入、远程/移动访问；安全类是被低估的洼地；桌面壳与用量挂件已严重同质化。
 4. **大量高星项目已停滞**：EverOS（12.3k★）、petdex（3.9k★）、dsh-pocket（393★）等未适配 rc.1，详见报告"stalled despite stars"名单。
 
+## 统计图
+
+| 图 | 内容 |
+|---|---|
+| ![daily creation](charts/01_daily_creation.png) | 每日新建仓库数 + 累计曲线（2026-07-15 起；更早的 300+ 个为蹭 tag 的老仓库） |
+| ![star pyramid](charts/02_star_pyramid.png) | 星标金字塔（对数轴）：86% 的仓库 star < 5 |
+| ![rc.1 activity](charts/03_rc1_activity.png) | 各星级段的 rc.1 破坏性变更跟进率：头部也仅 59% |
+| ![languages](charts/04_languages.png) | 语言构成：JS+TS 合计 90% |
+| ![lifecycle](charts/05_lifecycle.png) | 生命周期拆分：48% 一次性仓库 / 31% rc.1 前停滞 / 21% 真活跃 |
+
+图表由 `scripts/make_charts.py` 从 `data/repos.jsonl` 重新生成：`python3 scripts/make_charts.py`
+
 ## 仓库结构
 
 ```
@@ -34,6 +46,9 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 │   ├── stats.txt                # 全量统计（星标金字塔/语言/一次性比率/锚点活跃率）
 │   ├── digest.txt               # 700 个 README 的一行式摘要+分类（人工校正基础）
 │   └── analysis.json            # 机器预分类结构化结果
+├── charts/                      # 统计图（scripts/make_charts.py 生成）
+├── scripts/
+│   └── make_charts.py           # 从 data/ 重新生成全部图表
 └── skills/github-topic-audit/   # 可复用审计 Skill（见下）
 ```
 
