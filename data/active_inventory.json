@@ -1,0 +1,5752 @@
+[
+{
+"repo": "deepseek-ai/deepseek-harness",
+"stars": 183243,
+"cat": "official-core"
+},
+{
+"repo": "nexu-io/open-design",
+"stars": 90289,
+"cat": "adapted-independent"
+},
+{
+"repo": "ruvnet/ruflo",
+"stars": 68778,
+"cat": "adapted-independent"
+},
+{
+"repo": "esengine/DeepSeek-Reasonix",
+"stars": 35030,
+"cat": "adapted-independent"
+},
+{
+"repo": "volcengine/OpenViking",
+"stars": 31830,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Molunerfinn/PicGo",
+"stars": 27005,
+"cat": "off-topic-squatter"
+},
+{
+"repo": "nocobase/nocobase",
+"stars": 23755,
+"cat": "off-topic-squatter"
+},
+{
+"repo": "Tencent/WeKnora",
+"stars": 20342,
+"cat": "adapted-independent"
+},
+{
+"repo": "Nagi-ovo/voyager",
+"stars": 19779,
+"cat": "adapted-independent"
+},
+{
+"repo": "anywhere-labs/deepseek-harness-desktop",
+"stars": 17978,
+"cat": "desktop-client"
+},
+{
+"repo": "tt-a1i/archify",
+"stars": 15011,
+"cat": "adapted-independent"
+},
+{
+"repo": "walkinglabs/learn-harness-engineering",
+"stars": 13647,
+"cat": "tutorial-docs"
+},
+{
+"repo": "freestylefly/awesome-gpt-image-2",
+"stars": 11988,
+"cat": "skills-presets"
+},
+{
+"repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+"stars": 11348,
+"cat": "market-curation"
+},
+{
+"repo": "MemTensor/MemOS",
+"stars": 10910,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Q00/ouroboros",
+"stars": 5616,
+"cat": "adapted-independent"
+},
+{
+"repo": "ZSeven-W/openpencil",
+"stars": 5556,
+"cat": "adapted-independent"
+},
+{
+"repo": "zhu1090093659/dsh-web-ui",
+"stars": 5510,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Devin-AXIS/iPolloWork",
+"stars": 4471,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "crafter-station/petdex",
+"stars": 3952,
+"cat": "adapted-independent"
+},
+{
+"repo": "strukto-ai/mirage",
+"stars": 3549,
+"cat": "context-management"
+},
+{
+"repo": "liustack/modlens",
+"stars": 3513,
+"cat": "vision-multimodal"
+},
+{
+"repo": "edison7009/EchoBird",
+"stars": 3108,
+"cat": "model-provider"
+},
+{
+"repo": "whiteguo233/OpenBiliClaw",
+"stars": 2979,
+"cat": "vertical-domain"
+},
+{
+"repo": "omdsh-dev/DSH-better-sidebar",
+"stars": 2618,
+"cat": "session-ui-ux"
+},
+{
+"repo": "chuspeeism/dashi-taskboard",
+"stars": 2453,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "ccch1mneyyy/dsh-TUI",
+"stars": 2289,
+"cat": "tui-terminal"
+},
+{
+"repo": "GCWing/BitFun",
+"stars": 1804,
+"cat": "desktop-client"
+},
+{
+"repo": "dsh-market/dsh-market",
+"stars": 1732,
+"cat": "market-curation"
+},
+{
+"repo": "Small-tailqwq/dsh-deep-whale",
+"stars": 1579,
+"cat": "fun-novelty"
+},
+{
+"repo": "AdamPlatin123/awesome-dsh-plugins",
+"stars": 1330,
+"cat": "market-curation"
+},
+{
+"repo": "Tencent/BrowserSkill",
+"stars": 1256,
+"cat": "search-web"
+},
+{
+"repo": "mem9-ai/mem9",
+"stars": 1195,
+"cat": "memory-knowledge"
+},
+{
+"repo": "GanyuanRan/Aegis",
+"stars": 1098,
+"cat": "eng-git-ci"
+},
+{
+"repo": "paean-ai/deeptide",
+"stars": 1093,
+"cat": "adapted-independent"
+},
+{
+"repo": "agentrq/agentrq",
+"stars": 1088,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+"stars": 1074,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "ysr666/dsh-vision-router",
+"stars": 936,
+"cat": "vision-multimodal"
+},
+{
+"repo": "MemTensor/memmy-agent",
+"stars": 914,
+"cat": "memory-knowledge"
+},
+{
+"repo": "tong-io/tongflow",
+"stars": 911,
+"cat": "vertical-domain"
+},
+{
+"repo": "hairyf/deepseek-harness-desktop",
+"stars": 907,
+"cat": "desktop-client"
+},
+{
+"repo": "0xsline/awesome-deepseek-harness",
+"stars": 809,
+"cat": "market-curation"
+},
+{
+"repo": "Anionex/dsh-vision-toolkit",
+"stars": 805,
+"cat": "vision-multimodal"
+},
+{
+"repo": "NanmiCoder/dsh-agent-teams",
+"stars": 784,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "bowenliang123/dsh-context",
+"stars": 778,
+"cat": "context-management"
+},
+{
+"repo": "Electricitysheep/dsh-handbook",
+"stars": 618,
+"cat": "tutorial-docs"
+},
+{
+"repo": "superdesigndev/treg",
+"stars": 565,
+"cat": "mcp-tooling"
+},
+{
+"repo": "mnemon-dev/mnemon",
+"stars": 504,
+"cat": "memory-knowledge"
+},
+{
+"repo": "xiaods/k8e",
+"stars": 478,
+"cat": "security-governance"
+},
+{
+"repo": "xmanrui/dsh-im",
+"stars": 470,
+"cat": "im-notify"
+},
+{
+"repo": "hashgraph-online/hol-guard",
+"stars": 459,
+"cat": "security-governance"
+},
+{
+"repo": "fufankeji/deepseek-harness-studio",
+"stars": 450,
+"cat": "vision-multimodal"
+},
+{
+"repo": "MeteorNOX/DeepSeek-Balance-Whale-Widget",
+"stars": 442,
+"cat": "usage-billing"
+},
+{
+"repo": "EthanYoQ/AI-Novel-Writer",
+"stars": 427,
+"cat": "vertical-domain"
+},
+{
+"repo": "Ikalus1988/MisakaNet",
+"stars": 422,
+"cat": "search-web"
+},
+{
+"repo": "lencx/Minke",
+"stars": 391,
+"cat": "desktop-client"
+},
+{
+"repo": "Lum1104/dsh-browser",
+"stars": 383,
+"cat": "search-web"
+},
+{
+"repo": "alibaba/anolisa",
+"stars": 381,
+"cat": "adapted-independent"
+},
+{
+"repo": "WYH66666666/DSH-Transparent-UI-Plugin",
+"stars": 361,
+"cat": "search-web"
+},
+{
+"repo": "PM-Shawn/Abu-Cowork",
+"stars": 342,
+"cat": "desktop-client"
+},
+{
+"repo": "tingly-dev/tingly-box",
+"stars": 342,
+"cat": "model-provider"
+},
+{
+"repo": "PC2005-cloud/dsh-pet",
+"stars": 311,
+"cat": "fun-novelty"
+},
+{
+"repo": "omdsh-dev/dsh-genui",
+"stars": 293,
+"cat": "session-ui-ux"
+},
+{
+"repo": "nutshellai-tech/mobius",
+"stars": 284,
+"cat": "adapted-independent"
+},
+{
+"repo": "zhoushoujianwork/easyeda-agent",
+"stars": 276,
+"cat": "vertical-domain"
+},
+{
+"repo": "bruc3van/awesome-dsh-plugin",
+"stars": 261,
+"cat": "market-curation"
+},
+{
+"repo": "hust-open-atom-club/oh-dsh",
+"stars": 256,
+"cat": "desktop-client"
+},
+{
+"repo": "Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins",
+"stars": 254,
+"cat": "market-curation"
+},
+{
+"repo": "mrpulor-gh/nuphus-mcp",
+"stars": 236,
+"cat": "vision-multimodal"
+},
+{
+"repo": "V1ki/dsh-plugin-subscriptions",
+"stars": 232,
+"cat": "model-provider"
+},
+{
+"repo": "Ariestar/sivtr",
+"stars": 231,
+"cat": "memory-knowledge"
+},
+{
+"repo": "huiliyi37/dsh-tianshu-tui",
+"stars": 229,
+"cat": "tui-terminal"
+},
+{
+"repo": "Awesome-AI-Pedia/Awesome-AI-Pedia",
+"stars": 227,
+"cat": "market-curation"
+},
+{
+"repo": "QCYTSN/dsh-dafeiyu",
+"stars": 226,
+"cat": "desktop-client"
+},
+{
+"repo": "liustack/modsearch",
+"stars": 221,
+"cat": "search-web"
+},
+{
+"repo": "hikariming/dshfind",
+"stars": 203,
+"cat": "market-curation"
+},
+{
+"repo": "ZSeven-W/dsh-ios",
+"stars": 192,
+"cat": "vertical-domain"
+},
+{
+"repo": "whitelonng/dshcode",
+"stars": 191,
+"cat": "desktop-client"
+},
+{
+"repo": "libukai/awesome-deepseek-harness",
+"stars": 184,
+"cat": "market-curation"
+},
+{
+"repo": "Dominic789654/awesome-deepseek-harness",
+"stars": 180,
+"cat": "market-curation"
+},
+{
+"repo": "Ruler4396/dsh-launcher",
+"stars": 170,
+"cat": "desktop-client"
+},
+{
+"repo": "omdsh-dev/dsh-mnemon",
+"stars": 169,
+"cat": "memory-knowledge"
+},
+{
+"repo": "ningbainb/deepseek-harness-desktop",
+"stars": 166,
+"cat": "desktop-client"
+},
+{
+"repo": "weijiafu14/pi2dsh",
+"stars": 156,
+"cat": "session-ui-ux"
+},
+{
+"repo": "imsai-sh/awesome-deepseek-harness-plugins",
+"stars": 156,
+"cat": "market-curation"
+},
+{
+"repo": "Han-1413141/dsh-cost-meter",
+"stars": 153,
+"cat": "usage-billing"
+},
+{
+"repo": "liangmianya/dsh-synapse",
+"stars": 152,
+"cat": "session-ui-ux"
+},
+{
+"repo": "zhaoolee/notes",
+"stars": 149,
+"cat": "skills-presets"
+},
+{
+"repo": "elysia395/dsh-wallpaper-engine",
+"stars": 143,
+"cat": "fun-novelty"
+},
+{
+"repo": "ZSeven-W/dsh-openpencil",
+"stars": 140,
+"cat": "vertical-domain"
+},
+{
+"repo": "pulseaiclub/phi",
+"stars": 139,
+"cat": "model-provider"
+},
+{
+"repo": "yjh051108/dsh-super-injector",
+"stars": 138,
+"cat": "security-governance"
+},
+{
+"repo": "bradeGithub/DSH-Plugins-Marketplace",
+"stars": 135,
+"cat": "market-curation"
+},
+{
+"repo": "ChisaAlter/Deepseek-Harness-Desktop",
+"stars": 134,
+"cat": "desktop-client"
+},
+{
+"repo": "EthanYoQ/Invoice-Downloader",
+"stars": 132,
+"cat": "vertical-domain"
+},
+{
+"repo": "zh667/TokenLedger",
+"stars": 130,
+"cat": "usage-billing"
+},
+{
+"repo": "drewnekota/cetus",
+"stars": 125,
+"cat": "desktop-client"
+},
+{
+"repo": "ZSeven-W/dsh-noema",
+"stars": 121,
+"cat": "memory-knowledge"
+},
+{
+"repo": "SkillNerds/xskill",
+"stars": 119,
+"cat": "skills-presets"
+},
+{
+"repo": "worldwonderer/oh-story-dsh",
+"stars": 118,
+"cat": "vertical-domain"
+},
+{
+"repo": "NanmiCoder/dsh-auto-mode",
+"stars": 116,
+"cat": "skills-presets"
+},
+{
+"repo": "summer1238/dsh-remote-web-gateway",
+"stars": 116,
+"cat": "remote-mobile"
+},
+{
+"repo": "lire1131/dsh-undo-savepoint",
+"stars": 112,
+"cat": "session-ui-ux"
+},
+{
+"repo": "kelai141/dsh-mobile-apk",
+"stars": 112,
+"cat": "remote-mobile"
+},
+{
+"repo": "Vladimir-Human/humanizer-ru",
+"stars": 111,
+"cat": "skills-presets"
+},
+{
+"repo": "Ychris12138/dsh-usage-stats",
+"stars": 105,
+"cat": "usage-billing"
+},
+{
+"repo": "volcengine/ark-cli",
+"stars": 103,
+"cat": "vertical-domain"
+},
+{
+"repo": "Sanqi-normal/dsh-webui-market-plugin",
+"stars": 99,
+"cat": "market-curation"
+},
+{
+"repo": "shengsheng90/DSH-taskboard",
+"stars": 98,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "ZSeven-W/dsh-crew",
+"stars": 97,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "beancookie/awesome-dsh-plugin",
+"stars": 95,
+"cat": "market-curation"
+},
+{
+"repo": "orziz/odai",
+"stars": 95,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Anionex/dsh-turn-rewind",
+"stars": 94,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Tabbit-Browser/dsh-tabbit",
+"stars": 93,
+"cat": "search-web"
+},
+{
+"repo": "EverMind-AI/SkillCorpus",
+"stars": 92,
+"cat": "market-curation"
+},
+{
+"repo": "Leslie-SSS/seeWxapkg",
+"stars": 88,
+"cat": "vertical-domain"
+},
+{
+"repo": "omdsh-dev/dsh-annotation",
+"stars": 88,
+"cat": "session-ui-ux"
+},
+{
+"repo": "cocode-agency/cocode",
+"stars": 88,
+"cat": "desktop-client"
+},
+{
+"repo": "Mars-Sea/dsh-commandcode-provider",
+"stars": 87,
+"cat": "model-provider"
+},
+{
+"repo": "Nwflower/dsh-chat-import",
+"stars": 87,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Totoro-qaq/dsh-plugin-bridge",
+"stars": 84,
+"cat": "eng-git-ci"
+},
+{
+"repo": "wssfk12138/dsh-damage-pulse",
+"stars": 83,
+"cat": "usage-billing"
+},
+{
+"repo": "RevolutionLA/dsh-dream-skin",
+"stars": 80,
+"cat": "fun-novelty"
+},
+{
+"repo": "PerryLink/dsh-auto-review",
+"stars": 73,
+"cat": "security-governance"
+},
+{
+"repo": "zuorn/Tydora",
+"stars": 72,
+"cat": "desktop-client"
+},
+{
+"repo": "kingOfSoySauce/dsh-skin-market",
+"stars": 71,
+"cat": "fun-novelty"
+},
+{
+"repo": "like-study1/Oh-My-DSH",
+"stars": 68,
+"cat": "market-curation"
+},
+{
+"repo": "dream-num/dsh-univer-office",
+"stars": 68,
+"cat": "vertical-domain"
+},
+{
+"repo": "Noob-stupid/dsh-plugin-hub",
+"stars": 67,
+"cat": "market-curation"
+},
+{
+"repo": "bruc3van/dsh-desktop",
+"stars": 66,
+"cat": "desktop-client"
+},
+{
+"repo": "dhicoc/dsh-reverse-skill",
+"stars": 64,
+"cat": "skills-presets"
+},
+{
+"repo": "ZASENJC/dsh-plugins-store",
+"stars": 64,
+"cat": "market-curation"
+},
+{
+"repo": "JingbiaoMei/Tokdash",
+"stars": 62,
+"cat": "model-provider"
+},
+{
+"repo": "feibi-mochi/deepseek-harness-control-center",
+"stars": 60,
+"cat": "usage-billing"
+},
+{
+"repo": "PerryLink/dsh-memento",
+"stars": 59,
+"cat": "memory-knowledge"
+},
+{
+"repo": "morluto/jacobian",
+"stars": 57,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "seriousz158/dsh-memory",
+"stars": 57,
+"cat": "memory-knowledge"
+},
+{
+"repo": "ZSeven-W/dsh-android",
+"stars": 55,
+"cat": "vertical-domain"
+},
+{
+"repo": "starsstreaming/beautiCode",
+"stars": 55,
+"cat": "desktop-client"
+},
+{
+"repo": "Francis-Xavier-code/dsh-balance-plugin",
+"stars": 54,
+"cat": "usage-billing"
+},
+{
+"repo": "Hilbert-beinghappy/seektty",
+"stars": 54,
+"cat": "tui-terminal"
+},
+{
+"repo": "chokwinlee/deepseek-harness-desktop",
+"stars": 53,
+"cat": "desktop-client"
+},
+{
+"repo": "fwerkor/local-shell-mcp",
+"stars": 53,
+"cat": "desktop-client"
+},
+{
+"repo": "btspoony/mstar-harness",
+"stars": 52,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "2BingLing/dsh-market",
+"stars": 51,
+"cat": "market-curation"
+},
+{
+"repo": "whiteguo233/dsh-openbiliclaw",
+"stars": 50,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "xiincs/deepseek-harness-desktop",
+"stars": 49,
+"cat": "desktop-client"
+},
+{
+"repo": "liguobao/deepseek-harness-remote",
+"stars": 48,
+"cat": "remote-mobile"
+},
+{
+"repo": "melandlabs/opencontext",
+"stars": 48,
+"cat": "context-management"
+},
+{
+"repo": "openma-ai/Martty",
+"stars": 48,
+"cat": "tui-terminal"
+},
+{
+"repo": "skymecode/deepseek-harness-for-vscode",
+"stars": 47,
+"cat": "ide-integration"
+},
+{
+"repo": "01Virex/dsh-status-rotator",
+"stars": 46,
+"cat": "session-ui-ux"
+},
+{
+"repo": "FlashingChen/dsh-desktop-hub",
+"stars": 46,
+"cat": "desktop-client"
+},
+{
+"repo": "Ephemeral-AI-Lab/dsh-plugins",
+"stars": 45,
+"cat": "session-ui-ux"
+},
+{
+"repo": "dream12347/dsh-session-manager",
+"stars": 45,
+"cat": "session-ui-ux"
+},
+{
+"repo": "whyihaveyou/dsh-suite",
+"stars": 44,
+"cat": "market-curation"
+},
+{
+"repo": "DDDMUC/dsh-free-search",
+"stars": 43,
+"cat": "search-web"
+},
+{
+"repo": "xgone/dsh-remote",
+"stars": 42,
+"cat": "remote-mobile"
+},
+{
+"repo": "Fishsb/dsh-prompt-enhancer",
+"stars": 41,
+"cat": "skills-presets"
+},
+{
+"repo": "lamost423/dsh-trace-compare",
+"stars": 41,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "a179-sanae/dsh-auto-collapse",
+"stars": 41,
+"cat": "session-ui-ux"
+},
+{
+"repo": "mexiaosqwq/dsh-web-mobile",
+"stars": 41,
+"cat": "remote-mobile"
+},
+{
+"repo": "franksong2702/dsh-codex-connect",
+"stars": 39,
+"cat": "model-provider"
+},
+{
+"repo": "edonadei/caliper",
+"stars": 39,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "bihangchi9-creator/dsh-lark-bridge",
+"stars": 35,
+"cat": "im-notify"
+},
+{
+"repo": "6Mikao9/dsh-wsl-workspace",
+"stars": 35,
+"cat": "file-workspace"
+},
+{
+"repo": "Nyasers/dsh-hanako",
+"stars": 35,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Tyan66666/billion-context-dsh",
+"stars": 33,
+"cat": "context-management"
+},
+{
+"repo": "xiehuan123/dsh-deepread",
+"stars": 32,
+"cat": "context-management"
+},
+{
+"repo": "PerryLink/dsh-mcp-panel",
+"stars": 32,
+"cat": "mcp-tooling"
+},
+{
+"repo": "modusensus/dsh-mneme",
+"stars": 32,
+"cat": "memory-knowledge"
+},
+{
+"repo": "ChenRuoT/dsh-sidebar-qa",
+"stars": 31,
+"cat": "session-ui-ux"
+},
+{
+"repo": "the-beating-light-of-the-nail/dsh-meme-hub",
+"stars": 31,
+"cat": "fun-novelty"
+},
+{
+"repo": "flymysql/dsh-remote",
+"stars": 31,
+"cat": "remote-mobile"
+},
+{
+"repo": "MoFeng2223/dsh-claude-provider",
+"stars": 30,
+"cat": "model-provider"
+},
+{
+"repo": "openguardrails/openguardrails",
+"stars": 30,
+"cat": "security-governance"
+},
+{
+"repo": "Fisfzy/dsh-ego-browser",
+"stars": 30,
+"cat": "search-web"
+},
+{
+"repo": "lhh010/dsh-ui-whale",
+"stars": 29,
+"cat": "search-web"
+},
+{
+"repo": "FuRongJun-1999/dsh-memory",
+"stars": 29,
+"cat": "memory-knowledge"
+},
+{
+"repo": "anweat/dsh-web-search-pro",
+"stars": 29,
+"cat": "search-web"
+},
+{
+"repo": "skyf0xx/hedgehog",
+"stars": 29,
+"cat": "usage-billing"
+},
+{
+"repo": "sorsama/deepseek-harness-mobile",
+"stars": 29,
+"cat": "remote-mobile"
+},
+{
+"repo": "Gin-7/dsh-pet-remielle",
+"stars": 28,
+"cat": "fun-novelty"
+},
+{
+"repo": "PerryLink/dsh-plugin-guide",
+"stars": 28,
+"cat": "tutorial-docs"
+},
+{
+"repo": "PlutoKeating/dsh-lark-bot",
+"stars": 28,
+"cat": "im-notify"
+},
+{
+"repo": "UNLINEARITY/dsh-code",
+"stars": 27,
+"cat": "tui-terminal"
+},
+{
+"repo": "PerryLink/dsh-permission-rules",
+"stars": 27,
+"cat": "security-governance"
+},
+{
+"repo": "dqsjqian/Aria",
+"stars": 27,
+"cat": "off-topic-squatter"
+},
+{
+"repo": "omdsh-dev/dsh-plugin-check",
+"stars": 27,
+"cat": "eng-git-ci"
+},
+{
+"repo": "amlyczz/dsh-lark-link",
+"stars": 26,
+"cat": "im-notify"
+},
+{
+"repo": "loadingvx/deepseek-harness-workbench-plugin",
+"stars": 26,
+"cat": "other"
+},
+{
+"repo": "Nexus-Aethra/DSHBox",
+"stars": 26,
+"cat": "search-web"
+},
+{
+"repo": "AcidGr/dsh-web-lan-access",
+"stars": 25,
+"cat": "search-web"
+},
+{
+"repo": "WEP-56/DSH-Launcher",
+"stars": 25,
+"cat": "desktop-client"
+},
+{
+"repo": "AtlasCloudAI/atlas-cloud-skills",
+"stars": 25,
+"cat": "skills-presets"
+},
+{
+"repo": "lhh010/dsh-minigames",
+"stars": 25,
+"cat": "fun-novelty"
+},
+{
+"repo": "cosyncing/cosyncing",
+"stars": 24,
+"cat": "eng-git-ci"
+},
+{
+"repo": "kejixiaoliang/awesome-dsh-plugins",
+"stars": 24,
+"cat": "market-curation"
+},
+{
+"repo": "geml-spec/geml",
+"stars": 24,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "omdsh-dev/dsh-toolkit",
+"stars": 24,
+"cat": "mcp-tooling"
+},
+{
+"repo": "hyqibot/DeepSeek-Harness-Token-Free",
+"stars": 24,
+"cat": "usage-billing"
+},
+{
+"repo": "ARFCON/dsh-hotplug-hub",
+"stars": 24,
+"cat": "market-curation"
+},
+{
+"repo": "PGZXB/dsh-feishu",
+"stars": 24,
+"cat": "im-notify"
+},
+{
+"repo": "Ericwong5021/deepseek-plugin-store",
+"stars": 24,
+"cat": "market-curation"
+},
+{
+"repo": "JustGenius-s/DSH-Desktop",
+"stars": 23,
+"cat": "desktop-client"
+},
+{
+"repo": "MichengAI/dsh-codex-ui",
+"stars": 23,
+"cat": "model-provider"
+},
+{
+"repo": "PolinniZhong/dsh-personal-center",
+"stars": 22,
+"cat": "skills-presets"
+},
+{
+"repo": "liguobao/dsh-desktop",
+"stars": 22,
+"cat": "desktop-client"
+},
+{
+"repo": "left0ver/dsh-file-review",
+"stars": 22,
+"cat": "eng-git-ci"
+},
+{
+"repo": "flizzywine/dsh-tavern",
+"stars": 22,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "JUANWANG-BUAA/dsh-full-remote",
+"stars": 21,
+"cat": "remote-mobile"
+},
+{
+"repo": "xiaoshihou514/dsh-desktop-pet",
+"stars": 21,
+"cat": "fun-novelty"
+},
+{
+"repo": "YELEBAI/dsh-plugin-marketplace",
+"stars": 20,
+"cat": "market-curation"
+},
+{
+"repo": "yunxiiQwQ/dsh-maid-whale-webUI",
+"stars": 20,
+"cat": "fun-novelty"
+},
+{
+"repo": "chaos-03x/dsh-agy",
+"stars": 20,
+"cat": "model-provider"
+},
+{
+"repo": "zp-home/dsh-recommend",
+"stars": 19,
+"cat": "market-curation"
+},
+{
+"repo": "PensiveFei/deep-read-summarize",
+"stars": 19,
+"cat": "search-web"
+},
+{
+"repo": "techysy/deepseek-harness-fnos",
+"stars": 19,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Qinling-Melon-Farmers/dsh-memoir",
+"stars": 18,
+"cat": "memory-knowledge"
+},
+{
+"repo": "futrime/webdsh",
+"stars": 18,
+"cat": "session-ui-ux"
+},
+{
+"repo": "slywalker2006/dsh-passwords",
+"stars": 18,
+"cat": "remote-mobile"
+},
+{
+"repo": "taxueseek/dsh-files",
+"stars": 18,
+"cat": "file-workspace"
+},
+{
+"repo": "rirko/dsh-melody-launcher",
+"stars": 18,
+"cat": "desktop-client"
+},
+{
+"repo": "WSL043/dsh-codex-subscription",
+"stars": 18,
+"cat": "model-provider"
+},
+{
+"repo": "Zhenyu98/dsh-context-doctor",
+"stars": 18,
+"cat": "context-management"
+},
+{
+"repo": "Blank-not-black/dsh-Remote",
+"stars": 18,
+"cat": "remote-mobile"
+},
+{
+"repo": "Zephyr-vibe/dsh-archived-sessions",
+"stars": 17,
+"cat": "session-ui-ux"
+},
+{
+"repo": "MJorgin/dsh-media-skills",
+"stars": 17,
+"cat": "skills-presets"
+},
+{
+"repo": "dshplugin/dsh-plugin-hub",
+"stars": 17,
+"cat": "market-curation"
+},
+{
+"repo": "pengpengyi92/dsh-quant",
+"stars": 17,
+"cat": "vertical-domain"
+},
+{
+"repo": "magian1127/deepseek-harness-zh_pro",
+"stars": 16,
+"cat": "skills-presets"
+},
+{
+"repo": "zexadev/dsh-tether",
+"stars": 16,
+"cat": "remote-mobile"
+},
+{
+"repo": "renat3u/tonghuashun-webui",
+"stars": 16,
+"cat": "search-web"
+},
+{
+"repo": "NoNameLeGo/dsh-catppuccin-theme",
+"stars": 15,
+"cat": "fun-novelty"
+},
+{
+"repo": "ymh0000123/dsh-theme-endfield",
+"stars": 15,
+"cat": "fun-novelty"
+},
+{
+"repo": "memorax-ai/dsh-harmony",
+"stars": 15,
+"cat": "vertical-domain"
+},
+{
+"repo": "wenbin-wb/dsh-bridge",
+"stars": 15,
+"cat": "remote-mobile"
+},
+{
+"repo": "FTShare-Lab/dsh_kline",
+"stars": 15,
+"cat": "vertical-domain"
+},
+{
+"repo": "omdsh-dev/dsh-llm-fallbacks",
+"stars": 15,
+"cat": "model-provider"
+},
+{
+"repo": "Lixxx1/dsh-vscode",
+"stars": 15,
+"cat": "ide-integration"
+},
+{
+"repo": "omdsh-dev/dsh-advisor",
+"stars": 15,
+"cat": "eng-git-ci"
+},
+{
+"repo": "cloader/dsh-taskboard",
+"stars": 15,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "omdsh-dev/stent",
+"stars": 15,
+"cat": "mcp-tooling"
+},
+{
+"repo": "seed-forge/harness-ai-kit",
+"stars": 14,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "JUSTMONIKA2022/dsh-sandbox-escalation-fix",
+"stars": 14,
+"cat": "security-governance"
+},
+{
+"repo": "alxshelepenok/grove",
+"stars": 14,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "A3Boy/dsh-web-tools",
+"stars": 14,
+"cat": "model-provider"
+},
+{
+"repo": "ZK-Andy/dsh-continual-evolve",
+"stars": 14,
+"cat": "security-governance"
+},
+{
+"repo": "sjh9714/dsh-win32",
+"stars": 14,
+"cat": "desktop-client"
+},
+{
+"repo": "maddogfinance/dsh-trading",
+"stars": 14,
+"cat": "vertical-domain"
+},
+{
+"repo": "white0dew/awesome-dsh-plugins",
+"stars": 13,
+"cat": "market-curation"
+},
+{
+"repo": "Lixiaoyiao/deepseek-harness-action",
+"stars": 13,
+"cat": "eng-git-ci"
+},
+{
+"repo": "2672243194/dsh-read-url",
+"stars": 13,
+"cat": "search-web"
+},
+{
+"repo": "Rianico/dsh-better-edit",
+"stars": 13,
+"cat": "usage-billing"
+},
+{
+"repo": "openma-ai/deepseek-harness-acp",
+"stars": 13,
+"cat": "other"
+},
+{
+"repo": "ADWMC/helm-d",
+"stars": 13,
+"cat": "remote-mobile"
+},
+{
+"repo": "Fengze233/dsh-vscode",
+"stars": 13,
+"cat": "ide-integration"
+},
+{
+"repo": "poiuyjie/dsh-vision-opencode",
+"stars": 13,
+"cat": "vision-multimodal"
+},
+{
+"repo": "XieZongChen/dsh-md-notes",
+"stars": 13,
+"cat": "eng-git-ci"
+},
+{
+"repo": "kanneiren/dsh-network-settings",
+"stars": 13,
+"cat": "session-ui-ux"
+},
+{
+"repo": "MAXeaglet/dsh-bash-terminal",
+"stars": 13,
+"cat": "tui-terminal"
+},
+{
+"repo": "omdsh-dev/dsh-security-audit",
+"stars": 13,
+"cat": "security-governance"
+},
+{
+"repo": "omdsh-dev/dsh-plugin-dev",
+"stars": 13,
+"cat": "tutorial-docs"
+},
+{
+"repo": "Flyvhidbwo/dsh-vision-proxy",
+"stars": 12,
+"cat": "vision-multimodal"
+},
+{
+"repo": "timeance/dsh-approve-for-me",
+"stars": 12,
+"cat": "security-governance"
+},
+{
+"repo": "TiantianFlow/dsh-one-gateway",
+"stars": 12,
+"cat": "ide-integration"
+},
+{
+"repo": "PensiveFei/dsh-secure-audit",
+"stars": 12,
+"cat": "security-governance"
+},
+{
+"repo": "omdsh-dev/plugin-template",
+"stars": 12,
+"cat": "tutorial-docs"
+},
+{
+"repo": "KCNyu/clawock",
+"stars": 12,
+"cat": "eng-git-ci"
+},
+{
+"repo": "tonyd2wild/DeepSeek-Harness-Browser",
+"stars": 12,
+"cat": "search-web"
+},
+{
+"repo": "WM-CODER/custom-first-control-prompt",
+"stars": 12,
+"cat": "skills-presets"
+},
+{
+"repo": "isomoes/ikanban",
+"stars": 12,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "wx-yss/dsh-message-rail",
+"stars": 12,
+"cat": "session-ui-ux"
+},
+{
+"repo": "LaplaceYoung/dsh-directorx",
+"stars": 12,
+"cat": "memory-knowledge"
+},
+{
+"repo": "songoao25/dsh-bottom-info-bar",
+"stars": 12,
+"cat": "model-provider"
+},
+{
+"repo": "billLiao/awesome-dsh-plugin",
+"stars": 12,
+"cat": "market-curation"
+},
+{
+"repo": "TomoyoNatsume/dsh-qq-bridge",
+"stars": 12,
+"cat": "im-notify"
+},
+{
+"repo": "Liu-ZA-81/dsh-theme-firefly",
+"stars": 11,
+"cat": "fun-novelty"
+},
+{
+"repo": "linyp/dsh-plugin-langfuse",
+"stars": 11,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "a903067276-rgb/dsh-file-mentions",
+"stars": 11,
+"cat": "file-workspace"
+},
+{
+"repo": "lninghaha/dsh-coding-subscription-oauth",
+"stars": 11,
+"cat": "model-provider"
+},
+{
+"repo": "alib8b8/aflare",
+"stars": 11,
+"cat": "memory-knowledge"
+},
+{
+"repo": "fakechris/dsh-harness-ops",
+"stars": 11,
+"cat": "search-web"
+},
+{
+"repo": "bpc-oss/dsh-web-billing",
+"stars": 11,
+"cat": "usage-billing"
+},
+{
+"repo": "suntianc/dsh-codex-auth",
+"stars": 11,
+"cat": "model-provider"
+},
+{
+"repo": "XMoon/dsh-pi-tui",
+"stars": 11,
+"cat": "tui-terminal"
+},
+{
+"repo": "yxccai/dsh-desktop",
+"stars": 11,
+"cat": "desktop-client"
+},
+{
+"repo": "FeatherHunter/dsh-opencode-palette",
+"stars": 11,
+"cat": "skills-presets"
+},
+{
+"repo": "ai-shushu/dsh-quota-meter",
+"stars": 11,
+"cat": "usage-billing"
+},
+{
+"repo": "Meredith2328/dsh-sticky-note",
+"stars": 11,
+"cat": "market-curation"
+},
+{
+"repo": "jyh20030112/dsh-visual-plugin",
+"stars": 11,
+"cat": "vision-multimodal"
+},
+{
+"repo": "omdsh-dev/dsh-mygo",
+"stars": 11,
+"cat": "skills-presets"
+},
+{
+"repo": "Karbo123/DSH-EvoResearch",
+"stars": 11,
+"cat": "search-web"
+},
+{
+"repo": "SakalioLabs/dsh-code-ide",
+"stars": 11,
+"cat": "ide-integration"
+},
+{
+"repo": "Likenttt/garmin-connect-plugin-for-dsh",
+"stars": 10,
+"cat": "session-ui-ux"
+},
+{
+"repo": "TQSY114514/dsh-ui-appearance",
+"stars": 10,
+"cat": "eng-git-ci"
+},
+{
+"repo": "dickpy/dsh-imagegen",
+"stars": 10,
+"cat": "vision-multimodal"
+},
+{
+"repo": "Js2Hou/dsh-mcp-manager",
+"stars": 10,
+"cat": "mcp-tooling"
+},
+{
+"repo": "Co-Engram/Co-Engram",
+"stars": 10,
+"cat": "memory-knowledge"
+},
+{
+"repo": "havingautism/dsh-deepresearch",
+"stars": 10,
+"cat": "search-web"
+},
+{
+"repo": "chyra-moon/deepseek-harness-desktop",
+"stars": 10,
+"cat": "desktop-client"
+},
+{
+"repo": "xtxo/dsh-ui",
+"stars": 10,
+"cat": "desktop-client"
+},
+{
+"repo": "Sqhao-O/dsh-docs",
+"stars": 10,
+"cat": "vertical-domain"
+},
+{
+"repo": "daha1216/dsh-plugin-collection",
+"stars": 10,
+"cat": "session-ui-ux"
+},
+{
+"repo": "xiajiajun516/dsh-config-manager",
+"stars": 10,
+"cat": "skills-presets"
+},
+{
+"repo": "dongsheng123132/task-passport",
+"stars": 9,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "corrinehu/dsh-workbuddy-connect",
+"stars": 9,
+"cat": "model-provider"
+},
+{
+"repo": "jiezeng2004-design/dsh-chatgpt-bridge",
+"stars": 9,
+"cat": "session-ui-ux"
+},
+{
+"repo": "a903067276-rgb/dsh-hud",
+"stars": 9,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Jiao-XXX/dsh-auto-approve",
+"stars": 9,
+"cat": "security-governance"
+},
+{
+"repo": "vvlife/awesome-deepseek-harness-plugins",
+"stars": 9,
+"cat": "market-curation"
+},
+{
+"repo": "PerryLink/dsh-checkpoint-rewind",
+"stars": 9,
+"cat": "eng-git-ci"
+},
+{
+"repo": "lhh010/dsh-paste-input",
+"stars": 9,
+"cat": "session-ui-ux"
+},
+{
+"repo": "amlyczz/dsh-agy-link",
+"stars": 9,
+"cat": "model-provider"
+},
+{
+"repo": "omdsh-dev/dsh-sidechain",
+"stars": 9,
+"cat": "ide-integration"
+},
+{
+"repo": "sopaco/terrain",
+"stars": 9,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "corrinehu/dsh-chat-imagine",
+"stars": 9,
+"cat": "session-ui-ux"
+},
+{
+"repo": "AgentConnect/dsh-awiki",
+"stars": 9,
+"cat": "vertical-domain"
+},
+{
+"repo": "webkubor/dsh-bloom-theme",
+"stars": 9,
+"cat": "fun-novelty"
+},
+{
+"repo": "940842546/dsh-usage-billing",
+"stars": 8,
+"cat": "usage-billing"
+},
+{
+"repo": "PerryLink/dsh-lsp-actions",
+"stars": 8,
+"cat": "eng-git-ci"
+},
+{
+"repo": "HarcoChen/dsh-vsc-integration",
+"stars": 8,
+"cat": "ide-integration"
+},
+{
+"repo": "anweat/dsh-browser",
+"stars": 8,
+"cat": "search-web"
+},
+{
+"repo": "omdsh-dev/dsh-session-health",
+"stars": 8,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Relistencode/dsh-extension-hub",
+"stars": 8,
+"cat": "market-curation"
+},
+{
+"repo": "PerryLink/dsh-claude-move",
+"stars": 8,
+"cat": "session-ui-ux"
+},
+{
+"repo": "shaoshi20/dshscan",
+"stars": 8,
+"cat": "security-governance"
+},
+{
+"repo": "Airmetro/dsh-update-checker",
+"stars": 8,
+"cat": "market-curation"
+},
+{
+"repo": "jiezeng2004-design/dsh-requirements-alignment",
+"stars": 8,
+"cat": "eng-git-ci"
+},
+{
+"repo": "xiaoyuyu6420/dsh-backup",
+"stars": 8,
+"cat": "eng-git-ci"
+},
+{
+"repo": "dabaicai001/star-deepseek-harness-desktop",
+"stars": 8,
+"cat": "desktop-client"
+},
+{
+"repo": "whitefirer/dsh-niulai-pet",
+"stars": 8,
+"cat": "fun-novelty"
+},
+{
+"repo": "wsxwj123/dsh-plugins",
+"stars": 8,
+"cat": "session-ui-ux"
+},
+{
+"repo": "qimidandapigu/dsh-xiaotangyuan-game",
+"stars": 8,
+"cat": "fun-novelty"
+},
+{
+"repo": "zsyu9779/dsh-desktop",
+"stars": 8,
+"cat": "desktop-client"
+},
+{
+"repo": "Physicolor/dsh-ui-harmonizer",
+"stars": 8,
+"cat": "search-web"
+},
+{
+"repo": "SiriLee/dsh-rewind",
+"stars": 8,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Aa728848/dsh-chatgpt-subscription",
+"stars": 8,
+"cat": "model-provider"
+},
+{
+"repo": "Vncntvx/dsh-zotero",
+"stars": 8,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Tokeii0/dsh-lovelyaudit",
+"stars": 8,
+"cat": "security-governance"
+},
+{
+"repo": "lhh010/dsh-ui-progress",
+"stars": 8,
+"cat": "search-web"
+},
+{
+"repo": "statem-li/dsh-webui",
+"stars": 7,
+"cat": "memory-knowledge"
+},
+{
+"repo": "hancao97/hanai-investment-dsh",
+"stars": 7,
+"cat": "search-web"
+},
+{
+"repo": "lhh010/dsh-bash-encoding",
+"stars": 7,
+"cat": "session-ui-ux"
+},
+{
+"repo": "sjh9714/dsh-movein",
+"stars": 7,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "cyanseek/dsh-landscape",
+"stars": 7,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "omdsh-dev/dsh-tool-calculator",
+"stars": 7,
+"cat": "security-governance"
+},
+{
+"repo": "gusibi/molibot",
+"stars": 7,
+"cat": "memory-knowledge"
+},
+{
+"repo": "JustGenius-s/DSH-Plugs",
+"stars": 7,
+"cat": "session-ui-ux"
+},
+{
+"repo": "mianyoubiaoqing/dsh-Mmem",
+"stars": 7,
+"cat": "memory-knowledge"
+},
+{
+"repo": "omdsh-dev/dsh-minigames",
+"stars": 7,
+"cat": "fun-novelty"
+},
+{
+"repo": "siegfly/dsh-deepseek-vision",
+"stars": 7,
+"cat": "vision-multimodal"
+},
+{
+"repo": "euanguo/dsh-studio",
+"stars": 7,
+"cat": "desktop-client"
+},
+{
+"repo": "wallpap/dsh-compact-activity",
+"stars": 7,
+"cat": "context-management"
+},
+{
+"repo": "qkycir-123/dsh-run2skill",
+"stars": 7,
+"cat": "skills-presets"
+},
+{
+"repo": "huanyuLv/dsh-balance-tide",
+"stars": 7,
+"cat": "usage-billing"
+},
+{
+"repo": "MichengAI/dsh-codex-desktop",
+"stars": 7,
+"cat": "desktop-client"
+},
+{
+"repo": "baihejiangnan/dsh-plugin-pack-web",
+"stars": 7,
+"cat": "search-web"
+},
+{
+"repo": "YRN-playmaker/dsh-wallpaper_share",
+"stars": 7,
+"cat": "fun-novelty"
+},
+{
+"repo": "kangjinghang/dsh-xueqiu",
+"stars": 7,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Vithrive/Deepseek-Harness-for-VS-Code",
+"stars": 7,
+"cat": "ide-integration"
+},
+{
+"repo": "KyoMio/dsh-zen-remote",
+"stars": 7,
+"cat": "remote-mobile"
+},
+{
+"repo": "fly233338/dsh-overleaf",
+"stars": 7,
+"cat": "mcp-tooling"
+},
+{
+"repo": "Acidmoon/DIzzy-DSH",
+"stars": 7,
+"cat": "session-ui-ux"
+},
+{
+"repo": "querit-ai/querit-plugins",
+"stars": 7,
+"cat": "search-web"
+},
+{
+"repo": "WizisCool/dsh-ears",
+"stars": 7,
+"cat": "voice-audio"
+},
+{
+"repo": "dancingmemory/dskin",
+"stars": 7,
+"cat": "search-web"
+},
+{
+"repo": "FeatherHunter/dsh-mattpocock-skills-deck",
+"stars": 7,
+"cat": "skills-presets"
+},
+{
+"repo": "losebird/dsh-plugin-market",
+"stars": 6,
+"cat": "market-curation"
+},
+{
+"repo": "Scorp1o117/dsh-tool-vision",
+"stars": 6,
+"cat": "vision-multimodal"
+},
+{
+"repo": "feiyang-dev/DeepSeek-Harness-Desktop",
+"stars": 6,
+"cat": "desktop-client"
+},
+{
+"repo": "omdsh-dev/dsh-hub-workshop",
+"stars": 6,
+"cat": "market-curation"
+},
+{
+"repo": "Vim0x3c/dsh-session-manager",
+"stars": 6,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ai-daming/clickvibe",
+"stars": 6,
+"cat": "other"
+},
+{
+"repo": "xingyingyuzhui/dsh-updater-ui",
+"stars": 6,
+"cat": "session-ui-ux"
+},
+{
+"repo": "a903067276-rgb/dsh-file-upload",
+"stars": 6,
+"cat": "file-workspace"
+},
+{
+"repo": "MochiNek0/dsh-desktop",
+"stars": 6,
+"cat": "desktop-client"
+},
+{
+"repo": "NEXTINDIE/DeepSeek-Harness-for-VS-Code",
+"stars": 6,
+"cat": "ide-integration"
+},
+{
+"repo": "yu-wenchao/deepseek-harness-desktop-Install",
+"stars": 6,
+"cat": "desktop-client"
+},
+{
+"repo": "Jiyr0119/dsh-workspace-explorer",
+"stars": 6,
+"cat": "file-workspace"
+},
+{
+"repo": "HaoyueQin/deepseek-harness-desktop",
+"stars": 6,
+"cat": "desktop-client"
+},
+{
+"repo": "tomowang/dsh-tui",
+"stars": 6,
+"cat": "tui-terminal"
+},
+{
+"repo": "MicroMilo/upstream-radar",
+"stars": 6,
+"cat": "market-curation"
+},
+{
+"repo": "godchen520/dsh-web-remote",
+"stars": 6,
+"cat": "remote-mobile"
+},
+{
+"repo": "3274375092/dsh-voice",
+"stars": 6,
+"cat": "voice-audio"
+},
+{
+"repo": "Zhangbo-cn/dsh-voice-input-plugin",
+"stars": 6,
+"cat": "voice-audio"
+},
+{
+"repo": "Aa728848/dsh-llm-verifier",
+"stars": 6,
+"cat": "model-provider"
+},
+{
+"repo": "siweina/dsh-novel-writer",
+"stars": 6,
+"cat": "vertical-domain"
+},
+{
+"repo": "InfinitePersistence/dsh-serial-console",
+"stars": 6,
+"cat": "eng-git-ci"
+},
+{
+"repo": "getpapi/papi",
+"stars": 6,
+"cat": "eng-git-ci"
+},
+{
+"repo": "moguiyu/dsh-tavily",
+"stars": 6,
+"cat": "search-web"
+},
+{
+"repo": "rotifer-protocol/rotifer-playground",
+"stars": 6,
+"cat": "fun-novelty"
+},
+{
+"repo": "DoloresCaritasAngelus/DSH-AUX",
+"stars": 6,
+"cat": "vision-multimodal"
+},
+{
+"repo": "Tisitan/dsh-live2d-companion",
+"stars": 6,
+"cat": "fun-novelty"
+},
+{
+"repo": "AtlasCloudAI/mcp-server",
+"stars": 6,
+"cat": "mcp-tooling"
+},
+{
+"repo": "wsz987/dsh-channels",
+"stars": 6,
+"cat": "im-notify"
+},
+{
+"repo": "unknowbug/RE-Framework",
+"stars": 6,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Asher-2000/dsh-expert-mode",
+"stars": 6,
+"cat": "skills-presets"
+},
+{
+"repo": "maxwell-feng/dsh-windows-ocr",
+"stars": 6,
+"cat": "vision-multimodal"
+},
+{
+"repo": "omdsh-dev/dsh-tool-stat",
+"stars": 6,
+"cat": "session-ui-ux"
+},
+{
+"repo": "LaoYueHanNi/dsh-token-usage",
+"stars": 6,
+"cat": "usage-billing"
+},
+{
+"repo": "pointer-a/dsh-server-login",
+"stars": 6,
+"cat": "security-governance"
+},
+{
+"repo": "mytianyi0712/dsh-tui-plugin-OhMyPi",
+"stars": 6,
+"cat": "tui-terminal"
+},
+{
+"repo": "StvLi/dsh-ros2",
+"stars": 6,
+"cat": "vertical-domain"
+},
+{
+"repo": "anweat/dsh-restart",
+"stars": 6,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ExElectron/dsh-tool-hongtou",
+"stars": 6,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Xizhi1024/deepseek-harness-dsh-for-vscode",
+"stars": 6,
+"cat": "ide-integration"
+},
+{
+"repo": "Scorp1o117/dsh-tdai-memory",
+"stars": 6,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Minecraftbe/dsh-toolfold",
+"stars": 5,
+"cat": "session-ui-ux"
+},
+{
+"repo": "pixellover1433/dsh-better-sidebar-lite",
+"stars": 5,
+"cat": "session-ui-ux"
+},
+{
+"repo": "0lidaxiang/dsh-plugin-greet",
+"stars": 5,
+"cat": "search-web"
+},
+{
+"repo": "wlj521/dsh-ui-tweaks",
+"stars": 5,
+"cat": "eng-git-ci"
+},
+{
+"repo": "CeilCelia/dsh-eli-mode",
+"stars": 5,
+"cat": "skills-presets"
+},
+{
+"repo": "HackSing/dsh-plugins",
+"stars": 5,
+"cat": "market-curation"
+},
+{
+"repo": "XHR666/dsh-mpkg-wallpaper",
+"stars": 5,
+"cat": "fun-novelty"
+},
+{
+"repo": "omdsh-dev/Qwen-MM-Plugins",
+"stars": 5,
+"cat": "other"
+},
+{
+"repo": "DoggyHU/dsh4vscode",
+"stars": 5,
+"cat": "ide-integration"
+},
+{
+"repo": "Yui-Little/dsh-mobile-shell",
+"stars": 5,
+"cat": "remote-mobile"
+},
+{
+"repo": "JunNanLYS/dsh-layered-memory",
+"stars": 5,
+"cat": "memory-knowledge"
+},
+{
+"repo": "JayZz210l/deepseek-harness-for-ide",
+"stars": 5,
+"cat": "ide-integration"
+},
+{
+"repo": "yuqingsh/dsh-image-subagent",
+"stars": 5,
+"cat": "vision-multimodal"
+},
+{
+"repo": "mingzeng21/dsh-obsidian",
+"stars": 5,
+"cat": "search-web"
+},
+{
+"repo": "qw457812/dotfiles",
+"stars": 5,
+"cat": "off-topic-squatter"
+},
+{
+"repo": "PerryLink/dsh-composer-history",
+"stars": 5,
+"cat": "session-ui-ux"
+},
+{
+"repo": "labmimors/dsh-mcp-lens",
+"stars": 5,
+"cat": "mcp-tooling"
+},
+{
+"repo": "seven282/oss-prompt-optimizer",
+"stars": 5,
+"cat": "skills-presets"
+},
+{
+"repo": "Visol-456/dsh-llm-fallback",
+"stars": 5,
+"cat": "model-provider"
+},
+{
+"repo": "PerryLink/dsh-background-agents",
+"stars": 5,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "the-beating-light-of-the-nail/awesome-dsh-plugin-stock",
+"stars": 5,
+"cat": "market-curation"
+},
+{
+"repo": "Sparrived/DSH-Deeptop",
+"stars": 5,
+"cat": "desktop-client"
+},
+{
+"repo": "c-ling/dsh-plugin-notify",
+"stars": 5,
+"cat": "im-notify"
+},
+{
+"repo": "xohmai/dsh-session-delete",
+"stars": 5,
+"cat": "session-ui-ux"
+},
+{
+"repo": "TheYoungChen/dsh-plugin-market",
+"stars": 5,
+"cat": "market-curation"
+},
+{
+"repo": "SeaOf0/dsh-redteam-model",
+"stars": 5,
+"cat": "model-provider"
+},
+{
+"repo": "inmny/dsh-sandbox-escalation-fix",
+"stars": 5,
+"cat": "security-governance"
+},
+{
+"repo": "xbzbing/dsh-auth-gateway",
+"stars": 5,
+"cat": "model-provider"
+},
+{
+"repo": "c-ling/dsh-plugin-pet",
+"stars": 5,
+"cat": "fun-novelty"
+},
+{
+"repo": "caoyiwei850/dsh-ssh-ops",
+"stars": 5,
+"cat": "tui-terminal"
+},
+{
+"repo": "lesliechowsh/dsh-memo",
+"stars": 5,
+"cat": "memory-knowledge"
+},
+{
+"repo": "MJ-Chang/dsh-vscode",
+"stars": 5,
+"cat": "ide-integration"
+},
+{
+"repo": "1264459640/dsh-trellis",
+"stars": 5,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "yoke233/dsh-prime-agent",
+"stars": 4,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Coprexist/AIsChat",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Wine-Red/dsh-codex-timeline",
+"stars": 4,
+"cat": "model-provider"
+},
+{
+"repo": "dttxorg/deepseekeyes",
+"stars": 4,
+"cat": "vision-multimodal"
+},
+{
+"repo": "evoelsewhere/evoflux",
+"stars": 4,
+"cat": "search-web"
+},
+{
+"repo": "Roarpeng/GraphFlow",
+"stars": 4,
+"cat": "memory-knowledge"
+},
+{
+"repo": "SnowAmberX/dsh-role-router",
+"stars": 4,
+"cat": "model-provider"
+},
+{
+"repo": "webkong/dsh-plugin-manager",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "wenzetan/dsh-quota-panel",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "kiligzzz/dsh-session-nav",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "sheep-programmer/dsh-web-search-free",
+"stars": 4,
+"cat": "search-web"
+},
+{
+"repo": "chiro2001/dsh-oc",
+"stars": 4,
+"cat": "tui-terminal"
+},
+{
+"repo": "omdsh-dev/dsh-tool-csv",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "kinoward/dsh-plugin-subhub",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "Whatsmore-nf/dsh-pdf-edit",
+"stars": 4,
+"cat": "vertical-domain"
+},
+{
+"repo": "MrWeiCodes/dsh-permgate",
+"stars": 4,
+"cat": "security-governance"
+},
+{
+"repo": "majiayu000/dsh-plugin-registry",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "lhh010/dsh-input-history",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "wss534857356/dsh-plugin-codex",
+"stars": 4,
+"cat": "model-provider"
+},
+{
+"repo": "Wenaixi/dsh-superpower",
+"stars": 4,
+"cat": "skills-presets"
+},
+{
+"repo": "WilliamShi666/dsh-multiple-chat-panels",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "CraZY222123/dsh-self-evolve",
+"stars": 4,
+"cat": "memory-knowledge"
+},
+{
+"repo": "jarvis-intelligence/jarvis-index",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "Walvez/dsh-codex-sync",
+"stars": 4,
+"cat": "model-provider"
+},
+{
+"repo": "Guyao146/dsh-activity-tracker",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "jasen215/dsh-continual-harness",
+"stars": 4,
+"cat": "memory-knowledge"
+},
+{
+"repo": "yingjunnan/dsh-deepseek-quota",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "Noelune/dsh-agent-relay",
+"stars": 4,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "lusipad/RocketX",
+"stars": 4,
+"cat": "im-notify"
+},
+{
+"repo": "a903067276-rgb/dsh-plan-switch",
+"stars": 4,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "chnjames/dsh-plugin-market",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "ZhangFengshun/dsh-remote-ssh",
+"stars": 4,
+"cat": "remote-mobile"
+},
+{
+"repo": "dsh-ssh/dsh-ssh",
+"stars": 4,
+"cat": "remote-mobile"
+},
+{
+"repo": "cheshireez/dsh-skill-hub",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "huoxue1/harness-lark",
+"stars": 4,
+"cat": "im-notify"
+},
+{
+"repo": "kenz1117/dsh-ui-usage-billing",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "gjj-star/dsh-conversation-navigator",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PerryLink/dsh-doublecheck",
+"stars": 4,
+"cat": "eng-git-ci"
+},
+{
+"repo": "CAOGGL/dsh-ding",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "wangshunnn/oh-my-dsh",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "RangeKing/vibemeter",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "WTStarMark/DSH-QAQ",
+"stars": 4,
+"cat": "tui-terminal"
+},
+{
+"repo": "FuRongJun-1999/CommonTrustProtocol",
+"stars": 4,
+"cat": "vertical-domain"
+},
+{
+"repo": "IMHaoyan/deepseek-harness-launcher",
+"stars": 4,
+"cat": "desktop-client"
+},
+{
+"repo": "yhlooo/dsh-bridges",
+"stars": 4,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "PicGo/dsh-plugin",
+"stars": 4,
+"cat": "file-workspace"
+},
+{
+"repo": "pzc2004/dsh-frostfin",
+"stars": 4,
+"cat": "vertical-domain"
+},
+{
+"repo": "Wenaixi/dsh-ponytail",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "unknowbug/anchorlaw",
+"stars": 4,
+"cat": "other"
+},
+{
+"repo": "lilyblessing/dsh-mcp-skill-panel",
+"stars": 4,
+"cat": "skills-presets"
+},
+{
+"repo": "Rainpomelo/deepseek-harness-liquid-glass-theme",
+"stars": 4,
+"cat": "fun-novelty"
+},
+{
+"repo": "omdsh-dev/dsh-tool-time",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "BananaSoldier01/dsh-tidychat",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Diluka/dsh-agent-plugin-market",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "omdsh-dev/dsh-tool-markdown",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "omdsh-dev/dsh-tool-diff",
+"stars": 4,
+"cat": "session-ui-ux"
+},
+{
+"repo": "yjh051108/dsh-engram-relay",
+"stars": 4,
+"cat": "memory-knowledge"
+},
+{
+"repo": "wink-run/dsh-plugin-store",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "xiaoshihou514/dsh-weixin",
+"stars": 4,
+"cat": "im-notify"
+},
+{
+"repo": "Sunrisepeak/dsh-index",
+"stars": 4,
+"cat": "market-curation"
+},
+{
+"repo": "pan17/dsh-wechat",
+"stars": 4,
+"cat": "im-notify"
+},
+{
+"repo": "tafcear/kimi-tide",
+"stars": 4,
+"cat": "model-provider"
+},
+{
+"repo": "leeclouddragon/dsh-all-in",
+"stars": 4,
+"cat": "usage-billing"
+},
+{
+"repo": "huguangyu666/dsh-plugin-notify",
+"stars": 4,
+"cat": "im-notify"
+},
+{
+"repo": "Scorp1o117/dsh-soul-md",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "zoahdev/dsh-ecosystem",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Ottohere-Mourn/TeachReplay",
+"stars": 3,
+"cat": "other"
+},
+{
+"repo": "c-ling/dsh-plugin-vision-bridge",
+"stars": 3,
+"cat": "vision-multimodal"
+},
+{
+"repo": "TYEclipse/dsh-webfetch",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "hrhgit/deepseek-harness-plugin-manager",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "Yuel25/dsh-desktop",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "remybroun/infographic",
+"stars": 3,
+"cat": "skills-presets"
+},
+{
+"repo": "SamuFlore/query-balance",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "DamonBao/dsh-codex-suite",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "MicroHEROX/dsh-exa-mcp",
+"stars": 3,
+"cat": "mcp-tooling"
+},
+{
+"repo": "lonelymoon87/dsh-specflow",
+"stars": 3,
+"cat": "eng-git-ci"
+},
+{
+"repo": "iambbp/dsh-monitor",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Wanbinyu/dsh-billing",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "OrinVoss/dsh-math-team",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "spacexun2/dsh-worktime-board",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "umbrella22/xuanling",
+"stars": 3,
+"cat": "other"
+},
+{
+"repo": "Phant0Meow/dsh-meow-smooth",
+"stars": 3,
+"cat": "remote-mobile"
+},
+{
+"repo": "xiaohj233/dsh-keepalive",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "superboy911/dsh-model-router",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "Spirtxiaoqi7/mindspace-dsh-local-rag",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PerryLink/dsh-session-pin",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PerryLink/dsh-github",
+"stars": 3,
+"cat": "eng-git-ci"
+},
+{
+"repo": "ywsldxk/dsh-plugin-stars",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "lincong1987/dsh-model-switch",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "Drifter-yh/dsh-tool-policy",
+"stars": 3,
+"cat": "security-governance"
+},
+{
+"repo": "muvuula/DeepSeek-Harness-Core",
+"stars": 3,
+"cat": "other"
+},
+{
+"repo": "yuunnn/dsh-on-imessage",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "nyantused-cpun/folio",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "MicroHEROX/dsh-Kimi-WebBridge",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "coderPerseus/dsh-hub",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "omdsh-dev/dsh-input-history",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "wuliLiuyue/wxpilot",
+"stars": 3,
+"cat": "im-notify"
+},
+{
+"repo": "stuarthu/dsh-crew",
+"stars": 3,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "MistRain-1/dsh-reconnect",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "RYun601/dsh-launcher",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "sjhmars/dsh-plugins",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "2006spy/dsh-token-billing",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "Dylan37670/dsh-plugin-panel",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Yuuhann1999/dsh-bloub-mood",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "peterwangze/dsh-agent-router",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "studyzy/dsh-suggest-prompt",
+"stars": 3,
+"cat": "skills-presets"
+},
+{
+"repo": "LAN-TINA-WS/dsh-windows-shell-policy",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "omdsh-dev/dsh-tool-schema",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "jiangli07/dsh-deepseek-quota-bar",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "omdsh-dev/dsh-tool-regex",
+"stars": 3,
+"cat": "security-governance"
+},
+{
+"repo": "c-ling/dsh-plugin-peak-pricing",
+"stars": 3,
+"cat": "eng-git-ci"
+},
+{
+"repo": "ChengxiuCDP/dsh-plugin-advisor",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "zhang66633/dsh-pixel-ui",
+"stars": 3,
+"cat": "tui-terminal"
+},
+{
+"repo": "StyxNether/dsh-auto-approval-plugin",
+"stars": 3,
+"cat": "security-governance"
+},
+{
+"repo": "jianweideng0515-create/dsh-usage-stats",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "Lheyang/orca-dsh-launcher",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "Aampidy/dsh-mcmp",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "Jiangdl0220/dsh-archived-sessions",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "xiaohj233/dsh-magic-context",
+"stars": 3,
+"cat": "context-management"
+},
+{
+"repo": "LRainner/AgentCat",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "causebefore/dsh-pomodoro",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "PerryLink/dsh-skill-pack-security",
+"stars": 3,
+"cat": "security-governance"
+},
+{
+"repo": "TtTRz/dsh-wecom",
+"stars": 3,
+"cat": "im-notify"
+},
+{
+"repo": "HongzhongL/dsh-grayprint",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "Web0926/dsh-llm-verifier",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "lwmxiaobei/dsh-plugins",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "zhangz-2018/dsh-project-orchestrator",
+"stars": 3,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "jinguanghai/deepseek-harness-forge-plugins",
+"stars": 3,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Pasumao/dsh-plugin-workbench",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "skymecode/dsh-bgm",
+"stars": 3,
+"cat": "fun-novelty"
+},
+{
+"repo": "DshMarketPlace/dsh-plugins-store",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "anweat/dsh-plugin-dev-guide",
+"stars": 3,
+"cat": "ide-integration"
+},
+{
+"repo": "sandcn/DeepSeek-cli",
+"stars": 3,
+"cat": "other"
+},
+{
+"repo": "wally8-8/dsh-done-whale",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "linxichen/dsh-rigorquant",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "cocofhu/skillhub",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "Nzssm1/dsh-factor-investing",
+"stars": 3,
+"cat": "memory-knowledge"
+},
+{
+"repo": "c-ling/dsh-plugin-newsboard",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "astra3294/dsh-doctor",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "yugasun/dsh-plugins",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "dongsheng123132/awesome-dsh-plugins",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "dingzhenyao/dsh-plugin-directory",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "CH4ACKO3/dsh-turn-fold",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "pangzi499/dsh-balance-stats",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "wingsky-1/dsh-plugin-hub",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "huxint/dsh-team",
+"stars": 3,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "ZTCNO0NE/dsh-loom",
+"stars": 3,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "SpookySandwich/dsh-plugin-rollout-scout",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "xing666173/dsh-vision-hub",
+"stars": 3,
+"cat": "vision-multimodal"
+},
+{
+"repo": "lynx-gt/dsh-subagent-cwd",
+"stars": 3,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Luaphes/dsh-plugins-market",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "xx-hub/dsh-craft-your-textbook",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Scorp1o117/dsh-plugin-marketplace",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "ZoeHao2026/dsh-ui-model-selection-collapsible",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "Spirtxiaoqi7/mindspace-dsh-session-memory",
+"stars": 3,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Physicolor/dsh-widgets",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "kanneiren/dsh-windows-manager",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "omdsh-dev/dsh-tool-encoding",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "hanzhangzzz/dsh-diagram",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "xiaoshihou514/dsh-vision",
+"stars": 3,
+"cat": "vision-multimodal"
+},
+{
+"repo": "JavenLu233/dsh-cost-monitor",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "ai-eks/dsh-auth-tunnel",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "paean-ai/8x-skills",
+"stars": 3,
+"cat": "skills-presets"
+},
+{
+"repo": "heekei/dsh-usage",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "jiesou/dsh-opencode-zen-free-provider",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "komoai2026/dsh-kolmopdf",
+"stars": 3,
+"cat": "vertical-domain"
+},
+{
+"repo": "flg1217/dsh-llm-agy",
+"stars": 3,
+"cat": "model-provider"
+},
+{
+"repo": "byh819-png/dsh-client-ui-notify",
+"stars": 3,
+"cat": "im-notify"
+},
+{
+"repo": "omdsh-dev/dsh-tool-json",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Nichts0v0/dsh-mcp-manager",
+"stars": 3,
+"cat": "mcp-tooling"
+},
+{
+"repo": "cherrchen/deepseek-harness-electron",
+"stars": 3,
+"cat": "desktop-client"
+},
+{
+"repo": "unStone/dsh-xray",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Andrew111888/dsh-plugin-balance",
+"stars": 3,
+"cat": "usage-billing"
+},
+{
+"repo": "kirkchinese/CiteCiter",
+"stars": 3,
+"cat": "eng-git-ci"
+},
+{
+"repo": "tevenfeng/dsh-plugin-omoslim",
+"stars": 3,
+"cat": "eng-git-ci"
+},
+{
+"repo": "aust24lzy/dsh-plugin-hub",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "dsh-plugin/dsh-plugin.github.io",
+"stars": 3,
+"cat": "market-curation"
+},
+{
+"repo": "PerryLink/dsh-output-styles",
+"stars": 3,
+"cat": "skills-presets"
+},
+{
+"repo": "Mongfayi/dsh-recall",
+"stars": 3,
+"cat": "search-web"
+},
+{
+"repo": "omdsh-dev/dsh-paste-input",
+"stars": 3,
+"cat": "session-ui-ux"
+},
+{
+"repo": "YOGEMOW/DeepSeek_Prism",
+"stars": 3,
+"cat": "vision-multimodal"
+},
+{
+"repo": "vilicvane/dsh-plugin-turn-memory",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "jilian-dsh/dsh-rule-engine",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "linxuhao/Deepseek-Continuity",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "InterPSS-Project/ipss-agent",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "kestiny18/dsh-plugins",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Saikel-Orado-Liu/dsh-cost-meter",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "linconz/agentduel-dsh",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "wulun811/dsh-plugin-vet",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "chinng-inta/dsh-web-search-searxng",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "shuind/dsh-codex-harness",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "jean3690/dsh-devtoolbox",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "DshMarketPlace/dshmarketplace",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "lonelymoon87/dsh-gitflow",
+"stars": 2,
+"cat": "eng-git-ci"
+},
+{
+"repo": "ddtcorex/maestro-skills",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "lkh081231/screenshot-feedback-hook-mcp",
+"stars": 2,
+"cat": "vision-multimodal"
+},
+{
+"repo": "AtlasCloudAI/cli",
+"stars": 2,
+"cat": "other"
+},
+{
+"repo": "onlyqzq/dsh-riskproof",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "zsxh1990/pr-genius",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "djasdh/interest-memory",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "omdsh-dev/sandbox-mxc",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "omdsh-dev/ex-setting",
+"stars": 2,
+"cat": "other"
+},
+{
+"repo": "VinsonWild/Wangdefa.Memory",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "ywleeo/browser-mcp",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "TYEclipse/dsh-plugins-hub",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "wuxiangru915/dsh-review-loop",
+"stars": 2,
+"cat": "eng-git-ci"
+},
+{
+"repo": "lonelymoon87/dsh-guardian",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "xiaoshihou514/dsh-tui",
+"stars": 2,
+"cat": "tui-terminal"
+},
+{
+"repo": "dsh-pub/dsh-pub",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PeanutsDou/peanut-dsh-plugin",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "fly3366/DeepJIT",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "tttnny/DSH-Launcher",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "tuterx/dsh-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "iceprosurface/dsh-gateway-config",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "KAIbsb/dsh-tray",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "sgzxs/dsh-global-task-list",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "wxxb789/dsh-legion",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "writeCasually/deepseek-harness-plugins",
+"stars": 2,
+"cat": "other"
+},
+{
+"repo": "omdsh-dev/dsh-ui-progress",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "hx876298682-tech/deepseek-harness-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "xiaohj233/dsh-tavily-search-provider",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "qomob/dsh",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "diamondfsd/deepseek-harness-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "XJungit/omdp",
+"stars": 2,
+"cat": "other"
+},
+{
+"repo": "Onenightcarnival/deepseek-harness-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "zhenghaoyang24/dsh-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "TingRuDeng/dsh-feishu-bot",
+"stars": 2,
+"cat": "im-notify"
+},
+{
+"repo": "cckyros/goal-acceptance",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "BenHuHuan/dhs-tuicode",
+"stars": 2,
+"cat": "tui-terminal"
+},
+{
+"repo": "zoumutou/dsh-web-preview",
+"stars": 2,
+"cat": "eng-git-ci"
+},
+{
+"repo": "jingzhao-l/iterate-plugin",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "grunmin/dsh-acp-enhanced",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "cwbcheng/dsh-knowledge-graph",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "1052326311/dsh-plan-lattice",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "bpc-oss/chrome-faithful",
+"stars": 2,
+"cat": "remote-mobile"
+},
+{
+"repo": "reimu-create/deepseek-harness-portable",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "omdsh-dev/dsh-bash-encoding",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "omdsh-dev/dsh-ui-whale",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "MichengAI/dsh-codex-desktop-website",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "jilian-dsh/dsh-rules-manager",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "zerro-223/dsh-token-usage",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "edabchann/dsh-neotui",
+"stars": 2,
+"cat": "tui-terminal"
+},
+{
+"repo": "cyj0920/dsh-jlink-plugin",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "phelpsyacht/dshmath-manim",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "Pasumao/dsh-plugin-notify",
+"stars": 2,
+"cat": "im-notify"
+},
+{
+"repo": "kakadeka/Baton",
+"stars": 2,
+"cat": "context-management"
+},
+{
+"repo": "H2O-MERO/DeepSeek-Harness-GUI",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "tyql688/dsh-providers",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "penglai-doll/LocalWhale",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "luoyan96/dsh-catnap-studio",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "ChenLaoshiYF/dsh-mcpguard",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "TinyPanda168/SpecsRelay-DSH",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "jqueryscript/awesome-dsh-plugins",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "YEYEYEYESHIFU/dsh-session-hotkeys",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "TommyFang2077/dsh-easy-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "ShanHaiFish/dsh-plugin-security-review",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "1841220388zzzcccxxx-star/dsh-token-stats",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "TingRuDeng/dsh-smart-approval",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "qinyre/dsh-Desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "mingzeng21/dsh-notion",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "zrt-ai-lab/dsh-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "maxwell-feng/dsh-tesseract-ocr",
+"stars": 2,
+"cat": "vision-multimodal"
+},
+{
+"repo": "1e0zj/dsh-plugin-mall",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "dami9527/dsh-image-pathify",
+"stars": 2,
+"cat": "vision-multimodal"
+},
+{
+"repo": "coolbat/awesome-dsh-plugins",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "Dely0/dsh-personal-workbench",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "skiuniverse/dsh-running-liang",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "laoduu/DeepSeek-Harness-yizi-themes",
+"stars": 2,
+"cat": "fun-novelty"
+},
+{
+"repo": "Saikel-Orado-Liu/dsh-coding-preset",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "WSL043/dsh-native-session-manager",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "omdsh-dev/dsh-cron",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "AbcdefgXW/dsh-msg-hub",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "stuarthu/dsh-chrome",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "nonmean/dsh-lan-access",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "kolawong/dsh-plugin-auth-webserver",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "Djokovical5294/DeepSeek-Harness-Token-Free",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "rice-awa/dsh-lan-gateway",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "FeatherHunter/dsh-prompt",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "creativedswork/dsh-expmem",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Liyuk/dsh-skin-chatlab",
+"stars": 2,
+"cat": "fun-novelty"
+},
+{
+"repo": "zp-home/dsh-dev-sandbox",
+"stars": 2,
+"cat": "security-governance"
+},
+{
+"repo": "ShanHaiFish/sent-msg-locator",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "lovezi0/dsh-memory-palace",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "c-ling/dsh-plugin-goldboard",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "hytime/dsh-companion",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "pang123hui/dsh-workspace-sidebar",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "chenbin-dev/dsh-auth-everying",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "PerryLink/dsh-library",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "DDDFXYqiming/dsh-annotation-patched",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "qinyre/dsh-plugin-install",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "DDDFXYqiming/dsh-layered-memory",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "smanx/dsh-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "Andiii208/dsh-harness-remote",
+"stars": 2,
+"cat": "remote-mobile"
+},
+{
+"repo": "Britneycode/dsh-update-center",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "c-ling/dsh-plugin-toolbox",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "AbcdefgXW/dsh-toolbox-web",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "PM25000/dsh-ths-holdings",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "jo32/DeepDeck",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "jiesou/dsh-cline-free-provider",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "NOirBRight/dsh-llm-codex",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "kriskwok/dsh-ios-app",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "Gaq152/dsh-credits",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "Walvez/dsh-search-failover",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "alanzhao0128/dsh-balance-monitor",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "usertianziyang/DSH-Plugin-Hub",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "yoza10635/dsh-argp",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "UllrAI/dsh-mqtt",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "chouxiaohuai/dsh-uiskin-theme",
+"stars": 2,
+"cat": "fun-novelty"
+},
+{
+"repo": "morlay/better-session",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "NOirBRight/dsh-usage-monitor",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "aiworkskills/dsh-wechat-article",
+"stars": 2,
+"cat": "im-notify"
+},
+{
+"repo": "edusrez/dsh-smart-restart",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "xiaosu19/dsh-codex-mode",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "tangyuewei/dsh-client-ui-pet",
+"stars": 2,
+"cat": "fun-novelty"
+},
+{
+"repo": "wang-junjian/spritely",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "Kaixxrua/dsh-aigc-radar",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "wgd753/awesome-dsh-plugin",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "qwe225380/dsh-omni-router",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "magicOF2/dsh-autoload-history",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "cuddly-guacamole/dsh-auto-approval-llm",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "azhe411/dsh-download-progress",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "studyzy/dsh-web-remote-access",
+"stars": 2,
+"cat": "remote-mobile"
+},
+{
+"repo": "AppliedYuu/dsh-WallpaperAndCost",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "cocofhu/dsh-testsuite",
+"stars": 2,
+"cat": "eng-git-ci"
+},
+{
+"repo": "MarchLiu/dsh-rich-editor",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "master1Sun/dsh-prompt-library",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "FeatherHunter/dsh-chinese-skill-patch",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "gehennawu/dsh-service",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "yllyx/dsh-plugin-stock",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "STFQ/dsh-showcase",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "wellcover/dsh-opencodego-quota",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "beihzb/dsh-notebook",
+"stars": 2,
+"cat": "vision-multimodal"
+},
+{
+"repo": "ZK-Andy/dotnet-deepseek-harness-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "PKUfudawei/dsh-capability-menu",
+"stars": 2,
+"cat": "skills-presets"
+},
+{
+"repo": "HaoyueQin/deepseek-harness-background",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "EugeneVl/dsh_session_folders",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Free-corner/dsh-chat-tools",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PerryLink/dsh-fund-research",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "Han-Yao94/dsh-session-toolkit",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "having5548/deepseek-harness-desktop",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "alloevil/dsh-xray",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "57ggfk/dsh-turn-status-phrases",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Hilbert-beinghappy/dsh-plugin-clarify",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "baihejiangnan/dsh-plugin-pack",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "domparent/OLEDCare",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "luxueliu/luxueliu-usage-command",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "yuanbaoerer/dsh-decision-split",
+"stars": 2,
+"cat": "eng-git-ci"
+},
+{
+"repo": "OpenCnid/deepseek-rlm",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "easyv-ai/dsh-jumpserver",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "scriptsnet/dsh-fleet",
+"stars": 2,
+"cat": "vertical-domain"
+},
+{
+"repo": "AKI2253/Sidor_UI",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "auki-zy/dsh-cursor-theme",
+"stars": 2,
+"cat": "fun-novelty"
+},
+{
+"repo": "terminator850/dsh-tauri",
+"stars": 2,
+"cat": "desktop-client"
+},
+{
+"repo": "xie-tj/dsh-token-usage-ledger",
+"stars": 2,
+"cat": "usage-billing"
+},
+{
+"repo": "fyjgtddco/DSH-SW-and-CAD",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "suntianc/dsh-antigravity-auth",
+"stars": 2,
+"cat": "model-provider"
+},
+{
+"repo": "webkong/dsh-plugin-sidebar",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "tanleikingsley913/dsh-management-suite",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "kezboardpj/dsh-chat-nav",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "398894496-arch/runtime36",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Shrbuz/dsh-web-notes",
+"stars": 2,
+"cat": "search-web"
+},
+{
+"repo": "swarm-apps/dsh-swarmdrop",
+"stars": 2,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "mqhe2007/dsh-pm",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "EternalNight996/dsh-memory-eternal",
+"stars": 2,
+"cat": "memory-knowledge"
+},
+{
+"repo": "lemonxiny55/dsh-code-index",
+"stars": 2,
+"cat": "market-curation"
+},
+{
+"repo": "zp-home/dsh-weixin-clawbot",
+"stars": 2,
+"cat": "im-notify"
+},
+{
+"repo": "caoyixian06/dsh-lanchat",
+"stars": 2,
+"cat": "session-ui-ux"
+},
+{
+"repo": "peterwangze/software-project-governance",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "tatuke/agent-switch",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Bandersnatch0x/design-playbook",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "evil7/deepSea",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "SuperMate-Ai/SuperMate-Harness-System",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "openHacking/pptkit-presentation",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "kyrielrving11/LoopForge",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Bandersnatch0x/amber-protocol",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "ifrankwang/openspec-agents",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "sdoygb/conjugate-spectral-geometry",
+"stars": 1,
+"cat": "off-topic-squatter"
+},
+{
+"repo": "lujoai/Lujo-MCP",
+"stars": 1,
+"cat": "mcp-tooling"
+},
+{
+"repo": "drscrewdriver/inferglow",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "possible055/agentshim",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "jarvis-intelligence/scip-swift",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "diqierjia/StrataGate-AgentMemory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "AmethystLuna/logicprobe",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "RealAlexandreAI/dsh-all-search",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "rsagacom/dsh-ajw",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "NSOiO/talon-ui",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "nightwhale-dev/nightwhale",
+"stars": 1,
+"cat": "other"
+},
+{
+"repo": "TTTPOB/dsh-task-models",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "SLAPaper/dsh-self-checking-profile",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "TT-Wang/dsh-assembler",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "NIyueeE/dsh-container",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Mongfayi/dsh-local-filetree",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "MarecGents/deepseek-harness-hub",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "haozhu11/dsh-plugin-background",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "baisama-cloud/dsh-session-mover",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Li3NGa/DHS-multi-agent-plugin",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "AzureHalcyon/dsh-deepseek-usage",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "Townrain/dsh-session-title-interval-llm",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "z953218350/dsh-archive-manager",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "krystal-cao/deepseek-harness-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "Mappedinfo/dsh-tool-vision-read",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "jikllji/DSH-JI-Plugins",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "TIPSONG/dsh-vision-api-localorweb",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "luca3xxvsoo/dsh-extra-plan",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "stuarthu/dsh-hot-reload",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "csthinker/deepseek-harness-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "Max-Null/dsh-plugin-center",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "RoyougiShiki/dsh-restart-systemd",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "tallahandsome-ux/dsh-fetch-third-party",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "kanchengw/dsh-mindseye",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "lovy2004/dsh-molbio-tools",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "zhouCode/dsh-squad",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "zzyyyds88/dsh-solo-leveling",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "STARDUSTLC666/dsh-minimal-ptc",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "JinkaiLiu/dsh-autonomy",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "weichi-ai/dshd",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "Jedeiah/dsh-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "GTC2080/dsh-APEX_Plugin",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "Icestab/dsh-image-vision-bridge",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "zhouzhencheng07/dsh-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "aitingtingya/mv-superds",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "c-ling/dsh-plugin-wallet",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "hezhongtang/dsh-update-copilot",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "StarPivotNet/dsh-plugins-public",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "PerryLink/dsh-defend",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "fishlikewater/dsh-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "creativedswork/dsh-uni-editor",
+"stars": 1,
+"cat": "mcp-tooling"
+},
+{
+"repo": "u9521/dsh-advanced-model-editor",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "Julyves/dsh-git-ui",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "stvlynn/dsh.fish",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Max-Null/dsh-habit",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "sealfly/dsh-reasonix-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "ice-kele/dsh-llm-guardian",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "helibeiqi/dsh-quant-data-mcp",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "NattoCB/dsh-plugin-wechat-bridge",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "my-dsh/oh-my-dsh",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "mxl2498/dsh-balance",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "alanzhao0128/dsh-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "jonnycafong/office-farmer-emoji",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "kexuejin/dsh-zhihu-dashboard",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "Max-Null/dsh-chinese-thinking",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "tmpdot/dsh-checkpoint-diff",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "xiaomao49/dsh-wiki-bridge",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "Max-Null/dsh-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Max-Null/dsh-guardian",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "boogoo619/dsh-focus-overlay",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "whitelonng/dsh-opencode-go-pool",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "tbxy09/dsh-replay-lab",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "allentnetus/dsh-job-hunting",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "Socialist-Sister/dsh-survival-mode",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "jackylong1987/dsh-long-plugins",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "Max-Null/dsh-skill-mcp-center",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "Xidong-AI/dsh-rate-limiter",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "YureWright/dsh-plgstore",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "PerryLink/dsh-local-ai",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "lishLRF/dsh-3d-model-viewer",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "qiaoy01/dsh-mission",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "lemonorangeapple/dsh-effort-switcher",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "openma-ai/dsh-agents-plugins",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "openma-ai/dsh-mcp-apps",
+"stars": 1,
+"cat": "mcp-tooling"
+},
+{
+"repo": "xrj/dsh-market-site",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "zhaimingyou/aisync",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "Jiyr0119/dsh-service-console",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Pasumao/dsh-plugin-image-tools",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "Lichen455/band-notify",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "Cheng-xiu/dsh-auto-scheduler",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "A-G-guy/dsh-plus",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "fno2010/dsh-web-search-ext",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "huyang218/dsh-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "Pasumao/dsh-plugin-dev-kb",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "EternalNight996/dsh-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "dhicoc/dsh-theme-mineradio",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "ZJUZhiyuCai/dsh-ivory",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "hufang360/dsh-sticky-notes",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "void2anything/dsh-qingagent",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "stuarthu/dsh-update-notifier",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "R2h1/deepseek-harness-app",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "julescules/dsh-galgame-localization-reverse",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "jiewaigongxing/dsh-jiey-browser",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "22-ai-00/dsh-enhanced",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Cheng-xiu/dsh-mobile-link",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "liustack/aimanager",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "Mason-1011/dsh-task-center",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "LaoYueHanNi/dsh-git-worktree",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "PerryLink/dsh-session-sync",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "temotee2103/dsh-overdrive",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "luoxunhao/deepseek-harness-plugins",
+"stars": 1,
+"cat": "other"
+},
+{
+"repo": "nlqh7/dsh-beautify",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "lcthe/dsh-timeline-rail",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Mu-scorpio/token-usage-counter",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "islibaodong/dsh-login",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "westhack/deepseek-harness-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "WanYanTianDe/dsh-headroom",
+"stars": 1,
+"cat": "context-management"
+},
+{
+"repo": "AI-Scarlett/dsh-safe-plugin-manager",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "heshuren371/dsh-music-player-tui",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "Ri0n72Y/dsh-workspace-scope",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "omdsh-dev/dsh-sandbox-micro",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "magicOF2/dsh-schedule",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "chen7712369/dsh-web-launcher",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "zhangweiii/dsh-tui",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "memorax-ai/dsh-webui-studio",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "Andiii208/dsh-ultramath",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "LQing2018/dsh-desktop-client",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "AFAP/dsh-message-minimap",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "sfyyy/dsh-generation-image",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "yangfei222666-9/dsh-voice-gate",
+"stars": 1,
+"cat": "voice-audio"
+},
+{
+"repo": "orchestral-media/orchestral",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "shoxiy-danny/dsh-feishu",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "drmi5446/dsh-wallpaper-engine",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "licyer/dsh-token-monitor",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "AwesomeHou/dsh-doudizhu",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "lanbaolu/dsh-wechat-bridge",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "7dgroup-ai/dsh-7d-tray-win",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "cosmic-snail/dsh-travel-plan",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Letter2025/dsh-task-worktree",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "karmiy/dsh-session-nav",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "flg1217/dsh-subagent-codebuddy",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "symmetryseeker/dsh-akn-plugin",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "dsh-blue/blue",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "null5069/dsh-better-stats",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "Max-Null/dsh-chat-rail",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "SparkElf/dsh-plugins-plus",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "Cheerwhy/dsh-chat-anchors",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "JasonWei04/dsh-computer-use",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "qubyyang/awesome-ios-sim",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "EdwinDigital/dsh-web-search-microsoft-webiq",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "ovo669/dsh-settings-sections",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Jadramcool/dsh-workspace-hub",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "mozhuanzuojing/dsh-agent-pill",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "luxiwusuobuneng/dsh-plugin-context-manager",
+"stars": 1,
+"cat": "context-management"
+},
+{
+"repo": "Liu-Bot24/dsh-trace-insight",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "Max-Null/dsh-node-appearance",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "FeatherHunter/dsh-plugin-ui-debug",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "jiesou/dsh-webui-fix-pack",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "wuweiran-web/dsh-beauty-persist",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "lanbaolu/dsh-fail-soft",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Sivan757/dsh-agent-plugins-market",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "ddggkkcc/dsh-stash",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "TGYD-helige/dsh-plugins",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "NelsonLongxiang/dsh-prompt-templates",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "PerryLink/dsh-industry-research",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "ericfetch/dsh-sight",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "wangxing-git/dsh-tool-session",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Pasumao/dsh-plugin-table-zoom",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "PerryLink/dsh-research-report",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "kiligzzz/dsh-session-archive",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Yiklek/dsh-web-profile",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "Octo-o-o-o/dsh-plugin-deploy",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "KhalilYamber/dsh-tidewatch",
+"stars": 1,
+"cat": "ide-integration"
+},
+{
+"repo": "JasperGuWP/dsh-plugin-market",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "naodeng/dsh-qa",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "drscrewdriver/dsh-session-search-toggle",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "uruana33/dsh-cost-meter",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "rqwj/oh-my-ticket",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "HaoyueQin/dsh-usage-statistics-panel",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "iia-arg/dsh-plugins",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "fastengiel-kurai/dsh-peekfile-everything",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "00080000/dsh-project-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "Kenerlee/dsh-moments-aieo",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "Asher-2000/dsh-memory-connect",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "loeanxi/dsh-injection-guard",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "sunyuhuirong/shl-session-history",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "QWQcool/dsh-trivium",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "T-MKT/dsh-customization-settings",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Wanbinyu/dsh-error-lens",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "pai535Huang/dsh-superpower",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "young-tim/dsh-llm-governor",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "zhuifengqug/dsh-quick-restart",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ltsone9/dsh-filemenu",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "Wanbinyu/dsh-provider-probe",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "SiriusWJ/dsh-updater-npm",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "PerryLink/dsh-data-quality",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "a903067276-rgb/dsh-todo-guard",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "hviana/dsh-cli-bridge",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "fb0sh/dsh-pentester",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "xiaozs-com/dsh-screen-automation",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "HaoyueQin/dsh-better-reasoning-effort",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "WODE25500/dsh-skillopt",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "wannanbigpig/dsh-usage-stats",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "BubblePtr/dsh-holdem",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "yhfgyyf/dsh-auto-preset-router",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "hollis-openlab/dsh-matt-skills-flow",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "DIAG5/dsh-better-input",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "kk3ya03-star/dsh-lcx-codex",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "WintryGrass/dsh-multi-candidate",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "callmesoul/deepseek-kanban-plugin",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Casually/dsh-web-remote-frp",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "hyperion2144/dsh-subagent-pro",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "Mikoribbit/odsh-bridge",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "mrdevlorx/dsh-model-garden",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "Howe829/dsh-insider",
+"stars": 1,
+"cat": "ide-integration"
+},
+{
+"repo": "DDDFXYqiming/dsh-pseudo-vision",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "502399493zjw-lgtm/dsh-codex-shared-pool",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "JoFe2/kaleidosphere-dsh-plugin",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ChuShiZ/dsh-archive-manager",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "LilycleHeart/dsh-liuli-ui-enhance",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "nmbzth/dsh_update_check",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "SiriusWJ/dsh-lite-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "yhfgyyf/dsh-tui-app",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "m1khal3v/dsh-llm-key-rotation",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "ai-yucheng/dsh-audio-copilot",
+"stars": 1,
+"cat": "voice-audio"
+},
+{
+"repo": "SH-9999/what-was-that",
+"stars": 1,
+"cat": "other"
+},
+{
+"repo": "CNSeniorious000/dsh-generative-ui",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "shellexy/dsh-webviewgtk",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "piggy00544/dsh-upgrade-kit",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "cxdyun/dsh-skills-marketplace",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "kevinshi3200/persona-auditor",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "YLifeOnlyOnce/dsh-calendar",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "codingayice/dsh-interview",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "Mempemp/DSH-CodeEditor_BSL",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "alpacachen/dsh-kanban",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "GeekRicardo/dsh-convmap",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "omdsh-dev/dsh-tool-tariff",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "SUJIElearning/dsh-search-free-nokey",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "helibeiqi/dsh-time-travel",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "duhu2000/dsh-mcp-connector",
+"stars": 1,
+"cat": "mcp-tooling"
+},
+{
+"repo": "hytime/dsh-client-ui-shortcuts",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "CN-WenYu/dsh-git-conventions",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "GeekRicardo/claude-in-dsh",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "DevRico003/dsh-verifier-gate",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "infosave2007/cortiq-router",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "skymecode/dsh-deep-diving",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "jiaererw/dsh-plugin-chrome",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "kee0012/dsh-sidebar-panel",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ssjob123/dsh-file-panel-left",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Yinbenfeng/dsh-plugin-quick-draw-Tool-",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "SCT192221/dsh-multimodal",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "MochiNek0/dsh-web-search-free",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "Guyao146/dsh-better-model-thinking-control",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "MingYU-kalo/dsh-https-fix",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "zuodazuoqiang001/dsh-pet",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "z-col/dsh-workspace-groups",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "NokorinNishikino/kidai-plugin-remote-client",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "NokorinNishikino/kidai-plugin-remote",
+"stars": 1,
+"cat": "remote-mobile"
+},
+{
+"repo": "terwer/dsh-siyuan-note",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "NokorinNishikino/kidai-snapshot-guard",
+"stars": 1,
+"cat": "security-governance"
+},
+{
+"repo": "PaoMoXML/dsh-paste-names",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "zdk119746/dsh-llm-workbuddy",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "aaPanel/btpanel-dsh",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "orpheus0829/dsh-identity-control",
+"stars": 1,
+"cat": "ide-integration"
+},
+{
+"repo": "joshryandavis/dsh-llm-kiro",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "lasdrder0705/dsh-pro-vision",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "xia-sc/dsh-cc-studio",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Fish121380/auto-mouse",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "zx490336534/dsh-spec-collab",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "oxgbl/dsh-deepseek-price",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "ShanHaiFish/Shimmering-dsh-plugins",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Ruiming-cn/dsh-better-at",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "lengzhanbao/dsh-taffy-theme",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "TNTsama11/dsh-tool-vision",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "yanzhao77/deepseek_software",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Mutx163/dsh-model-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "zhy201810576/dsh-zh-reasoning",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Xyz10088/dsh-quick-restart",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "whateverboy2333/dsh-flat-teams",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "dingdongji-hub/dsh-atom-commune-skin",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "liznee/dsh-speech-input",
+"stars": 1,
+"cat": "voice-audio"
+},
+{
+"repo": "Nzssm1/dsh-a-stock-five-dimension",
+"stars": 1,
+"cat": "vertical-domain"
+},
+{
+"repo": "demo007x/dsh-web-mermaid",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "kob-repo/dsh-whale-celebration",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ShanHaiFish/dsh-plugin-manager-lite",
+"stars": 1,
+"cat": "market-curation"
+},
+{
+"repo": "ne-ilyxa/dsh-session-drafts",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "cheesehaqi/dsh-qq-onebot-bridge",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "Kreatur-ECHO/dsh-task-complete-notifier",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "Alain-Prot0s5/dsh-screenshot",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "kaaaaahn/dsh-vision",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "nicearrack/dsh-translator",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "aixlb/dsh-bcc",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "awesimon/research-agent-harness",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "kezboardpj/dsh-btw",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "nixiaohao/DeepSeek-Desktop-Studio",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "chenjie1129/remotion-video-plugin",
+"stars": 1,
+"cat": "ide-integration"
+},
+{
+"repo": "sha2kyou/dsh-settings-about",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "ZoeHao2026/dsh-standalone-chat",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "peterwangze/dsh-reasoning-level",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "EIGHTfs/dsh-git-rescue",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Qx002/dsh-group-chat",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Hilbert-beinghappy/dsh-plugin-auxiliary-runtime",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "Kytolly/dsh-evolve-in-git",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "meng-114/dsh-image-tiler",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "Ruiming-cn/dsh-more-session-operations",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "luxueliu/luxueliu-reasoning-efforts",
+"stars": 1,
+"cat": "model-provider"
+},
+{
+"repo": "ShanHaiFish/dsh-check-for-updates",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "delef/dsh-free-web-search",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "pmorgan3/deep-tui",
+"stars": 1,
+"cat": "tui-terminal"
+},
+{
+"repo": "pg527322814/dsh-bayes-predict",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "TUcookie/dsh-offpeak-saver",
+"stars": 1,
+"cat": "orchestration-workflow"
+},
+{
+"repo": "zhangdong456/dsh-prompt-presets",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "guyuefangyuanl/dsh-memory",
+"stars": 1,
+"cat": "memory-knowledge"
+},
+{
+"repo": "ai-yucheng/dsh-composer-image-tools",
+"stars": 1,
+"cat": "vision-multimodal"
+},
+{
+"repo": "log-li/dsh-auto-mode",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "guyuefangyuanl/deepseek-better-harness",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "enterhalf/dsh-web-network-optimizer",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "ExploringBB/dsh-plugin-restart-desktop",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "cokiscarazo-rgb/dsh-plugin-message-timeline-navigation",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "Elave-66/dsh-blue-sea-launcher",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "ericw0315/dsh-usage-lite",
+"stars": 1,
+"cat": "usage-billing"
+},
+{
+"repo": "fuxin123z/dsh-skill-manage",
+"stars": 1,
+"cat": "skills-presets"
+},
+{
+"repo": "SeerableOfficial/dsh-web-search-toggle",
+"stars": 1,
+"cat": "search-web"
+},
+{
+"repo": "oxgbl/dsh-no-cmd-launcher",
+"stars": 1,
+"cat": "desktop-client"
+},
+{
+"repo": "PenguinAndy/dsh-ezcommit-plugin",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "chidaic/dsh-agent-notify",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "sakthiveltofficial/dsh-git-plugins",
+"stars": 1,
+"cat": "eng-git-ci"
+},
+{
+"repo": "Chu-m/dsh-chat-continue",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "FloatingLifeTL/dsh-plugin-session-manager-custom",
+"stars": 1,
+"cat": "session-ui-ux"
+},
+{
+"repo": "YiMlT/dsh-notify-yimit",
+"stars": 1,
+"cat": "im-notify"
+},
+{
+"repo": "liznee/dsh-file-resource",
+"stars": 1,
+"cat": "file-workspace"
+},
+{
+"repo": "botaochen840-lgtm/fatfish-pet-smart-companion",
+"stars": 1,
+"cat": "fun-novelty"
+},
+{
+"repo": "Jokasa7/dsh-product-subagent-console",
+"stars": 1,
+"cat": "orchestration-workflow"
+}
+]

@@ -4,7 +4,7 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 
 - 评估日期：2026-08-22
 - 数据快照：`data/repos.jsonl`（9,393 个 `dsh-plugin` topic 仓库元数据，覆盖率 89%）
-- 深读范围：star ≥ 10 的全部 700 个仓库 README（`data/digest.txt` 为逐个分类结果）
+- 深读范围：star ≥ 10 的全部 700 个仓库 README（`data/digest.txt`）；「活跃×有星」交集 1,150 个仓库 README 逐个读取（`data/active_inventory.md`）
 
 ## 核心发现（TL;DR）
 
@@ -23,6 +23,8 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 2. **star 榜单不可直接选型**：reactive-resume（41k★）、PicGo（27k★）、NocoBase（23.7k★）等知名无关项目靠打 topic 标签占据榜首（"蹭 tag"），top 700 中约 15% 属此类或空壳。
 3. **最强四条产品线**：记忆/知识库、视觉桥接（DeepSeek V4 纯文本 → 配眼睛）、订阅/Provider 接入、远程/移动访问；安全类是被低估的洼地；桌面壳与用量挂件已严重同质化。
 4. **大量高星项目已停滞**：EverOS（12.3k★）、petdex（3.9k★）、dsh-pocket（393★）等未适配 rc.1，详见报告"stalled despite stars"名单。
+5. **（v2 增补）适配型独立产品主导了 star 榜**：按"是否为 DSH 而建"重分后，top 700 中 62 个适配型仓库拿走 61% 的星；剔除 DSH 本体后 star 榜前 11 名全部不是原生插件，第一个原生要数到第 12 名（anywhere-labs 桌面端，18k★）。纯原生视角的插件目录与重排榜单见 [report/DSH原生插件整理.md](report/DSH原生插件整理.md)，清单数据为 `data/native_plugins.jsonl`（538 个，`scripts/classify_native.py` 可复现）。
+6. **（v3 增补）「活跃×有星」真实内核 1,150 个已逐个理完**：最大品类是会话/Web UI 微增强（169 个，官方 UI 只交付了 MVP）；PerryLink 一人以 24 个活跃仓库成为最高产工坊；安全类从洼地变成 41 个活跃仓库的完整谱系；娱乐层（40 个桌宠/皮肤）全部存活于 rc.1 之后。逐仓 27 品类清单见 [report/活跃插件全量清单分析.md](report/活跃插件全量清单分析.md) 与 `data/active_inventory.md`。
 
 ## 统计图
 
@@ -40,15 +42,21 @@ DeepSeek Harness（DSH / dsh）插件生态的独立基准评估仓库：一份�
 
 ```
 ├── report/
-│   └── DSH插件生态评估报告.md   # 完整评估报告（品类全景/活跃度/Remote 专项/建议）
+│   ├── DSH插件生态评估报告.md   # v1 完整评估报告（品类全景/活跃度/Remote 专项/建议）
+│   ├── DSH原生插件整理.md       # v2 原生视角重整（剔除适配型独立产品）
+│   └── 活跃插件全量清单分析.md   # v3 「活跃×有星」1,150 个逐仓分析
 ├── data/
 │   ├── repos.jsonl              # 9,393 仓库元数据快照（GitHub API 抓取）
 │   ├── stats.txt                # 全量统计（星标金字塔/语言/一次性比率/锚点活跃率）
 │   ├── digest.txt               # 700 个 README 的一行式摘要+分类（人工校正基础）
-│   └── analysis.json            # 机器预分类结构化结果
+│   ├── analysis.json            # 机器预分类结构化结果
+│   ├── native_plugins.jsonl     # v2 原生插件清单（538 个，按 star 降序）
+│   ├── active_inventory.md      # v3 1,150 个活跃插件逐仓分类清单（27 品类）
+│   └── active_inventory.json    # 同上的结构化版本
 ├── charts/                      # 统计图（scripts/make_charts.py 生成）
 ├── scripts/
-│   └── make_charts.py           # 从 data/ 重新生成全部图表
+│   ├── make_charts.py           # 从 data/ 重新生成全部图表
+│   └── classify_native.py       # v2 原生/适配/无关三桶分类（可复现）
 └── skills/github-topic-audit/   # 可复用审计 Skill（见下）
 ```
 
