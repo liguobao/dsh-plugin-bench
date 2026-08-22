@@ -38,9 +38,14 @@ results:
 
 - GitHub search caps **every query at 1000 results** regardless of pagination.
   The script slices star buckets, then recursively bisects any >1000 bucket by
-  creation-date range.
+  creation-date range. (Logic covered by an offline unit test:
+  `python3 scripts/test_bisection.py` — no network, no rate limit.)
 - README downloads parallelize x8 and skip already-downloaded files, so reruns
   are cheap.
+
+If gh API calls start failing in long runs, you have hit GitHub's *secondary*
+rate limit (not the 30/min primary one): stop, wait a few minutes, rerun —
+the script resumes where it left off (jsonl dedupes, READMEs skip existing).
 
 Output: `audit-<topic>/repos.jsonl` (full metadata) + `readmes/` (top N by
 stars, first 8KB each). Compare the enumerated count against
