@@ -17,13 +17,15 @@ from datetime import date, datetime, timedelta, timezone
 
 CAP = 1000  # GitHub search hard limit per query
 
-def gh_api(path, retries=3):
+SEARCH_INTERVAL = 2.5  # authed search limit is 30 req/min; ~24/min stays under it
+
+def gh_api(path, retries=4):
     for i in range(retries):
         r = subprocess.run(["gh", "api", path], capture_output=True, text=True)
         if r.returncode == 0:
             return json.loads(r.stdout)
-        # rate limit / transient secondary rate limit -> back off
-        time.sleep(10 * (i + 1))
+        # rate limit / transient secondary rate limit -> back off and retry
+        time.sleep(20 * (i + 1))
     return None
 
 def search(query, page):
@@ -55,8 +57,8 @@ def fetch_slice(query, label, out, seen, log):
         if len(d.get("items", [])) < 100:
             break
         page += 1
-        time.sleep(1.5)
-    time.sleep(1.5)
+        time.sleep(SEARCH_INTERVAL)
+    time.sleep(SEARCH_INTERVAL)
     return got
 
 def fetch_bucket(topic, bucket, label, out, seen, log, quick):
