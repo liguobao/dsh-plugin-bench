@@ -235,12 +235,29 @@ star ≥ 10 活跃子集（305 个）的结构差异：市场/目录（29）与�
 | npm 周下载总量 | **758,062 次** |
 | npm 下载分布 | 中位数 **0**；周下载 <10 的 366 个（65%）；top10 占 66% |
 
-**Release 下载榜（剔除 PicGo）**：open-design 15.8 万、BrowserSkill 12.9 万、openpencil 5.3 万、BitFun 4 万、dashi-taskboard 3.9 万、anywhere-labs 桌面端 3.8 万。
-**npm 周下载榜**：dshmarket 15.5 万、官方 dsh-better-sidebar 9.4 万、@liustack/modlens 8.9 万、dsh-vision-router 3.5 万、dsh-TUI 2.9 万、dsh-vision-toolkit 2.7 万、claude-flow(ruflo) 2.3 万、dsh-agent-teams 1.9 万、dsh-context 1.8 万、官方 dsh-mnemon 1.2 万。
+**Release 下载榜（全量口径，剔除蹭 tag 的 PicGo）**：open-design 15.8 万、BrowserSkill 12.9 万、openpencil 5.3 万、BitFun 4 万、dashi-taskboard 3.9 万、anywhere-labs 桌面端 3.8 万——**前五名全部是适配型独立产品**（先有产品后接 DSH，见第六节），其下载量不反映 DSH 生态本身的分发。
+**npm 周下载榜（全量口径）**：dshmarket 15.5 万、官方 dsh-better-sidebar 9.4 万、@liustack/modlens 8.9 万、dsh-vision-router 3.5 万、dsh-TUI 2.9 万、dsh-vision-toolkit 2.7 万、claude-flow(ruflo，适配型) 2.3 万、dsh-agent-teams 1.9 万、dsh-context 1.8 万、官方 dsh-mnemon 1.2 万。
+
+### 原生口径修正（236 个「原生 × 活跃 × 有星」）
+
+按第六节三桶名单过滤后，**原生插件的分发数据才是生态真实体温**：
+
+| 指标 | 原生（236） | 对比全量（1,150） |
+|---|---|---|
+| 有 Release | 166（**70%**） | 56% |
+| Release 总下载 | **152,432**（仅为全量的 14%） | 648,328（剔 PicGo） |
+| 已发布 npm | 149（**63%**） | 49% |
+| npm 周下载 | **578,909**（占全量的 76%） | 758,062 |
+| top10 集中度 | release 87% / npm 84% | 88% / 66% |
+
+**原生 Release 下载榜**：anywhere-labs 桌面端 3.8 万、ningbainb 桌面版 2.6 万、dsh-super-injector 2.3 万、xiincs 桌面版 1.3 万、fufankeji studio 7.7k、oh-dsh 7.6k、hairyf 5.2k——除注入器外清一色桌面客户端，印证 Release 是二进制分发渠道。
+**原生 npm 周下载榜**：dshmarket 15.5 万、官方 dsh-better-sidebar 9.4 万、modlens 8.9 万、dsh-vision-router 3.5 万、dsh-TUI 2.9 万、dsh-vision-toolkit 2.7 万、dsh-agent-teams 1.9 万、dsh-context 1.8 万、官方 dsh-mnemon 1.2 万、dsh-cost-meter 1 万——与全量榜几乎一致（适配型在 npm 渠道竞争力弱，claude-flow 除外）。
+
+覆盖说明：三桶名单只判定到 top 701；1–9★ 活跃长尾（845 个）未逐一判桶。长尾中已发现反例：dsh-omni-router（2★，npm 周下载 1.1 万）按命名与定位应属原生但不在名单内——低星高装机是长尾的真实形态，原生 npm 总量实际略被低估。
 
 **品类交叉**：桌面客户端 release 率最高（88%，需附安装包）；市场/策展最低（30%，纯索引不需分发）；npm 发布率工程化类最高（eng-git-ci 67%）。官方仓库表现突出——dsh-better-sidebar 与 dsh-mnemon 双双进入 npm 周下载前十。
 
-**解读**：npm 周下载 75.8 万 > release 下载 64.8 万，**主分发渠道是 npm**（`dsh plugin add` 走 npm），Release 主要服务桌面端/APP 等需二进制的仓库。两个"长尾死区"：①416 个仓库写好 package.json 却从未发布——装不上的"插件"；②379 个 release 零附件下载。**分发完成度与代码活跃度严重脱节**——"活跃"插件中约三分之一实际不可安装或无人安装；npm 周下载中位数为 0 意味着即便发布了，多数也无人通过正式渠道安装（社区大量经 `github:owner/repo` 直装）。
+**解读**：npm 周下载 75.8 万 > release 下载 64.8 万，**主分发渠道是 npm**（`dsh plugin add` 走 npm），Release 主要服务桌面端/APP 等需二进制的仓库（原生 release 榜被桌面客户端包揽）。两个"长尾死区"：①416 个仓库写好 package.json 却从未发布——装不上的"插件"；②379 个 release 零附件下载。**分发完成度与代码活跃度严重脱节**——"活跃"插件中约三分之一实际不可安装或无人安装；npm 周下载中位数为 0 意味着即便发布了，多数也无人通过正式渠道安装（社区大量经 `github:owner/repo` 直装）。原生过滤后进一步看到：**Release 下载的 86% 归属非原生产品**（open-design、BrowserSkill 等先有产品后有 tag），而 npm 下载的 76% 属于原生插件——npm 是原生生态的血管，Release 榜是适配型产品的秀场。
 
 ## 十二、逐行理完 1,150 后的新发现
 
