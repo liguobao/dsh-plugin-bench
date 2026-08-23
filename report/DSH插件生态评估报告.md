@@ -220,7 +220,29 @@ star ≥ 10 活跃子集（305 个）的结构差异：市场/目录（29）与�
 荣誉提及：modsearch（221，2 月元老）、hairyf 桌面版（907，Tauri 5MB）、官方 dsh-mnemon（169）、liguobao/deepseek-harness-remote（48，唯一端到端加密远程方案）。omdsh-dev 官方全家桶（17 个全适配）可视为第 0 名。
 出局警示：dsh-anchored-standard（3.7k）、dsh-pocket（393）——高星未适配 rc.1。
 
-## 十一、逐行理完 1,150 后的新发现
+## 十一、分发渠道体检（1,150 活跃仓库的 Release 与 npm，2026-08-23 增补）
+
+对全部 1,150 个「活跃 × 有星」仓库逐个检查 GitHub Release 与 npm 包（逐仓数据：`data/dist_check.jsonl`，2,300 次 gh API + npm registry 查询）：
+
+| 指标 | 数值 |
+|---|---|
+| 有 GitHub Release | **642（56%）**，其中 512 个最新 release 在 8/20 后 |
+| Release 附件总下载量 | 1,082,122 次；剔除蹭 tag 的 PicGo（43.4 万）后 **648,328 次** |
+| 有附件下载的 release | 仅 263/642——四成 release 打了 tag 却没附产物，379 个零下载 |
+| 下载集中度 | top10 仓库占 88% |
+| 有 package.json | 983（85%）；无包名的 167 个为纯 profile/皮肤/技能仓库 |
+| 已发布 npm | **567**（有包名者的 58%，全体 49%）；**416 个写好包名却从未 publish** |
+| npm 周下载总量 | **758,062 次** |
+| npm 下载分布 | 中位数 **0**；周下载 <10 的 366 个（65%）；top10 占 66% |
+
+**Release 下载榜（剔除 PicGo）**：open-design 15.8 万、BrowserSkill 12.9 万、openpencil 5.3 万、BitFun 4 万、dashi-taskboard 3.9 万、anywhere-labs 桌面端 3.8 万。
+**npm 周下载榜**：dshmarket 15.5 万、官方 dsh-better-sidebar 9.4 万、@liustack/modlens 8.9 万、dsh-vision-router 3.5 万、dsh-TUI 2.9 万、dsh-vision-toolkit 2.7 万、claude-flow(ruflo) 2.3 万、dsh-agent-teams 1.9 万、dsh-context 1.8 万、官方 dsh-mnemon 1.2 万。
+
+**品类交叉**：桌面客户端 release 率最高（88%，需附安装包）；市场/策展最低（30%，纯索引不需分发）；npm 发布率工程化类最高（eng-git-ci 67%）。官方仓库表现突出——dsh-better-sidebar 与 dsh-mnemon 双双进入 npm 周下载前十。
+
+**解读**：npm 周下载 75.8 万 > release 下载 64.8 万，**主分发渠道是 npm**（`dsh plugin add` 走 npm），Release 主要服务桌面端/APP 等需二进制的仓库。两个"长尾死区"：①416 个仓库写好 package.json 却从未发布——装不上的"插件"；②379 个 release 零附件下载。**分发完成度与代码活跃度严重脱节**——"活跃"插件中约三分之一实际不可安装或无人安装；npm 周下载中位数为 0 意味着即便发布了，多数也无人通过正式渠道安装（社区大量经 `github:owner/repo` 直装）。
+
+## 十二、逐行理完 1,150 后的新发现
 
 1. **PerryLink 是最高产的"单人插件工坊"**：活跃集 24 个仓库（auto-review、permission-rules、memento、checkpoint-rewind、lsp-actions、defend、local-ai……），全部适配 rc.1——一个人的 JetBrains。
 2. **omdsh-dev 官方线 30+ 个活跃仓库全适配 rc.1**——维护纪律明显好于社区平均。
@@ -229,7 +251,7 @@ star ≥ 10 活跃子集（305 个）的结构差异：市场/目录（29）与�
 5. **原生记忆竞争在 rc.1 前一周才爆发**（全部创建于 08-05 之后）——底座之争让位外部平台后，原生层转向治理与整理。
 6. **峰谷计费是分时定价催生的电费焦虑赛博复刻**（≥7 个错峰插件：offpeak-saver、tidewatch、peak-pricing 等）。
 
-## 十二、风险与建议
+## 十三、风险与建议
 
 **生态级风险**：① 供应链风险敞口 vs 安全装机量失衡（原生安全无 200★+ 且适配 rc.1 者）；② 48% 一次性仓库 + 下次破坏性变更预计再淘汰一批（rc.1 已示范）；③ 灰色 Provider 插件随时可能因官方收紧批量失效；④ 策展目录普遍虚报收录量，选型看验证手段而非收录量。
 
@@ -243,6 +265,6 @@ star ≥ 10 活跃子集（305 个）的结构差异：市场/目录（29）与�
 
 - 抓取时间：2026-08-22（UTC+8）；rc.1 分界时间戳 2026-08-21T07:12:39Z
 - 工具：GitHub Search/Repos API（gh CLI）+ 分类脚本（离线单测覆盖枚举逻辑）
-- `data/repos.jsonl`（9,393 元数据）｜`data/digest.txt`（700 摘要）｜`data/analysis.json`（预分类）｜`data/active_inventory.md|.json`（1,150 × 27 品类）｜`data/native_plugins.jsonl`（538 原生）
+- `data/repos.jsonl`（9,393 元数据）｜`data/digest.txt`（700 摘要）｜`data/analysis.json`（预分类）｜`data/active_inventory.md|.json`（1,150 × 27 品类）｜`data/native_plugins.jsonl`（538 原生）｜`data/dist_check.jsonl`（1,150 × Release/npm 体检）
 - 复现：`python3 scripts/classify_native.py`（三桶）；`python3 scripts/make_charts.py`（图表）；审计全流程见 `skills/github-topic-audit/`
 - 本仓库报告与脚本：MIT；`data/repos.jsonl` 为 GitHub API 公开元数据快照，版权归各仓库所有者
