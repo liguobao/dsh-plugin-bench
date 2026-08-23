@@ -26,7 +26,7 @@ native-and-active worth tracking"):
 
 ```
 full topic  →  enumerated  →  anchor-active  →  active × starred
-           →  README-read set  →  native bucket  →  final watchlist
+           →  README-read set  →  native bucket  →  dist check  →  watchlist
 ```
 
 ## Workflow
@@ -130,14 +130,36 @@ creation date (a self-described "first X plugin" repo is a good marker).
   vs the 1-9★ active tail (DSH: infrastructure captures stars;
   micro-enhancements don't).
 
-### 8. Deep-dive the user's niche
+### 8. Distribution-channel check (`scripts/check_dist.py`)
+
+Star counts say nothing about installability. For the active set, check
+whether each repo has GitHub releases / asset downloads and whether its
+package.json name is actually published on the registry, with weekly
+download counts:
+
+```bash
+python3 check_dist.py audit-<topic> --repos active_set.jsonl \
+    --native-file audit-<topic>/native_plugins.jsonl
+```
+
+Always print **both** the all-repos and native-only summaries — in the DSH
+audit, 86% of release downloads belonged to adapted pre-existing products
+(open-design, BrowserSkill...) while 76% of npm downloads belonged to native
+plugins: the registry is the native ecosystem's bloodstream, the release
+chart is the adapted products' showcase. Report the two dead zones (named-
+but-never-published packages, zero-download releases) and note that a median
+weekly download of 0 means the community installs via `github:owner/repo`
+directly — registry counts only measure the head. Watch the download
+leaderboards for low-star/high-install repos your curated lists missed.
+
+### 9. Deep-dive the user's niche
 
 Enumerate the niche's repos specifically, fetch READMEs fully, and build a
 comparison table — stars, anchor pass, technical approach, gaps. Rank by
 anchor-pass + design, not stars alone. Disclose conflict of interest if the
 user owns a plugin in the niche.
 
-### 9. Write ONE consolidated report
+### 10. Write ONE consolidated report
 
 Single document, skeleton in [references/classification.md](references/classification.md).
 Non-negotiables:

@@ -92,6 +92,30 @@ the anchor) and *borderline* (pushed hours before it).
   author with 20+ active repos ("workshop" pattern) is a finding; official-org
   follow-up discipline vs community average is another.
 
+## Distribution channels: what download counts actually measure
+
+Check installs AFTER the native split, never before — the two channels tell
+opposite stories (DSH numbers):
+
+- **Package registry (npm) downloads skew native**: 76% of weekly npm
+  downloads belonged to native plugins; the registry is the ecosystem's
+  bloodstream because `plugin add` resolves package names.
+- **GitHub Release downloads skew adapted**: 86% of release downloads
+  belonged to pre-existing products (open-design 158k, BrowserSkill 129k)
+  whose users never chose "a DSH plugin". Releases serve repos shipping
+  binaries — in the native bucket the release chart was wall-to-wall desktop
+  clients.
+- **Two dead zones** reveal friction: named-but-never-published packages
+  (DSH: 416 — "active" plugins you cannot install) and zero-asset-download
+  releases (DSH: 379 — tags without artifacts).
+- **Registry downloads only measure the head**: DSH median weekly downloads
+  was 0 — the tail installs via `github:owner/repo` direct references. Never
+  report registry medians as "most plugins have no users"; report them as
+  "the community bypasses the registry outside the head".
+- **Low-star/high-install repos are real**: DSH found a 2-star repo with
+  11k weekly downloads missing from the curated native list (which only
+  covered the star top-N). Scan download leaderboards for list gaps.
+
 ## Consolidated report skeleton (single document)
 
 1. Header: method + coverage + anchor definition + data-file pointers
@@ -105,14 +129,16 @@ the anchor) and *borderline* (pushed hours before it).
 8. Native/adapted/unrelated three-bucket table + exclusion groups
 9. Category panorama: full-count table on the active set + native product-
    line detail; tier-shift observation
-10. Niche deep-dive (if user has a stake): comparison table + disclosure
-11. Productive/commoditized/toy/off-topic split
-12. Top-N native picks (native + anchor-passing + irreplaceable; note
+10. Distribution check: all-repos vs native-only tables, both leaderboards
+    (flag adapted entries), dead zones, registry-vs-release channel split
+11. Niche deep-dive (if user has a stake): comparison table + disclosure
+12. Productive/commoditized/toy/off-topic split
+13. Top-N native picks (native + anchor-passing + irreplaceable; note
     honorables and explicit "out on activity" warnings)
-13. Findings from the line-by-line read (workshop authors, official-org
+14. Findings from the line-by-line read (workshop authors, official-org
     discipline, emerging sub-categories, dead-end routes)
-14. Risks & recommendations (users vs authors), keyed to unfilled gaps
-15. Appendix: data files, reproduction commands, license note for snapshots
+15. Risks & recommendations (users vs authors), keyed to unfilled gaps
+16. Appendix: data files, reproduction commands, license note for snapshots
 
 Keep ONE document; fold earlier partial reports into it rather than linking
 sibling versions.
