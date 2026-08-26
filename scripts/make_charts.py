@@ -51,7 +51,7 @@ WHITE = "#FFFFFF"
 
 def configure_style() -> None:
     available = {font.name for font in font_manager.fontManager.ttflist}
-    for name in ("PingFang SC", "Hiragino Sans GB", "Heiti SC", "Arial Unicode MS"):
+    for name in ("Noto Sans CJK SC", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Arial Unicode MS"):
         if name in available:
             plt.rcParams["font.family"] = [name, "DejaVu Sans"]
             break
