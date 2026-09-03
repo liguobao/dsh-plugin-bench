@@ -40,6 +40,14 @@ DIRECT = {
 MANUAL_CATEGORY_OVERRIDES = {
     "gychen-NJU/dsh-overleaf": "vertical-domain",
     "sperictao/dsh-pro-max": "desktop-client",
+    # Strict remote-access scope: another device operates a running DSH over
+    # the network. Remote workspaces, instance ops, and plugin rescue are not
+    # counted as end-user remote access.
+    "liguobao/ds-harness-remote": "remote-access",
+    "ZhangFengshun/dsh-remote-ssh": "file-workspace",
+    "shendeguize/Remote_DSH_Center": "orchestration-workflow",
+    "NokorinNishikino/kidai-plugin-remote": "security-governance",
+    "NokorinNishikino/kidai-plugin-remote-client": "security-governance",
 }
 
 RULES = [
