@@ -139,7 +139,8 @@ if __name__ == "__main__":
             todo = [json.loads(l)["repo"] for l in open(args.repos)]
     else:
         todo = [json.loads(l)["repo"] for l in open(os.path.join(args.audit_dir, "repos.jsonl"))
-                if json.loads(l)["stars"] >= args.min-stars]
+                if json.loads(l)["stars"] >= args.min_stars]
+    requested = set(todo)
 
     done = set()
     if os.path.exists(OUT):
@@ -157,7 +158,9 @@ if __name__ == "__main__":
             if (i + 1) % 100 == 0:
                 print(f"{i+1}/{len(todo)} {time.time()-t0:.0f}s", flush=True)
 
-    rows = [json.loads(l) for l in open(OUT)]
+    # A resumable cache can contain repositories from an older requested set.
+    # Keep those rows cached, but exclude them from the current summary.
+    rows = [json.loads(l) for l in open(OUT) if json.loads(l)["repo"] in requested]
     summarize(rows, "ALL repos")
     if args.native_file and os.path.exists(args.native_file):
         native = {json.loads(l)["repo"] for l in open(args.native_file)}

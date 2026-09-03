@@ -1,58 +1,58 @@
-total unique repos: 5800
-stars 100+: 211
-stars 20-99: 308
-stars 5-19: 1054
-stars 1-4: 2455
-stars 0: 1772
-languages: [('JavaScript', 3172), ('TypeScript', 1916), ('Python', 305), ('Rust', 59), ('HTML', 43), ('Shell', 39)]
-one-shot (pushed only on creation day): 2302/5800 = 39.7%
-no description: 498/5800
-archived: 18
+total unique repos: 13321
+stars 100+: 252
+stars 20-99: 344
+stars 5-19: 1308
+stars 1-4: 6637
+stars 0: 4780
+languages: [('JavaScript', 7608), ('TypeScript', 4402), ('Python', 518), ('Rust', 103), ('HTML', 88), ('PowerShell', 86)]
+one-shot (pushed only on creation day): 5624/13321 = 42.2%
+no description: 1405/13321
+archived: 50
 
-activity anchor (breaking change @ 2026-08-21T07:12:39Z):
-  100+: 175/211 = 82.9%
-  20-99: 203/308 = 65.9%
-  5-19: 473/1054 = 44.9%
-  1-4: 1224/2455 = 49.9%
-  0: 668/1772 = 37.7%
-  OVERALL: 2743/5800 = 47.3%
+activity anchor (breaking change @ 2026-09-01T15:45:07Z):
+  100+: 117/252 = 46.4%
+  20-99: 108/344 = 31.4%
+  5-19: 218/1308 = 16.7%
+  1-4: 607/6637 = 9.1%
+  0: 453/4780 = 9.5%
+  OVERALL: 1503/13321 = 11.3%
 
 README-read repos: 700
 category pre-pass (NEEDS MANUAL CORRECTION via digest.txt):
-  eng-quality          291
-  model-provider       120
+  eng-quality          295
+  model-provider       106
   ui-theme             39
-  desktop-client       35
-  context-search       30
+  desktop-client       38
+  context-search       33
+  security             28
   market-curation      26
-  remote-mobile        25
-  usage-billing        24
-  security             24
-  memory-knowledge     18
+  usage-billing        23
+  memory-knowledge     20
   office-docs          16
-  vision               14
-  notify-im            10
+  remote-access        16
+  vision               15
+  notify-im            11
   skills-pack          9
-  orchestration        8
+  mobile-client        7
+  orchestration        7
   fun-novelty          7
-  voice-audio          3
-  vertical-domain      1
+  voice-audio          4
 category x anchor cross-tab (maintenance discipline by category):
-  eng-quality          198/291 = 68%
-  model-provider       67/120 = 56%
-  ui-theme             26/39 = 67%
-  desktop-client       25/35 = 71%
-  context-search       22/30 = 73%
-  market-curation      16/26 = 62%
-  remote-mobile        19/25 = 76%
-  usage-billing        18/24 = 75%
-  security             15/24 = 62%
-  memory-knowledge     13/18 = 72%
-  office-docs          13/16 = 81%
-  vision               12/14 = 86%
-  notify-im            7/10 = 70%
-  skills-pack          5/9 = 56%
-  orchestration        5/8 = 62%
-  fun-novelty          4/7 = 57%
-  voice-audio          2/3 = 67%
-  vertical-domain      0/1 = 0%
+  eng-quality          117/295 = 40%
+  model-provider       29/106 = 27%
+  ui-theme             8/39 = 21%
+  desktop-client       16/38 = 42%
+  context-search       12/33 = 36%
+  security             11/28 = 39%
+  market-curation      10/26 = 38%
+  usage-billing        7/23 = 30%
+  memory-knowledge     9/20 = 45%
+  office-docs          5/16 = 31%
+  remote-access        8/16 = 50%
+  vision               3/15 = 20%
+  notify-im            4/11 = 36%
+  skills-pack          1/9 = 11%
+  mobile-client        3/7 = 43%
+  orchestration        3/7 = 43%
+  fun-novelty          2/7 = 29%
+  voice-audio          3/4 = 75%

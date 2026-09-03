@@ -44,6 +44,10 @@ def main():
     ap.add_argument("--product-first", default=None, help="file of repo full_names counted as adapted")
     ap.add_argument("--exclude", action="append", default=[],
                     help="repo to drop entirely (e.g. the core platform repo); repeatable")
+    ap.add_argument("--previous", default=None,
+                    help="previous classification.jsonl used as carry-forward evidence")
+    ap.add_argument("--supplement-active-high", action="store_true",
+                    help="metadata-classify missing star>=10 or anchor-active starred repos")
     args = ap.parse_args()
 
     pf = load_product_first(args.product_first)
@@ -68,9 +72,65 @@ def main():
             cls = "native" if linked(repo, m.get("desc") or "", e.get("first") or "", args.kw) else "unrelated"
         rows.append({"repo": repo, "stars": e["stars"], "cat": e["cat"],
                      "verdict": e.get("verdict"), "created": created,
-                     "desc": (m.get("desc") or "")[:200], "cls": cls})
+                     "desc": (m.get("desc") or "")[:200], "cls": cls,
+                     "classification_source": "current-readme"})
+
+    by_repo = {row["repo"]: row for row in rows}
+    if args.previous and os.path.exists(args.previous):
+        with open(args.previous) as f:
+            for line in f:
+                previous = json.loads(line)
+                repo = previous["repo"]
+                if repo in by_repo or repo not in meta or repo in set(args.exclude):
+                    continue
+                m = meta[repo]
+                row = dict(previous)
+                row.update({
+                    "stars": m.get("stars", 0),
+                    "created": (m.get("created") or "")[:10],
+                    "desc": (m.get("desc") or "")[:200],
+                    "classification_source": "previous-carry-forward",
+                })
+                rows.append(row)
+                by_repo[repo] = row
+
+    if args.supplement_active_high:
+        if not args.anchor:
+            ap.error("--supplement-active-high requires --anchor")
+        for repo, m in meta.items():
+            if repo in by_repo or repo in set(args.exclude):
+                continue
+            if m.get("stars", 0) < 10 and not (
+                m.get("stars", 0) >= 1 and m.get("pushed", "") >= args.anchor
+            ):
+                continue
+            created = (m.get("created") or "")[:10]
+            if repo in pf:
+                cls = "adapted"
+            elif created < args.start:
+                cls = "adapted"
+            else:
+                cls = "native" if linked(
+                    repo, m.get("desc") or "", "", args.kw
+                ) else "unrelated"
+            row = {
+                "repo": repo,
+                "stars": m.get("stars", 0),
+                "cat": "unclassified",
+                "verdict": None,
+                "created": created,
+                "desc": (m.get("desc") or "")[:200],
+                "cls": cls,
+                "classification_source": "metadata-only",
+            }
+            rows.append(row)
+            by_repo[repo] = row
 
     native = sorted((r for r in rows if r["cls"] == "native"), key=lambda x: -x["stars"])
+    all_out = os.path.join(args.audit_dir, "classification.jsonl")
+    with open(all_out, "w") as f:
+        for r in sorted(rows, key=lambda x: -x["stars"]):
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
     out = os.path.join(args.audit_dir, "native_plugins.jsonl")
     with open(out, "w") as f:
         for r in native:
@@ -85,6 +145,7 @@ def main():
     board = sorted(rows, key=lambda r: -r["stars"])
     first_native = next((i for i, r in enumerate(board) if r["cls"] == "native"), -1)
     print(f"first native on star leaderboard: rank #{first_native + 1}")
+    print(f"wrote {all_out} ({len(rows)} classified)")
     print(f"wrote {out} ({len(native)} native)")
     if args.anchor:
         a = sum(1 for r in native if meta.get(r["repo"], {}).get("pushed", "") >= args.anchor)

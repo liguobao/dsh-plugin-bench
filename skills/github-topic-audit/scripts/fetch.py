@@ -13,23 +13,37 @@ sleeps between search calls; a 10k-repo topic takes a few minutes.
 """
 import argparse, base64, json, os, subprocess, sys, time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 
 CAP = 1000  # GitHub search hard limit per query
+FULL_SLICE_CAP = 100  # one page: avoids unstable pagination on tied sort keys
 
 SEARCH_INTERVAL = 2.5  # authed search limit is 30 req/min; ~24/min stays under it
 
 def gh_api(path, retries=4):
     for i in range(retries):
-        r = subprocess.run(["gh", "api", path], capture_output=True, text=True)
-        if r.returncode == 0:
+        try:
+            r = subprocess.run(
+                ["gh", "api", path], capture_output=True, text=True, timeout=30
+            )
+        except subprocess.TimeoutExpired:
+            r = None
+        if r is not None and r.returncode == 0:
             return json.loads(r.stdout)
+        # Missing repositories and README files are terminal, not transient.
+        if r is not None and "HTTP 404" in r.stderr:
+            return None
         # rate limit / transient secondary rate limit -> back off and retry
         time.sleep(20 * (i + 1))
     return None
 
 def search(query, page):
-    return gh_api(f"search/repositories?q={query}&per_page=100&page={page}")
+    # Explicit ordering keeps pagination stable. GitHub's default best-match
+    # order may reshuffle between pages and silently skip repositories.
+    return gh_api(
+        f"search/repositories?q={query}&per_page=100&page={page}"
+        "&sort=created&order=asc"
+    )
 
 def count(query):
     d = search(query, 1)
@@ -66,21 +80,31 @@ def fetch_bucket(topic, bucket, label, out, seen, log, quick):
     total = count(q)
     if total == 0:
         return
-    if total <= CAP or quick:
+    if quick or total <= FULL_SLICE_CAP:
         fetch_slice(q, label, out, seen, log)
         return
-    # Over the cap: recursively bisect by creation-date range.
-    log(f"  {label}: {total} > {CAP}, bisecting by created date")
-    bisect_range(topic, bucket, date(2008, 1, 1),
-                 datetime.now(timezone.utc).date() + timedelta(days=1),
+    # Full mode uses single-page leaves. Even explicit sort order is unstable
+    # when many repositories share the same creation timestamp, so paginating
+    # a larger leaf can silently skip tied items.
+    log(f"  {label}: {total} > {FULL_SLICE_CAP}, bisecting by created timestamp")
+    bisect_range(topic, bucket, datetime(2008, 1, 1, tzinfo=timezone.utc),
+                 datetime.now(timezone.utc) + timedelta(days=1),
                  label, out, seen, log, depth=0)
 
+def iso_second(dt):
+    """GitHub search accepts ISO-8601 timestamps, which avoid same-day caps."""
+    return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
 def bisect_range(topic, bucket, lo, hi, label, out, seen, log, depth):
-    q = f"topic:{topic}+{bucket}+created:{lo.isoformat()}..{hi.isoformat()}"
+    q = f"topic:{topic}+{bucket}+created:{iso_second(lo)}..{iso_second(hi)}"
     total = count(q)
     if total == 0:
         return
-    if total <= CAP or depth > 9:
+    if total <= FULL_SLICE_CAP:
+        fetch_slice(q, f"{label}[{lo}..{hi}]", out, seen, log)
+        return
+    if hi - lo <= timedelta(seconds=1):
+        log(f"  WARN: {label}[{lo}..{hi}] still has {total} repos within one second")
         fetch_slice(q, f"{label}[{lo}..{hi}]", out, seen, log)
         return
     mid = lo + (hi - lo) / 2
@@ -111,6 +135,8 @@ def main():
                     help="download READMEs for top N repos by stars (0 = skip)")
     ap.add_argument("--quick", action="store_true",
                     help="skip cap-busting bisection (only first 1000 per bucket)")
+    ap.add_argument("--bucket", action="append", default=None,
+                    help="fetch only this GitHub stars qualifier; repeatable")
     args = ap.parse_args()
 
     outdir = args.out or f"audit-{args.topic}"
@@ -122,10 +148,12 @@ def main():
 
     log(f"== enumerating topic:{args.topic} (quick={args.quick})")
     seen = set()
-    buckets = ["stars:>10000", "stars:1000..10000", "stars:500..999",
-               "stars:200..499", "stars:100..199", "stars:50..99",
-               "stars:20..49", "stars:10..19", "stars:5..9", "stars:1..4",
-               "stars:0"]
+    buckets = args.bucket or [
+        "stars:>10000", "stars:1000..10000", "stars:500..999",
+        "stars:200..499", "stars:100..199", "stars:50..99",
+        "stars:20..49", "stars:10..19", "stars:5..9", "stars:1..4",
+        "stars:0",
+    ]
     for b in buckets:
         fetch_bucket(args.topic, b, b, out, seen, log, args.quick)
         log(f"  cumulative unique: {len(seen)}")

@@ -21,7 +21,8 @@ CAT_RULES = [
     ("memory-knowledge", ["memory", "记忆", "knowledge", "知识库", "rag", "embedding", "context database"]),
     ("context-search", ["context", "上下文", "search", "搜索", "retrieval", "web search", "deepread", "file mount"]),
     ("model-provider", ["ollama", "vllm", "llm", "model", "模型", "router", "route", "inference", "oauth", "api key", "provider", "subscription", "订阅"]),
-    ("remote-mobile", ["remote", "远程", "mobile", "android", "ios", "phone", "手机", "relay", "tailscale", "frp"]),
+    ("remote-access", ["remote", "远程", "relay", "中继", "gateway", "网关", "tunnel", "隧道", "tailscale", "frp", "cloudflare", "局域网", "lan access", "reverse proxy", "扫码"]),
+    ("mobile-client", ["android", "apk", "ios", "mobile client", "mobile app", "webview", "手机端", "移动端"]),
     ("ui-theme", ["theme", "主题", "skin", "皮肤", "catppuccin", "wallpaper", "sidebar", "侧边栏", "tui", "statusline"]),
     ("fun-novelty", ["pet", "桌宠", "宠物", "meme", "梗图", "toy", "companion", "看板娘", "galgame", "roleplay", "角色扮演"]),
     ("security", ["security", "安全", "audit", "审计", "secret", "poison", "guard", "encrypt", "加密", "permission", "权限", "sandbox"]),
@@ -105,7 +106,9 @@ def main():
     results = []
     rd = os.path.join(args.audit_dir, "readmes")
     for f in sorted(glob.glob(rd + "/*.md")):
-        repo = os.path.basename(f)[:-3].replace("_", "/")
+        # GitHub owners cannot contain underscores, while repository names can.
+        # Only the first underscore is our owner/repo filename separator.
+        repo = os.path.basename(f)[:-3].replace("_", "/", 1)
         r = repos.get(repo, {})
         txt = open(f, encoding="utf-8", errors="ignore").read()
         if not txt.strip():
@@ -117,7 +120,7 @@ def main():
             "adapted": bool(anchor and r.get("pushed", "") >= anchor),
             "cat": cat_of(txt[:3000] + " " + (r.get("desc") or "")),
             "verdict": verdict_of(txt, r.get("desc")),
-            "first": " ".join(lines)[:110],
+            "first": " ".join(lines)[:110].rstrip(),
         })
     results.sort(key=lambda x: -x["stars"])
 
@@ -136,8 +139,11 @@ def main():
         json.dump(results, f, ensure_ascii=False, indent=1)
     with open(os.path.join(args.audit_dir, "digest.txt"), "w") as f:
         for r in results:
-            f.write(f"[{r['stars']:>6}*|{r['cat'][:14]:14s}|{r['verdict'][:4]:4s}|"
-                    f"anc:{'Y' if r['adapted'] else '-'}] {r['repo']} :: {r['first']}\n")
+            line = (
+                f"[{r['stars']:>6}*|{r['cat'][:14]:14s}|{r['verdict'][:4]:4s}|"
+                f"anc:{'Y' if r['adapted'] else '-'}] {r['repo']} :: {r['first']}"
+            )
+            f.write(line.rstrip() + "\n")
 
     open(os.path.join(args.audit_dir, "stats.txt"), "w").write("\n".join(out) + "\n")
     print("\n".join(out))

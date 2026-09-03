@@ -1,0 +1,1465 @@
+{
+  "snapshot": {
+    "enumerated": 13321,
+    "official": 13321,
+    "official_source": "枚举期间 GitHub 搜索各星级分桶合计；结束时复查未获网络权限",
+    "coverage": 1.0,
+    "readmes": 700,
+    "anchor": "2026-09-01T15:45:07Z",
+    "anchor_label": "v0.1.2-alpha.4"
+  },
+  "scale": {
+    "star_tiers": {
+      "100+": 252,
+      "20-99": 344,
+      "5-19": 1308,
+      "1-4": 6637,
+      "0": 4780
+    },
+    "one_shot": 5624,
+    "languages": [
+      [
+        "JavaScript",
+        7608
+      ],
+      [
+        "TypeScript",
+        4402
+      ],
+      [
+        "Python",
+        518
+      ],
+      [
+        "Unknown",
+        225
+      ],
+      [
+        "Rust",
+        103
+      ],
+      [
+        "HTML",
+        88
+      ],
+      [
+        "PowerShell",
+        86
+      ],
+      [
+        "Shell",
+        77
+      ]
+    ]
+  },
+  "activity": {
+    "passed": 1503,
+    "rate": 0.11282936716462728,
+    "tiers": {
+      "100+": {
+        "passed": 117,
+        "total": 252,
+        "rate": 0.4642857142857143
+      },
+      "20-99": {
+        "passed": 108,
+        "total": 344,
+        "rate": 0.313953488372093
+      },
+      "5-19": {
+        "passed": 218,
+        "total": 1308,
+        "rate": 0.16666666666666666
+      },
+      "1-4": {
+        "passed": 607,
+        "total": 6637,
+        "rate": 0.09145698357691728
+      },
+      "0": {
+        "passed": 453,
+        "total": 4780,
+        "rate": 0.09476987447698745
+      }
+    },
+    "active_starred": 1050,
+    "native_active_starred": 929
+  },
+  "high_star": {
+    "total": 984,
+    "active": 303,
+    "stalled": 681,
+    "native": 803,
+    "native_active": 229,
+    "definite_stalled": 578,
+    "borderline_stalled": 103,
+    "top_definite": [
+      {
+        "repo": "amruthpillai/reactive-resume",
+        "stars": 42109,
+        "pushed": "2026-08-28T20:24:25Z",
+        "created": "2020-03-25T14:08:22Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
+        "fork": false
+      },
+      {
+        "repo": "freestylefly/awesome-gpt-image-2",
+        "stars": 27369,
+        "pushed": "2026-08-30T10:46:30Z",
+        "created": "2026-04-25T09:19:13Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出Skills，持续更新中",
+        "fork": false
+      },
+      {
+        "repo": "walkinglabs/learn-harness-engineering",
+        "stars": 14695,
+        "pushed": "2026-08-26T01:08:59Z",
+        "created": "2026-03-29T12:28:19Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Harness engineering beginner tutorial, from 0 to 1",
+        "fork": false
+      },
+      {
+        "repo": "crafter-station/petdex",
+        "stars": 4031,
+        "pushed": "2026-08-31T11:47:51Z",
+        "created": "2026-05-02T07:51:35Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "A public gallery of animated pets for Codex, Claude Code, DeepSeek Harness, Hermes, OpenCode, Gemini CLI, and more.",
+        "fork": false
+      },
+      {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "stars": 3132,
+        "pushed": "2026-08-31T13:52:09Z",
+        "created": "2026-02-22T13:51:44Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "Intelligent Skill routing and workflow orchestration for AI agents — +21.12 pp reward, −29.6% tokens on SkillsBench with DeepSeekV4Flash-VE.",
+        "fork": false
+      },
+      {
+        "repo": "Jesseovo/last30days-skill-cn",
+        "stars": 1738,
+        "pushed": "2026-07-20T08:55:57Z",
+        "created": "2026-03-31T08:13:20Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "last30days-cn 是一个 AI Agent 技能（Skill），能够自动搜索中国互联网 8 大主流平台最近 30 天的内容，综合分析后生成有据可查的研究报告。",
+        "fork": false
+      },
+      {
+        "repo": "Alisa0808/vox-director",
+        "stars": 1699,
+        "pushed": "2026-08-11T15:39:41Z",
+        "created": "2026-07-10T15:32:05Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "Turn one topic into a finished Vox-style paper-collage explainer/ad video — automated end to end on Atlas Cloud + ffmpeg. An agent skill.",
+        "fork": false
+      },
+      {
+        "repo": "MeteorNOX/DeepSeek-Balance-Whale-Widget",
+        "stars": 1619,
+        "pushed": "2026-08-24T17:14:19Z",
+        "created": "2026-08-18T03:13:51Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动动画，随界面自动启用，建议直接喊来你的dsh安装",
+        "fork": false
+      },
+      {
+        "repo": "NanmiCoder/dsh-agent-teams",
+        "stars": 1299,
+        "pushed": "2026-08-31T09:12:22Z",
+        "created": "2026-08-12T13:41:50Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "AgentTeams plugin for DeepSeek Harness",
+        "fork": false
+      },
+      {
+        "repo": "Unclecheng-li/AI_Animation",
+        "stars": 1210,
+        "pushed": "2026-08-30T15:23:34Z",
+        "created": "2026-04-11T09:54:15Z",
+        "lang": "HTML",
+        "archived": false,
+        "desc": "本项目整理了用于生成[炫酷 HTML 动画网页]的 AI Prompts，涵盖动画效果、3D 可视化、PPT 风格演示、UI 美化等多个类别。",
+        "fork": false
+      },
+      {
+        "repo": "mem9-ai/mem9",
+        "stars": 1204,
+        "pushed": "2026-08-25T07:46:23Z",
+        "created": "2026-03-08T05:52:21Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Unlimited memory for OpenClaw",
+        "fork": false
+      },
+      {
+        "repo": "sunchaokun/PPT-Design-Skill",
+        "stars": 1182,
+        "pushed": "2026-08-31T13:05:31Z",
+        "created": "2026-07-09T04:03:02Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "Precision PPT design skill for OpenCode/Claude Code/Codex, with 40,000+ styles, pixel-perfect Build Mode control, AI image generation, and fully editable PPTX. 面向专业演示设计场景，帮助用户从需求分析、视觉方向选择到原生可编辑 PPTX 交付，打造高质量、可持续修改的演示文稿。",
+        "fork": false
+      },
+      {
+        "repo": "Anionex/agent-vision-toolkit",
+        "stars": 1137,
+        "pushed": "2026-08-27T05:13:05Z",
+        "created": "2026-08-01T10:00:13Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "为纯文本模型\"看图“设计更好的视觉工具箱和技能，支持多图理解，图片问答，前端UI还原、GUI 自动化等，并可选无缝接入多个主流agent，直接识别粘贴图片｜ A vision toolkit and skill designed for text-only llms — image Q&A, long-screenshot OCR, frontend UI restoration, and GUI automation, with optional seamless integration for Codex, Claude Code, Pi, Oh My Pi, and OpenCode",
+        "fork": false
+      },
+      {
+        "repo": "paean-ai/deeptide",
+        "stars": 1098,
+        "pushed": "2026-08-22T08:56:10Z",
+        "created": "2026-05-05T16:40:06Z",
+        "lang": "Rust",
+        "archived": false,
+        "desc": "Built by DeepSeek, for DeepSeek — a Swift-native macOS coding agent",
+        "fork": false
+      },
+      {
+        "repo": "tong-io/tongflow",
+        "stars": 1012,
+        "pushed": "2026-08-28T10:18:06Z",
+        "created": "2026-04-08T00:21:23Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "TongFlow — Multimodal GenAI Studio",
+        "fork": false
+      }
+    ],
+    "top_borderline": [
+      {
+        "repo": "Molunerfinn/PicGo",
+        "stars": 27119,
+        "pushed": "2026-09-01T12:01:25Z",
+        "created": "2017-12-12T08:39:44Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": ":rocket: The Ultimate Image Uploader for Efficient Creators. Supports Obsidian, Typora, VS Code etc. and 60+ image hosting services  (S3, GitHub, Cloudflare R2, Imgur, Aliyun OSS...). Paste, upload, done.",
+        "fork": false
+      },
+      {
+        "repo": "MemTensor/MemOS",
+        "stars": 11160,
+        "pushed": "2026-09-01T08:11:45Z",
+        "created": "2025-07-06T09:51:27Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.",
+        "fork": false
+      },
+      {
+        "repo": "Q00/ouroboros",
+        "stars": 5753,
+        "pushed": "2026-09-01T11:55:19Z",
+        "created": "2026-01-14T01:14:04Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "Agent OS: the agent gets smarter on its own. We just hold the line: the grading command and expected result never make it into the success contract we hand it. Interview-gated, staged evaluation, budgeted evolution loop. MCP server, 13 runtimes: Claude Code, Codex CLI, Gemini CLI, OpenCode, Copilot, Kiro and more.",
+        "fork": false
+      },
+      {
+        "repo": "liustack/modlens",
+        "stars": 3839,
+        "pushed": "2026-09-01T06:47:52Z",
+        "created": "2026-02-22T07:12:00Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OCR, layout, semantics). | 全网最强 DeepSeek Harness 外挂视觉插件，为 DeepSeek、GLM 等纯文本模型外挂视觉能力，粘贴图片即得结构化 JSON 证据（OCR、版面、语义）。",
+        "fork": false
+      },
+      {
+        "repo": "xiaobright/dsh-anchored-standard",
+        "stars": 3823,
+        "pushed": "2026-09-01T14:04:49Z",
+        "created": "2026-08-14T14:06:39Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
+        "fork": false
+      },
+      {
+        "repo": "agentscope-ai/ReMe",
+        "stars": 3385,
+        "pushed": "2026-09-01T14:02:27Z",
+        "created": "2024-08-29T02:40:53Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "ReMe: Memory Management Kit for Agents - Remember Me, Refine Me.",
+        "fork": false
+      },
+      {
+        "repo": "hyhmrright/brooks-lint",
+        "stars": 1444,
+        "pushed": "2026-09-01T11:59:21Z",
+        "created": "2026-03-26T11:40:33Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "AI code reviews grounded in 12 classic engineering books — decay risk diagnostics with book citations, severity labels, and 6 analysis modes including full-sweep auto-fix",
+        "fork": false
+      },
+      {
+        "repo": "0xsline/awesome-deepseek-harness",
+        "stars": 979,
+        "pushed": "2026-08-31T18:04:43Z",
+        "created": "2026-08-11T13:14:49Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "DeepSeek Harness (DSH) ecosystem: curated plugins, tools, and infrastructure from dsh-external/hub and the public dsh-plugin topic.",
+        "fork": false
+      },
+      {
+        "repo": "Anionex/dsh-vision-toolkit",
+        "stars": 848,
+        "pushed": "2026-08-31T16:49:12Z",
+        "created": "2026-08-13T12:36:34Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "[dsh]为纯文本模型设计更强大的视觉工具箱：一行安装使用、粘贴图片直接识别、多张图片问答、截图到前端UI 还原等｜DeepSeek Harness-native integration for agent-vision-toolkit: image Q&A, long-screenshot OCR, UI restoration, grounding, pixel diff, Artifacts, and Web UI.",
+        "fork": false
+      },
+      {
+        "repo": "Electricitysheep/dsh-handbook",
+        "stars": 731,
+        "pushed": "2026-09-01T03:28:36Z",
+        "created": "2026-08-13T15:22:29Z",
+        "lang": "HTML",
+        "archived": false,
+        "desc": "DeepSeek Harness (dsh) 从 0 到 1 深度手册：安装/插件开发/性能调优/实测案例/同模型多 Agent 实测对比（中文 + 英文 PDF）",
+        "fork": false
+      }
+    ]
+  },
+  "classification": {
+    "counts": {
+      "adapted": 86,
+      "native": 2588,
+      "unrelated": 203
+    },
+    "stars": {
+      "adapted": 587747,
+      "native": 136159,
+      "unrelated": 36294
+    },
+    "first_native_rank": 11
+  },
+  "categories": {
+    "other": 141,
+    "session-ui-ux": 95,
+    "model-provider": 73,
+    "search-web": 70,
+    "security-governance": 68,
+    "desktop-client": 67,
+    "market-curation": 65,
+    "memory-knowledge": 58,
+    "usage-billing": 52,
+    "orchestration-workflow": 50,
+    "eng-git-ci": 35,
+    "vision-multimodal": 34,
+    "skills-presets": 33,
+    "im-notify": 33,
+    "fun-novelty": 28,
+    "file-workspace": 25,
+    "vertical-domain": 24,
+    "tui-terminal": 23,
+    "mcp-tooling": 22,
+    "context-management": 14,
+    "remote-access": 11,
+    "adapted-independent": 8,
+    "ide-integration": 6,
+    "mobile-client": 5,
+    "voice-audio": 4,
+    "tutorial-docs": 3,
+    "off-topic-squatter": 2,
+    "official-core": 1
+  },
+  "category_details": {
+    "other": {
+      "repos": 141,
+      "stars": 2126,
+      "star_10_plus": 17,
+      "native": 125,
+      "adapted": 3,
+      "unrelated": 13,
+      "distribution": {
+        "repos": 26,
+        "with_releases": 16,
+        "release_downloads": 2094,
+        "zero_download_releases": 8,
+        "with_package_name": 17,
+        "published_npm": 9,
+        "named_unpublished": 8,
+        "npm_weekly": 3734,
+        "npm_weekly_median": 0
+      }
+    },
+    "session-ui-ux": {
+      "repos": 95,
+      "stars": 4236,
+      "star_10_plus": 16,
+      "native": 94,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 54,
+        "with_releases": 23,
+        "release_downloads": 106,
+        "zero_download_releases": 19,
+        "with_package_name": 47,
+        "published_npm": 19,
+        "named_unpublished": 28,
+        "npm_weekly": 97918,
+        "npm_weekly_median": 0
+      }
+    },
+    "model-provider": {
+      "repos": 73,
+      "stars": 11941,
+      "star_10_plus": 26,
+      "native": 64,
+      "adapted": 3,
+      "unrelated": 6,
+      "distribution": {
+        "repos": 34,
+        "with_releases": 21,
+        "release_downloads": 12683,
+        "zero_download_releases": 13,
+        "with_package_name": 30,
+        "published_npm": 20,
+        "named_unpublished": 10,
+        "npm_weekly": 11513,
+        "npm_weekly_median": 0
+      }
+    },
+    "search-web": {
+      "repos": 70,
+      "stars": 26871,
+      "star_10_plus": 19,
+      "native": 59,
+      "adapted": 6,
+      "unrelated": 5,
+      "distribution": {
+        "repos": 35,
+        "with_releases": 19,
+        "release_downloads": 129393,
+        "zero_download_releases": 10,
+        "with_package_name": 26,
+        "published_npm": 17,
+        "named_unpublished": 9,
+        "npm_weekly": 13574,
+        "npm_weekly_median": 0
+      }
+    },
+    "security-governance": {
+      "repos": 68,
+      "stars": 1956,
+      "star_10_plus": 17,
+      "native": 61,
+      "adapted": 2,
+      "unrelated": 5,
+      "distribution": {
+        "repos": 28,
+        "with_releases": 17,
+        "release_downloads": 302,
+        "zero_download_releases": 14,
+        "with_package_name": 24,
+        "published_npm": 17,
+        "named_unpublished": 7,
+        "npm_weekly": 6482,
+        "npm_weekly_median": 0
+      }
+    },
+    "desktop-client": {
+      "repos": 67,
+      "stars": 31209,
+      "star_10_plus": 22,
+      "native": 60,
+      "adapted": 2,
+      "unrelated": 5,
+      "distribution": {
+        "repos": 39,
+        "with_releases": 33,
+        "release_downloads": 103053,
+        "zero_download_releases": 2,
+        "with_package_name": 29,
+        "published_npm": 19,
+        "named_unpublished": 10,
+        "npm_weekly": 9986,
+        "npm_weekly_median": 0
+      }
+    },
+    "market-curation": {
+      "repos": 65,
+      "stars": 21522,
+      "star_10_plus": 25,
+      "native": 64,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 57,
+        "with_releases": 15,
+        "release_downloads": 32,
+        "zero_download_releases": 14,
+        "with_package_name": 41,
+        "published_npm": 28,
+        "named_unpublished": 13,
+        "npm_weekly": 178378,
+        "npm_weekly_median": 0
+      }
+    },
+    "memory-knowledge": {
+      "repos": 58,
+      "stars": 41225,
+      "star_10_plus": 18,
+      "native": 45,
+      "adapted": 5,
+      "unrelated": 8,
+      "distribution": {
+        "repos": 29,
+        "with_releases": 22,
+        "release_downloads": 5480,
+        "zero_download_releases": 14,
+        "with_package_name": 21,
+        "published_npm": 14,
+        "named_unpublished": 7,
+        "npm_weekly": 12967,
+        "npm_weekly_median": 0
+      }
+    },
+    "usage-billing": {
+      "repos": 52,
+      "stars": 808,
+      "star_10_plus": 8,
+      "native": 52,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 19,
+        "with_releases": 11,
+        "release_downloads": 89,
+        "zero_download_releases": 10,
+        "with_package_name": 19,
+        "published_npm": 16,
+        "named_unpublished": 3,
+        "npm_weekly": 11364,
+        "npm_weekly_median": 0
+      }
+    },
+    "orchestration-workflow": {
+      "repos": 50,
+      "stars": 19088,
+      "star_10_plus": 19,
+      "native": 38,
+      "adapted": 4,
+      "unrelated": 8,
+      "distribution": {
+        "repos": 29,
+        "with_releases": 19,
+        "release_downloads": 44423,
+        "zero_download_releases": 13,
+        "with_package_name": 23,
+        "published_npm": 10,
+        "named_unpublished": 13,
+        "npm_weekly": 1722,
+        "npm_weekly_median": 0
+      }
+    },
+    "eng-git-ci": {
+      "repos": 35,
+      "stars": 1701,
+      "star_10_plus": 16,
+      "native": 30,
+      "adapted": 1,
+      "unrelated": 4,
+      "distribution": {
+        "repos": 22,
+        "with_releases": 17,
+        "release_downloads": 182,
+        "zero_download_releases": 13,
+        "with_package_name": 20,
+        "published_npm": 17,
+        "named_unpublished": 3,
+        "npm_weekly": 17657,
+        "npm_weekly_median": 0
+      }
+    },
+    "vision-multimodal": {
+      "repos": 34,
+      "stars": 1544,
+      "star_10_plus": 5,
+      "native": 31,
+      "adapted": 1,
+      "unrelated": 2,
+      "distribution": {
+        "repos": 13,
+        "with_releases": 8,
+        "release_downloads": 313,
+        "zero_download_releases": 6,
+        "with_package_name": 10,
+        "published_npm": 6,
+        "named_unpublished": 4,
+        "npm_weekly": 37560,
+        "npm_weekly_median": 0
+      }
+    },
+    "skills-presets": {
+      "repos": 33,
+      "stars": 31704,
+      "star_10_plus": 11,
+      "native": 29,
+      "adapted": 1,
+      "unrelated": 3,
+      "distribution": {
+        "repos": 16,
+        "with_releases": 8,
+        "release_downloads": 320,
+        "zero_download_releases": 6,
+        "with_package_name": 12,
+        "published_npm": 9,
+        "named_unpublished": 3,
+        "npm_weekly": 8637,
+        "npm_weekly_median": 0
+      }
+    },
+    "im-notify": {
+      "repos": 33,
+      "stars": 1282,
+      "star_10_plus": 6,
+      "native": 33,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 10,
+        "with_releases": 5,
+        "release_downloads": 522,
+        "zero_download_releases": 4,
+        "with_package_name": 9,
+        "published_npm": 6,
+        "named_unpublished": 3,
+        "npm_weekly": 7372,
+        "npm_weekly_median": 0
+      }
+    },
+    "fun-novelty": {
+      "repos": 28,
+      "stars": 10994,
+      "star_10_plus": 14,
+      "native": 25,
+      "adapted": 1,
+      "unrelated": 2,
+      "distribution": {
+        "repos": 16,
+        "with_releases": 9,
+        "release_downloads": 16135,
+        "zero_download_releases": 5,
+        "with_package_name": 13,
+        "published_npm": 8,
+        "named_unpublished": 5,
+        "npm_weekly": 7607,
+        "npm_weekly_median": 0
+      }
+    },
+    "file-workspace": {
+      "repos": 25,
+      "stars": 580,
+      "star_10_plus": 4,
+      "native": 24,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 12,
+        "with_releases": 8,
+        "release_downloads": 528,
+        "zero_download_releases": 7,
+        "with_package_name": 10,
+        "published_npm": 5,
+        "named_unpublished": 5,
+        "npm_weekly": 666,
+        "npm_weekly_median": 0
+      }
+    },
+    "vertical-domain": {
+      "repos": 24,
+      "stars": 10983,
+      "star_10_plus": 14,
+      "native": 18,
+      "adapted": 3,
+      "unrelated": 3,
+      "distribution": {
+        "repos": 17,
+        "with_releases": 12,
+        "release_downloads": 9998,
+        "zero_download_releases": 7,
+        "with_package_name": 12,
+        "published_npm": 10,
+        "named_unpublished": 2,
+        "npm_weekly": 1345,
+        "npm_weekly_median": 0
+      }
+    },
+    "tui-terminal": {
+      "repos": 23,
+      "stars": 3229,
+      "star_10_plus": 9,
+      "native": 22,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 12,
+        "with_releases": 6,
+        "release_downloads": 25,
+        "zero_download_releases": 3,
+        "with_package_name": 11,
+        "published_npm": 6,
+        "named_unpublished": 5,
+        "npm_weekly": 29066,
+        "npm_weekly_median": 0
+      }
+    },
+    "mcp-tooling": {
+      "repos": 22,
+      "stars": 1489,
+      "star_10_plus": 8,
+      "native": 16,
+      "adapted": 2,
+      "unrelated": 4,
+      "distribution": {
+        "repos": 8,
+        "with_releases": 5,
+        "release_downloads": 249,
+        "zero_download_releases": 1,
+        "with_package_name": 7,
+        "published_npm": 5,
+        "named_unpublished": 2,
+        "npm_weekly": 1740,
+        "npm_weekly_median": 0
+      }
+    },
+    "context-management": {
+      "repos": 14,
+      "stars": 5020,
+      "star_10_plus": 5,
+      "native": 10,
+      "adapted": 1,
+      "unrelated": 3,
+      "distribution": {
+        "repos": 8,
+        "with_releases": 6,
+        "release_downloads": 0,
+        "zero_download_releases": 6,
+        "with_package_name": 7,
+        "published_npm": 4,
+        "named_unpublished": 3,
+        "npm_weekly": 18510,
+        "npm_weekly_median": 0
+      }
+    },
+    "remote-access": {
+      "repos": 11,
+      "stars": 1208,
+      "star_10_plus": 4,
+      "native": 11,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 9,
+        "with_releases": 8,
+        "release_downloads": 383,
+        "zero_download_releases": 4,
+        "with_package_name": 8,
+        "published_npm": 7,
+        "named_unpublished": 1,
+        "npm_weekly": 22239,
+        "npm_weekly_median": 0
+      }
+    },
+    "adapted-independent": {
+      "repos": 8,
+      "stars": 290639,
+      "star_10_plus": 8,
+      "native": 0,
+      "adapted": 8,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 8,
+        "with_releases": 8,
+        "release_downloads": 229361,
+        "zero_download_releases": 2,
+        "with_package_name": 3,
+        "published_npm": 3,
+        "named_unpublished": 0,
+        "npm_weekly": 25469,
+        "npm_weekly_median": 2786
+      }
+    },
+    "ide-integration": {
+      "repos": 6,
+      "stars": 190,
+      "star_10_plus": 2,
+      "native": 6,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 6,
+        "with_releases": 5,
+        "release_downloads": 267,
+        "zero_download_releases": 1,
+        "with_package_name": 5,
+        "published_npm": 2,
+        "named_unpublished": 3,
+        "npm_weekly": 0,
+        "npm_weekly_median": 0
+      }
+    },
+    "mobile-client": {
+      "repos": 5,
+      "stars": 469,
+      "star_10_plus": 3,
+      "native": 5,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 5,
+        "with_releases": 4,
+        "release_downloads": 2140,
+        "zero_download_releases": 0,
+        "with_package_name": 3,
+        "published_npm": 3,
+        "named_unpublished": 0,
+        "npm_weekly": 0,
+        "npm_weekly_median": 0
+      }
+    },
+    "voice-audio": {
+      "repos": 4,
+      "stars": 107,
+      "star_10_plus": 2,
+      "native": 4,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 3,
+        "with_releases": 1,
+        "release_downloads": 8,
+        "zero_download_releases": 0,
+        "with_package_name": 2,
+        "published_npm": 2,
+        "named_unpublished": 0,
+        "npm_weekly": 1310,
+        "npm_weekly_median": 548
+      }
+    },
+    "tutorial-docs": {
+      "repos": 3,
+      "stars": 59,
+      "star_10_plus": 3,
+      "native": 3,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 3,
+        "with_releases": 2,
+        "release_downloads": 0,
+        "zero_download_releases": 2,
+        "with_package_name": 2,
+        "published_npm": 1,
+        "named_unpublished": 1,
+        "npm_weekly": 0,
+        "npm_weekly_median": 0
+      }
+    },
+    "off-topic-squatter": {
+      "repos": 2,
+      "stars": 24001,
+      "star_10_plus": 1,
+      "native": 0,
+      "adapted": 2,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 2,
+        "with_releases": 1,
+        "release_downloads": 0,
+        "zero_download_releases": 1,
+        "with_package_name": 1,
+        "published_npm": 1,
+        "named_unpublished": 0,
+        "npm_weekly": 16,
+        "npm_weekly_median": 16
+      }
+    },
+    "official-core": {
+      "repos": 1,
+      "stars": 209599,
+      "star_10_plus": 1,
+      "native": 0,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 1,
+        "with_releases": 1,
+        "release_downloads": 0,
+        "zero_download_releases": 1,
+        "with_package_name": 1,
+        "published_npm": 0,
+        "named_unpublished": 1,
+        "npm_weekly": 0,
+        "npm_weekly_median": 0
+      }
+    }
+  },
+  "tier_categories": {
+    "active_10_plus": {
+      "model-provider": 26,
+      "market-curation": 25,
+      "desktop-client": 22,
+      "search-web": 19,
+      "orchestration-workflow": 19,
+      "memory-knowledge": 18,
+      "other": 17,
+      "security-governance": 17,
+      "session-ui-ux": 16,
+      "eng-git-ci": 16,
+      "fun-novelty": 14,
+      "vertical-domain": 14,
+      "skills-presets": 11,
+      "tui-terminal": 9,
+      "adapted-independent": 8,
+      "mcp-tooling": 8,
+      "usage-billing": 8,
+      "im-notify": 6,
+      "context-management": 5,
+      "vision-multimodal": 5,
+      "remote-access": 4,
+      "file-workspace": 4,
+      "mobile-client": 3,
+      "tutorial-docs": 3,
+      "ide-integration": 2,
+      "voice-audio": 2,
+      "official-core": 1,
+      "off-topic-squatter": 1
+    },
+    "active_1_9": {
+      "other": 124,
+      "session-ui-ux": 79,
+      "security-governance": 51,
+      "search-web": 51,
+      "model-provider": 47,
+      "desktop-client": 45,
+      "usage-billing": 44,
+      "memory-knowledge": 40,
+      "market-curation": 40,
+      "orchestration-workflow": 31,
+      "vision-multimodal": 29,
+      "im-notify": 27,
+      "skills-presets": 22,
+      "file-workspace": 21,
+      "eng-git-ci": 19,
+      "fun-novelty": 14,
+      "mcp-tooling": 14,
+      "tui-terminal": 14,
+      "vertical-domain": 10,
+      "context-management": 9,
+      "remote-access": 7,
+      "ide-integration": 4,
+      "mobile-client": 2,
+      "voice-audio": 2,
+      "off-topic-squatter": 1
+    }
+  },
+  "top_native_active": [
+    {
+      "repo": "anywhere-labs/dsh-desktop",
+      "stars": 23033,
+      "pushed": "2026-09-02T04:34:43Z",
+      "created": "2026-08-13T16:30:50Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。",
+      "fork": false
+    },
+    {
+      "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "stars": 14231,
+      "pushed": "2026-09-02T04:58:17Z",
+      "created": "2026-08-13T13:55:31Z",
+      "lang": "Python",
+      "archived": false,
+      "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+      "fork": false
+    },
+    {
+      "repo": "yjh051108/dsh-routing-suite",
+      "stars": 7031,
+      "pushed": "2026-09-02T17:34:41Z",
+      "created": "2026-08-14T21:20:55Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
+      "fork": false
+    },
+    {
+      "repo": "zhu1090093659/dsh-web",
+      "stars": 6732,
+      "pushed": "2026-09-03T00:24:29Z",
+      "created": "2026-08-12T05:15:20Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "DeepSeek Harness (DSH) Web Plugin Aggregation Ecosystem · Everything is a plugin, distributed via the Creative Workshop",
+      "fork": false
+    },
+    {
+      "repo": "omdsh-dev/DSH-better-sidebar",
+      "stars": 3246,
+      "pushed": "2026-09-02T15:55:40Z",
+      "created": "2026-08-07T16:04:00Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages.",
+      "fork": false
+    },
+    {
+      "repo": "dsh-market/dsh-market",
+      "stars": 3063,
+      "pushed": "2026-09-02T04:54:48Z",
+      "created": "2026-08-14T04:58:15Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场",
+      "fork": false
+    },
+    {
+      "repo": "chuspeeism/dashi-taskboard",
+      "stars": 2879,
+      "pushed": "2026-09-02T16:18:35Z",
+      "created": "2026-07-24T14:14:07Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "现代化可灵活嵌入的任务面板，支持 Codex、DeepSeek Harness",
+      "fork": false
+    },
+    {
+      "repo": "ccch1mneyyy/dsh-TUI",
+      "stars": 2784,
+      "pushed": "2026-09-02T23:34:16Z",
+      "created": "2026-08-13T12:49:31Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。  DSH official WeChat featured TUI plugin — Claude Code style: whale bar, live status, streaming thoughts, double-Esc rollback, context bar + TPS. npm one-click.",
+      "fork": false
+    },
+    {
+      "repo": "Small-tailqwq/dsh-deep-whale",
+      "stars": 1891,
+      "pushed": "2026-09-02T04:22:32Z",
+      "created": "2026-08-13T13:02:14Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "Whale Girl skin series for DeepSeek Harness. 适用于 DeepSeek Harness 的，鲸鱼娘系列皮肤。",
+      "fork": false
+    },
+    {
+      "repo": "dsh-tauri-desk/deepseek-harness-desktop",
+      "stars": 1586,
+      "pushed": "2026-09-02T19:58:46Z",
+      "created": "2026-08-14T02:36:29Z",
+      "lang": "Rust",
+      "archived": false,
+      "desc": "DeepSeek Harness Tauri 桌面版 | Only 5mb installer, zero environment setup, preset plugins, Windows / macOS / Linux.",
+      "fork": false
+    },
+    {
+      "repo": "AdamPlatin123/dsh-plugin-radar",
+      "stars": 1441,
+      "pushed": "2026-09-03T00:45:37Z",
+      "created": "2026-08-04T21:46:54Z",
+      "lang": "Python",
+      "archived": false,
+      "desc": "DSH Plugin Radar — 开源 DSH 插件生态雷达：自动发现 15900+ 候选、k8s 运行级实测 10000+、15 分钟快照管线；插件目录是其自动生成的 artifact",
+      "fork": false
+    },
+    {
+      "repo": "bowenliang123/dsh-context",
+      "stars": 1247,
+      "pushed": "2026-09-02T10:12:53Z",
+      "created": "2026-08-14T08:23:28Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "The best DeepSeek Harness plugin for context insight and management, with context dashboard / browser and context command, for context statistics, composition, breakdown, evolution details, understanding how the context is made of, and how it evolves. 一站式 DeepSeek Harness 上下文可视化插件，Context 面板及浏览器与 Context 命令，透视上下文组成、演进、压缩、剪枝等事件与动作。",
+      "fork": false
+    },
+    {
+      "repo": "xmanrui/dsh-im",
+      "stars": 1072,
+      "pushed": "2026-09-02T19:11:33Z",
+      "created": "2026-08-14T20:40:06Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord和WhatsApp）。 Connect IM bots to DeepSeek Harness via QR code or credentials (9 channels).",
+      "fork": false
+    },
+    {
+      "repo": "ysr666/dsh-vision-router",
+      "stars": 1053,
+      "pushed": "2026-09-02T15:25:37Z",
+      "created": "2026-08-13T18:57:47Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) + pixel-level vision tools (Q&A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots). One-command install, no Python, image turns work like ordinary tool-calling turns.",
+      "fork": false
+    },
+    {
+      "repo": "shaobeichen/dsh-pocket",
+      "stars": 905,
+      "pushed": "2026-09-03T00:47:32Z",
+      "created": "2026-08-15T09:36:29Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "把 DeepSeek Harness 装进你的口袋：电脑上跑 dsh web，手机扫码即同步访问（局域网 + 公网，实时同屏）Put DeepSeek Harness in your pocket: run dsh web on your computer and access it synchronously by scanning a QR code on your phone (LAN + public network, real‑time screen mirroring)",
+      "fork": false
+    }
+  ],
+  "owner_concentration": [
+    [
+      "PerryLink",
+      33
+    ],
+    [
+      "omdsh-dev",
+      29
+    ],
+    [
+      "STARDUSTLC666",
+      17
+    ],
+    [
+      "ddtcorex",
+      15
+    ],
+    [
+      "173787247",
+      14
+    ],
+    [
+      "NOirBRight",
+      9
+    ],
+    [
+      "GooDAnDReaDY",
+      9
+    ],
+    [
+      "better-er",
+      8
+    ],
+    [
+      "a903067276-rgb",
+      7
+    ],
+    [
+      "DDDFXYqiming",
+      7
+    ],
+    [
+      "MichengAI",
+      6
+    ],
+    [
+      "lhh010",
+      6
+    ],
+    [
+      "gameswu",
+      6
+    ],
+    [
+      "HaoyueQin",
+      6
+    ],
+    [
+      "songoao25",
+      5
+    ]
+  ],
+  "remote_access": {
+    "repos": 11,
+    "stars": 1208,
+    "star_10_plus": 4,
+    "native": 11,
+    "routes": {
+      "generic-remote": 4,
+      "lan-gateway": 2,
+      "reverse-proxy-self-hosted": 2,
+      "cloudflare-tunnel": 2,
+      "hosted-relay": 1
+    },
+    "distribution": {
+      "all": {
+        "repos": 9,
+        "with_releases": 8,
+        "release_downloads": 383,
+        "zero_download_releases": 4,
+        "with_package_name": 8,
+        "published_npm": 7,
+        "named_unpublished": 1,
+        "npm_weekly": 22239,
+        "npm_weekly_median": 0
+      },
+      "native": {
+        "repos": 9,
+        "with_releases": 8,
+        "release_downloads": 383,
+        "zero_download_releases": 4,
+        "with_package_name": 8,
+        "published_npm": 7,
+        "named_unpublished": 1,
+        "npm_weekly": 22239,
+        "npm_weekly_median": 0
+      }
+    },
+    "top": [
+      {
+        "repo": "shaobeichen/dsh-pocket",
+        "stars": 905,
+        "pushed": "2026-09-03T00:47:32Z",
+        "created": "2026-08-15T09:36:29Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "把 DeepSeek Harness 装进你的口袋：电脑上跑 dsh web，手机扫码即同步访问（局域网 + 公网，实时同屏）Put DeepSeek Harness in your pocket: run dsh web on your computer and access it synchronously by scanning a QR code on your phone (LAN + public network, real‑time screen mirroring)",
+        "fork": false,
+        "cls": "native",
+        "route": "lan-gateway"
+      },
+      {
+        "repo": "saya-ch/dsh-mobile",
+        "stars": 190,
+        "pushed": "2026-09-02T14:18:18Z",
+        "created": "2026-08-15T05:28:38Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "DeepSeek Harness 的 Android App 与安全远程访问插件，支持局域网/远程连接和高度自定义的移动界面与扩展能力。",
+        "fork": false,
+        "cls": "native",
+        "route": "lan-gateway"
+      },
+      {
+        "repo": "xgone/dsh-remote",
+        "stars": 54,
+        "pushed": "2026-09-02T10:35:01Z",
+        "created": "2026-08-16T08:35:08Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "Remote access for DeepSeek Harness: account/password auth + MFA (TOTP) login gate, signed session cookies, role-based access, in-browser directory picker, and a Settings page for account management.",
+        "fork": false,
+        "cls": "native",
+        "route": "reverse-proxy-self-hosted"
+      },
+      {
+        "repo": "slywalker2006/dsh-passwords",
+        "stars": 40,
+        "pushed": "2026-09-02T22:22:43Z",
+        "created": "2026-08-14T06:35:16Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Server-grade gateway that turns DeepSeek Harness into a multi-tenant platform: remote access + auto HTTPS, subuser permissions & quotas, sandbox enforcement, encrypted auth, audit log.",
+        "fork": false,
+        "cls": "native",
+        "route": "cloudflare-tunnel"
+      },
+      {
+        "repo": "ZhangFengshun/dsh-remote-ssh",
+        "stars": 8,
+        "pushed": "2026-09-02T04:27:56Z",
+        "created": "2026-08-18T11:00:59Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DSH web plugin: VSCode Remote-SSH-like remote development (SSH, remote workspace, file explorer, integrated terminal)",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
+      },
+      {
+        "repo": "NOirBRight/dsh-mobile",
+        "stars": 5,
+        "pushed": "2026-09-02T16:58:01Z",
+        "created": "2026-08-15T15:26:13Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Android client and Host pairing plugin for DeepSeek Harness",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
+      },
+      {
+        "repo": "zdx8637-gitdog/dshmobile",
+        "stars": 2,
+        "pushed": "2026-09-02T14:58:30Z",
+        "created": "2026-08-16T09:51:26Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "手机远程控制 DeepSeek Harness：Android App + 云端 relay + PC 插件，常驻二维码一码三用（扫码下载/配对/登录授权）。",
+        "fork": false,
+        "cls": "native",
+        "route": "hosted-relay"
+      },
+      {
+        "repo": "shendeguize/Remote_DSH_Center",
+        "stars": 1,
+        "pushed": "2026-09-02T19:57:24Z",
+        "created": "2026-08-20T16:13:57Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "One-page local manager and CLI for local and remote dsh web instances, with SSH tunnels for remote hosts.",
+        "fork": false,
+        "cls": "native",
+        "route": "reverse-proxy-self-hosted"
+      },
+      {
+        "repo": "NokorinNishikino/kidai-plugin-remote-client",
+        "stars": 1,
+        "pushed": "2026-09-02T15:16:48Z",
+        "created": "2026-08-21T22:51:07Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "KPR‘C 纪代管理（Client）：零依赖的桌面客户端，DSH的外部管理器，启停插件、隔离运行、手动回滚、预检诊断、变砖救急！配合KSG（Kidai-snapshot-guard）使用，保存自动快照、备份回滚！",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
+      },
+      {
+        "repo": "NokorinNishikino/kidai-plugin-remote",
+        "stars": 1,
+        "pushed": "2026-09-02T15:13:52Z",
+        "created": "2026-08-21T22:50:51Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "KPR 纪代管理：DSH的外部管理器，启停插件、隔离运行、手动回滚、预检诊断、变砖救急！配合KSG（Kidai-snapshot-guard）使用，自动快照、备份回滚！ ",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
+      },
+      {
+        "repo": "ddtcorex/dsh-maestro-remote",
+        "stars": 1,
+        "pushed": "2026-09-02T16:53:04Z",
+        "created": "2026-08-25T07:40:58Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Remote access for DeepSeek Harness via cloudflared tunnel + proxy, with PIN auth and Telegram notifications.",
+        "fork": false,
+        "cls": "native",
+        "route": "cloudflare-tunnel"
+      }
+    ]
+  },
+  "mobile_client": {
+    "repos": 5,
+    "stars": 469,
+    "star_10_plus": 3,
+    "native": 5,
+    "distribution": {
+      "repos": 5,
+      "with_releases": 4,
+      "release_downloads": 2140,
+      "zero_download_releases": 0,
+      "with_package_name": 3,
+      "published_npm": 3,
+      "named_unpublished": 0,
+      "npm_weekly": 0,
+      "npm_weekly_median": 0
+    },
+    "top": [
+      {
+        "repo": "kelai141/dsh-mobile-apk",
+        "stars": 301,
+        "pushed": "2026-09-02T15:47:28Z",
+        "created": "2026-08-13T23:55:34Z",
+        "lang": "Kotlin",
+        "archived": false,
+        "desc": "dsh 安卓壳 APK——WebView UI + 内嵌 Termux 运行时快照（解压即跑），为dsh本地运行设计的高性能方案",
+        "fork": false
+      },
+      {
+        "repo": "Clarklevis1995/dsh-mobile",
+        "stars": 126,
+        "pushed": "2026-09-02T15:15:06Z",
+        "created": "2026-08-17T15:52:40Z",
+        "lang": "Kotlin",
+        "archived": false,
+        "desc": "DeepSeek Harness Mobile 是一个面向 DeepSeek Harness 的原生 iOS 客户端。它通过 dsh-plugin-mobile-gateway 与 Harness 建立 WebSocket 连接，将工作区、会话、实时回复和 Agent 执行轨迹带到 iPhone，同时延续 DeepSeek WebUI 克制、清晰的视觉语言",
+        "fork": false
+      },
+      {
+        "repo": "Phant0Meow/dsh-meow-smooth",
+        "stars": 35,
+        "pushed": "2026-09-02T15:56:55Z",
+        "created": "2026-08-19T18:40:50Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "手机电脑dsh通知功能！移动端可用的通知！手机端ui交互优化！让手机端dsh真正可用。DSH notification support for both mobile and desktop! Mobile notifications are now live, with a refined mobile UI/UX to make DSH genuinely functional on phones.",
+        "fork": false
+      },
+      {
+        "repo": "Clarklevis1995/dsh-plugin-mobile-gateway",
+        "stars": 6,
+        "pushed": "2026-09-02T15:19:15Z",
+        "created": "2026-08-18T12:49:01Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "以websocket为通信方式的dsh网关插件，支持在同一网域内移动端的接入，实现移动端的dsh app",
+        "fork": false
+      },
+      {
+        "repo": "enoughpower/dsh-harmony",
+        "stars": 1,
+        "pushed": "2026-09-02T07:31:13Z",
+        "created": "2026-08-22T15:19:28Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DSH Harmony 客户端 搭配 dsh-pocket 使用",
+        "fork": false
+      }
+    ]
+  },
+  "distribution": {
+    "all_active": {
+      "repos": 521,
+      "with_releases": 310,
+      "release_downloads": 558086,
+      "zero_download_releases": 186,
+      "with_package_name": 413,
+      "published_npm": 264,
+      "named_unpublished": 149,
+      "npm_weekly": 526832,
+      "npm_weekly_median": 0
+    },
+    "native_active": {
+      "repos": 445,
+      "with_releases": 249,
+      "release_downloads": 106696,
+      "zero_download_releases": 166,
+      "with_package_name": 380,
+      "published_npm": 252,
+      "named_unpublished": 128,
+      "npm_weekly": 487022,
+      "npm_weekly_median": 0
+    }
+  }
+}
