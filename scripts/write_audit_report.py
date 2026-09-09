@@ -104,10 +104,11 @@ def main() -> None:
         "",
         f"- 官方 topic 计数：**{snapshot['official']:,}**",
         f"- 官方计数来源：{snapshot.get('official_source', 'GitHub API')}",
-        f"- 实际去重枚举：**{snapshot['enumerated']:,}**，覆盖 **{pct(snapshot['coverage'])}**",
+        f"- 实际去重枚举：**{snapshot['enumerated']:,}**，覆盖 **{snapshot['coverage'] * 100:.2f}%**",
         f"- README 覆盖：**{snapshot['readmes']:,}**",
         f"- 原生 / 适配 / 无关判定覆盖：**{classified_total:,}** 个重点仓库",
         f"- 活跃锚点：`{snapshot['anchor']}`",
+        "- 本轮为自动化统计及初步分类；README 缓存每份最多保留前 8,000 字符，未完成全部摘要的逐条人工复核。下载与预分类不等于完整深读。",
         "",
         "## 一、核心结论",
         "",
@@ -239,7 +240,7 @@ def main() -> None:
             distribution_table_row("原生活跃", distribution["native_active"]),
             "",
             (
-                "分发查询已覆盖全部活跃有星仓库。"
+            "分发脚本已为全部活跃有星仓库生成记录；记录覆盖不代表每次接口请求均成功。"
                 if dist_complete
                 else f"本轮分发查询仅覆盖 **{distribution['all_active']['repos']:,} / {activity['active_starred']:,}** 个活跃有星仓库；未覆盖项目不计入下载与发布合计。"
             ),
@@ -248,7 +249,7 @@ def main() -> None:
             "",
             "## 七、高星停滞",
             "",
-            f"star ≥ 10 停滞 {high['stalled']:,} 个，其中确定性停滞 {high['definite_stalled']:,}，锚点前 24 小时内的临界项目 {high['borderline_stalled']:,}。确定性停滞头部：",
+            f"star ≥ 10 中，锚点后未观察到 push 的项目有 {high['stalled']:,} 个，其中最后 push 早于锚点 24 小时的有 {high['definite_stalled']:,} 个，锚点前 24 小时内的有 {high['borderline_stalled']:,} 个。此处混合原生、适配与无关项目，仅列时间信号，不代表已验证不兼容或停止维护。前一组头部如下：",
             "",
         ]
     )
@@ -261,8 +262,11 @@ def main() -> None:
             "## 八、方法边界与产物",
             "",
             "- 全量元数据通过 star 分桶、ISO 时间戳递归切片与单页叶子抓取，规避 GitHub 1000 条上限和并列排序分页遗漏。",
-            f"- 本轮读取 README {snapshot['readmes']:,} 份；未读取 README 的活跃尾部使用历史人工标签或元数据规则，不能视为本轮逐仓深读。",
+            f"- 本轮缓存并自动预分类 README {snapshot['readmes']:,} 份，每份最多前 8,000 字符；未完成逐仓深读。",
             "- README 分类仍包含机器辅助增量；`classification_source` 字段区分人工沿用、本轮人工复核、增量规则和仅元数据。",
+            "- 分类脚本中的历史人工标签及硬编码覆盖项不代表本轮重新人工核实；品类与原生性结果均属初步判断。",
+            "- 分发脚本未分别记录网络失败、限流与不存在；表中未发布、无 Release 及零下载包含待复核项。npm 包名亦未逐一核对仓库归属，下载量不能直接代表插件用户数。",
+            "- 锚点后 push 只说明仓库发生推送，不证明已适配；与历史快照比较时，锚点及观察窗口不同，不能直接解释为维护率提升。",
             f"- 纯皮肤可能无需适配 {anchor_label}；固定锚点也会随时间逐渐吸收新建仓库。",
             "- `data/audit_summary.json` 是本报告的结构化数字来源。",
             "- `charts/08_remote_access.png` 为远程访问技术路线图。",
