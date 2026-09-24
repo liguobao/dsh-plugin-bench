@@ -1,0 +1,159 @@
+# deepseek-harness-zh_pro
+
+**DeepSeek Harness 综合性增强插件**
+
+**语言 / Language:** [中文](README.md) · [English](README.en.md)
+
+<p align="center">
+    <img alt="版本 0.9.4" src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-0.9.4-5965d8">
+  <img alt="界面 中文" src="https://img.shields.io/badge/%E7%95%8C%E9%9D%A2-%E4%B8%AD%E6%96%87-4aa3ff">
+  <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-3b7a57">
+</p>
+
+综合性增强插件：补全中文界面，并提供思考显示、会话列表、服务监控和模型请求中文化
+等增强。「中文补全」只在中文界面生效；其余界面与会话增强同时支持中文和英文界面。
+所有会修改模型请求的功能都是独立的显式开关，默认关闭。
+
+## 功能
+
+下表严格按照 **DSH 设置 → 增强设置** 从上到下排列：
+
+| 功能 | 默认值 | 说明 |
+| --- | --- | --- |
+| 中文补全 | 开 | 仅中文界面：修正已确认的残留英文，并统一词元、接口密钥、模型标识、时长和数量格式 |
+| 代理角色提示中文化 | 关 | 把四个默认代理及已确认系统段落换成中文；只在新会话首次请求时锁定，不追溯旧会话 |
+| 工具说明中文化 | 关 | 中文化已确认的 DSH 官方工具说明和官方指引段落；工具名、参数名及第三方工具保持不变，只对新会话生效 |
+| 上下文注入中文化 | 关 | 把 DSH 注入会话的官方上下文（工作区指令帧、skill 目录帧、运行时上下文含头部行、审批/模式切换通知、动态插件通知、定时提醒、压缩检查点前言）在进入会话历史前换成中文；GUI 与模型请求一致显示，仅新会话生效；翻译快照头部行会使 DSH 每步注入一条替换快照（会话日志略增） |
+| 网络搜索 | 开 | 对话中的 web_search 工具改用多引擎后端（免 Key：DuckDuckGo 尽力而为，Yandex 与 Bing 为主力——Yandex 走旧端点 `/search/site/`，Bing 以 cn.bing.com 的 RSS 结构化通道优先、www 与 HTML 端点兜底，再加 Wikipedia；配了凭据 `TAVILY_API_KEY` 则自动优先 Tavily 官方 API）；与智谱插件同时安装时自动优先智谱，智谱失败（含敏感内容过滤）自动转多引擎后端重试；官方 web_search 工具不可见的环境（Web profile 默认）自动补齐工具壳，智谱在场时让位给智谱壳；设置页「网络搜索」卡片内可直接填/清除 Tavily API Key（保存即生效，无需重启） |
+| 提示词注入 | 关 | 向后续模型请求注入可编辑文本；默认文本为“思考过程和回复始终使用中文输出”，默认目标为初始系统提示，也可改为首用户提示词 |
+| 自动展开最新思考 | 开 | 流式思考出现时展开最新一条，新思考出现时收起上一条由插件自动展开的内容；DSH v0.1.2 紧凑视图下回答完成后随官方过程折叠隐藏（详见行为契约） |
+| 默认展开行数 | 20 行，最新 N 行 | 超出部分折叠；范围 0–200，0 表示不限制，也可改为显示最早 N 行 |
+| 展开模式 | 按钮模式 | 按钮模式逐批展开；滚动模式在固定高度的正文中滚动查看 |
+| 自动归档旧会话 | 7 天 | 打开新建会话界面时归档超过指定天数未活动的会话；范围 0–365，0 表示关闭 |
+| 查看已归档 | 开 | 在工作区行提供归档视图（按钮位于全选按钮之后）；归档行可恢复、重命名、分叉或删除，也可勾选后批量取消归档或批量删除 |
+| 会话删除按钮 | 开 | 在会话三点菜单显示“删除会话”；日志移入系统回收站，不保留列表恢复位；已删除的会话不会出现在归档视图里 |
+| 会话多选 | 开 | 空闲会话行可勾选，多选后可批量删除或批量归档；运行中、待交互及完成未读会话不可选。归档视图中的归档行同样可勾选，提供批量取消归档与批量删除；工作区行另有全选按钮，一键勾选该工作区当前所有可勾选会话（再点取消） |
+| 服务监控 | 关 | 双形态：左侧会话列表与设置之间保留原面板，同时在右侧边栏新增「服务监控」tab（入口在右栏引导页）；显示对话期间新启动的本地监听服务，悬停时按需解析进程，点击时在文件管理器中定位；tab 底部「基线端口」区可点击把基线端口重新纳入监控；右栏条目时间后面有三个操作按钮——排除监控（重新放入基线，无确认）、永久监控（加入设置的自定义监控项，需确认）、终止进程（普通权限尝试终止，需确认）；左栏面板不提供按钮 |
+| 刷新间隔 | 10 秒 | 范围 2–300 秒；页面不可见时暂停轮询 |
+| 自定义监控项 | 空 | 可添加、改名或改地址，常驻显示在线/离线状态；最多 100 项 |
+
+“对话样式相关”“对话列表相关”和“服务监控”都是同一插件卡样式的可收缩分组，
+默认收起并分别记忆展开状态。完整交互、数据与安全边界见
+[行为契约](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/behavior.md)。
+
+## 环境要求
+
+- DeepSeek Harness ≥ `0.1.7-alpha.2`；完整 UI 使用 `web`
+- Node.js `^22.19.0 || >=24.0.0`
+
+## 安装
+
+```sh
+# Web GUI
+dsh plugin --profile web add deepseek-harness-zh_pro
+
+# 无头模式（headless）
+dsh plugin --profile headless add deepseek-harness-zh_pro
+
+# 仅用于正在运行的 Web GUI 热安装
+npx -y deepseek-harness-zh_pro install --profile web
+```
+
+bundle 按 profile 隔离。headless 只运行 Host 半边，没有浏览器增强。
+
+本地源码联调：
+
+```powershell
+pnpm install
+node bin/dsh-zh.mjs install --profile web --link $PWD
+dsh plugin --profile headless add "link:<项目绝对路径>"
+```
+
+TypeScript 源码构建与检查：
+
+```powershell
+pnpm install
+npm run typecheck
+npm test
+npm pack --dry-run --json
+```
+
+`src/` 是唯一手写源码；`lib/`、`bin/`、`scripts/` 和根目录验证脚本都是被 Git 忽略的构建产物，
+由 `prepare`、`npm run build` 或 `prepack` 动态生成。发布前会重新编译并生成客户端经典脚本。
+
+安装后按 profile 分别检查：
+
+```sh
+npx -y deepseek-harness-zh_pro status --profile web
+dsh plugin --profile headless list
+```
+
+## 更新
+
+重新执行安装命令即可更新依赖和持久 bundle。浏览器端内容更新后刷新页面；使用本地 link
+开发时，本包自带卸载时的模块缓存清理（Fiber 释放即逐出自己的 ESM 缓存条目）：
+
+- **首次升级到本版本需要重启一次 `dsh web`**——让清理代码本身进入长跑进程；
+- 此后构建完成，用插件清单的停用→启用（或 `dsh plugin` remove/add 往返）重建 Loader 行
+  即可载入新构建，无需重启；
+- 若运行中的实例来自不含清理代码的旧版本，停用→启用不会载入新构建，仍需重启一次。
+
+不要以反复试探代替诊断。
+
+## 卸载
+
+```sh
+dsh plugin --profile web remove deepseek-harness-zh_pro
+dsh plugin --profile headless remove deepseek-harness-zh_pro
+# 正在运行的 Web GUI 也可使用：
+npx -y deepseek-harness-zh_pro remove --profile web
+```
+
+卸载按 profile 独立清理；短进程 profile 从下一次调用起不再加载，且不删除会话数据。
+
+## 设置与数据
+
+| 数据 | 存储位置 |
+| --- | --- |
+| 中文补全、思考显示、统计、归档视图、会话删除、会话多选、服务监控及三张卡片的展开状态 | 浏览器 localStorage：`deepseek-harness-zh_pro:enhancements` |
+| 代理角色提示中文化、工具说明中文化、上下文注入中文化、网络搜索、提示词开关/文本/目标、自动归档天数 | DSH `settings.yaml`，命名空间 `dsh-zh` |
+| Tavily 官方 API 密钥（可选，启用后搜索优先走 Tavily） | DSH 凭据：`${DSH_HOME:-~/.dsh}/.credentials.yaml` 的 `refs:` 段键 `TAVILY_API_KEY`，或同名环境变量（插件每次调用现查，不缓存）；也可直接在设置页「网络搜索」卡片里填写/清除（写同一位置，界面只回脱敏提示） |
+
+插件不上传数据；模型工具注册仅限网络搜索的 `web_search` 工具壳（随开关装卸，见功能表）。除网络搜索与用户显式开启的提示词注入、代理角色提示中文化、工具说明中文化与上下文注入中文化外，其余功能不会修改模型请求；上下文注入中文化替换注入会话历史的官方英文文本，关闭后新注入恢复英文，已写入会话的部分按官方行为保留。
+网络搜索开启时，搜索查询会发送到所选后端：智谱插件在场且可用时发往智谱（由智谱插件处理），配了凭据 `TAVILY_API_KEY` 时发往 Tavily 官方 API（密钥只进 `Authorization` 请求头），否则发往公开的 DuckDuckGo/Yandex/Bing/Wikipedia 端点；本插件不存储查询与结果，也不把密钥写入配置、日志或诊断快照。
+中文补全只在中文界面生效；其余界面增强在英文界面同样生效。提示词注入仍只由自身开关决定。
+
+无头模式（headless）没有浏览器设置页，但共用 `${DSH_HOME:-~/.dsh}/settings.yaml`；可先在 Web GUI 保存四个 Host 开关，后续 `headless` 读取同一 `dsh-zh` 命名空间。
+
+## 常见问题
+
+**提示词会自动开启吗？** 不会，默认关闭。编辑提示词文本并不等于开启注入。
+
+**为什么还有少量英文？** DOM 硬编码文本只覆盖已确认的内置清单；未收录文本保持原样，
+避免误改正文或第三方插件内容。
+
+**怎么让搜索走 Tavily？** 直接在设置页「网络搜索」卡片里填入 Key 并保存即可（保存即生效，
+无需重启）。注意**首次安装或更新本插件后要重启一次 `dsh web`**：凭据接口是主机半边新增的，
+不重启时卡片会提示「主机接口未就绪」（key 本身没有问题）。也可以手动在
+`${DSH_HOME:-~/.dsh}/.credentials.yaml` 的 `refs:` 段加一行
+`TAVILY_API_KEY: "tvly-…"`（或设同名环境变量）。识别到即优先走 Tavily 官方 API
+（`search_depth: basic`，免费额度 1000 次/月，每次搜索消耗 1 点），用尽后自动退避 1 小时并
+降级到免 Key 引擎，搜索不会整体失败。环境变量优先于凭据文件，此时卡片里的「清除」不可用。
+想省额度、只在免 Key 引擎全部失败时才动用 Tavily，见
+[`docs/behavior.md`](docs/behavior.md) 的「Tavily 额度消耗」。
+
+**搜索报「DuckDuckGo 触发反爬限流 (HTTP 202)」？** 这是本机 IP 上 DDG 的常态，插件会自动
+降级到 Yandex/Bing/Wikipedia 并把各引擎归因聚合进错误消息。排查见
+[`docs/troubleshooting.md`](docs/troubleshooting.md)。
+
+## 开发文档
+
+- [行为契约](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/behavior.md)
+- [运行架构](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/architecture.md)
+- [开发指南](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/development.md)
+- [故障排查](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/troubleshooting.md)
+- [发布流程](https://github.com/magian1127/deepseek-harness-zh_pro/blob/main/docs/release.md)
+
+## License
+
+[MIT](LICENSE)

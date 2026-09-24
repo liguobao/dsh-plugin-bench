@@ -1,0 +1,126 @@
+# 🐋 DSH Meme Hub
+
+**A curated tour of the DeepSeek Harness (dsh) community's wildest plugins** [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+English | [简体中文](README.zh-CN.md)
+
+<p align="center">
+  <a href="https://dsh-meme-hub.cdqyfdbymn.me/">
+    <b>🌐 Visit the website — dsh-meme-hub.cdqyfdbymn.me</b>
+  </a>
+  <br><sub>Browse plugins, memes &amp; one-click installs — full site below</sub>
+</p>
+
+<p align="center">
+  <img src="showcase/hero-en.png" alt="Everything is a Plugin — so go tinker with anything." width="640">
+</p>
+
+> **Everything is a Plugin — so go tinker with anything.**
+
+On August 13, 2026, DeepSeek open-sourced its agent harness [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) with a brutally simple slogan: **Everything is a Plugin**. 45,000+ stars in 24 hours. But the real show started afterwards: the community got the joke overnight — if everything is a plugin, then ads are plugins, skins are plugins, desktop pets are plugins, and yes, **even Excel is a plugin**.
+
+Spammy web-game ads, QQ 2006, a God-of-Wealth jackpot wheel, hand-drawn pixel whales, a Deep-Sea Maid Atelier… meme density straight out of the 2005 Chinese internet.
+
+This is an [Awesome List](https://github.com/sindresorhus/awesome)-style navigation repo: one line per project + one hand-picked screenshot (star counts are snapshots from the day of listing). No code, no install tutorials — just the fastest route to the funniest corners.
+
+---
+
+## 📖 The Companion Deep Dive
+
+What does the plugin architecture behind this 24-hour meme carnival actually look like? And why did this community ignite so fast? 👉
+
+[**china-ai-arbitrage.xyz · DSH's First 24 Hours: A Meme Census (companion long-read)**](https://www.china-ai-arbitrage.xyz/blog/dsh-meme-hub-24h)
+
+Prefer browsing over reading? All 28 picks live on one page with screenshots, categories and one-click install commands 👉
+
+[**Install DeepSeek Harness (dsh) Plugins — 28 Community Picks**](https://www.china-ai-arbitrage.xyz/dsh-hub)
+
+---
+
+## Contents
+
+- [Peak Absurdity](#peak-absurdity)
+- [Skins and Themes](#skins-and-themes)
+- [Cyber Pets](#cyber-pets)
+- [The Slack-Off Zone](#the-slack-off-zone)
+- [Actually Useful](#actually-useful)
+- [The No-Screenshot Club](#the-no-screenshot-club)
+- [How to Get Listed](#how-to-get-listed)
+- [Copyright](#copyright)
+
+---
+
+## Peak Absurdity
+
+*Highest meme concentration. Enter at your own risk. Ads, parodies, nostalgia — if it touches one of these, it belongs here.*
+
+- 📺 **[dsh-ads](https://github.com/Nagi-ovo/dsh-ads)** ★123 — "Bro, come kick me!" Turns DSH into a 2005-era Chinese web portal: knockoff web-game banners, a God-of-Wealth jackpot wheel, fake antivirus popups, corner ads — and a close button whose hitbox is smaller than it looks
+
+  ![dsh-ads in action: sidebar ads, in-chat feed ads and the Wanjia Blue Whale banner](showcase/dsh-ads.webp)
+  *Sidebar, chat, corners — all stuffed. The model keeps working in the background; your answers just have to sit through the ads first*
+
+  ![Animated fake-game poster: Wanjia Blue Whale](showcase/dsh-ads-bluewhale.gif)
+  *Recognize the format? Bro, come kick me*
+
+  ![V4 Pro jackpot ad: God-of-Wealth whale wheel with four unlock progress bars](showcase/dsh-ads-reward.png)
+  *One spin per turn, four progress bars to unlock. The ads are fake — your odds of winning V4 Pro are genuinely slim too*
+
+- 📸 **[dsh-group-photo](https://github.com/SenmuuuuW/dsh-group-photo)** ★12 — The Polaroid wall from DSH beta's closing night: GitHub OAuth with zero scopes + a frozen whitelist. Pose once, stay on the wall forever
+
+  ![DSH beta closing-night Polaroid wall](showcase/dsh-group-photo.jpg)
+  *One Polaroid per person, one parting note each — the last night of the beta*
+
+- 🐧 **[dsh-qq2006](https://github.com/LaplaceYoung/dsh-qq2006)** ★3 — DSH's web UI fully remodeled into a QQ 2006 client: 357 period-authentic assets, working skins, sound effects and login dialogs — with 1,561 tests all green
+
+  ![dsh-qq2006 skin in action](showcase/dsh-qq2006.gif)
+  *One second and you're back in 2006. Childhood DNA, activate*
+
+- 📗 **[dsh-deepcel](https://github.com/Small-tailqwq/dsh-deepcel)** ★3 — DSH rebuilt as a spreadsheet: sessions, tools and settings all reconstructed as interactive cells. The model is literally filling out a form this time
+
+  ![Deepcel skin: the DSH interface as an Excel worksheet](showcase/dsh-deepcel.webp)
+  *Light and dark modes, full cell interactions — your boss would approve*
+
+- 🏃 **[dsh-reasoning-effort](https://github.com/HanaAyane/dsh-reasoning-effort)** ★6 — A Codex-style model + reasoning-effort slider ported into DSH, plus a bonus fat-fish mode: drag a sprinting eight-frame fat fish to dial thinking intensity — the faster it runs, the harder the model thinks
+
+  ![dsh-reasoning-effort Codex-style reasoning effort slider](showcase/dsh-reasoning-effort.jpg)
+  *Three levels — off / high / max — synced with DSH's /model command; flip one switch in settings and the plain white button turns into a sprinting fat fish*
+
+- ⏰ **[dsh-liangwengu](https://github.com/mozhuanzuojing/dsh-liangwengu)** ★0 — DeepSeek API pricing peak/idle alert on Beijing time: a cartoon popup yells "Liang Wenfeng is coming, run!" at 08:55 and declares "Liangwengu is ONLINE!" at 12:00 and 18:00 — 30-minute countdowns, an HP bar that doubles as boiling water, a nine-realm cultivation ladder, full-screen ascension fireworks. Peak = price ×2, run; valley = half price, farm
+
+  ![dsh-liangwengu cartoon mascot](showcase/dsh-liangwengu.jpg)
+  *The mascot that screams at you twice a day about your API bill*
+
+- ⌚ **[liang-wenfeng-gu](https://github.com/chunfeng11221/liang-wenfeng-gu)** ★1 — The Liang schedule as a harness adapter: terse Liang-Wenfeng mode during work hours (9-12 / 14-18), full Liang-Wengu chatter the rest of the day, and a punctual 08:50 warning — "Liang Wenfeng time is coming, wrap it up." Mode banner included, zero dependencies
+
+- 🏛️ **[dsh-gov-portal](https://github.com/ExElectron/dsh-gov-portal)** ★20 — DSH reborn as a Chinese local-government service portal: deep-blue gradient nav, red-header notice tickers, DVD-screensaver popups, "this site has been visited 000042 times", and a translucent APPROVED stamp slamming down when your stream finishes. The chrome is 2008; every knob is wired 1:1 to real agent capabilities
+
+---
+
+## Skins and Themes
+
+*Not every meme has to be absurd. Some people just want the whale girl to look nice.*
+
+- 🎀 **[dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale)** ★141 — Whale-girl skin series "Deep-Sea Maid Atelier" (maid-atelier): two maids tending the shop, deep-sea-blue lace UI + chibi sidebar, CC BY-NC-SA 4.0
+
+  ![Deep-Sea Maid Atelier skin preview](showcase/dsh-deep-whale.webp)
+  *Light and dark modes, lace-trimmed deep-sea blue — the whale girl deserves nothing less*
+
+- 🖼️ **[dsh-plugin-background](https://github.com/gameswu/dsh-plugin-background)** ★3 — The DSH port of VSCode's background extension: independent backgrounds for chat / trace / sidebar / settings, with GIF and muted-video rotation
+
+  ![dsh-plugin-background settings editor](showcase/dsh-plugin-background.png)
+  *Per-image opacity, blur and rotation; crossfade transitions included*
+
+- 🎮 **[gal-view](https://github.com/Ayase34/gal-view)** ★14 — Turn the chat screen into a visual novel: 16:9 stage, whale-girl maid sprite, ornate dialogue box, typewriter lines — plus a drag-and-drop scene editor that syncs straight back into play mode
+
+  ![gal-view visual novel chat view](showcase/gal-view.jpg)
+  *DeepSeek as a blue-haired whale maid: "Please talk to me more, master"*
+
+---
+
+## Cyber Pets
+
+*You write your code, I raise my whale. They come in many forms — some with more facial expressions than you.*
+
+- 🐋 **[whale-girl](https://github.com/vlln/whale-girl)** ★28 — A whale girl in full QQ-Pet form: draggable, feedable, playable with. Finished tasks rack up seniority, titles and memories — and she sulks when one fails
+
+  ![whale-gir

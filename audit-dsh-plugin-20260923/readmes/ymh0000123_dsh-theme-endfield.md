@@ -1,0 +1,67 @@
+# dsh-theme-endfield
+
+参考《明日方舟：终末地》官网风格的 DSH Web 主题插件。
+
+奶油纸底、墨黑文字、信号黄/武陵青强调色、全直角工业编辑风。插件只运行在 Client 侧，通过主题令牌和样式覆盖界面，不修改应用代码。
+
+## 安装
+
+```bash
+dsh plugin --profile web add github:ymh0000123/dsh-theme-endfield
+```
+
+重启或重新加载 `web` profile 后生效。卸载：
+
+```bash
+dsh plugin --profile web rm dsh-theme-endfield
+```
+
+## 功能
+
+在 **设置 › 终末地主题设置** 中调整：
+
+- 主题总开关、谷地黄/武陵青配色、直角/圆角模式；
+- 等高线背景、动态开关、`24 / 60 / 120 FPS`；
+- 等高线速度 `1x / 2x / 4x`；
+- 可选鼠标轨迹：鼠标附近的等高线局部变形并逐渐恢复，默认关闭；
+- 背景水印及持续显示；
+- 启动加载动画；
+- 雷霆大字及入场动画。
+
+所有设置经 DSH 的持久化设置命名空间保存（Host `index.js` 通过 `ctx.settings.register('dsh-theme-endfield', schema)` 声明，浏览器 `client.js` 通过 `ctx.settingsScope` 读写，详见 [docs/features.md](docs/features.md) 与 [docs/engineering-notes.md](docs/engineering-notes.md)）。它随 `<dshHome>/settings.yaml` 落盘，与页面 origin/端口无关，因此 DSH web 与 DSH Desktop 都能正确保存并在重启/换端口后恢复，不再使用会被 Desktop 随机端口清空的 `localStorage`。设置文案支持中英文；动态等高线尊重系统「减少动态效果」，动画帧率和速度可独立调整。
+
+## 文档
+
+| 文档 | 内容 |
+| --- | --- |
+| [docs/design-language.md](docs/design-language.md) | 色板、令牌映射与对比度规则 |
+| [docs/features.md](docs/features.md) | 功能行为、默认值、存储键与边界情况 |
+| [docs/engineering-notes.md](docs/engineering-notes.md) | 算法、层叠、动画和性能实现说明 |
+| [docs/testing.md](docs/testing.md) | 校验脚本与测试套件说明 |
+| [docs/contour-trail.md](docs/contour-trail.md) | 鼠标轨迹的采样、衰减与验证 |
+
+## 开发与验证
+
+```bash
+node check.js
+node selftest.js
+npm test
+```
+
+`npm test` 覆盖样式不变量、配色、设置页、真实浏览器渲染、等高线平滑/尖点、动画可访问性、覆盖率和 24/60/120 FPS 性能预算。部分浏览器测试需要本机安装 Chrome 或 Edge。
+
+## 项目结构
+
+```text
+client.js          Client 侧主题实现
+index.js           Host 侧空实现
+cordis.patch.yml   Bundle 注入配置
+check.js           样式表静态校验
+selftest.js        校验器自检
+test/              渲染、设置、配色与性能测试
+docs/              设计、功能、工程与测试文档
+```
+
+## 许可证
+
+MIT

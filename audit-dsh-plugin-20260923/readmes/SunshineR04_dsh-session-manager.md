@@ -1,0 +1,164 @@
+# dsh-session-manager
+
+A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin that
+**permanently deletes sessions**, with a cross-workspace archived-session list
+to do it from and a red **Delete permanently** item in the session context menu.
+
+[中文文档](README.zh.md)
+
+## What dsh already does, and what this plugin is for
+
+**DeepSeek Harness never deletes a session's files.** Its own *Delete workspace*
+action says so outright: *"This removes "{name}" from the workspace list. The
+folder and session logs will be kept. Its sessions will appear under
+Ungrouped."* A long-lived install therefore accumulates one session directory
+per conversation forever, with no way to reclaim the disk.
+
+**Archive/restore is no longer a gap.** Since dsh 0.1.7 the official product
+ships archive and unarchive in the session ⋯ menu, a sidebar
+**Show archived** / **Archived only** view filter, an undo toast, and an
+admission gate that stops an archived session (and its subagent descendants)
+from running model steps. Use those — this plugin does not try to replace them.
+
+| Capability | Official (dsh 0.1.7) | This plugin |
+| --- | --- | --- |
+| Archive / unarchive | ✅ ⋯ menu, stop-work confirm, undo toast | ✅ |
+| Find archived sessions | ✅ sidebar **Show archived** filter | ✅ one list across **all** workspaces |
+| **Delete session files** | ❌ never | ✅ red **Delete permanently** |
+| Bulk operations | ❌ | ✅ select all + delete in one confirmed run |
+
+Every delete is a **direct physical deletion** — there is no backup layer.
+
+## Features
+
+### 1. Settings page: Settings → Session Manager
+
+- Lists every **archived session**: title, owning workspace, project directory,
+  update time, running state
+- **Restore** (returns to its pre-archive position) and red
+  **Delete permanently** per session
+- **Select all + bulk delete**: tick rows (or the header checkbox) and delete
+  every selected session in one confirmed action. The run is serial and
+  tolerant: a failing session is reported in full while the rest still go
+  through, sessions with a running task are skipped (the dialog says how many
+  before you commit), and the per-run result is one summary — clean, partially
+  failed, or all-running refused
+- Destructive confirm dialog — every delete is a direct physical delete,
+  there is no backup layer
+- Backed by the official session / workspace client stores — fully reactive
+
+### 2. Session context menu: red "Delete permanently"
+
+Hover a session row in the left sidebar → ⋯ menu: below the built-in
+Rename / Fork session / Archive session items, a red **Delete permanently**
+item appears (native danger styling, same confirm dialog).
+
+> The official workspace browser exposes no slot for session menus, so the
+> plugin augments the rendered popup via DOM observation + React-fiber
+> resolution. The augmentation is passive: if the host UI structure changes
+> and resolution fails, the button simply does not appear — nothing else is
+> affected.
+
+### 3. Agent tools
+
+| Tool | Notes |
+| --- | --- |
+| `session_list_archived` | List archived sessions as JSON |
+| `session_restore_archived` | Restore by id (reversible, no confirmation) |
+| `session_delete_permanently` | Delete by id; **requires `confirm: true`**; refuses running sessions |
+
+## Install
+
+```bash
+git clone https://github.com/SunshineR04/dsh-session-manager.git
+dsh plugin --profile <name> add "file:/path/to/dsh-session-manager"
+```
+
+`dsh plugin add` installs through pnpm and appends the package to
+`dsh.profile.bundles`; this package's `cordis.patch.yml` bundle layer mounts
+the plugin row automatically. **Restart the dsh desktop app afterwards**
+(new bundles are not hot-loaded).
+
+Alternatively mount it manually in the profile's `cordis.patch.yml` (the
+bundle channel above is easier):
+
+```yaml
+- insert:
+    - id: session-manager
+      name: dsh-session-manager
+```
+
+## Delete semantics
+
+Deleting runs in this order:
+
+1. **Open sessions only**: a persistent pending-deletion marker is written
+   **before any mutation** (crash safety — a crash mid-delete always leaves
+   the next boot a marker to sweep), right after the read-only existence
+   check; malformed ids read back from that queue file are pattern-validated
+   before any filesystem use.
+2. **Registry bookkeeping (durable + broadcast)**: detaches the id from
+   its workspace's `sessionIds` and removes it from the global archive set.
+   The detach does not trust the workspace's filtered `sessionIds` view alone —
+   a stale registry header index can hide the id from that getter (which used
+   to let deleted sessions survive, resurfacing as *ungrouped* entries), so
+   the raw workspace record is checked as a fallback.
+3. Removes the session artifact directory
+   `~/.dsh/sessions/<encoded-project>/<session-id>/` (`session.jsonl.zstd`).
+   The directory is resolved through three seams in turn — registry header +
+   persistence `locate`, the persistence header listing, then a raw scan of
+   the sessions root for a directory named exactly the session id — so a
+   degenerated header seam can no longer silently skip the deletion.
+4. Removes the metadata checkpoint
+   `~/.dsh/storages/session_projcache/sessions/<id>.json` (and `.bak-*`).
+5. **Broadcasts the official `api-session/removed` event**, so every connected
+   client drops the session from its list store immediately. (The host itself
+   only emits this event when a live session is disposed, which a cold delete
+   never is.)
+
+The SQLite search index reconciles itself once the source files are gone;
+attachments are content-addressed and intentionally kept.
+
+- Every delete is a **direct physical deletion** — there is no backup
+  layer, so double-check the confirm dialog.
+- **Deleting an open session works immediately**: its registry accounting,
+  files and metadata are removed at once (post-delete flushes cannot recreate
+  anything — appends open the log by path and never recreate a deleted
+  directory). Because dsh has no public "close session" API, the in-memory
+  copy lingers (and still shows in that open view) until the owning UI scope
+  dies; the id is kept in the archive set as a **tombstone**, so it is hidden
+  from the workspace browser and every listing meanwhile, and the next dsh
+  restart finishes the cleanup. Running sessions are still refused.
+- **Pending banner**: the settings page lists only the sessions you can
+  still act on. Entries with files on disk (e.g. a mid-delete crash leftover)
+  get a row with **Cancel deletion**, which clears the tombstone as well
+  (registry first, marker second, so a failure leaves the entry fully
+  retryable). Entries whose files are already gone (the normal open-session
+  delete) have nothing left to act on, so they collapse into a single
+  "already deleted · clears after restart" summary line with an optional
+  expander for their ids instead of occupying the banner — and canceling one
+  is refused by the host too (`session/data-gone`), not just hidden by the UI.
+- Restore only removes the id from the archive set — archiving keeps the
+  workspace `sessionIds` slot, so the session returns to its previous position.
+  A queued-for-deletion id is refused with `session/pending` (cancel it first
+  when its files are still on disk); restoring one would expose an
+  artifact-less husk.
+
+## Config
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `sessionListLimit` | `500` | Max entries per list call |
+| `allowDeleteRunning` | `false` | Force-delete sessions with a **running** task (skips the refusal and the tombstone — dangerous; open-**idle** sessions delete immediately either way) |
+| `toolDeleteRequiresConfirm` | `true` | Agent delete tool requires `confirm: true` |
+| `menuDeleteAvailable` | `true` | Mount the red menu item |
+
+## Develop
+
+```bash
+pnpm install
+pnpm test   # syntax check + host unit tests + client render smoke tests
+```
+
+The render tests mount the real client settings section with React inside
+jsdom (`test/client.render.test.mjs`) — they catch UI crashes the host

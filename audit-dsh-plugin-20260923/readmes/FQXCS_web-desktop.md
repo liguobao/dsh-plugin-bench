@@ -1,0 +1,140 @@
+# WebDesktop 桌面启动器
+
+一个 Windows 桌面 GUI 程序：点击桌面图标启动后打开窗口，在后台执行 web 服务的启动命令；
+服务启动期间窗口显示「正在启动服务」等待动画，服务就绪后自动跳转到配置的地址
+（如 `http://127.0.0.1:3080`）。浏览器内核使用系统自带 **Edge（WebView2）**。
+
+## 功能特性
+
+- 后台启动任意 web 服务命令（可配置），无需命令行窗口
+- 等待期间展示加载动画与计时，就绪后自动跳转目标地址
+- 配置文件保存在 `~/.WebDesktop/config.json`，首次运行时自动创建
+- 首次运行（或启动时发现任意参数为空）首页进入图形化配置页面：全部参数必填，
+  除 `web_command` / `web_url` 外的高级设置默认折叠，保存后自动重启
+- 启动失败 / 进程退出 / 超时均展示错误页，附服务日志尾部，支持「重试」「打开配置」
+- 目标网页的右键使用 WebView2 内核菜单（浅色，刷新 / 另存为 / 打印 / 复制 / 粘贴 / 全选等，
+  随点击位置变化），应用不再注入任何自绘菜单；菜单中隐藏了「返回 / 前进」（避免退回加载页）
+  与「更多工具」子菜单，页面自身处理右键的区域仍按页面行为处理
+- 同时恢复被 pywebview（`debug=False`）关闭的浏览器快捷键：`Ctrl+R` / `F5` 刷新、
+  `Ctrl+F` 查找、`Ctrl+P` 打印、`Ctrl+±` 缩放；开发者工具保持关闭
+- 以遮罩方式打开的配置页覆盖在目标网页上：不刷新页面、服务保持运行，
+  右上角「✕」（或 Esc）关闭后目标网页原样保留；错误页进入的配置页同样带「✕」，
+  关闭后返回错误页；首次启动的配置页无此按钮
+- 跳转到目标网页后，右下角叠加一个可拖动的齿轮图标：单击（或 Enter / 空格）直接
+  打开配置页，无悬浮菜单与气泡提示；按住拖动可移动到任意位置（拖动与单击以 4 像素
+  位移阈值区分），位置写入页面本站存储，整页刷新后仍然保留（图标不会出现在等待页、
+  错误页与配置页上）
+- 应用启动后常驻系统托盘（右下角）：左键单击托盘图标打开主窗口；右键菜单可
+  「打开主窗口」或「退出程序」
+- 关闭窗口行为可在配置页设置：「最小化到系统托盘」（窗口隐藏、程序与服务继续
+  后台运行，从托盘恢复或退出）或「退出程序」（关闭窗口即结束进程）
+- 退出程序时自动清理服务进程树（可配置，最小化到托盘期间服务保持运行）
+- 单文件 exe 分发，双击即用
+
+## 目录结构
+
+```
+web-desktop/
+├── main.py                # 程序入口
+├── app/
+│   ├── config.py          # 配置管理（~/.WebDesktop 下配置文件的创建/加载/校验/保存）
+│   ├── controller.py      # 应用控制器（服务编排、页面切换、配置保存与重启）
+│   ├── service.py         # web 服务子进程管理（启动/健康检查/日志/清理）
+│   ├── pages.py           # 内置等待页、错误页与配置页 HTML
+│   ├── toolbar.py         # 目标网页可拖动齿轮按钮注入脚本（默认右下角）
+│   ├── tray.py            # 系统托盘（纯 Win32 API 实现：托盘图标与右键菜单）
+│   ├── ui.py              # pywebview 窗口与 js 接口
+│   ├── webview_settings.py # 恢复 WebView2 内核默认能力（右键菜单、浏览器快捷键）
+│   └── paths.py           # 路径工具（兼容打包运行）
+├── build.ps1              # 打包脚本（PyInstaller）
+├── create_shortcut.ps1    # 桌面快捷方式脚本
+└── requirements.txt       # Python 依赖
+```
+
+配置文件不随项目分发，首次运行时自动在用户家目录创建：
+`~/.WebDesktop/config.json`（Windows 上即 `C:\Users\<用户名>\.WebDesktop\config.json`）。
+
+其中 `~` 表示用户家目录，**从环境变量解析**：Windows 读取 `USERPROFILE`
+（缺失时用 `HOMEDRIVE` + `HOMEPATH` 拼接），Linux/macOS 读取 `HOME`。
+
+## 配置文件说明（~/.WebDesktop/config.json）
+
+| 配置项 | 说明 | 默认值 |
+| --- | --- | --- |
+| `web_command` | 服务启动命令（完整命令行字符串，含空格的路径用双引号包裹） | 无默认值，必填 |
+| `web_url` | 服务就绪后跳转的地址（也是健康检查地址） | 无默认值，必填 |
+| `url_source` | 访问地址来源：`fixed` 直接使用 `web_url` / `log` 服务就绪后用正则从日志提取 | `fixed` |
+| `url_log_regex` | `url_source` 为 `log` 时，从服务日志提取访问地址的正则（取第一个匹配，含捕获组则取第 1 组） | `(https?://\S+)` |
+| `working_dir` | 服务进程工作目录 | `~/.WebDesktop/working` |
+| `log_dir` | 日志目录（服务日志与程序日志） | `~/.WebDesktop/log` |
+| `startup_timeout` | 等待服务就绪的超时秒数 | `60` |
+| `check_interval` | 健康检查轮询间隔（秒） | `0.5` |
+| `check_timeout` | 单次健康检查超时（秒） | `2` |
+| `window_title` | 窗口标题 | `Web 桌面启动器` |
+| `window_size` | 窗口尺寸 `[宽, 高]` | `[1200, 800]` |
+| `show_console` | 是否显示服务控制台窗口（调试用） | `false` |
+| `kill_on_exit` | 退出程序时是否终止服务进程 | `true` |
+| `close_action` | 关闭窗口动作：`minimize_to_tray` 最小化到系统托盘 / `exit` 退出程序 | `minimize_to_tray` |
+
+配置页面说明：
+
+- 首次运行（配置文件不存在）或启动时发现任意参数为空，首页即进入配置页面
+- `web_command`、`web_url`、`url_source`（访问地址来源）与 `url_log_regex`（日志提取正则）直接展示；其余参数为高级设置，默认折叠
+- 全部参数均为必填项；除 `web_command` / `web_url` 外均有默认值
+- 点击「保存」校验通过后自动重启应用并进入正常启动流程
+- 服务启动失败时可在错误页点击「打开配置」修改配置
+- 在目标网页上的入口是右下角的可拖动齿轮图标（单击即进入）：以遮罩方式打开配置页，
+  不刷新页面、服务保持运行；错误页进入的配置页为整页切换。遮罩式配置页显示右上角
+  「✕」按钮，点击关闭并返回来源页面；首次运行进入的配置页不显示该按钮
+
+示例：启动 Node 服务并跳转 3080 端口：
+
+```json
+{
+  "web_command": "node server.js",
+  "web_url": "http://127.0.0.1:3080",
+  "working_dir": "D:\\my-web-service"
+}
+```
+
+> 提示：`web_command` 按 Windows 命令行规则解析，可执行文件路径含空格时请用
+> 双引号包裹，例如 `"\"D:\\Program Files\\nodejs\\node.exe\" server.js"`。
+
+## 运行方式（源码）
+
+```powershell
+pip install -r requirements.txt
+python main.py
+```
+
+## 打包为 exe
+
+```powershell
+powershell -ExecutionPolicy Bypass -File build.ps1
+powershell -ExecutionPolicy Bypass -File create_shortcut.ps1   # 创建桌面快捷方式
+```
+
+打包产物：`dist\WebDesktop.exe`。配置文件无需随包分发，首次运行时自动创建。
+
+应用图标使用项目根目录的 `app.ico`：打包时嵌入 exe（文件图标、桌面快捷方式图标），
+运行时窗口标题栏与任务栏图标同样来源于它；替换图标只需替换 `app.ico` 后重新打包。
+
+## 常见问题
+
+- **跳转到 dsh web 类服务时报「dsh web authentication required; reopen the URL printed by dsh web」**：这类服务（`dsh --profile web`）不是裸 HTTP 服务，它需要一次「令牌换 cookie」认证——服务启动时会在日志打印一行带 `?token=...` 的地址（如 `dsh web: http://127.0.0.1:3080/?token=xxx`），浏览器访问该地址后才拿到会话 cookie。此时请把 `url_source` 设为 `log`，并把 `url_log_regex` 配置为能匹配这行地址的正则（默认 `(https?://\S+)` 即可，dsh 会打印带 token 的地址），服务就绪后会自动用日志里的真实地址跳转。同时建议给 `web_command` 加上 `--no-open`，避免 dsh 额外弹出一个系统浏览器。
+- **WebView2 运行时缺失**：Windows 11 已内置；Windows 10 需安装
+  [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。
+- **服务启动失败**：错误页会展示服务日志末尾 30 行，可点击「打开配置」修改
+  `web_command` 等参数，也可临时将 `show_console` 改为 `true` 观察服务真实输出。
+- **一直等待不跳转**：确认 `web_url` 与服务的实际监听端口一致；健康检查以 HTTP
+  响应为准，若服务不是 HTTP 协议请调整检查方式。
+- **日志位置**：默认在 `~/.WebDesktop/log\` 目录下：`app.log`（程序日志）、
+  `web_service.log`（服务日志），可通过 `log_dir` 修改。
+  每次启动服务都会清空 `web_service.log` 后重新写入，避免日志无限累积，
+  同时确保从日志提取访问地址（`url_source=log`）只会命中本次启动打印的地址。
+- **如何恢复默认配置**：退出程序后删除 `~/.WebDesktop/config.json`，
+  下次启动会自动重建并进入配置页面。
+
+## DeepSeek Harness 鲸鱼娘图标
+
+- https://github.com/fornarwhal/deepseek-whale-girl-icon

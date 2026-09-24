@@ -1,0 +1,2584 @@
+[
+ {
+  "repo": "deepseek-ai/deepseek-harness",
+  "stars": 234291,
+  "cat": "official-core",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "nexu-io/open-design",
+  "stars": 97820,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ruvnet/ruflo",
+  "stars": 73154,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "tt-a1i/archify",
+  "stars": 70563,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "volcengine/OpenViking",
+  "stars": 38554,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "esengine/DeepSeek-Reasonix",
+  "stars": 35700,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Tencent/WeKnora",
+  "stars": 29328,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "anywhere-labs/dsh-desktop",
+  "stars": 28700,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "nocobase/nocobase",
+  "stars": 24334,
+  "cat": "off-topic-squatter",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Nagi-ovo/voyager",
+  "stars": 20166,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+  "stars": 16744,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "EverMind-AI/EverOS",
+  "stars": 13162,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dataelement/dsh-desktop",
+  "stars": 8739,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "YaoApp/yao",
+  "stars": 7999,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "zhu1090093659/dsh-web",
+  "stars": 7963,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "plastic-labs/honcho",
+  "stars": 7318,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ZSeven-W/openpencil",
+  "stars": 6014,
+  "cat": "adapted-independent",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "loopx-project/loopx",
+  "stars": 5953,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-market/dsh-market",
+  "stars": 4445,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/DSH-better-sidebar",
+  "stars": 3731,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "strukto-ai/mirage",
+  "stars": 3654,
+  "cat": "context-management",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "whiteguo233/OpenBiliClaw",
+  "stars": 3347,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ccch1mneyyy/dsh-TUI",
+  "stars": 3166,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "superdesigndev/treg",
+  "stars": 2673,
+  "cat": "mcp-tooling",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dsh-tauri/deepseek-harness-desktop",
+  "stars": 2553,
+  "cat": "im-notify",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "YuJunZhiXue/dsh-purge",
+  "stars": 2015,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Minglink/dsh-infinite-gen-4",
+  "stars": 1964,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AdamPlatin123/dsh-plugin-radar",
+  "stars": 1467,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "xmanrui/dsh-im",
+  "stars": 1462,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "alvinunreal/openpets",
+  "stars": 1231,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "platonai/Browser4",
+  "stars": 1145,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "agentrq/agentrq",
+  "stars": 1129,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ysr666/dsh-vision-router",
+  "stars": 1116,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "EthanYoQ/AI-Novel-Writer",
+  "stars": 1085,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "vshulcz/deja-vu",
+  "stars": 931,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "wecode-ai/Wegent",
+  "stars": 859,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "hashgraph-online/hol-guard",
+  "stars": 661,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "vibeinging/dsh-desktop",
+  "stars": 588,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "inclusionAI/Avernet",
+  "stars": 566,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "1692775560/dsh-Mimir-Academic-research",
+  "stars": 538,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "zhoushoujianwork/easyeda-agent",
+  "stars": 532,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "kelai141/dsh-mobile-apk",
+  "stars": 522,
+  "cat": "mobile-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "pulseaiclub/phi",
+  "stars": 514,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "yogsoth-ai/de-anthropocentric-research-engine",
+  "stars": 499,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "flizzywine/dsh-tavern",
+  "stars": 477,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "chenxiachan/thoughtdag",
+  "stars": 475,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "omdsh-dev/dsh-genui",
+  "stars": 475,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "syncable-dev/memtrace-public",
+  "stars": 475,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "shanliuling/dsh-image-gen",
+  "stars": 455,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "text2future/flowix",
+  "stars": 430,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dream-num/dsh-univer-office",
+  "stars": 394,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PM-Shawn/Abu-Cowork",
+  "stars": 382,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "bruc3van/awesome-dsh-plugin",
+  "stars": 362,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "tingly-dev/tingly-box",
+  "stars": 347,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "saya-ch/dsh-mobile",
+  "stars": 304,
+  "cat": "remote-access",
+  "classification_source": "manual-carry-forward",
+  "remote_route": "lan-gateway"
+ },
+ {
+  "repo": "Ariestar/sivtr",
+  "stars": 275,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "hikariming/dshfind",
+  "stars": 265,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ranxianglei/billion-context",
+  "stars": 260,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "acryldev/acryl",
+  "stars": 255,
+  "cat": "file-workspace",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "imsai-sh/awesome-deepseek-harness-plugins",
+  "stars": 247,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "FuRongJun-1999/dsh-memory",
+  "stars": 243,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ZJU-REAL/Polaris",
+  "stars": 242,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "xing-shuyin/pi-web-ui",
+  "stars": 233,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "liguobao/ds-harness-remote",
+  "stars": 213,
+  "cat": "remote-access",
+  "classification_source": "manual-current-review",
+  "remote_route": "peer-to-peer"
+ },
+ {
+  "repo": "PerryLink/dsh-auto-review",
+  "stars": 197,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Nwflower/dsh-chat-import",
+  "stars": 196,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "corrinehu/dsh-workbuddy-connect",
+  "stars": 185,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "edonadei/caliper",
+  "stars": 181,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "wenbin-wb/dsh-bridge",
+  "stars": 173,
+  "cat": "remote-access",
+  "classification_source": "incremental-heuristic",
+  "remote_route": "cloudflare-tunnel"
+ },
+ {
+  "repo": "ChisaAlter/Deepseek-Harness-Desktop",
+  "stars": 170,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "bradeGithub/DSH-Plugins-Marketplace",
+  "stars": 167,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Ychris12138/dsh-usage-stats",
+  "stars": 160,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "kingOfSoySauce/dsh-skin-market",
+  "stars": 157,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-research-report",
+  "stars": 156,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-industry-research",
+  "stars": 154,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "HanaAyane/dsh-reasoning-effort",
+  "stars": 153,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ZSeven-W/rish-app",
+  "stars": 146,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dshplugin/dsh-plugin-hub",
+  "stars": 127,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "fangqian616/consensus-pipeline",
+  "stars": 125,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jigjoy-ai/baro",
+  "stars": 124,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "slow-stack/mneme",
+  "stars": 119,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "franksong2702/dsh-codex-connect",
+  "stars": 118,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "HsiangNianian/dsh-auto-continue",
+  "stars": 116,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Phant0Meow/dsh-meow-memory",
+  "stars": 116,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-permission-rules",
+  "stars": 114,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-memento",
+  "stars": 113,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Sikao-Engine/KimiX",
+  "stars": 111,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Tyan66666/billion-context-dsh",
+  "stars": 107,
+  "cat": "context-management",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "a86582751/dsh-nexttavern",
+  "stars": 103,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "mexiaosqwq/dsh-web-mobile",
+  "stars": 101,
+  "cat": "mobile-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "flymysql/dsh-remote",
+  "stars": 98,
+  "cat": "file-workspace",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "diqierjia/StrataGate-AgentMemory",
+  "stars": 96,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "aa2246740/dsh-watcher",
+  "stars": 93,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "WSL043/dsh-codex-subscription",
+  "stars": 93,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Noob-stupid/dsh-plugin-gating-hub",
+  "stars": 88,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "like-study1/Oh-My-DSH",
+  "stars": 86,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "SiriLee/dsh-rewind",
+  "stars": 85,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "WestFox-AwA/dsh-prompt-optimizer",
+  "stars": 82,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "JingbiaoMei/Tokdash",
+  "stars": 80,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Laplace-bit/dsh-smooth-stream",
+  "stars": 74,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "MichengAI/dsh-archive-manager",
+  "stars": 74,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ZASENJC/dsh-plugins-store",
+  "stars": 69,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-mcp-panel",
+  "stars": 66,
+  "cat": "mcp-tooling",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "huaweicloud/huaweicloud-devkit",
+  "stars": 65,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "slywalker2006/dsh-passwords",
+  "stars": 63,
+  "cat": "remote-access",
+  "classification_source": "manual-carry-forward",
+  "remote_route": "cloudflare-tunnel"
+ },
+ {
+  "repo": "btspoony/mstar-harness",
+  "stars": 62,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "mrRisega/dsh-remote",
+  "stars": 60,
+  "cat": "remote-access",
+  "classification_source": "incremental-heuristic",
+  "remote_route": "lan-gateway"
+ },
+ {
+  "repo": "whyihaveyou/dsh-suite",
+  "stars": 56,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "opencues/opencues",
+  "stars": 54,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-fund-research",
+  "stars": 51,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GDWhisper/dsh-web-startup-auth",
+  "stars": 47,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "cosyncing/cosyncing",
+  "stars": 46,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "openguardrails/openguardrails",
+  "stars": 46,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "chaos-03x/dsh-agy",
+  "stars": 44,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "kejixiaoliang/awesome-dsh-plugins",
+  "stars": 42,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "left0ver/dsh-file-review",
+  "stars": 41,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-doublecheck",
+  "stars": 40,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-plugin-guide",
+  "stars": 40,
+  "cat": "tutorial-docs",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "songoao25/dsh-bottom-info-bar",
+  "stars": 39,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "MnemosyneOS/mnemosyne",
+  "stars": 37,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-data-quality",
+  "stars": 36,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "AcidGr/dsh-web-lan-access",
+  "stars": 35,
+  "cat": "remote-access",
+  "classification_source": "incremental-heuristic",
+  "remote_route": "lan-gateway"
+ },
+ {
+  "repo": "dingminhua/dsh-connect-workbuddy",
+  "stars": 34,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "limbo947/dsh-recall-plugin",
+  "stars": 34,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lhh010/dsh-minigames",
+  "stars": 33,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lhh010/dsh-ui-whale",
+  "stars": 33,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Tkingxiao/dsh-any-background",
+  "stars": 33,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "agi-fans/oh-my-dsh",
+  "stars": 32,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "hyzyn/dsh-plugin-kit",
+  "stars": 31,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PGZXB/dsh-feishu",
+  "stars": 31,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "yinnho/aginxbrowser",
+  "stars": 31,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "MoFeng2223/dsh-claude-provider",
+  "stars": 30,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Aa728848/dsh-chatgpt-subscription",
+  "stars": 28,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PensiveFei/deep-read-summarize",
+  "stars": 28,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Qinling-Melon-Farmers/dsh-memoir",
+  "stars": 28,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Kihara777/NixKits",
+  "stars": 27,
+  "cat": "skills-presets",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-claude-move",
+  "stars": 27,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Duskriver/dsh-opencode-go",
+  "stars": 26,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jo32/DeepDeck",
+  "stars": 26,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lizhiyao/oh-my-knowledge",
+  "stars": 23,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "caoyiwei850/dsh-ssh-ops",
+  "stars": 22,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Iwctwbh/dsh-flowglass",
+  "stars": 22,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/dsh-advisor",
+  "stars": 21,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-lsp-actions",
+  "stars": 21,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "zp-home/dsh-recommend",
+  "stars": 21,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/dsh-llm-fallbacks",
+  "stars": 20,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-checkpoint-rewind",
+  "stars": 20,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "wingsky-1/dsh-plugin-hub",
+  "stars": 20,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "xiaoyuyu6420/dsh-backup",
+  "stars": 20,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "YELEBAI/dsh-plugin-marketplace",
+  "stars": 20,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "buberlo/dsh-jev",
+  "stars": 19,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "gulagala001/oh-my-dsh",
+  "stars": 19,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "MichengAI/dsh-automation",
+  "stars": 19,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "KannaKuron/dsh-gitbash-shell",
+  "stars": 18,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "MichengAI/dsh-im-connect",
+  "stars": 18,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-background-agents",
+  "stars": 18,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "sikadi233-hub/minecraft-dev",
+  "stars": 18,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AgentConnect/dsh-awiki",
+  "stars": 17,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "maxwell-feng/dsh-tinyfish-search",
+  "stars": 17,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Nwflower/dsh-claude-style",
+  "stars": 17,
+  "cat": "fun-novelty",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "XieZongChen/dsh-md-notes",
+  "stars": 17,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "XMoon/dsh-pi-tui",
+  "stars": 17,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Aa728848/dsh-llm-verifier",
+  "stars": 16,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "bychv/dsh-preset-enhance",
+  "stars": 16,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-composer-history",
+  "stars": 16,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-defend",
+  "stars": 16,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-github",
+  "stars": 16,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "billLiao/awesome-dsh-plugin",
+  "stars": 15,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "cloveric/tarocub",
+  "stars": 15,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dsh-external/dsh-ui-whale",
+  "stars": 15,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KCNyu/clawock",
+  "stars": 15,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "LiuJunheng/DeepSeekHarnessGreen",
+  "stars": 15,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-local-ai",
+  "stars": 15,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "TecFancy/dsh-auth-gate",
+  "stars": 15,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ddtcorex/govard",
+  "stars": 14,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-click",
+  "stars": 14,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "XDTrees/dsh-workbuddy-xdpool",
+  "stars": 14,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-russian-lang",
+  "stars": 13,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "freehul/sgme",
+  "stars": 12,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "LaoYueHanNi/dsh-token-usage",
+  "stars": 12,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-library",
+  "stars": 12,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-session-sync",
+  "stars": 12,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-talk",
+  "stars": 12,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "picoaide/picoaide-harness",
+  "stars": 12,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "xbzbing/dsh-auth-gateway",
+  "stars": 12,
+  "cat": "remote-access",
+  "classification_source": "incremental-heuristic",
+  "remote_route": "reverse-proxy-self-hosted"
+ },
+ {
+  "repo": "Breeze136/dsh-kb-rag",
+  "stars": 11,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "cuddly-guacamole/dsh-auto-approval-llm",
+  "stars": 11,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "klarkxy/dsh-editor",
+  "stars": 11,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AcidGr/dsh-web-whale-maid",
+  "stars": 10,
+  "cat": "fun-novelty",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "mokuyoaxis/agent-guard",
+  "stars": 10,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-budget",
+  "stars": 10,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-mask",
+  "stars": 10,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-test-drive",
+  "stars": 10,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "v587d/capital-generation",
+  "stars": 10,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "zlZayn/dsh-zhihu-search",
+  "stars": 10,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AcidGr/dsh-web-mobile-fix",
+  "stars": 9,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "evoelsewhere/evoflux",
+  "stars": 9,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "KannaKuron/dsh-better-workspace",
+  "stars": 9,
+  "cat": "file-workspace",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lhh010/dsh-paste-input",
+  "stars": 9,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Max-Samson/dsh-usage-chart",
+  "stars": 9,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-observe",
+  "stars": 9,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-session-pin",
+  "stars": 9,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "yoza10635/dsh-argp",
+  "stars": 9,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "01men/ybkk-AIOS",
+  "stars": 8,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "42ch-dev/dsh-rust-sdk",
+  "stars": 8,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "cccakeee/awesome-dsh-plugins",
+  "stars": 8,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "FeatherHunter/ilife",
+  "stars": 8,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KurohaneKaoruko/DSH-Novel",
+  "stars": 8,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "LaoYueHanNi/dsh-git-worktree",
+  "stars": 8,
+  "cat": "eng-git-ci",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "mo-n/dsh-provider-qoder",
+  "stars": 8,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "muyuanjin/dsh-ptc-plus",
+  "stars": 8,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PelyDeng/dsh-plugin-manager",
+  "stars": 8,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-draw",
+  "stars": 8,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-translate",
+  "stars": 8,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "STARDUSTLC666/dsh-ppt",
+  "stars": 8,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "weibaohui/dsh-tasks",
+  "stars": 8,
+  "cat": "im-notify",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Wine-Red/dsh-codex-timeline",
+  "stars": 8,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "1420079678-ctrl/agent-body",
+  "stars": 7,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AgentsDanceAI/AIStore",
+  "stars": 7,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "g-yixuan/dsh-sidenote",
+  "stars": 7,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "grunmin/dsh-acp-enhanced",
+  "stars": 7,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "lhh010/dsh-ui-progress",
+  "stars": 7,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ly6170/dsh-messager",
+  "stars": 7,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-output-styles",
+  "stars": 7,
+  "cat": "skills-presets",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-score",
+  "stars": 7,
+  "cat": "security-governance",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "polaris-smart/dsh-devices",
+  "stars": 7,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "sensedeal/cue-skills",
+  "stars": 7,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "agentic-control-plane/dsh-acp-plugin",
+  "stars": 6,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Chinesezjc/dsh-tool-todo-tree",
+  "stars": 6,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "chnjames/dsh-plugin-market",
+  "stars": 6,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "gcry13067381632-jpg/dsh-qqbot",
+  "stars": 6,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "gehennawu/dsh-service",
+  "stars": 6,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-subscriptions",
+  "stars": 6,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "HiQ-AI/dingtalk-dsh-assistant",
+  "stars": 6,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Icather/dsh-clean-desktop-shell",
+  "stars": 6,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "MrWeiCodes/dsh-loop-guard",
+  "stars": 6,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "omdsh-dev/dsh-minigames",
+  "stars": 6,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "PerryLink/dsh-fast",
+  "stars": 6,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Ri0n72Y/dsh-workspace-scope",
+  "stars": 6,
+  "cat": "file-workspace",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "shatyuka/dsh-llm-codebuddy",
+  "stars": 6,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "thissensen/dsh-agent-studio",
+  "stars": 6,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "WSL043/dsh-chat-manager",
+  "stars": 6,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "XHR666/dsh-mpkg-wallpaper",
+  "stars": 6,
+  "cat": "fun-novelty",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "aa2246740/dsh-skillhub",
+  "stars": 5,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "alone-tree/dsh-skill-mcp-manager",
+  "stars": 5,
+  "cat": "mcp-tooling",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "astra3294/dsh-doctor",
+  "stars": 5,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-image-gen",
+  "stars": 5,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-key-rotation",
+  "stars": 5,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-lanmode",
+  "stars": 5,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "IT-coder-Yy/dsh-git-plugin",
+  "stars": 5,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "JochenYang/dsh-app",
+  "stars": 5,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "linkbag/dsh-swarm-orchestrator",
+  "stars": 5,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "linxichen/dsh-rigorquant",
+  "stars": 5,
+  "cat": "vertical-domain",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "pgmi-builds/better-dsh",
+  "stars": 5,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "unknowbug/anchorlaw",
+  "stars": 5,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "chenweigao/perch",
+  "stars": 4,
+  "cat": "file-workspace",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-pub/dsh-pub",
+  "stars": 4,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dshhub-co/dshhub-market",
+  "stars": 4,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Hou-DL/dsh-token-pulse",
+  "stars": 4,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Icstick/dsh-adaptive-context",
+  "stars": 4,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KannaKuron/dsh-ptc-cordis-preset",
+  "stars": 4,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lcestou/dsh-oh-my-claude",
+  "stars": 4,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "lifangjin/dsh-paoding",
+  "stars": 4,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "lovezi0/dsh-memory-palace",
+  "stars": 4,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "polarskicpl/dsh-codex-migrate",
+  "stars": 4,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "possible055/agentshim",
+  "stars": 4,
+  "cat": "vertical-domain",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "sky-unicorn/dsh-enhanced-plugins",
+  "stars": 4,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "TheYoungChen/dsh-plugin-market",
+  "stars": 4,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "toustifer/agentflow",
+  "stars": 4,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Xyanxhu/kilo-zen2dsh",
+  "stars": 4,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "1475505/miliastra-beyond-simulator",
+  "stars": 3,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "adithyanraj03/dsh-graft-plugin",
+  "stars": 3,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "azazo1/dsh-fork-inbox-guard",
+  "stars": 3,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "azazo1/dsh-write-protect",
+  "stars": 3,
+  "cat": "file-workspace",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "beijingwahw/dsh-computer-use-plugin",
+  "stars": 3,
+  "cat": "vision-multimodal",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "DDDFXYqiming/dsh-layered-memory",
+  "stars": 3,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-sync",
+  "stars": 3,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dsh-cc/dsh-cc",
+  "stars": 3,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/awesome-dsh-plugins",
+  "stars": 3,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/dsh-paste-input",
+  "stars": 3,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "evil7/deepSea",
+  "stars": 3,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Fishsb/dsh-shoucang-memory",
+  "stars": 3,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "gluztm/DSHGuard",
+  "stars": 3,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "huashenglian/dsh-livechat",
+  "stars": 3,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jilian-dsh/dsh-rule-engine",
+  "stars": 3,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lhh010/dsh-input-history",
+  "stars": 3,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "linxuhao/AItelier",
+  "stars": 3,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "miuzel/dsh-subagent-ui",
+  "stars": 3,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ns-zzj/dsh-hos-scrcpy",
+  "stars": 3,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "peiyucn/dsh-sparrow",
+  "stars": 3,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PM25000/dsh-ths-holdings",
+  "stars": 3,
+  "cat": "vertical-domain",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "whyself/Amadeus",
+  "stars": 3,
+  "cat": "vertical-domain",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "wink-run/dsh-plugin-store",
+  "stars": 3,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "yishengjun8/dsh-workspace-studio",
+  "stars": 3,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ywsldxk/dsh-plugin-stars",
+  "stars": 3,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "zoahdev/dsh-ecosystem",
+  "stars": 3,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "alaliqing/dsh-annotate",
+  "stars": 2,
+  "cat": "context-management",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "asuramaya/osiris",
+  "stars": 2,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "aust24lzy/dsh-plugin-hub",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "azazo1/dsh-think-window",
+  "stars": 2,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Britneycode/dsh-update-center",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "cyjyyd/dsh-ssh-tui",
+  "stars": 2,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dingzhenyao/dsh-plugin-directory",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dongsheng123132/awesome-dsh-plugins",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "dsh-plugin/dsh-plugin.github.io",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Dylan37670/dsh-plugin-panel",
+  "stars": 2,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "FiretrUCK666/dsh-task-board",
+  "stars": 2,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "godv61/dsh-task-engine",
+  "stars": 2,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-tts",
+  "stars": 2,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "GooDAnDReaDY/dsh-vision-bridge",
+  "stars": 2,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "justhalfbit/dsh-plugin-jev-effort-selector",
+  "stars": 2,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KannaKuron/dsh-ide-git",
+  "stars": 2,
+  "cat": "ide-integration",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Kayungko/dsh-plugin-task-coordinator",
+  "stars": 2,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "kolawong/dsh-plugin-auth-webserver",
+  "stars": 2,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "momo20012002/dsh-hmos-emulator",
+  "stars": 2,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "omdsh-dev/dsh-file-trace",
+  "stars": 2,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/dsh-input-history",
+  "stars": 2,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/dsh-paste-input",
+  "stars": 2,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "openbkn-ai/bkn-dsh",
+  "stars": 2,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PolinniZhong/dsh-knit",
+  "stars": 2,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "qigelunbiya/DSH-Patrol",
+  "stars": 2,
+  "cat": "vision-multimodal",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "rootkiller6788/dsh-plugin-anything",
+  "stars": 2,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "s11phere/dsh-away-notify",
+  "stars": 2,
+  "cat": "im-notify",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "tanle-mtr/dsh-plogin-plugin-recommender",
+  "stars": 2,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "TGYD-helige/dsh-plugins",
+  "stars": 2,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "tianjiqx/dsh-wigolo",
+  "stars": 2,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "TYEclipse/dsh-plugins-hub",
+  "stars": 2,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Wine-Red/dsh-prompt-stash",
+  "stars": 2,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "zlZayn/dsh-ds-balance",
+  "stars": 2,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "01men/RQ-DSH",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "173787247/dsh-wsl-kit",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "305037991x-pixel/dsh-account-balance",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "aa2246740/dsh-gateway",
+  "stars": 1,
+  "cat": "im-notify",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "aa2246740/dsh-oauth-login",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "AskTheWay/dsh-auto-memory",
+  "stars": 1,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "AskTheWay/dsh-jev-interceptor",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "azazo1/dsh-node-accent",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "azazo1/dsh-reject-message",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "baobaolaodie/flow-comet",
+  "stars": 1,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "bbaz123/dsh-confirmation-resolution",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "bbaz123/novel-writing-plugin",
+  "stars": 1,
+  "cat": "context-management",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "bitterSmilezzz/dsh-model-selector",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Britneycode/dsh-archive-vault",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "coeasy/dsh-go",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ComeCaramelos/dsh-docker-desktop-mcp",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ComeCaramelos/dsh-hOver-information",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "coolbat/awesome-dsh-plugins",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "DahliaVoid/dsh-temp-session",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "davidtan2008/deepseek-harness-desktop",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "DDDFXYqiming/dsh-session-recap",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "DDDMUC/dsh-delete-session",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "DDDMUC/dsh-provider-hub",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-config",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-dashboard",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-memory",
+  "stars": 1,
+  "cat": "memory-knowledge",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-mobile",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-observe",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-remote",
+  "stars": 1,
+  "cat": "remote-access",
+  "classification_source": "manual-carry-forward",
+  "remote_route": "cloudflare-tunnel"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-review",
+  "stars": 1,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ddtcorex/dsh-maestro-supervisor",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "domitor-syh/dsh-rollback",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "drscrewdriver/dsh-prime-memory",
+  "stars": 1,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/dsh-file-trace",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/dsh-input-history",
+  "stars": 1,
+  "cat": "tui-terminal",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/dsh-minigames",
+  "stars": 1,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "dsh-external/dsh-ui-progress",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "EastMG/dsh-gacha-calendar",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "evlon/deepseek-harness-launcher",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "ffyfox/dsh-linux-desktop",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "flandre2233/dsh-recovery-resume",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "fly3366/DeepJIT",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "fly3366/dsh-o11y-plugin",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "FQXCS/web-desktop",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Gamitrd6316/dsh-launcher",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "Harvey-Will/dsh-vision-analysis",
+  "stars": 1,
+  "cat": "vision-multimodal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "hrhgit/deepseek-harness-plugin-manager",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "hyperion2144/dsh-desktop-tauriapp",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "hyperion2144/dsh-hashline-edittool",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "idoall/dsh-quick-replies",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "idoall/dsh-update-status",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jacket-sikaha/dsh-market-gist-autosync",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jackovibe/dsh-codex-pin",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "jackovibe/dsh-settings-order",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "janpauldahlke/dsh-gpu-monitor-nvml",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Jaylor-Wang/dsh-tool-antigravity",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "john-walks-slow/dsh-clear-mind",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "john-walks-slow/dsh-proactive",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "john-walks-slow/dsh-qol",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KannaKuron/dsh-agent-lang",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KaramachiA217/dsh-settings-ui",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "KeepLost/harniverse",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "kolawong/dsh-plugin-toolkit",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "lengmoXXL/dsh-git",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "lhh010/dsh-file-trace",
+  "stars": 1,
+  "cat": "tui-terminal",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "lovezi0/dsh-model-extension",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "luca3xxvsoo/dsh-extra-plan",
+  "stars": 1,
+  "cat": "orchestration-workflow",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "ManoloRemiddi/deepseek-harness-plugins",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "MaybeMeibeMaybi/dsh-harmonyos-hiboard",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "mill413/dsh-session-resume",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "minatoAI/jina-web-search-dsh-plugin",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "NIyueeE/dsh-container",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "NoelJudeNoel/dshost-plugin",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "omdsh-dev/dsh-ui-progress",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "omdsh-dev/dsh-ui-whale",
+  "stars": 1,
+  "cat": "search-web",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "oxlyn/dsh-flyout-sidebar",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-autotier",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-plugin-doctor",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "PerryLink/dsh-team-rooms",
+  "stars": 1,
+  "cat": "orchestration-workflow",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "robbin810130/dsh-vault-plugin",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "sealfly/dsh-reasonix-desktop",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "shellexy/dsh-webviewgtk",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "slow-stack/euthyna",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "SunshineR04/dsh-session-manager",
+  "stars": 1,
+  "cat": "context-management",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Tkingxiao/I-am-Yuike",
+  "stars": 1,
+  "cat": "skills-presets",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "tr1v3r/dsh-proxy",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "tr1v3r/dsh-quote-followup",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "usertianziyang/DSH-Plugin-Hub",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "victor10035445/dsh-v-skill-links",
+  "stars": 1,
+  "cat": "skills-presets",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "weibaohui/dsh-kb",
+  "stars": 1,
+  "cat": "memory-knowledge",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Whning0513/deepseek-protocol-doctor",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "Witchwarren2344/dsh-mnemosyne-memory",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "writeCasually/deepseek-harness-plugins",
+  "stars": 1,
+  "cat": "other",
+  "classification_source": "manual-carry-forward"
+ },
+ {
+  "repo": "WSL043/dsh-image-viewer",
+  "stars": 1,
+  "cat": "vision-multimodal",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "xavier711/dsh-plugin-deepseek-usage",
+  "stars": 1,
+  "cat": "usage-billing",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "XiangSu-ce/dsh-plugin-freecodego",
+  "stars": 1,
+  "cat": "model-provider",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "yefengliu1/dsh-agent-grid",
+  "stars": 1,
+  "cat": "session-ui-ux",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "yellpoliovirusvaccine37/dsh-launcher",
+  "stars": 1,
+  "cat": "desktop-client",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "YpipaQ/dsh-s-m-c-center",
+  "stars": 1,
+  "cat": "security-governance",
+  "classification_source": "incremental-heuristic"
+ },
+ {
+  "repo": "zhanghao3693/dsh-dpharness",
+  "stars": 1,
+  "cat": "market-curation",
+  "classification_source": "incremental-heuristic"
+ }
+]

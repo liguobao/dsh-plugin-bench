@@ -1,0 +1,115 @@
+# DeepSeek Harness 服务器部署（dsh-server-deployment）
+
+[简体中文](README.md) | [English](README.en.md)
+
+<p align="center">
+  <img src="assets/cover.png" alt="DSH 服务器部署封面" width="100%">
+</p>
+
+为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）Web 端增加**多用户门户**的零依赖 Node 网关：登录认证、每用户独立 DSH 实例与 OS 级数据隔离、每用户独立 API Key，以及内置的**交付文件抽屉**（下载 / 上传 / 当前工作区自动定位）。隔离以 **OS 账号为边界**而非网关代码——文件访问经 sudo 助手 `runuser` 降权为 `dsh-<name>` 用户执行（修复 issue #1 TOCTOU 竞态），网关对用户目录零权限；完整机制见 [docs/multi-user-isolation.md](docs/multi-user-isolation.md)。
+
+> **部署定位（重要）**：本项目是**服务器端部署**方案——网关、每用户 DSH 实例与文件助手全部运行在**远程服务器**上，多个用户通过浏览器（公网域名 + HTTPS）访问各自的会话与交付文件；它**不是本机 / 桌面工具**，**无需在用户电脑上安装任何软件**。文档中的示例路径（如 `/opt/deepseek-harness`、`/etc/systemd/system`）均为服务器端路径。
+
+## 特性
+
+- **登录门户**：自研暗色登录页（漆面 + 金箔风格），scrypt 口令（兼容旧版 APR1）、HMAC 签名会话 Cookie（HttpOnly / Secure / SameSite=Lax）、登录限流（IP + 账号两级）、CSRF 双提交校验。
+- **用户隔离**：每个用户一个独立 DSH 实例（独立端口），以独立系统账号 `dsh-<name>` 运行，`DSH_HOME` 指向其 0700 私有目录；`userctl.js` 一条命令完成建号 / 改密 / 删号 / 预置 Key。
+- **每用户独立 API Key**：登录后无 Key 自动引导 `/setup` 填写，经回环 RPC 写入该用户私有的 `.credentials.yaml`（0600，属主仅本人）。
+- **回环特权接口修复**：网关向后端呈现 `Host: 127.0.0.1:<port>` 并剥离浏览器信任标记，DSH 钉在回环的 settings / credentials / agentPreset 等特权接口在公网访问下同样可用。
+- **交付文件抽屉（文件管理）**：主界面右下角**一颗**可拖动胶囊「🗂 文件管理」（2026-08 起由「交付文件」+「上传文件」双胶囊合并而来），白色抽屉内嵌文件浏览器——目录浏览、下载（attachment + 中文文件名）、多文件上传（100MB 上限）；自动定位到当前对话所在工作目录（嗅探会话 RPC 追踪 cwd，持久化恢复）。胶囊在 SPA 弹窗（设置面板/模态）打开时自动隐藏，避免遮挡。
+- **安全边界**：所有用户文件访问经 sudoers 固定路径的助手脚本——root 仅校验参数并降权，文件操作以 `dsh-<name>` 用户自身身份执行（修复 issue #1 的 TOCTOU 竞态）；网关进程对用户目录零权限；隐藏文件（含 `.credentials.yaml`）不可下载；SPA 注入尊重 `prefers-reduced-motion`、无玻璃拟态/渐变装饰。
+
+## 架构
+
+```
+浏览器 ──https──▶ 反向代理(TLS, 例: OpenResty) ──▶ dsh-gateway(:3100) ──▶ 每用户 DSH 实例(:3101+)
+                                  │                     │
+                                  │ 会话/限流/CSRF/路由  │ 以独立 OS 账号 dsh-<name> 运行
+                                  │ Key 引导/抽屉注入    │ DSH_HOME=<用户私有目录 0700>
+                                  └──────────┬──────────┘
+                                             └─ 文件访问走 sudo 助手: dsh-file-{list,stat,read,put}
+```
+
+> 网关默认端口为 **3100**（`server.js` 默认值、systemd 单元与 nginx 示例已统一；可用环境变量 `PORT` 覆盖，覆盖后需同步反代配置——回环防护会自动读取网关启动时写入的 `state-port.json`，无需手动改 `GW_PORT`）；每用户实例自 3101 递增，由 `userctl` 分配。
+
+多用户与数据隔离的完整说明见 [docs/multi-user-isolation.md](docs/multi-user-isolation.md)。
+
+## 目录结构
+
+```
+gateway/                # 网关本体（零依赖 Node）
+  server.js             #   登录/会话/限流/CSRF/反代/SPA注入/文件抽屉/上传下载接口
+  auth.js               #   scrypt + APR1 口令校验
+  credentials.js        #   .credentials.yaml 读写（仅 userctl 使用）
+  store.js              #   users.json 乐观并发读改写（网关与 userctl 共用）
+  userctl.js            #   用户管理：OS 账号/端口/实例/Key
+  _smoke.js             #   网关冒烟测试（本地即可运行，无需 DSH）
+  _unit.js              #   纯逻辑单元测试（node gateway/_unit.js，无需 root）
+  static/               #   登录前可访问的静态资源（manifest/favicon）
+bin/                    # 主机端入口与 root 助手
+  dsh-users.sh          #   userctl 的 sudo 入口
+  dsh-file-{list,stat,read,put}[.js]
+units/                  # systemd 单元模板（网关 + 每用户实例由 userctl 生成）
+nginx/                  # TLS 反向代理示例配置（已占位化域名）
+```
+
+## 快速部署（概览）
+
+1. 安装 DSH（npm 包）并准备 Node 运行时；按 `units/` 配置网关 systemd 服务（`User=<服务账号>`，仅监听 127.0.0.1）。
+2. 用 `sudo bin/dsh-users.sh add <用户>` 建号（自动创建 OS 账号、分配端口、生成并启动实例）。
+3. 安装 root 助手并配置 sudoers（固定路径白名单）：
+
+   ```bash
+   install -o root -g root -m 0755 bin/dsh-file-* /opt/deepseek-harness/bin/
+   # /etc/sudoers.d/dsh-upload:
+   # <服务账号> ALL=(root) NOPASSWD: /opt/deepseek-harness/bin/dsh-file-put, /opt/deepseek-harness/bin/dsh-file-stat, /opt/deepseek-harness/bin/dsh-file-read, /opt/deepseek-harness/bin/dsh-file-list
+   # 仅在调大上传上限时需要（助手默认 110000000 字节 ≈ 105MB）：
+   # Defaults!/opt/deepseek-harness/bin/dsh-file-put env_keep += "DSH_UPLOAD_MAX_BYTES"
+   ```
+
+   升级或自检时可在服务器上按以下清单验证助手（把 `<user>` 换成真实用户名）：
+
+   ```bash
+   H=/opt/deepseek-harness/users/<user>
+   sudo -n /opt/deepseek-harness/bin/dsh-file-list "$H" ''          # JSON 目录列表
+   printf 'BYTES 6\nhello\n' | sudo -n /opt/deepseek-harness/bin/dsh-file-put "$H" "$H/workspace" t.txt   # v2 长度协议；短流 exit=6 不落盘
+   sudo -n /opt/deepseek-harness/bin/dsh-file-stat  "$H" "$H/workspace/t.txt"   # 输出 6
+   sudo -n /opt/deepseek-harness/bin/dsh-file-read  "$H" "$H/workspace/t.txt"   # 输出 hello
+   sudo -n /opt/deepseek-harness/bin/dsh-file-read  "$H" /etc/passwd; echo "exit=$?"  # exit=3（越界拒绝）
+   ps -ef | grep -E 'runuser.*dsh-'                                  # 子进程应为 dsh-<user> 而非 root
+   ```
+
+4. 按 `nginx/dsh-https-1145.conf` 配置 TLS 反向代理（替换 `server_name` 为你的域名并挂证书）。
+5. 登录后首次使用会引导填写 DeepSeek API Key（仅写入用户私有目录）。
+
+> 环境变量：网关与 userctl 均可用环境变量覆盖默认的 `/opt/deepseek-harness` 路径：
+
+| 变量 | 作用方 | 默认 |
+|---|---|---|
+| `DSH_BASE_DIR` | userctl / dsh-users.sh 派生路径的安装前缀 | `/opt/deepseek-harness` |
+| `DSH_USERS_DIR`、`DSH_USERS_FILE`、`DSH_SETTINGS_SRC`、`DSH_NODE_BIN`、`DSH_DSH_BIN` | userctl 细粒度覆盖 | 由 BASE_DIR 派生 |
+| `USERS_FILE`、`SECRET_FILE`、`USERS_DIR` | 网关 | `/opt/deepseek-harness/...` |
+| `UPLOAD_HELPER`、`FILE_STAT_HELPER`、`FILE_READ_HELPER`、`FILE_LIST_HELPER` | 网关调用助手的绝对路径 | `/opt/deepseek-harness/bin/dsh-file-*`（**自定义前缀时必须同步改 sudoers 与这四个变量**） |
+| `HOST`、`PORT`（默认 3100）、`SESSION_TTL`、`COOKIE_SECURE`、`DEEPSEEK_BASE_URL`、`UPLOAD_MAX_MB`、`MAX_IP_ATTEMPTS`、`MAX_USER_ATTEMPTS`、`WINDOW_MS`、`LOCK_MS`、`SNIFF_BUFFER_CONCURRENCY`（并发缓冲的 history 响应上限，默认 4） | 网关 | 见 `gateway/server.js` |
+| `DSH_UPLOAD_MAX_BYTES` | dsh-file-put（root 助手，经 sudoers `env_keep` 传入） | `110000000`（调大 `UPLOAD_MAX_MB` 时需同步） |
+| `DSH_TRUSTED_HOST` | userctl（实例 `--trusted-host`） | `127.0.0.1:1145` |
+
+`bin/dsh-users.sh` 与 `bin/dsh-file-list` 已按自身位置自定位：任意目录检出即可直接运行（`dsh-users.sh` 首次调用自动重提权为 root；node 解析相对脚本位置，缺失时回退 `PATH`）。自定义安装前缀时 systemd 单元用上面的 `sed` 命令生成；网关 systemd 单元还支持 `EnvironmentFile=-/etc/default/dsh-gateway`，可在该文件里统一注入上述环境变量。
+
+## 交付文件抽屉的行为细节
+
+- **自动定位**：网关嗅探代理流量中的 `session.history`（打开会话）与 `session.list`（每会话含 cwd），记住当前对话目录并持久化到 `state-cwd.json`；打开「文件管理」即列出该目录（目录失效自动回退工作区）。
+- **嵌入与关闭**：抽屉以同源 iframe 内嵌（`X-Frame-Options: SAMEORIGIN`）；页面内「返回应用」运行时检测 iframe 环境，发 `postMessage('dshgw-close')` 关闭抽屉而非导航，杜绝嵌套打开。
+- **上传**：原始字节体 `POST /__gw/upload?dir=&name=`，助手降权为 `dsh-<name>` 落盘（root 仅校验参数），文件属主天然为本人，同名覆盖，超限 413。
+
+## 安全注意事项
+
+- **安装树完整性（最关键）**：`/opt/deepseek-harness` 整棵树——含 DSH monorepo 源码（`packages/`、`apps/`、`node_modules/`）与 `.agents/` 技能库——不得带 group/other 写位。所有租户实例**共享执行**这份代码，任何可写点都是跨租户注入点（改共享代码或技能文件 → 以其他租户身份执行 → 窃取其 API Key）。部署/升级后必须自检：`find /opt/deepseek-harness -not -path '*/users*' -perm /022 | wc -l` 输出 0（`users/` 用户目录除外）。
+- `gateway/` 目录保持 `root:dsh-gateway 0770`：网关需要在其内做 tmp+rename 原子写（users.json / secret / state-cwd.json）；目录内代码文件（server/userctl/auth/credentials/static）归 root:root 0644。`bin/` 全部归 root:root。
+- 网关以专用系统账号 `dsh-gateway`（无 shell）运行，**切勿**用 `ubuntu` 等自带 NOPASSWD sudo 的云镜像账号运行网关；其 sudo 能力仅限 `/etc/sudoers.d/dsh-upload` 白名单中的四个文件助手。网关 systemd 单元**不可**设置 `NoNewPrivileges=yes`（会阻断 sudo 调 root 助手，上传/下载/列表全部失效）。
+- **回环租户隔离**（`bin/dsh-loopback-guard` + `units/dsh-loopback-guard.service`）：DSH 实例的特权接口按「Host 头是回环」放行，而所有实例同处 127.0.0.1--任何租户的 agent 都能伪造 Host 直连他人端口窃取 API Key。防护为 iptables OUTPUT 链：每个 `dsh-<name>` 只能连自己的实例端口，其他租户端口与网关端口被 REJECT，root/网关账号不受影响。网关端口解析顺序为 `GW_PORT` 环境变量 > 网关启动时写入的 `state-port.json` > 默认 3100。userctl 增删用户自动刷新规则（经 `iptables-restore --noflush` 单次提交，刷新期间无防护空窗）；规则按**目标端口**逐条 REJECT（不可按 uid 全量拒绝，否则会掐断内核回包路径）。
+- 每用户实例带 systemd 资源限制（TasksMax/MemoryMax/CPUQuota，可经 `DSH_MEM_MAX`/`DSH_CPU_QUOTA` 调整）与内核加固项。
+- 文件助手（dsh-file-put/read/stat/list）root 仅做参数字符串校验与身份切换，所有文件操作经 `runuser -u dsh-<name>` 以用户自身身份执行（修复 issue #1 的 TOCTOU 竞态）；助手内的 realpath 前缀校验仅保留退出码语义，不再是安全边界。依赖 util-linux 的 `runuser`。**上传助手为 v2 长度协议**（`BYTES <n>` 头 + 精确字节校验）：网关流式转发请求体，中断/超时/超限的上传会以 exit 6 拒绝提交，不会留下截断文件。
+- 用户凭据文件必须保持仅属主可读（0600）：DSH 启动时会强制检查（`assertOwnerOnly`）。本网关的 root 助手模型天然满足，不要给用户目录添加任何 ACL 读取授权（曾因此触发实例拒绝启动）。
+- 网关与所有实例仅监听 127.0.0.1，公网只暴露 TLS 反代；反代必须**覆盖**（非追加）`X-Forwarded-For` 为 `$remote_addr`（`nginx/dsh-https-1145.conf` 模板已按此安全默认值配置），否则攻击者可伪造 XFF 绕过网关 IP 限流。
+- 登录限流为 IP + 账号两级；账号锁定（5 次/15 分钟）本身可被滥用作 DoS，仅靠 IP 级限流与强密码缓解。改密会使 `pwdVer` 递增，所有已签发会

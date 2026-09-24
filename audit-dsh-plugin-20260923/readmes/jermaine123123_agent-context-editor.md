@@ -1,0 +1,136 @@
+# Agent Context Editor
+
+Agent Context Editor is a cross-agent plugin for manually excluding, editing, and selectively compressing AI conversation context. It also supports searching, filtering, selecting, hiding, restoring, and undoing conversation changes while preserving the original Session.
+
+It provides a consistent, reversible, and user-controlled context-management option across supported Agent hosts, complementing prompt steering and automatic context compaction rather than replacing them.
+
+中文说明: [README.zh-CN.md](README.zh-CN.md)
+
+## Usage guidance
+
+Long-running Agent sessions can suffer from **context rot**: as the context grows—especially when failed attempts, stale conclusions, and irrelevant Tool output accumulate—the model may become less reliable at finding and correctly applying important information even before the context window is full.
+
+For most tasks, prompt steering and automatic context compaction are usually sufficient. Manual context exclusion and editing are optional controls for cases where the automatic result is not what you want, rather than something users need to manage continuously. They can be useful when compaction drops details worth preserving or when failed attempts and irrelevant history occupy too much of the context.
+
+> **Prompt-cache impact:** Excluding or editing context changes the model-input prefix. Cached prompt content after the earliest changed position may no longer be reusable, so changes near the end of a Session usually affect less cached context than changes near the beginning. Exact behavior depends on the Agent host, model, and provider. The original Session remains preserved.
+
+## Features
+
+- Manually exclude selected context and restore it later
+- Edit User messages and AI Answers with restore and undo
+- AI-condense selected context into an editable, reversible summary(selectively compressing)
+- Search conversations and navigate between matches
+- Filter User, AI, Reasoning, Answer, and Tool content
+- Select individual items, continuous ranges, or multiple items
+- Hide, restore, reset, and undo visual changes
+- Manage AI Reasoning and final Answers independently
+- Save changes without overwriting the original Session
+- Automatically use a Chinese or English interface
+
+## Supported hosts
+
+| Feature | Pi TUI | Pi Desktop/RPC | DeepSeek Harness |
+| --- | ---: | ---: | ---: |
+| Search and filters | Yes | Yes | Yes |
+| Single, range, and batch selection | Yes | Yes | Yes |
+| Independent Reasoning and Answer units | Yes | Yes | Yes |
+| Visual hide, restore, reset, and undo | Yes | Yes | Yes |
+| Manual context exclusion | Yes | No | Yes |
+| Manual User/Answer editing | Yes | No | Yes |
+| AI condensation and replacement | Yes | No | Yes |
+| Original Session preserved | Yes | Yes | Yes |
+| Chinese and English UI | Yes | Yes | Yes |
+
+Manual context exclusion, text editing, and selected-context AI condensation are available in Pi TUI and DeepSeek Harness. Editable content is limited to plain-text User messages and complete unsigned Answers.
+
+The separate [Pi Context Desktop](https://github.com/jermaine123123/pi-app) community build provides visual conversation management for Windows x64.
+
+## Install
+
+### Pi extension
+
+Download `pi-context-editor-0.6.1.tgz` from the [release assets](https://github.com/jermaine123123/agent-context-editor/releases). Pi `0.84.2` installs a local package directory rather than a `.tgz` file. Extract the archive so that `package.json` is at the package directory root, then run:
+
+```sh
+pi install ./pi-context-editor-0.6.1
+```
+
+When working directly from this repository:
+
+```sh
+pi install ./adapters/pi-extension
+```
+
+For Pi Desktop registration, run `adapters/pi-extension/scripts/install-desktop.ps1` with PowerShell. The script accepts `-PiPath` and `-DesktopExePath` for non-standard installations. Fully restart Pi Desktop after installation.
+
+### DeepSeek Harness
+
+Download `context-editor-deepseek-harness-0.4.10.tgz` from the release assets and install it with the official Harness CLI:
+
+```sh
+dsh plugin --profile <profile> add ./context-editor-deepseek-harness-0.4.10.tgz
+```
+
+The adapter has been tested with DeepSeek Harness `0.1.5-rc.1` and an isolated `0.1.6-alpha.1` build. See [COMPATIBILITY.md](adapters/deepseek-harness/COMPATIBILITY.md) for the tested host boundaries.
+
+## Usage
+
+### Pi TUI
+
+Enter `/ctx` to open the full-screen Context Editor. The primary controls are `x` for context exclusion or restoration, `e` for editing, `E` for restoring original text, `h` and `r` for visual hiding and restoration, and `s` for switching the search scope. Use `c` to generate and review a summary for the selected context, `C` to exclude or restore an applied summary, and `D` to restore the original context. Press `?` for the complete shortcut reference.
+
+### Pi Desktop/RPC
+
+Enter `/ctx` to open the native Context Editor dialogs. This path supports search, filters, selection, and visual hide/restore operations. It does not currently support model-context exclusion or User/Answer editing.
+
+### DeepSeek Harness
+
+Open the `Context Editor` tab beside the normal Chat view. The tab manages the same Session and provides context exclusion, User/Answer editing, search, filters, selection, visual hiding, restoration, and undo. Selected context can be condensed into an editable summary, applied after review, and restored later.
+
+Recent adapter updates improve compatibility with newer DeepSeek Harness builds and fix checkpoint-range handling for long turns containing interleaved messages and Tool steps.
+
+## How it works
+
+Agent Context Editor reads the existing Session and presents User, AI, Reasoning, Answer, and Tool content in an independent management view. Reasoning and final Answers from the same AI turn remain separately manageable, while related Tool Calls and Tool Results remain paired.
+
+Visual changes and model-context changes are stored separately. Visual hiding only changes the Context Editor view. Confirmed context exclusion, supported text edits, and applied condensation summaries change the derived input sent to the model without overwriting the original Session or the host's main chat timeline.
+
+## Current limitations
+
+- The plugin does not edit or hide content directly in the host's main chat timeline.
+- Pi Desktop/RPC does not support model-context exclusion or text editing.
+- Reasoning, Tool, System, attachment, structured User, and signed Answer content cannot be edited.
+- Batch text replacement is not supported.
+- Visual hiding does not change model input or reduce token usage.
+- There is no separate hide-all operation; restore-all is available.
+- AI condensation is available in Pi TUI and DeepSeek Harness, but not Pi Desktop/RPC; whole-session automatic cleanup is not included.
+- DeepSeek Harness compatibility is limited to the tested host boundaries documented in [COMPATIBILITY.md](adapters/deepseek-harness/COMPATIBILITY.md).
+
+## Current release
+
+The current stable project release is `v0.4.3`:
+
+- Pi extension: `pi-context-editor@0.6.1`
+- DeepSeek Harness adapter: `context-editor-deepseek-harness@0.4.10`
+- Pi Context Desktop community build: `context-editor-v0.1.4`
+
+See the [v0.4.3 release notes](https://github.com/jermaine123123/agent-context-editor/releases/tag/v0.4.3) for the current packages, compatibility updates, and verification results.
+
+## Roadmap
+
+- Support more Agent hosts
+
+### Future exploration
+
+- Explore a per-prompt Conversation Context Router: before each request, evaluate how the current task relates to conversation history and assemble a minimal, dependency-safe working set. Routing would affect only the derived model input for that request, never rewrite the original Session, and remain previewable, explainable, overridable, with a full-context fallback.
+
+## Development
+
+Requirements: Node.js 22.19 or later. Node 24 was used for the recorded local acceptance run.
+
+```sh
+npm ci
+npm run verify
+```
+
+`npm run verify` builds both adapters, runs TypeScript checks and 

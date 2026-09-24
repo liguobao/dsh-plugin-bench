@@ -1,0 +1,211 @@
+<div align="right"><strong>🇨🇳 中文</strong> | <strong><a href="./README_EN.md">🇬🇧 English</a></strong></div>
+
+# dsh-qa · 质量工作台
+
+[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm%20Noncommercial%201.0.0-blue)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-0.5.3-informational)]()
+[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)]()
+[![DSH Plugin](https://img.shields.io/badge/DSH-plugin-0A7EA4)]()
+[![DeepSeek Harness Compatibility](https://img.shields.io/badge/DeepSeek%20Harness-dsh--v0.1.7--alpha.1%20host--tested-0A7EA4)](https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.1.7-alpha.1)
+
+**dsh-qa** 是 DeepSeek Harness 的本地 QA 工作台：在一个项目空间中管理需求、测试用例、风险、执行、证据和交付决策。项目与迭代的对话复用 DSH 原生会话，并自动使用「测试模式」（preset id: `qa`）；业务数据保留在本机，运行时没有生产依赖。
+
+当前发布版本是 `v0.5.3`；本版本完成 Quiet Studio「安静工作室」视觉整理、项目目录与测试入口归档，并修复应用初始化期间页面选择被覆盖的问题，同时保持 Harness 官方 Panel/Slot API 与 `dsh-v0.1.7-alpha.1` 兼容性。`quality-control` 独立 bundle 的真实运行验证仍未评估。
+
+```
+测试首页 → DSH 测试对话 → 项目看板 → 日历排期
+```
+<img width="5090" height="2476" alt="image" src="https://github.com/user-attachments/assets/287ac2d2-aec0-4f7a-b3a6-72c183b871ba" />
+
+## 目录
+
+- [功能特性](#功能特性)
+- [安装（DSH 插件）](#安装dsh-插件)
+- [npm 安装与更新（独立运行）](#npm-安装与更新独立运行)
+- [快速开始（不装插件体验）](#快速开始不装插件体验)
+- [质量工作流](#研发质量控制工作台0205-质量域)
+- [独立运行模式](#独立运行模式)
+- [架构](#架构)
+- [AI 工具集](#ai-工具集)
+- [配套 QA 技能库](#配套-qa-技能库)
+- [开发与贡献](#开发与贡献)
+- [路线图文档](#路线图文档)
+- [许可证](#许可证)
+- [常见问题](#常见问题)
+
+## 功能特性
+
+### 测试项目管理
+
+- **项目与迭代双形态**：顶层对象可选「测试项目」或「迭代」（迭代可挂靠父项目），两者均绑定独立 DSH 会话，筛选栏可分别查看
+- **测试首页与日历排期**：在办项目、临期/逾期里程碑、待审批门禁、未关闭缺陷、最近动态同屏呈现；日历支持年/月/日跳转、点击日期新增、按项目登记里程碑或日程并直接删除
+- **实时看板**：六列流水线（需求分析 → 用例设计 → 用例评审 → 执行中 → 缺陷回归 → 已发布），拖拽换列，SSE 实时推送，多窗口同步
+- **项目档案工作区**：宽屏项目详情集中编辑名称、编号、产品、负责人、摘要和阶段；概览、质量任务、需求、用例、缺陷、里程碑、报告、知识、纪要和门禁 10 个分区，并展示进度、AI 策略、成员、文件目录与阶段时间线
+- **本地项目目录**：创建项目时可自动生成 `01_需求与范围 / 02_测试计划 / 03_测试用例 / 04_测试数据与脚本 / 05_测试执行 / 06_缺陷 / 07_测试报告 / 08_发布与归档` 八级工作目录；删除项目记录不会删除文件夹
+- **门禁治理**：需求评审/策略评审/用例评审/报告评审/发布/结项由 AI 提交申请，测试负责人人工审批（对齐 AI 研发质量分析 8 阶段工作流）
+
+### 研发质量控制工作台（0.2–0.5 质量域，已进入 v0.4.0 基线）
+
+- **质量任务与来源快照**：围绕单个测试目标创建质量任务，服务端采集并校验需求、工作区文件或允许的 Git 修订来源；记录摘要、指纹、验收标准、风险、测试范围和分析决策，避免把客户端提交的路径或内容当作可信输入
+- **测试计划与受控执行**：质量任务下维护可评审的测试计划和不可变执行配置版本；只允许基于当前已评审计划、当前配置版本和来源摘要生成预览令牌，再启动最小化环境中的本地受控测试运行
+- **证据、分析与回归**：终态运行可归档为带完整性校验的证据包；支持失败分析、人工确认后升级缺陷、同计划运行前后对比，以及可追溯、可排除的确定性回归集
+- **计算型质量门禁**：依据执行来源、已验证证据、关键测试结果和风险状态计算 `PASS / WARN / BLOCK`；可查看交付报告与趋势，仅允许对合格的警告项创建带责任人、原因和过期时间的受控例外
+- **项目详情直达**：首页在办项目和项目看板卡片主体可直接进入完整项目详情；首页最多展示 5 个在办项目，全部项目仍可在项目看板查看
+
+#### 质量交付流程参考
+
+![dsh-qa 质量交付流程：从可信来源、质量任务和受控执行，经证据与门禁，分流到 PASS 交付或 WARN/BLOCK 评审。](https://raw.githubusercontent.com/naodeng/dsh-qa/master/docs/diagram/quality-workflow/dsh-qa-quality-workflow.svg)
+
+流程图描述的是质量控制边界：未形成终态运行或未验证证据时，先进入故障分析与回归并重新执行；门禁 `PASS` 才进入交付，`WARN / BLOCK` 需要评审。例外只能作用于可豁免的 `WARN` 检查项，不能把 `BLOCK` 变为通过。
+
+### AI 协作能力
+
+- **可控 AI 模式**：每项目可选全流程辅助、按需协作，或完全关闭自动辅助；自动提取与首页提醒也可分别关闭
+- **AI 材料上板**：AI 从对话自动登记需求（可关联用例与验证目的）、测试用例（含优先级、需求追踪 `trace`、风险标签与三态）、缺陷（严重级别基于业务影响，含复现频率与影响范围）、里程碑（自动算截止日，逾期/临期徽章）、日程、测试知识、会话纪要、测试报告（版本链），并支持登记 Playwright/Pytest 等自动化结果；每次登记实时出现在看板卡片与材料流
+- **DSH 技能与命令**：每项目独立绑定 DSH 会话；“技能与命令”面板支持分类、搜索和点击插入，输入 `/` 出现即时建议，执行结果直接回显在工作台
+- **QA Skill 安装页面**：左侧 `QA Skill安装` Tab 按「测试类型 / 测试工作流程 / 加强版」展示 Skill；测试类型继续按「需求与策略、用例与评审、功能与兼容、接口与自动化、质量保障专项、缺陷、报告与审查」分组，支持中英文切换、搜索、官网详情和一键安装到 DSH
+- **DSH 单一对话与模型切换**：只使用本项目 DSH 测试模式会话，模型切换器动态读取 DSH 原生模型目录，不存在插件内第二套模型
+
+### 界面与连接
+
+- **中英文语言切换**：在设置弹窗中切换，默认中文，选择在本机浏览器中持久保存；导航、首页、看板、列表、日历、雷达与抽屉/模态框标题均双语化
+- **设置与版本信息**：设置弹窗展示当前/最新版本、兼容 DSH 版本、GitHub 仓库和项目官网；品牌区域的版本号可打开双语、分页的版本迭代记录
+- **可调工作区**：主导航、项目栏与项目雷达均可拖动边缘改变宽度，可分别收起；双击边缘恢复默认，布局预设不再放在设置弹窗中
+- 逾期里程碑红标、7 日内临期黄标、待批门禁紫标，顶栏实时统计
+
+## 安装（DSH 插件）
+
+请使用**启动 DSH 的同一种方式**管理插件：`dsh web` 是 `dsh --profile web` 的别名，下面两组命令都操作同一个 `web` profile。
+
+### 方式一：通过 npx 启动 DSH
+
+```bash
+# 安装 dsh-qa 插件
+npx @deepseek-ai/dsh plugin --profile web add dsh-qa
+
+# 更新到 npm 的 latest 版本
+npx @deepseek-ai/dsh plugin --profile web update dsh-qa
+
+# 安装或更新后启动/重启 Web UI
+npx @deepseek-ai/dsh web
+```
+
+### 方式二：从 DeepSeek Harness 源码仓库启动
+
+在已完成 `pnpm install` 和 `pnpm run build` 的 Harness 仓库根目录运行：
+
+```bash
+# 安装 dsh-qa 插件
+pnpm dsh plugin --profile web add dsh-qa
+
+# 更新到 npm 的 latest 版本
+pnpm dsh plugin --profile web update dsh-qa
+
+# 安装或更新后启动/重启 Web UI
+pnpm dsh web
+```
+
+如需固定到 GitHub 或本地开发副本，可在两种方式的 `add dsh-qa` 中分别替换为 `add github:naodeng/dsh-qa` 或 `add link:/path/to/dsh-qa`。安装或更新后重启 Web UI（插件在宿主启动时加载）。GUI 侧边栏会出现「质量工作台」入口；点击可在会话区打开，工具栏可在独立标签页打开。
+
+> **模型与 API**：工作台不维护第二套 API Key 或模型配置。每个测试项目绑定一个以项目文件夹为工作目录的 DSH 原生会话，并自动使用「测试模式」（preset id: `qa`）。模型列表、模型切换、技能、命令、工具和权限策略全部来自 DSH；新增服务商或模型请在 DSH 设置中配置。
+>
+> 旧项目如果绑定的是空白标准模式会话，工作台会直接切换为测试模式；如果旧会话已有对话，则保留原会话历史，自动新建并改绑一个测试模式会话。
+
+## npm 安装与更新（独立运行）
+
+```bash
+# 需要 Node.js 18+
+npm install -g dsh-qa
+qabench           # → http://127.0.0.1:8899
+
+# 升级到 npm 的 latest 版本后，重新启动工作台
+npm update -g dsh-qa
+qabench
+```
+
+此方式只启动本地 QA 工作台；如需在 DeepSeek Harness 中使用会话、模型、技能和命令，请按上方「安装（DSH 插件）」步骤安装插件。
+
+## 快速开始（不装插件体验）
+
+```bash
+# 需要 Node.js 18+
+git clone https://github.com/naodeng/dsh-qa.git
+cd dsh-qa
+npm start        # → http://127.0.0.1:8899
+```
+
+首次启动会创建一个示例项目和一个示例迭代，包含需求、用例、缺陷、里程碑、报告和待审批门禁，可直接在首页、看板和日历中体验。独立模式可管理本地项目数据；DSH 对话、模型、技能和命令需从 DSH 侧边栏打开插件后使用。
+
+## 独立运行模式
+
+```bash
+npm start          # 或双击 start.command
+# → http://127.0.0.1:8899 （数据目录：<项目>/data）
+```
+
+独立地址可查看和管理测试项目、看板与日历；DSH 对话、模型、技能和命令必须从 DSH 侧边栏打开插件后使用。
+
+## 架构
+
+```
+lib/index.js      宿主半（cordis 插件）：进程内拉起工作台 + /api/dsh-qa 路由 + 系统提示播报
+lib/client.js     浏览器半（0.5.3）：官方 Panel/Slot 侧边栏与 main keyed slot + Workbench iframe
+lib/panel-contract.js  Panel/Slot 语义契约（运行时适配层只在 client.js）
+cordis.patch.yml  profile bundle 补丁（插入插件行）
+preset/qa/cordis.patch.yml  声明式 QA preset bundle
+server/           工作台服务（原生 http + SSE；项目、质量任务、执行、证据与门禁数据）
+public/           四视图前端（原生 JS，无构建步骤；相对路径，可挂任意前缀）
+```
+
+**路由**：`/api/dsh-qa/info`（状态）、`/api/dsh-qa/workbench/`（同源镜像代理，SSE 透传）。同源 iframe 还通过 DSH 当前的 `session/*`、`agentPresets/*`、`skills/*` 与 `commands/*` 接口连接原生会话；全部带 loopback 护栏。
+
+**数据目录**：插件模式 `~/.dsh/dsh-qa/`（项目与本地材料）；独立模式 `<项目>/data/`。DSH 对话由 DSH 自身持久化。工作台与 DSH 都保持监听 `127.0.0.1`。
+
+## AI 工具集
+
+工作台内置 23 个 QA 域工具，供 DSH 会话通过函数调用实时登记数据并更新项目与质量任务：
+
+| 分组 | 工具 |
+| --- | --- |
+| 项目管理 | `project_get` `project_update` `member_add` `project_transition` |
+| 需求与用例 | `requirement_add` `testcase_add` `testcase_status` `testcase_link` |
+| 缺陷与里程碑 | `defect_add` `defect_status` `milestone_add` `event_add` |
+| 沉淀与报告 | `knowledge_save` `minutes_save` `report_draft` `report_draft_save` |
+| 门禁与导入 | `gate_request` `testrun_import` |
+| 质量任务 | `qa_quality_task_get` `qa_quality_analysis_request` `qa_quality_analysis_save` `qa_quality_risk_decide` `qa_quality_test_scope_suggest` |
+
+## 测试模式 preset（插件模式）
+
+插件模式下，质量工作台对话自动使用 DSH 的「测试模式」（preset id: `qa`）。安装 `dsh-qa` 主 bundle 时会一并声明该 preset；仅使用独立模式管理本地项目时无需安装。
+
+```bash
+# 从当前 checkout 将 dsh-qa bundle 安装到 web profile
+scripts/install-qa-preset.sh
+# 指定 profile 或预览命令
+scripts/install-qa-preset.sh --profile web --dry-run
+```
+
+preset 基于 DSH 官方 `standard`（完整编码能力），persona 定制为 QA 测试助手，并内置 QA 质量原则（用例可执行可判定、覆盖正向/异常/边界、缺陷区分事实与猜测、不编造数据）。Harness 0.1.7+ 从当前 profile 的 bundle 声明发现 id=`qa`。
+
+### 可选研发质量控制 preset
+
+```bash
+# 将仓库内的 quality-control bundle 安装到 web profile
+scripts/install-quality-control-preset.sh
+# 预览：scripts/install-quality-control-preset.sh --profile web --dry-run
+```
+
+该 preset 现在是独立 bundle `preset/quality-control`，不会修改或复制用户目录中的 preset 文件。
+
+## 配套 QA 技能库
+
+
+工作台对话复用 DSH 原生技能与命令（输入 `/` 检索），可直接安装 [awesome-qa-skills](https://github.com/naodeng/awesome-qa-skills) 的测试技能作为配套能力，并参考 [awesome-qa-prompt](https://github.com/naodeng/awesome-qa-prompt) 的多角色工作流。
+
+在 DSH 侧边栏打开工作台后，进入左侧 `QA Skill安装` Tab 即可浏览和安装技能。页面按当前界面语言展示 `skills/zh` 或 `skills/en`，目录卡片的名称、描述、适用场景和详情链接同步自 [软件测试技能库](https://inaodeng.com/zh-cn/qaskills/)，实际安装来源仍是本地 `awesome-qa-skills` 仓库。
+
+安装页的分类顺序与网站保持一致：测试类型（需求与策略、用例与评审、功能与兼容、接口与自动化、质量保障专项、缺陷、报告与审查）、测试工作流程和加强版。安装目标为 DeepSeek Harness 的 `~/.dsh/skills/`；安装完成后重启 `dsh web`，再在新的 DSH 会话中使用。
+
+```bash
+# 一键安装当前仓库中的测试类型与测试工作流程技能到 DSH 技能目录
+scripts/install-qa-skills.sh                   

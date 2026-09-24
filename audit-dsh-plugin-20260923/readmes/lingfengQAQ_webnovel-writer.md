@@ -1,0 +1,231 @@
+# Webnovel Writer
+
+[![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-6.2.1-brightgreen.svg)](.claude-plugin/marketplace.json)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-purple.svg)](https://claude.ai/claude-code)
+[![Marketplace](https://img.shields.io/badge/Claude%20Code-Marketplace-black.svg)](.claude-plugin/marketplace.json)
+
+<a href="https://trendshift.io/repositories/22487" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22487" alt="lingfengQAQ%2Fwebnovel-writer | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
+一个跑在 Claude Code 上的长篇网文创作插件。从初始化设定、规划卷纲，到写章、审查、沉淀记忆、查询状态，再到一个只读的可视化面板——整条创作流程都给你串好了。
+
+它想解决的其实就一件事：**让 AI 写到几百章，依然记得住设定、接得住伏笔、守得住大纲。**
+
+一句话定位：这是一套面向长篇连载的一致性系统，不是写完就忘的一次性生成器。
+
+> **版本导览（2026-09-21 更新）**
+>
+> | 分支 | 版本 | 状态 |
+> |---|---|---|
+> | `master`（本分支） | v6 · Claude Code 插件 | 维护中（只修致命 bug），Claude Code 用户请用此版本 |
+> | `v7` | v7 · CLI 多宿主重写 | 已冻结，未发布，仅作开发档案 |
+> | [v8](https://github.com/lingfengQAQ/webnovel-writer/tree/v8) | v8 · 基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的写作工作台 | 源码预览；[安装与版本说明](https://github.com/lingfengQAQ/webnovel-writer/tree/v8#开始使用) |
+>
+> 原 v7 设计公示（[Discussions #118](https://github.com/lingfengQAQ/webnovel-writer/discussions/118)）所征集的反馈仍是 v8 设计的重要输入；v7 的 CLI 形态经评估后不再发布，下一代改以 dsh 插件形态开发，v8 公开产品源码、运行技能和使用教程；内部开发讨论与私人创作资料不属于公开内容。v6/v8 安装方式不同，尚无经过验证的旧书仓直接迁移方案。
+
+## 赞助与支持
+
+<a href="https://www.infistar.cc/register?aff=YBE8GGRE&ref_source=link" target="_blank"><img src="docs/assets/sponsors/infistar-banner.png" alt="Infistar.cc 无限星河 · 一站式全球大模型 API 服务平台" width="728"/></a>
+
+**Webnovel Writer × Infistar.cc 无限星河｜全模型 API · 助力长篇网文持续创作**
+
+感谢 [Infistar.cc 无限星河](https://www.infistar.cc/register?aff=YBE8GGRE&ref_source=link) 赞助并为 Webnovel Writer 提供模型服务支持！
+
+- ⚡ **稳定支持长篇连续写作**：提供高可用模型通道与稳定响应，满足大纲规划、章节创作、内容审查、润色改写及长上下文写作等场景。
+- 🧠 **兼容 Claude Code 与主流模型**：支持 Claude、ChatGPT、Gemini、Kimi、GLM、DeepSeek 等模型，可灵活配置长篇写作、审查和辅助模型。
+- 📚 **助力记忆与知识库检索**：支持 Embedding、Rerank 等兼容 OpenAI 格式的接口，帮助角色设定、时间线、伏笔和章节内容持续沉淀，减少长篇创作中的遗忘与前后矛盾。
+- 🎁 **Webnovel Writer 用户专属福利**：通过 [专属推广链接](https://www.infistar.cc/register?aff=YBE8GGRE&ref_source=link) 注册并完成首次调用，即可领取 [5美元等值测试额度 / 首充专属优惠]，快速体验更稳定、更连贯的 AI 长篇创作流程！
+
+<a href="https://www.packyapi.ai/register?aff=pJpV" target="_blank"><img src="docs/assets/sponsors/packycode-banner.png" alt="PackyCode · 稳定高效的 API 中转服务，一句话接入主流大模型" width="728"/></a>
+
+感谢 [PackyCode](https://www.packyapi.ai/register?aff=pJpV) 赞助支持 Webnovel Writer！PackyCode 是一家稳定、高效的 API 中转服务商，一句话接入主流大模型。统一域名、统一密钥、智能容灾切换，97% 可用性。人民币 1:1 充值，无汇率无手续费坑，新用户首充立享折扣 + $1 免费体验额度，多分组折扣低至 2 折起，提供专属 Codex/Claude Code 高速通道。[点此链接注册](https://www.packyapi.ai/register?aff=pJpV)，立即开始使用！
+
+Webnovel Writer 用业余时间维护。如果它帮你省下了梳理设定、对齐伏笔的功夫，欢迎来信交流想法、反馈使用体验，或表达对项目的支持：
+
+📮 **ksdflisjdf@gmail.com**
+
+## 为什么需要它
+
+长篇创作最难的不是写出第一章，而是写到第 80 章、第 200 章以后仍然保持：
+
+- 角色动机不漂移
+- 战力、时间线、地点和世界规则不互相打架
+- 伏笔有登记、有推进、有回收
+- 爽点、感情线、世界观扩展保持节奏
+- 每章写完后事实会沉淀到可检索的状态系统
+
+这套系统做的事，就是把上面这些“必须记住、不能写崩”的约束，变成 Claude Code 会自动执行的步骤：动笔前先查资料，写完后把新发生的事实记下来、做一致性审查，再把最新状态同步进检索索引、章节摘要、长期记忆和 Dashboard。它不只是“会写”，而是边写边攒。
+
+## 核心能力
+
+| 能力 | 命令 | 说明 |
+|------|------|------|
+| 深度初始化 | `/webnovel-init` | 分阶段问答，帮你把书的骨架、设定集、总纲和初始状态搭起来 |
+| 卷纲规划 | `/webnovel-plan` | 基于总纲拆卷、拆章、补时间线，并写回新增设定 |
+| 章节创作 | `/webnovel-write` | 一条龙写完一章：备上下文、起草、审查、润色、记录事实、自动备份 |
+| 质量审查 | `/webnovel-review` | 从爽点、一致性、节奏、OOC、连贯性、追读力等维度审查章节 |
+| 状态查询 | `/webnovel-query` | 查询角色、伏笔、节奏、实体关系和运行时信息 |
+| 项目学习 | `/webnovel-learn` | 把这本书里好用的写法记下来，存进项目长期记忆 |
+| 可视化面板 | `/webnovel-dashboard` | 只读浏览项目状态、实体图谱、章节内容和追读力数据 |
+| 项目体检 | `/webnovel-doctor` | 阶段感知检查目录、文件、数据库、RAG、依赖和 Dashboard 产物 |
+
+## 系统长什么样
+
+```mermaid
+flowchart LR
+    User[作者 / Claude Code] --> Skills[8 个 Skill 命令]
+    Skills --> Agents[Context / Reviewer / Data / Deconstruction Agent]
+    Agents --> Story[.story-system 合同与提交链]
+    Story --> Commit[accepted CHAPTER_COMMIT]
+    Commit --> State[.webnovel/state.json]
+    Commit --> Index[index.db / vectors.db]
+    Commit --> Summary[summaries / memory_scratchpad]
+    State --> Dashboard[只读 Dashboard]
+    Index --> Dashboard
+    Summary --> Dashboard
+```
+
+v6.0.0 的默认主链叫 **Story System**，几个关键角色：
+
+- `.story-system/`：唯一的事实源头，动笔前的“合同”和写完后的“提交”都存在这里
+- accepted 的 `CHAPTER_COMMIT`：一章写完，新事实从这里入账
+- `.webnovel/state.json`、`index.db`、`summaries/`、`memory_scratchpad.json`：都是从主链派生出来的只读视图，供查询和展示用
+- `.webnovel/projection_log.jsonl`：投影执行日志，用来定位 state/index/summary/memory/vector 哪一路没同步
+- `project-status`、`doctor`、`preflight` 和 Dashboard 会把主链与运行状态直接摆出来，哪里不对一眼就能看到
+
+## 快速开始
+
+### 1. 安装插件
+
+通过 Claude Code Marketplace 安装：
+
+```bash
+claude plugin marketplace add lingfengQAQ/webnovel-writer --scope user
+claude plugin install webnovel-writer@webnovel-writer-marketplace --scope user
+```
+
+只想在当前项目生效时，把 `--scope user` 改成 `--scope project`。
+
+> 插件的安装、启用与日常管理等更多用法，见 Claude Code 官方文档：[插件](https://docs.claude.com/en/docs/claude-code/plugins) · [插件市场](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces)。
+
+### 2. 安装 Python 依赖
+
+```bash
+python -m pip install -r https://raw.githubusercontent.com/lingfengQAQ/webnovel-writer/HEAD/requirements.txt
+```
+
+### 3. 初始化一本书
+
+在 Claude Code 中输入：
+
+```bash
+/webnovel-init
+```
+
+初始化完成后会创建书项目目录，包含：
+
+```text
+project-root/
+├── .story-system/        # 合同、章节提交和事件审计
+├── .webnovel/            # 状态、索引、摘要、备份和长期记忆
+├── 正文/                  # 章节正文
+├── 大纲/                  # 总纲、卷纲、时间线和章纲
+├── 设定集/                # 世界观、角色、力量体系等设定
+└── 审查报告/              # 章节审查报告
+```
+
+### 4. 配置 RAG
+
+进入书项目根目录，把 `.env.example` 复制为 `.env` 并填写 API Key：
+
+```bash
+cp .env.example .env
+```
+
+最小配置：
+
+```bash
+EMBED_BASE_URL=https://api-inference.modelscope.cn/v1
+EMBED_MODEL=Qwen/Qwen3-Embedding-8B
+EMBED_API_KEY=your_embed_api_key
+
+RERANK_BASE_URL=https://api.jina.ai/v1
+RERANK_MODEL=jina-reranker-v3
+RERANK_API_KEY=your_rerank_api_key
+```
+
+没填 Embedding Key 也能用——系统会自动退回 BM25 关键词检索，只是语义召回会弱一些。Embedding 和 Rerank 都可以换成任何兼容 OpenAI 格式的接口。
+
+### 5. 开始规划和写作
+
+```bash
+/webnovel-plan 1      # 规划第 1 卷
+/webnovel-write 1     # 写第 1 章
+/webnovel-review 1-5  # 审查第 1-5 章
+/webnovel-query 伏笔  # 查询项目状态
+```
+
+### 6. 打开可视化面板
+
+```bash
+/webnovel-dashboard
+```
+
+Dashboard 是个只读面板，能看项目状态、实体关系图、章节内容、伏笔和追读力数据。前端是预先打包好的，跟着插件一起发，本地不用跑 `npm build`。
+
+## 写章工作流
+
+`/webnovel-write` 不是把活儿丢给模型生成一次就完事，而是一条带关卡的完整流水线：
+
+1. 预检项目根、占位符和 Story System 健康状态
+2. 刷新本章 runtime contract
+3. 调用 `context-agent` 生成写作任务书
+4. 根据任务书起草正文
+5. 调用 `reviewer` 做多维审查，blocking issue 不通过则阻断
+6. 润色、排版、Anti-AI 终检
+7. 调用 `data-agent` 提取事实
+8. 生成 `CHAPTER_COMMIT`，驱动 state、index、summary、memory、vector 投影
+9. 执行章节级备份
+
+这么设计，是为了把“怎么写”和“写了什么”分开：文笔和节奏可以放开发挥，但发生过的事实必须登记、过审、存档，不能含糊。
+
+### 最终报告怎么看
+
+`/webnovel-init`、`/webnovel-plan`、`/webnovel-write` 和 `/webnovel-review` 结束时都会给一份面向作者的最终报告，不直接把内部 JSON、traceback 或长命令日志甩出来。报告先给一句总状态：
+
+- **已完成**：目标产物和关键校验都通过，可以进入下一步。
+- **部分完成**：主要产物已保留，但有跳过项、自动处理项或待确认的小尾巴。
+- **需要你处理**：系统已经停在安全位置，需要你决定创作方向、事实取舍、是否覆盖文件或如何处理 blocking 问题。
+- **未完成**：关键产物没有可信生成，按报告里的恢复建议重跑或排查。
+
+下面固定三段：一是产生的文件与完成情况，二是过程中遇到的问题与异常耗时，三是下一步建议。系统自动处理过的事也会写出来，比如投影失败后已补跑成功；只有不可恢复故障才会提示查看 `.webnovel/logs/run_last.log`。
+
+执行过程中只会看到少量进度提示，告诉你当前在做什么、会产生什么；只有创作方向、事实一致性、文件覆盖风险或 blocking issue 需要裁决时才会问你。重复执行同一条 `/webnovel-write 章号` 时，系统会先检查可信断点，尽量从失败点继续，不重写已经可信完成的正文、审查、提交或备份。
+
+## 内置题材
+
+内置 37 个中文网文题材模板，也支持把几个题材揉在一起写。下面只列一部分：
+
+| 类型 | 题材示例 |
+|------|----------|
+| 玄幻修仙类 | 修仙、系统流、高武、西幻、无限流、末世、科幻 |
+| 都市现代类 | 都市异能、都市日常、都市脑洞、现实题材、电竞、直播文 |
+| 言情类 | 古言、宫斗宅斗、青春甜宠、豪门总裁、狗血言情、替身文、种田 |
+| 特殊题材 | 规则怪谈、悬疑脑洞、悬疑灵异、历史古代、抗战谍战、知乎短篇、克苏鲁 |
+
+完整列表见 [题材模板文档](docs/guides/genres.md)。
+
+## 命令速查
+
+### Claude Code Skill 命令
+
+| 命令 | 示例 | 用途 |
+|------|------|------|
+| `/webnovel-init` | `/webnovel-init` | 初始化新书项目 |
+| `/webnovel-plan` | `/webnovel-plan 1` | 生成卷纲、时间线和章纲 |
+| `/webnovel-write` | `/webnovel-write 45` | 写作并提交指定章节 |
+| `/webnovel-review` | `/webnovel-review 1-5` | 审查章节范围 |
+| `/webnovel-query` | `/webnovel-query 萧炎` | 查询角色、伏笔、状态等信息 |
+| `/webnovel-learn` | `/webnovel-learn "这个钩子设计有效"` | 写入项目经验记忆 |
+| `/

@@ -1,0 +1,183 @@
+# DSH Go
+
+DSH Go 是面向 DeepSeek Harness 生态的 **原生包管理器 + Registry/Distribution 基础设施 + Marketplace**。当前架构以 Package Protocol V2、Manifest V2、Registry V4、Resolver V2、Runtime State V4、API V2 为唯一权威，不保留旧接口兼容层。
+
+API 权威入口：https://dsh-go.pages.dev/
+
+> 核心边界：Marketplace/Edge 只负责发现、查询、解析和生成安装计划；**Local Runtime 是唯一有权执行安装、更新、回滚、状态写入和激活的组件**。远程页面/API 不能修改用户机器，也不会自动重启客户端。
+
+## 最终架构
+
+```text
+Package Protocol V2 / Manifest V2
+                ↓
+Discovery → Candidate / Quarantine
+                ↓
+            Registry V4
+                ↓
+        Trust + Policy Engine
+                ↓
+            Resolver V2
+                ↓
+          Resolution Plan
+                ↓
+        Runtime Supervisor
+                ↓
+        CAS + Transaction
+                ↓
+        Runtime State V4
+                ↓
+       Activation Manager
+                ↓
+       Runtime Adapter ABI
+                ↓
+          Health / LKG
+```
+
+三条对外入口严格分层：
+
+```text
+CLI / Desktop / Deep Link / Local Host
+                 ↓
+          Runtime Supervisor
+
+API V2 / MCP Tools V2 / Marketplace
+                 ↓
+       discovery + resolve only
+```
+
+横向基础能力包括 Secrets/Config、Audit/Observability、Environment Lock/Recovery。完整设计见：
+
+- [`docs/architecture/dsh-go-v4-final-architecture.md`](docs/architecture/dsh-go-v4-final-architecture.md)
+- [`docs/architecture/dsh-go-v4-hardened-runtime-architecture.md`](docs/architecture/dsh-go-v4-hardened-runtime-architecture.md)
+- [`docs/plan/dsh-go-v4-architecture-hardening-optimization-plan.md`](docs/plan/dsh-go-v4-architecture-hardening-optimization-plan.md)
+
+## 架构原则
+
+- **唯一 Package Contract**：Plugin / MCP / Skill / Agent 均使用 `(type,id)` 身份和统一 SemVer/Channel 规则。
+- **唯一 Manifest**：可安装包只认 `dsh-package.json`（Manifest V2）；其他历史 manifest 最多作为发现线索，不具备安装权威。
+- **唯一 Registry 权威**：Registry V4 保存 package/release/immutable commit/artifact/security 元数据；Candidate/Quarantine 不是安装权威。
+- **唯一 Resolver**：Edge 与 Local Runtime 共用 `packages/resolver`，Resolver 本身不访问网络、不写磁盘。
+- **唯一 Runtime 写入口**：所有本地 mutation 必须经过 Runtime Supervisor；CLI、Desktop、Deep Link、Local Host 都不能直接写 Runtime State。
+- **事务安装**：解析 → Policy → Security → CAS → Transaction → Runtime State，一次失败不得产生半安装状态。
+- **显式激活**：安装/更新完成后进入 pending activation；Activation Manager 执行预检、Adapter 绑定、健康检查和 Last-Known-Good 回退。
+- **可信度不造假**：Stars、SHA256、声明存在 signature 都不等于 Trusted；Trusted 必须来自已验证 Publisher Ownership + 真正的 cryptographic signer verification，并受 Trust Root/revocation 约束。
+- **不自动重启**：任何包操作都不会自动重启 DSH 客户端。
+
+## Package Protocol V2
+
+标准坐标：
+
+```text
+plugin:owner/package@^1.2.0
+mcp:owner/server@2.0.0
+skill:owner/skill@*
+agent:owner/agent@~3.1.0
+```
+
+支持 channel：`stable`、`beta`、`nightly`、`dev`。类型必须显式提供，不存在隐式 plugin，也不存在 `github:` 安装坐标。
+
+## Local Runtime / CLI
+
+```bash
+# 查询/解析
+dsh package plan plugin:owner/package@^1.2.0
+dsh package info plugin:owner/package@1.2.3
+dsh package list
+
+# 本地 mutation 必须显式确认
+dsh package install plugin:owner/package@^1.2.0 --yes
+dsh package update plugin:owner/package@^1.3.0 --yes
+dsh package rollback plugin:owner/package --yes
+dsh package remove plugin:owner/package --yes
+
+# Runtime / Registry / Environment
+dsh runtime status --json
+dsh runtime activate --yes
+dsh registry status --json
+dsh environment lock
+dsh environment verify-lock
+dsh environment restore --yes
+```
+
+Canonical Deep Link：
+
+```text
+dsh://package/install?spec=plugin%3Aowner%2Fpackage%40%5E1.2.0&channel=stable
+```
+
+Deep Link 不能覆盖本地 Registry，最终安装仍需 Local Runtime 明确批准。
+
+## API V2 / MCP Tools V2
+
+远程接口只提供 discovery / resolve / install-plan：
+
+| 接口 | 用途 |
+|---|---|
+| `GET /api/v2` | API capability map |
+| `GET /api/v2/health` | Registry V4 健康状态与 revision |
+| `GET /api/v2/packages` | 包查询 |
+| `GET /api/v2/packages/:type/:id` | 包与 release 详情 |
+| `GET /api/v2/search?q=` | Registry/Search Index 查询 |
+| `POST /api/v2/resolve` | Resolver V2 依赖解析 |
+| `POST /api/v2/install-plan` | 生成本地安装计划，不执行安装 |
+| `GET /api/v2/publishers` | Publisher 信息 |
+| `GET /api/v2/advisories` | 安全公告 |
+| `GET /api/v2/registry/revision` | Registry revision |
+| `GET /api/v2/registry/delta` | Distribution V2 增量协商 |
+| `POST /api/v2/mcp` | MCP Tools V2 JSON-RPC |
+
+机器客户端应先读取 `/.well-known/dsh-marketplace.json`。OpenAPI 位于 `/openapi.json`。
+
+## Registry / Distribution
+
+公开机器数据：
+
+```text
+/catalog/registry-v4.json
+/catalog/registry-v4/index.json
+/catalog/search-index-v3.json
+/.well-known/dsh-marketplace.json
+/schemas/dsh-marketplace-discovery-v2.schema.json
+```
+
+外部 GitHub 发现数据必须先经过 Candidate/Quarantine。缺少 Manifest V2、无法解析 immutable commit、身份冲突或安全条件不满足的资源可以继续在发现层显示，但不会进入可安装 Registry authority。
+
+## Marketplace
+
+Marketplace 是人类发现平面，不拥有安装权限。当前站点支持 English、简体中文、日本語、한국어、Español；搜索使用 Search Index V3。详情页只为满足当前详情阈值策略且存在安全 release 的包生成，低阈值资源直接回到源码/发现入口，避免生成大量无效详情页。
+
+<!-- HOT-PLUGINS:START -->
+## 🔥 最近热门推荐（300-5000★）
+
+> 自动生成 · 仅收录**命名含 dsh / deepseek-harness 的 DSH 原生插件**（排除 awesome 盘点型仓库），并固定推荐 modlens / dsh-better-sidebar · 按最近更新排序 · Top20（每次同步后刷新）
+
+| # | 插件 | ★ Stars | 语言 | 最近更新 | 简介 |
+|---|------|---------|------|----------|------|
+| 1 | [modlens](https://github.com/liustack/modlens) | 4k | TypeScript | 2026-09-22 | The first vision plugin for DeepSeek Harne… |
+| 2 | [DSH-better-sidebar](https://github.com/omdsh-dev/DSH-better-sidebar) | 3.7k | TypeScript | 2026-09-23 | 开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/G… |
+| 3 | [dsh-plugin-radar](https://github.com/AdamPlatin123/dsh-plugin-radar) | 1.5k | Python | 2026-09-23 | DSH Plugin Radar — open-source ecosystem r… |
+| 4 | [dsh-desktop](https://github.com/vibeinging/dsh-desktop) | 588 | JavaScript | 2026-09-23 | DeepSeek Harness Desktop App: a local AI d… |
+| 5 | [dsh-tavern](https://github.com/flizzywine/dsh-tavern) | 477 | JavaScript | 2026-09-23 | 基于 DeepSeek Harness（DSH）的 SillyTavern 类文字游… |
+| 6 | [dsh-im](https://github.com/xmanrui/dsh-im) | 1.5k | JavaScript | 2026-09-23 | 通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信… |
+| 7 | [dsh-market](https://github.com/dsh-market/dsh-market) | 4.4k | TypeScript | 2026-09-23 | The plugin market inside DeepSeek Harness … |
+| 8 | [deepseek-harness-desktop](https://github.com/dsh-tauri/deepseek-harness-desktop) | 2.6k | TypeScript | 2026-09-23 | DeepSeek Harness Tauri 桌面版 \| Only 5mb ins… |
+| 9 | [dsh-TUI](https://github.com/ccch1mneyyy/dsh-TUI) | 3.2k | TypeScript | 2026-09-23 | DSH 官方公众号收录的 TUI 补位插件：鲸鱼顶栏/实时状态/流式思考/双击 Es… |
+| 10 | [dsh-image-gen](https://github.com/shanliuling/dsh-image-gen) | 455 | TypeScript | 2026-09-23 | AI image studio for DeepSeek Harness — gen… |
+| 11 | [dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 1.1k | JavaScript | 2026-09-23 | Eyes for text-only DeepSeek Harness agents… |
+| 12 | [dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 475 | TypeScript | 2026-09-23 | GenUI for DeepSeek Harness: interactive UI… |
+| 13 | [dsh-purge](https://github.com/YuJunZhiXue/dsh-purge) | 2k | JavaScript | 2026-09-23 | DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；… |
+| 14 | [dsh-infinite-gen-4](https://github.com/Minglink/dsh-infinite-gen-4) | 2k | JavaScript | 2026-09-23 | DeepSeek v4.1 flash 网络安全红队工具（无限四代） — jailb… |
+| 15 | [dsh-mobile](https://github.com/saya-ch/dsh-mobile) | 304 | TypeScript | 2026-09-23 | DeepSeek Harness 的 Android App 与安全远程访问插件，支… |
+| 16 | [dsh-Mimir-Academic-research](https://github.com/1692775560/dsh-Mimir-Academic-research) | 538 | TypeScript | 2026-09-23 | Mimir — 一站式科研工作台插件：LaTeX 论文边写边编译、arXiv 文献管… |
+| 17 | [dsh-mobile-apk](https://github.com/kelai141/dsh-mobile-apk) | 522 | Kotlin | 2026-09-23 | dsh 安卓壳 APK——WebView UI + 内嵌 Termux 运行时快照（… |
+| 18 | [dsh-univer-office](https://github.com/dream-num/dsh-univer-office) | 394 | TypeScript | 2026-09-23 | Give DeepSeek Harness a real office enviro… |
+| 19 | [dsh-wallpaper-engine](https://github.com/elysia395/dsh-wallpaper-engine) | 335 | JavaScript | 2026-09-23 | 把本机 Wallpaper Engine 的壁纸变成 DSH 网页界面的背景：Vid… |
+| 20 | [clearai-dsh](https://github.com/Clearailhc/clearai-dsh) | 394 | JavaScript | 2026-09-23 | ClearAI is a native DSH plugin that brings… |
+
+更新时间：2026-09-23
+<!-- HOT-PLUGINS:END -->
+
+## 同步与部署
+
+Registry V4 workflow 每天 UTC `00:18 / 06:18 / 1

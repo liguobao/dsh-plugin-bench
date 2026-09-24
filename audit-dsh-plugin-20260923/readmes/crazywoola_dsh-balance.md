@@ -1,0 +1,89 @@
+# dsh-balance
+
+[简体中文](./README.md) | [English](./README_EN.md)
+
+DeepSeek Harness 插件，用于查询 DeepSeek / StepFun API 余额、各提供方的可用模型和多维消费统计。API Key 仅由本机 Host 使用，不会发送到浏览器。
+
+设置页采用账户总览布局，支持 DeepSeek / StepFun 切换。运行 `pnpm preview` 可查看使用示例数据的新版界面。
+
+聊天框底部会跟随当前会话所选的提供方与模型更新余额；设置页可独立切换提供方。
+
+## 功能
+
+- DeepSeek：查看总余额、充值余额和赠送余额
+- StepFun：查看可用余额、总充值金额、总赠送金额及预付费 / 后付费账户类型
+- 提供方独立缓存；支持大小写不敏感的 Provider ID
+- 在聊天框下方显示当前 provider、模型和余额，兼容模型选择器与 `/model` 切换
+- 从当前提供方的 `/models` 接口读取可用模型、所属组织与创建时间
+- 在设置页按所选 provider、模型、会话和日期查看实际 usage 消费，并在当前会话的“消费”Tab 查看请求明细
+- 缺少 provider usage、未知 provider 或未知模型时标记为“未计费”，不进行 token 估算
+- 日期按浏览器 IANA 时区分组；DeepSeek 峰谷价格始终按北京时间计算
+- 默认显示 USD；配置 `usdToCny` 后额外显示固定汇率换算的 CNY
+- 缓存查询结果并支持手动刷新
+- 依据 DeepSeek 峰谷定价，在高峰时段（北京时间 9:00–12:00、14:00–18:00）将聊天框下方的余额指示灯变为橙色
+- 原生支持简体中文和英文，并跟随 Harness 系统语言切换
+- 支持 Harness 已保存的 `DEEPSEEK_API_KEY`
+
+## 安装
+
+```bash
+dsh plugin --profile web add @pinkbanana/dsh-balance@latest
+dsh --profile web
+```
+
+打开 <http://127.0.0.1:3080/>，进入“设置 → 模型余额”。该入口位于“Agent 预设”下方，余额摘要也会显示在已有会话的聊天框下方。API Key 可在“设置 → 模型”中保存，或通过 `DEEPSEEK_API_KEY` 环境变量提供。
+
+消费统计从已保存会话和当前运行中的 live session 读取，不展示 prompt 内容。可在插件配置中增加固定汇率，例如：
+
+```yaml
+usdToCny: 7.2
+```
+
+官方提供方 ID `deepseek-official` 与旧 ID `deepseek` 均受支持（大小写不敏感），共享 DeepSeek 凭据、余额及模型缓存。底部保留实际模型 ID，例如 `deepseek-flash`；价格未知的新模型仍标为“未计费”。
+
+## StepFun 配置
+
+在“设置 → 模型”中添加自定义提供方，Provider ID 填写 `StepFun`（`stepfun`、`STEPFUN` 等大小写写法均可），保存 API Key。Harness 默认将其保存为 `STEPFUN_API_KEY`；也可以直接设置该环境变量。在“设置 → 模型余额”选择 StepFun 即可查询。
+
+按 [StepFun 账户 API](https://platform.stepfun.com/docs/zh/api-reference/accounts/get) 使用 Bearer 认证请求 `GET https://api.stepfun.com/v1/accounts`。金额按 CNY 展示；总充值 / 总赠送金额按文档展示为累计金额，不与当前余额相加。接口没有服务可用性字段，后付费账户不会因为余额为零或负数而显示“服务不可用”。
+
+若模型配置使用其他凭据引用，可在本插件配置中覆盖（`baseUrl` 是 API 前缀，StepFun 应包含 `/v1`）：
+
+```yaml
+providers:
+  - id: StepFun
+    apiKeyRef: MY_STEPFUN_KEY
+    baseUrl: https://api.stepfun.com/v1
+```
+
+已有的顶层 `apiKeyRef` / `baseUrl` 继续用于 DeepSeek；`providers` 覆盖对应提供方的余额与模型查询。配置不读取自定义模型的 Base URL，默认查询官方 API。余额、可用模型与设置页统计随所选提供方切换。聊天框摘要使用当前会话的实时选择；会话“消费”保留该会话历史上所有 provider 的用量。
+
+模型列表按 [StepFun 列表 API](https://platform.stepfun.com/docs/zh/api-reference/models/list) 请求 `GET /v1/models`，解析 [Model 对象](https://platform.stepfun.com/docs/zh/api-reference/models/object) 的 `id`、`owned_by`、`created`（秒级 Unix 时间戳）。列表已包含这些信息，不需要逐个调用单模型详情接口。Host 路由为 `GET /dsh-balance/api/models?provider=StepFun`，模型缓存按 provider 隔离，`refresh=1` 强制刷新。
+
+## 统计口径
+
+每条请求按实际返回消息的 provider / model 归属，兼容旧日志的请求头；日期和峰谷价格按该次请求时间计算。Token 总量包括未缓存输入、输出、缓存读取与缓存写入。设置页默认筛选所选 provider，也可选择“全部提供方”；会话页保留混用模型的完整历史。
+
+当前内置价格仅覆盖 DeepSeek 官方定价。StepFun 等没有可靠历史价格的数据保留请求数与 token，显示“未计费”；不会套用同名 DeepSeek 模型价格，也不会将全部未知费用显示为 $0。混合统计仅累加已知价格，并注明不完整。账户余额是实时查询值，与本地用量估算独立。
+
+## 扩展与设计
+
+- `src/providers.ts` 保存可在前后端共享的 provider 元数据；`src/balance.ts` 的 adapter 表只负责端点与响应解析，传输、错误分类和缓存由公共逻辑处理。
+- `GET /dsh-balance/api/balance?provider=StepFun` 查询 StepFun；省略 provider 保持 DeepSeek 兼容，`refresh=1` 绕过对应缓存。不支持的 provider 返回 `UNSUPPORTED_PROVIDER`。
+- 排版参考 [Codrops 的 Kononenko 案例](https://tympanus.net/codrops/2026/09/18/kononenko-architectural-bureau/)：大字号、留白、建筑式网格和几何线条，使用原创 CSS 实现；支持深浅色主题、窄屏与减少动态效果偏好。
+
+## 开发
+
+```bash
+pnpm install
+pnpm check
+pnpm preview
+```
+
+预览不使用真实密钥。可使用 `?lang=en&theme=dark` 检查英文与深色主题，`?state=missing` / `error` / `empty` / `loading` 检查不同状态。顶部示例模型选择器可验证底部 provider / 模型切换。StepFun 余额与模型查询、新版账户页面自 `0.6.0` 起提供。实时模型余额和统计修复自 `0.7.0` 起提供。
+
+## License
+
+[MIT](./LICENSE)
+
+<a href="https://www.buymeacoffee.com/pinkbanana"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Crazywoola a coffee" width="199" height="55" /></a>

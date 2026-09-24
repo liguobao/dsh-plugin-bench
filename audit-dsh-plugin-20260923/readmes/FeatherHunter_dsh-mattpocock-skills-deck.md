@@ -1,0 +1,212 @@
+<h1 align="center">dsh-mattpocock-skills-deck</h1>
+
+<div align="center">
+
+**中文** · [English](docs/README.en.md)
+
+**拨开战争迷雾看见终点，剩下的交给 MattSkillsDeck。**  
+让 [mattpocock/skills](https://github.com/mattpocock/skills) 在 DSH 里化作一块看得见、派得动的任务板。
+
+你的 ⭐是我夜空中最亮的星。
+
+*Part the fog of war, see the end — MattSkillsDeck handles the rest.*
+
+[![版本](https://img.shields.io/npm/v/dsh-mattpocock-skills-deck?label=%E7%89%88%E6%9C%AC)](https://www.npmjs.com/package/dsh-mattpocock-skills-deck) [![下载量](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2Flast-month%2Fdsh-mattpocock-skills-deck&query=%24.downloads&label=%E4%B8%8B%E8%BD%BD%E9%87%8F&suffix=%2F%E6%9C%88&color=brightgreen)](https://www.npmjs.com/package/dsh-mattpocock-skills-deck) [![最近更新](https://img.shields.io/github/last-commit/FeatherHunter/dsh-mattpocock-skills-deck?label=%E6%9C%80%E8%BF%91%E6%9B%B4%E6%96%B0&color=FE7D37)](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck/commits/main) [![月提交](https://img.shields.io/github/commit-activity/m/FeatherHunter/dsh-mattpocock-skills-deck?label=%E6%8F%90%E4%BA%A4%E6%95%B0&color=DFAB01)](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck/graphs/commit-activity) [![许可证](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-lightgrey.svg)](LICENSE) [![技能包](https://img.shields.io/badge/%E6%8A%80%E8%83%BD%E5%8C%85-mattpocock%2Fskills-9D7CD8)](https://github.com/mattpocock/skills) [![期待你参与](https://img.shields.io/badge/%E6%9C%9F%E5%BE%85%E4%BD%A0%E5%8F%82%E4%B8%8E-brightgreen.svg)](https://github.com/FeatherHunter/dsh-mattpocock-skills-deck/issues) [![未来展望](https://img.shields.io/badge/%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B-6f42c1.svg)](docs/ROADMAP.md)
+
+</div>
+
+<h2 align="center"><sub>INSTALL</sub><br>安装</h2>
+
+<div align="center">
+
+前置要求：[DSH](https://www.npmjs.com/package/@deepseek-ai/dsh)（DeepSeek Harness）。在 DSH 里，你下指令、AI 干活；MattSkillsDeck 把这些活变成面板上的任务。
+
+**匹配的 DSH 内核版本：`0.1.5-rc.1`**（DSH 官方源上的当前 `latest`，也就是 `npm install -g @deepseek-ai/dsh` 装到的那一版）。本版就是在这一版内核上开发、构建与验收的，两条安装命令都按它给。DSH Desktop 2.0.10 自带的内核是**同一份代码、版本号写作 `0.1.5-rc.2`**（官方源上的 `next` 标签）——两者逐行比对只差 `version` 一个字段，核对过程见 [`research/624-file-channel.md`](research/624-file-channel.md) 第 6.3 节，所以桌面应用用户不需要另装内核。
+
+</div>
+
+```bash
+# ① 安装 DSH CLI（已装跳过）
+npm install -g @deepseek-ai/dsh
+
+# ② 安装 MattSkillsDeck —— --profile 必填：装进你实际使用的 DSH 入口对应的 profile
+#    （装错 profile 等于没装，重启多少次都不会加载）
+dsh plugin --profile web add dsh-mattpocock-skills-deck     # 用自启 web 服务（dsh web）
+#     或者
+dsh plugin --profile desktop add dsh-mattpocock-skills-deck   # 用 DSH Desktop 桌面应用
+# 锁定最新版更稳（当前 1.7.27）：
+dsh plugin --profile web add dsh-mattpocock-skills-deck@1.7.27 --registry https://registry.npmjs.org
+#     或者
+dsh plugin --profile desktop add dsh-mattpocock-skills-deck@1.7.27 --registry https://registry.npmjs.org
+```
+
+<div align="center">
+
+装完**重启一次对应的 DSH 入口**即生效：桌面应用完全退出并重开 DSH Desktop；web 服务重启 `dsh web` 后刷新页面。零配置。
+
+**点开面板不用再等：从点击到内容可见，真机实测从 5075 毫秒降到 193 毫秒。** 这是 2026-09-11 的真机复测；同一份记录里，提交阶段从 4948 毫秒降到 117 毫秒。做法是把标签折叠与地图行适配从「量一次、改一次」交替的循环改成先量后改，布局不再被反复重算。纪律与证据链见 [`docs/adr/20260911-zero-layout-jitter.md`](docs/adr/20260911-zero-layout-jitter.md)。
+
+面板就开在 DSH 自己的右侧边栏里：左边列表、右边详情，并排看。不需要再装别的插件。
+
+**👇 装完重启，面板就绪就是这个样子。**
+
+<img src="assets/readme/01-install-board-ready.png" width="640" alt="安装成功后任务板就绪的样子" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<details>
+<summary>进阶安装：免全局、更新不生效、交给 AI</summary>
+
+下面命令以 web profile 为例——**DSH Desktop 桌面应用用户请把所有 `--profile web` 换成 `--profile desktop`**。
+
+```bash
+# 免全局安装（想更稳，像上面一样锁版本）
+npx --yes @deepseek-ai/dsh plugin --profile web add dsh-mattpocock-skills-deck
+
+# 更新被静默忽略时，显式指定官方源
+dsh plugin --profile web add dsh-mattpocock-skills-deck@latest --registry https://registry.npmjs.org
+```
+
+复制下面这段发给你的 AI，它会确认 profile、检查环境并按需安装：
+
+```text
+请帮我安装 DeepSeek Harness 插件 dsh-mattpocock-skills-deck（MattSkillsDeck）。
+先读仓库 README：https://github.com/FeatherHunter/dsh-mattpocock-skills-deck
+先确认我实际使用的 DSH 入口对应哪个 profile（DSH Desktop 桌面应用 → desktop；自启 web 服务 → web），把插件装进正确的 profile；
+然后自行检查环境并按需安装（已装的跳过），完成后简要汇报结果。
+```
+
+</details>
+
+升级 · 卸载（desktop profile 用户把 `--profile web` 换成 `--profile desktop`）：
+
+```bash
+dsh plugin --profile web update dsh-mattpocock-skills-deck   # 升级
+dsh plugin --profile web remove dsh-mattpocock-skills-deck   # 卸载
+```
+
+<h2 align="center"><sub>BOARD</sub><br>任务板列表</h2>
+
+<div align="center">
+
+仓库里的任务不再是流水账：面板把它们按可接、阻塞、已关闭归位，进度走到哪一格一眼看清。每行任务的按钮就是动作入口：点一下，写好的指令填进输入框，确认后再发送。地图类型的行永远置顶，已关闭的收成一行。
+
+**👇 任务在哪看、状态怎么筛，全在这张图。**
+
+<img src="assets/readme/02-task-board-list.png" width="640" alt="任务板列表：状态筛选、标签筛选与行动作按钮" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<h2 align="center"><sub>STATUSBAR</sub><br>底部任务栏</h2>
+
+<div align="center">
+
+每条会话输入框下面都有一条胶囊状态栏：可接数量、待修（BUG）数量、诊断、沉淀、交接、环境进度都在上面。点可接、环境等主要分段，即跳到对应面板页，看完即回，不打断手头会话。
+
+**👇 离手最近的操作条，完整一条长这样。**
+
+<img src="assets/readme/03-statusbar-capsule.png" width="720" alt="底部任务栏：输入框下面完整一条胶囊" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<h2 align="center"><sub>DETAIL</sub><br>ISSUE 详情与评论</h2>
+
+<div align="center">
+
+点开任意一条任务，描述、标签、认领人与评论都在面板里排好版，不用跳终端。在底部输入框直接回话，一般只按标签显示其中一个（诊断、修复、讨论、执行），需要另起再点新会话。
+
+**👇 点开一条任务，看透并回上话。**
+
+<img src="assets/readme/04-issue-detail-comment.png" width="640" alt="点开一条任务后的详情与评论区首屏" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<h2 align="center"><sub>NEW SESSION</sub><br>新会话</h2>
+
+<div align="center">
+
+任何活都能另起干净会话干：详情页顶部点新会话，新会话标题自动起好，承接指令已预填，人只管检查后发送。当前会话不受扰，脏活累活都在新会话里。
+
+**👇 点一下新会话，指令已预填等人发。**
+
+<img src="assets/readme/05-new-session-prefilled.png" width="640" alt="点新会话后新会话输入框被预填指令的样子" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<h2 align="center"><sub>SKILLS</sub><br>技能快捷入口</h2>
+
+<div align="center">
+
+随包 25 个技能（快照 v1.2.3）装好即用：面板技能页顶部给通用推荐（默认 /ask-matt），列表一行讲清一个技能的中文用途，点加载就把斜杠指令填进输入框。完整名单与教程见 Matt 官方 [aihero.dev/skills](https://www.aihero.dev/skills)，本插件只讲入口与推荐。
+
+</div>
+
+<h2 align="center"><sub>BACKENDS</sub><br>多后端切换</h2>
+
+<div align="center">
+
+同一个面板可换跑道：设置页后端选择器列出 GitHub、本地 Markdown、GitLab 与 Other（无后端）逃生舱。切换只换数据源：切换后原数据不可见，原后端数据保留，切回来又可见。新人第一次大多只用一条跑道，知道能换即可。
+
+**👇 换跑道不断数据，选择器长这样。**
+
+<img src="assets/readme/07-backend-switch.png" width="560" alt="设置页后端选择器四行与来源小胶囊" style="border:1px solid #30363d;border-radius:6px">
+
+</div>
+
+<h2 align="center"><sub>FAQ</sub><br>常见问题</h2>
+
+<details open>
+<summary>更新之后还是旧版本？</summary>
+
+这是 DSH 桌面端的 pnpm 供应链策略（`minimumReleaseAge`）导致的：刚发布的版本，几个小时内 `dsh plugin update` 和插件市场的「更新」按钮都会静默跳过。更新后请完全退出 DSH 再重开，按 Ctrl+F5 刷新页面；还没更新的话，显式指定官方源装一次：
+
+```bash
+dsh plugin --profile web add dsh-mattpocock-skills-deck@latest --registry https://registry.npmjs.org
+```
+
+**👇 官方源装最新版，成功回显长这样。**
+
+<img src="assets/readme/08-faq-stale-version-fix.png" width="640" alt="终端用官方源装最新版的成功回显" style="border:1px solid #30363d;border-radius:6px">
+
+</details>
+
+<details>
+<summary>更新报错找不到新版本（No matching version），地址是镜像源？</summary>
+
+这是镜像源还没有同步到新版本：报错地址写着镜像源（例如 `registry.npmmirror.com`），而新版本已经在官方源上发布，包本身没有漏发。等镜像源同步完成就能正常更新；着急用的话，显式指定官方源装一次（下面这条命令不要去掉末尾的源参数，去掉就会走回镜像源）：
+
+```bash
+dsh plugin --profile web add dsh-mattpocock-skills-deck@latest --registry https://registry.npmjs.org
+```
+
+桌面应用用户把 `--profile web` 换成 `--profile desktop`。
+
+</details>
+
+<h2 align="center"><sub>ARCHITECTURE</sub><br>架构</h2>
+
+<div align="center">
+
+整体结构、数据流与关键状态见 [在线预览](https://featherhunter.github.io/dsh-mattpocock-skills-deck/architecture/MattSkills-architecture.html)或本地 [MattSkills-architecture.html](docs/architecture/MattSkills-architecture.html)（克隆后直接打开）。
+
+</div>
+
+<h2 align="center"><sub>DEVELOPMENT</sub><br>开发</h2>
+
+<div align="center">
+
+开发说明（构建、验证、同步、发布）见 [DEV-WORKFLOW.md](docs/workflow/DEV-WORKFLOW.md)。
+
+</div>
+
+<h2 align="center"><sub>MORE</sub><br>作者的其他作品</h2>
+
+<div align="center">
+
+喜欢这个插件的话，这些可能你也用得上：
+
+**[dsh-opencode-palette](https://github.com/FeatherHunter/dsh-opencode-palette)** —— 34 款 opencode 经典配色一键换装 DSH，即点即换，重启不丢
+
+**[dsh-prompt](https://github.com/FeatherHunter/dsh-prompt)** —— Prompt 工具箱：24 条深度模板随手点，别再复制粘贴
+
+**[dsh-chinese-skill-patch](https://github.com/F

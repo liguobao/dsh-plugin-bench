@@ -1,0 +1,193 @@
+<div align="center">
+
+<a href="https://dshpluginhub.ai"><img src="docs/assets/logo.svg" alt="DSH Plugin Hub" width="88" height="88"></a>
+
+# DSH Hub CLI
+
+**English** · [简体中文](README.zh-CN.md)
+
+**Share your DeepSeek Harness plugins and configuration as a versioned Profile.**
+
+Capture the plugins, order, runtime, and config you have running locally. Publish it as an immutable Release. Anyone can apply it with a single command, review every change before it lands, and roll back if they don't like it.
+
+### 🌐 [dshpluginhub.ai](https://dshpluginhub.ai) &nbsp;·&nbsp; [Browse Plugins](https://dshpluginhub.ai/plugins) &nbsp;·&nbsp; [Explore Presets](https://dshpluginhub.ai/profiles) &nbsp;·&nbsp; [Docs](https://dshpluginhub.ai/docs)
+
+[![npm version](https://img.shields.io/npm/v/%40dsh-plugin-hub%2Fcli?label=npm&color=cb3837)](https://www.npmjs.com/package/@dsh-plugin-hub/cli)
+[![CI](https://img.shields.io/github/actions/workflow/status/pax-beehive/dsh-hub-cli/ci.yml?branch=main&label=CI)](https://github.com/pax-beehive/dsh-hub-cli/actions/workflows/ci.yml)
+[![Node](https://img.shields.io/badge/node-%3E%3D22.13-339933?logo=node.js&logoColor=white)](https://nodejs.org)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+<a href="https://dshpluginhub.ai"><img src="docs/assets/hub-home.png" alt="DSH Plugin Hub home page" width="820"></a>
+
+<sub>This repository is the open-source client for the Hub. The website, API, and registry live at <a href="https://dshpluginhub.ai">dshpluginhub.ai</a>.</sub>
+
+[Quick start](#quick-start) · [Why Presets](#why-shareable-presets) · [Commands](#command-reference) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Governance](GOVERNANCE.md) · [Security](SECURITY.md)
+
+</div>
+
+---
+
+```bash
+npm install --global @dsh-plugin-hub/cli
+
+# Apply a teammate's Preset to your local "web" harness
+dsh-hub profile apply dsh-web-workspace --version 0.1.0 --profile web
+```
+
+That one command installs the exact plugin versions, in the exact order, with the exact patch the author published. Not "whatever is latest today." What they had.
+
+## Why shareable Presets
+
+A DeepSeek Harness (DSH) setup is more than a list of plugins. It is a specific runtime version, a set of plugins at specific versions, the order they load in, a `cordis.patch.yml` that wires them together, and a handful of environment variables that hold your keys.
+
+Getting that onto a colleague's machine usually means a wiki page, a Slack thread, and an afternoon of "works on my machine."
+
+**DSH Hub turns that setup into a first-class, versioned artifact.**
+
+```mermaid
+flowchart LR
+    subgraph author["Author's machine"]
+        A["~/.dsh/profiles/web<br/>plugins · order · patch · runtime"]
+    end
+    subgraph hub["DSH Plugin Hub"]
+        R["Preset Release<br/><b>dsh-web-workspace@0.1.0</b><br/>sha256 content hash"]
+    end
+    subgraph team["Anyone else"]
+        T1["Teammate"]
+        T2["CI runner"]
+        T3["AI agent"]
+    end
+
+    A -- "dsh-hub profile share" --> R
+    R -- "dsh-hub profile apply" --> T1
+    R -- "dsh-hub profile apply" --> T2
+    R -- "dsh-hub profile apply" --> T3
+```
+
+| Without DSH Hub | With a shared Preset |
+| --- | --- |
+| "Install these six plugins" | One slug and one version |
+| Direct versions drift within days | The Release records exact direct versions and sources |
+| Load order lives in someone's head | Order is part of the Release and validated on apply |
+| Secrets get pasted into docs | Only `${ENV_VAR}` references are published; values stay local |
+| Upgrades are a fresh install | `profile diff` shows exactly what changes before you upgrade |
+| Broke it? Start over | `profile rollback` restores the previous complete revision |
+
+<div align="center">
+<a href="https://dshpluginhub.ai/profiles"><img src="docs/assets/hub-profiles.png" alt="Presets on dshpluginhub.ai" width="820"></a>
+
+<sub>Browse community Presets, or build one in the web builder, at <a href="https://dshpluginhub.ai/profiles">dshpluginhub.ai/profiles</a>.</sub>
+</div>
+
+## What's inside a Preset Release
+
+A Release is a small, content-addressed document. The CLI verifies its hash before doing anything with it.
+
+```mermaid
+flowchart TB
+    R["<b>Preset Release</b><br/>dsh-web-workspace @ 0.1.0<br/><code>contentHash: sha256:…</code>"]
+    RT["<b>Runtime</b><br/>@deepseek-ai/dsh 4.2.1"]
+    P["<b>Patch</b><br/>cordis.patch.yml"]
+    I["<b>Inputs</b><br/>OPENAI_API_KEY (secret)<br/>SEARCH_ENDPOINT"]
+    subgraph B["Ordered bundles"]
+        direction TB
+        B1["1 · @deepseek-ai/dsh-base<br/><i>builtin</i>"]
+        B2["2 · dsh-better-sidebar @ 0.15.2<br/>npm · sha512 integrity"]
+        B3["3 · dsh-search @ 2.1.0<br/>npm · sha512 integrity"]
+        B4["4 · acme/dsh-notes # 9f3c…a1<br/>github · pinned commit"]
+        B1 --> B2 --> B3 --> B4
+    end
+    R --> RT
+    R --> B
+    R --> P
+    R --> I
+```
+
+- **Runtime** pins the exact DSH version the author verified against.
+- **Bundles** are ordered. npm sources carry integrity hashes. GitHub sources must point at a full 40-character commit, never a branch.
+- **Patch** is the author's `cordis.patch.yml`, published verbatim.
+- **Inputs** declare which environment variables the Preset needs. The CLI refuses to publish a patch that contains a credential-looking value.
+
+## Quick start
+
+Requires **Node.js 22.13+** and **pnpm** on your `PATH`.
+
+```bash
+npm install --global @dsh-plugin-hub/cli
+dsh-hub --help
+```
+
+### Apply someone's Preset
+
+```bash
+# Find one
+dsh-hub profile search workspace
+
+# See exactly what would change on your machine
+dsh-hub profile diff dsh-web-workspace --version 0.1.0 --profile web
+
+# Apply it (staged, validated, then swapped in atomically)
+dsh-hub profile apply dsh-web-workspace --version 0.1.0 --profile web
+
+# Confirm everything is healthy
+dsh-hub profile doctor --profile web
+```
+
+### Share your own
+
+```bash
+# Preview what would be captured from ~/.dsh/profiles/web
+dsh-hub profile share my-stack --version 1.0.0 --profile web --dry-run
+
+# Sign in once, then publish an immutable Release
+dsh-hub login
+dsh-hub profile share my-stack --version 1.0.0 --profile web
+
+# CI: publish with a publish-scoped token instead of an interactive login
+DSH_HUB_TOKEN=dshhub_... dsh-hub profile share my-stack --version 1.0.0 --profile web
+```
+
+### Upgrade and roll back
+
+```bash
+dsh-hub profile upgrade --version 0.2.0 --profile web --dry-run   # review the diff
+dsh-hub profile upgrade --version 0.2.0 --profile web             # apply it
+dsh-hub profile history --profile web                             # see saved revisions
+dsh-hub profile rollback --profile web                            # restore the previous one
+```
+
+### Install a single plugin
+
+```bash
+dsh-hub search memory
+dsh-hub info dsh-context --version 1.2.3
+dsh-hub install dsh-context --version 1.2.3 --profile web
+```
+
+## How it works
+
+### Review a plan before applying it
+
+Use `--plan` to save a reviewable, expiring description and a fingerprint of the current state. Apply it by ID after review. If the local Profile changed or the plan expired, create a fresh plan. Direct CLI mutation commands execute immediately unless you request `--plan` or `--dry-run`; agent tools use the plan/apply flow.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as You / Agent
+    participant CLI as dsh-hub
+    participant Hub as DSH Hub API
+    participant FS as ~/.dsh
+
+    U->>CLI: profile apply dsh-web-workspace --plan --json
+    CLI->>Hub: fetch Release + resolve bundles
+    Hub-->>CLI: Release (hash verified)
+    CLI->>FS: write plan {id, expiresAt, precondition}
+    CLI-->>U: plan JSON (exact versions, sources, inputs)
+    Note over U: Review. Confirm.
+    U->>CLI: operation apply <plan-id>
+    CLI->>FS: check precondition hash + expiry
+    CLI->>FS: stage → install → validate → atomic swap
+    CLI-->>U: operation.completed {revision}
+```
+
+This is what makes the CLI safe to hand to an AI agent. The agent can plan freely, but a human confirms the exact p

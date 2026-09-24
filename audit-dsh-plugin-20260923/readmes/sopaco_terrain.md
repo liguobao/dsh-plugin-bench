@@ -1,0 +1,177 @@
+<div align="center">
+    <img height="320" src="./assets/banner.webp">
+
+# Terrain
+
+**Terrain prepares the ground so agents don't have to guess where to stand.**
+
+Engineering environment management for human developers and AI coding assistants — knowledge as the map, tools as the roads, conventions as the trail markers.
+
+**English** · [简体中文](README_zh.md)
+
+<a href="https://github.com/sopaco/terrain/tree/dev/.terrain/human"><img alt="Litho Docs" src="https://img.shields.io/badge/Litho-Docs-green?logo=Gitbook&color=%23008a60"/></a>
+![Agent Ready](https://img.shields.io/badge/Agent-READY-green.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+</div>
+
+---
+
+## App preview
+
+| Project overview | Engineering knowledge | DeepWiki Q&A | Agent environment |
+|------------------|------------------------------|--------------|-------------------|
+| <img height="150" alt="image" src="assets/screenshots/01-overview.webp" /> | <img height="150" alt="Auto-generated C4 architecture docs" src="assets/screenshots/02-knowledge-litho.webp"> | <img height="150" alt="Knowledge-grounded Q&A with citations" src="assets/screenshots/03-deepwiki-ask.webp"> | <img height="150" alt="One-command agent tooling setup" src="assets/screenshots/05-env.png"> |
+
+*From left to right: project list with freshness scores, auto-generated C4 docs, knowledge-grounded Q&A, and one-command agent tooling setup.*
+
+---
+
+## Contents
+
+- [What is Terrain?](#what-is-terrain)
+- [Install](#install)
+- [Getting started](#getting-started)
+- [CLI command reference](#cli-command-reference)
+- [Why Terrain?](#why-terrain)
+- [Architecture](#architecture)
+- [Ecosystem](#ecosystem)
+- [From Litho to Terrain](#from-litho-to-terrain)
+- [License](#license)
+
+---
+
+## What is Terrain?
+
+Terrain is a **standardized, AI-friendly engineering environment**. Point it at a Git repository and it delivers three things:
+
+![terrain_caseflow](./assets/intro/terrain_caseflow_en.webp)
+
+- **🗺️ Engineering knowledge** — always-in-sync C4 docs and agent context, **produced from your code and consumed by both humans and AI agents**.
+- **🤝 A shared agent contract** — Skills, `AGENTS.md`, and CLIs, so every coding agent reads the project the same way instead of blind-grepping the live repo.
+- **⚙️ Auto-deployed tooling** — one command installs what your agents need (CodeGraph, RTK, preset Skills); no per-repo yak-shaving.
+
+It runs as a **desktop app (GUI)** or a **CLI** — see [Getting started](#getting-started) for which to pick.
+
+### Three pillars
+
+| Pillar | Metaphor | What you get |
+|--------|----------|--------------|
+| **Knowledge assets** | *Map* | Dual-track docs in `.terrain/`, produced from code |
+| **Agent tooling** | *Roads* | CodeGraph, RTK, and the Terrain CLI |
+| **Conventions & workflow** | *Trail markers* | Skills, `AGENTS.md`, and the four-phase SDD workflow |
+
+One codebase, two audiences:
+
+| Audience | Path | Format |
+|----------|------|--------|
+| **Humans** | `.terrain/human/` | Narrative C4 docs with Mermaid diagrams |
+| **AI agents** | `.terrain/agent/context.md` | Structured architecture overview (≤ 14 KiB) |
+| **Source index** | `.terrain/agent/repomix.md` | Repomix pack — grep/read on demand, not preloaded |
+| **Domain terms** | `.terrain/knowledge/` | Business glossary and internal conventions |
+
+### Knowledge factory
+
+<img height="360" src="./assets/graph_knowledge_factory.webp">
+
+### Why it stands out
+
+- **Incremental** — tracks Git HEAD and regenerates only what changed, not the whole knowledge base.
+- **Freshness-scored** — every asset carries a score; agents down-weight context below 50.
+- **One contract for every agent** — Claude Code, Codex, OpenCode, and Cursor read the same layers through `terrain tools`.
+- **Toolchain in one command** — `terrain env apply` installs CodeGraph, RTK, and preset Skills in dependency order.
+- **Reviewable workflow** — SDD turns requirements → design → codegen → review into Markdown artifacts.
+
+### Performance & integration
+
+- **Native Rust core** — a single binary, no runtime, no database. Scan, pack, search, freshness, and env run fully offline with no LLM call.
+- **Cross-platform** — prebuilt desktop installers for macOS (Apple Silicon) and Windows x64, plus `@terrain-ai/cli` on npm for headless machines and CI.
+- **Pipeline-friendly** — JSON stdout on every `terrain tools` call and NDJSON event streaming from `terrain ask query --stream`, so Terrain drops into CI jobs, PR checks, and agent loops without glue code.
+
+---
+
+## Install
+
+### Option 1 — Prebuilt installer (recommended)
+
+Download the package for your platform from [**GitHub Releases**](https://github.com/sopaco/terrain/releases) and open it — no Rust or Node toolchain required.
+
+| Platform | Asset |
+|----------|-------|
+| macOS (Apple Silicon) | `Terrain_<version>_macos_aarch64.dmg` |
+| Windows (x64) | `Terrain_<version>_windows_x64.exe` |
+
+> **Unsigned builds — first-launch notice.** The installers are not yet signed with an Apple Developer ID / Authenticode certificate, so both platforms raise a one-time warning. The download is intact; see below to continue.
+
+#### macOS — "Terrain is damaged / should be moved to the Trash"
+
+This is Gatekeeper, not a corrupt file. Downloads from the internet carry a `com.apple.quarantine` attribute, and macOS refuses to launch an unsigned app with that flag set. Remove the flag after copying `Terrain.app` to `/Applications`:
+
+```bash
+xattr -cr /Applications/Terrain.app
+```
+
+#### Windows — SmartScreen "Windows protected your PC"
+
+Click **More info → Run anyway**. The prompt appears once per build.
+
+### Option 2 — Build from source
+
+Use this path for unsupported platforms, custom patches, or contributing to Terrain itself.
+
+#### Prerequisites
+
+- **Rust** — stable toolchain (MSRV 1.94; see [rust-toolchain.toml](rust-toolchain.toml))
+- **Node.js / Bun** — frontend toolchain and optional Node-based tools
+- **LLM access** (optional) — OpenAI-compatible API, Ollama, or LM Studio (configure in the desktop app **Settings** panel)
+- **Mainstream coding agent** (optional) — e.g. Codex, DeepSeek Harness, or Claude Code, for knowledge composition and SDD codegen
+
+#### Build
+
+```bash
+# Clone and install frontend dependencies
+git clone https://github.com/sopaco/terrain.git
+cd terrain
+bun install
+
+# Build Rust workspace (CLI + libraries)
+cargo build --release
+
+# CLI binary
+./target/release/terrain --help
+
+# Desktop app (development)
+bun run dev:app
+```
+
+---
+
+## Getting started
+
+### Which entry point should I use?
+
+| | Desktop app (GUI) | CLI |
+|---|---|---|
+| **Best for** | Day-to-day exploration and documentation of a codebase | R&D infrastructure, CI/CD, headless servers, agent pipelines |
+| **What you get** | Everything pre-wired: project list, freshness scores, C4 docs, Q&A, env setup, SDD | 15 scriptable subcommands with JSON output for automation |
+| **Requires** | Nothing beyond an optional LLM endpoint | No display; install via npm or let env integration deploy it |
+| **Typical use** | Click through the app | `terrain init`, `terrain ask query`, `terrain tools …` inside a pipeline |
+
+### Path A — Desktop app (start here)
+
+The app bundles the full loop, so there is nothing to compose yourself.
+
+1. **Install and open** Terrain (see [Install](#install)).
+2. **Add a project** — point Terrain at a local Git repository.
+3. **Run initialization** — Terrain scans the repo, generates the six C4 docs, and writes `.terrain/`.
+4. **Read or ask** — browse the generated docs in the built-in reader, or ask a question in DeepWiki Q&A and get answers with citations.
+5. **Wire up your agents** — one click in the *Agent environment* screen installs Skills, CodeGraph, RTK, and the managed `AGENTS.md` snippets.
+
+> The CLI is included: env integration deploys it to `~/.terrain/bin/terrain`, so you can drop to the terminal at any point without a separate install.
+
+### Path B — CLI (infrastructure, CI, agent pipelines)
+
+For headless machines, install the CLI from npm:
+
+```bash
+npm install -g

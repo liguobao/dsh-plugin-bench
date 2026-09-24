@@ -1,0 +1,198 @@
+<p align="center">
+  <b>中文</b> · <b><a href="./README.en.md">English</a></b>
+</p>
+
+<p align="center">
+  <img src="./assets/readme/banner.webp" width="100%" alt="DSH Market —— DeepSeek Harness 插件市场：左侧 Web 版（蓝）与 DSH 插件版（黑灰）双 Logo 斜线强对照，右侧插件版功能（一键安装/猜你喜欢/场景推荐/已装管理/GitHub 加星/AI 代理安装）与在线体验入口">
+</p>
+
+<div align="center">
+
+[![DSH](https://img.shields.io/badge/DSH-%E2%89%A5_0.1.5-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)
+[![在线体验](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C-4D6BFE?style=flat-square&logo=githubpages&logoColor=white)](https://dsh.market/)
+[![提交插件](https://img.shields.io/badge/Contribute-%E6%8F%90%E4%BA%A4%E6%8F%92%E4%BB%B6-2EA043?style=flat-square&logo=github&logoColor=white)](https://github.com/2BingLing/dsh-market/issues/new?template=submit_plugin.md)
+[![Stars](https://img.shields.io/github/stars/2BingLing/dsh-market?style=flat-square&logo=github&label=Stars&color=4D6BFE)](https://github.com/2BingLing/dsh-market)
+[![收录](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2F2BingLing%2Fdsh-market%2Fmaster%2Fweb%2Fpublic%2Fcount.json&query=plugins&label=%E6%94%B6%E5%BD%95&color=4D6BFE&style=flat-square&cacheSeconds=3600)](https://dsh.market/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square&logo=opensourceinitiative&logoColor=white)](https://github.com/2BingLing/dsh-market/blob/master/LICENSE)
+[![自动收录](https://img.shields.io/github/actions/workflow/status/2BingLing/dsh-market/collect-and-deploy.yml?style=flat-square&label=%E8%87%AA%E5%8A%A8%E6%94%B6%E5%BD%95&logo=githubactions&logoColor=white)](https://github.com/2BingLing/dsh-market/actions)
+[![每日自动更新](https://img.shields.io/badge/%E6%AF%8F%E6%97%A5%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0-06%3A00-1a7f37?style=flat-square)](https://github.com/2BingLing/dsh-market/actions)
+
+</div>
+
+---
+
+## 两种形态
+
+<p align="center">
+  <img src="./assets/readme/section-forms.svg" width="100%" alt="两种形态横幅：Web 版与插件版两个 Logo 通过同一份 plugins.json 数据相连">
+</p>
+
+DSH 生态增长极快，插件与技能散落在 GitHub 各处 —— **不知道哪个好用、怎么装、怎么组合成一套能干活的环境**。DSH Market 用一个平台收齐它们，并提供两种消费入口：
+
+| | <img src="./assets/readme/logo-web.svg" width="26" alt="Web 版 Logo"> **Web 版**（已上线） | <img src="./assets/readme/logo-plugin.svg" width="26" alt="插件版 Logo"> **DSH 插件版**（开发完成） |
+|---|---|---|
+| **位置** | 浏览器 · GitHub Pages 纯静态站 | DSH 侧边栏 · cordis 插件 |
+| **定位** | 发现与评估 | 安装与管理 |
+| **内容** | 插件（cordis/skill）+ 整合包分区（生态内容市场） | 5-Tab 面板 · 一键安装 · 新手推荐 · 个性化推荐 · 场景推荐 · AI 代理安装（详见 [DSH 插件版](#dsh-插件版)）+ 整合包 Tab |
+| **安装** | 零安装，浏览器打开即用 | `npx @deepseek-ai/dsh plugin --profile web add @dsh-market/plugin` |
+| **资源消耗** | — | 零 token 被动运行，不参与日常对话 |
+
+> **两者的关系：仅共享同一份 `plugins.json` 数据**（每日 06:00 自动刷新星星与描述），除此之外没有直接关联——Web 版是独立的浏览站，插件版是独立的 cordis 插件，可分别使用、互不依赖：**用 Web 版不一定要装插件，装插件也不影响 Web 站**。
+
+## 演示
+
+| Web 版 | DSH 插件版 |
+|---|---|
+| ![Web 版截图](https://raw.githubusercontent.com/2BingLing/dsh-market/master/web/public/screenshot-web.jpg) | ![插件版截图](https://raw.githubusercontent.com/2BingLing/dsh-market/master/web/public/screenshot-plugin.jpg) |
+
+## 环境要求
+
+- **DSH ≥ 0.1.5**（最新发布 `0.1.5-rc.1` 已实测）
+- **Node.js ≥ 20**
+
+面板入口自动适配：0.1.5+ 用标准入口（图标进左侧导航栏）；更早版本回退侧栏底部按钮 + 浮层，仍可用但已进入维护模式，**0.5.0 起移除**。
+
+## 快速开始
+
+### Web 版
+
+无需安装，直接访问：
+
+<https://dsh.market/>
+
+### 安装插件版
+
+```bash
+npx @deepseek-ai/dsh plugin --profile web add @dsh-market/plugin
+```
+
+装完**重启 harness**，侧边栏底部出现「插件市场」入口。
+
+> **v0.4.0 起**：AI 代理安装升级为**路由模式**——先走零 LLM 直装（已装检测 → 配方缓存 → README 解析命令 + 冒烟验证），只有需要时才交给极简协议子代理；一键安装成功后自动学习配方，后续重装/换机器零 token 直装。
+
+> **v0.4.5 起**：确认安装时可勾选 **🛡 安全模式**——对于来源不明或敏感的插件，开启后**跳过零 LLM 直装**，强制 AI 子代理在安装前做安全扫描：检查危险命令（`curl|sh` 管道执行 / 下载执行 / base64 混淆）、敏感信息收集回传（读取 API Key / Token 并外发）、配置篡改（覆盖 sandbox / approval / 权限配置）、网络暴露与信任围栏（绑定 `0.0.0.0`、云服务器部署 / 反代隧道把本地端口暴露公网、弱化 Host 校验）、来源存疑（新建低活跃仓库）等；**发现风险即中止、不执行任何安装命令**。安全模式消耗 token，普通可信插件可保持关闭走快速安装。背景：DSH 曾曝极危漏洞 QVD-2026-57410（CVSS 9.8，伪造 Host 头绕过信任围栏即可无密钥控制机器）——本地端口一旦暴露公网等于交出控制权，远程访问请用隧道回连，不要把服务端口搬上公网。
+
+## DSH 插件版
+
+装进 DSH 侧边栏的插件市场：**新手 3 分钟上手，越用越懂你**。
+
+**新手友好 · 零门槛**
+
+- 首次打开有**冷启动问卷**：选你常用的场景与插件类型，立即得到精选 + 猜你喜欢
+- 不用记任何命令——卡片上**一键安装**（skill / cordis 自动路由，失败自动重试、可回滚）
+- **零 token 被动运行**：不打开面板不消耗任何资源，不参与日常对话
+
+**个性化推荐 · 越用越懂你**
+
+- 画像来自问卷 / 收藏 / GitHub 加星 / 已装插件，**全部保存在本机**
+- 「猜你喜欢」随使用动态更新（EMA 衰减），每个推荐附一句「为什么推荐」
+
+**场景推荐 · 读当前会话**
+
+- 手动触发，读取当前会话标题与消息（**零 token**）→ 推荐"现在这个场景该装什么"
+
+**AI 语义搜索 · 即将上线**
+
+- 本地召回 60 候选 → LLM 精排 20 并附理由；候选池固定不随插件量增长，默认关闭省 token
+
+**AI 代理安装（路由模式）**
+
+- 拿不准装不装？交给插件市场：**T0 零 LLM 直装**（已装 / 配方缓存 / README 解析命令 + 冒烟验证）→ 只有需要时才派**极简协议子代理**（固定步骤 + JSON 输出，不再全文读 README）；装成功自动学习配方；需要配置时先向你确认
+
+## 特性
+
+- **持续收录** — 每天自动扫描 `dsh-plugin` / `dsh` 等 GitHub topic、社区精选列表，全量收录（当前 8411 个插件 + 整合包通道）
+- **实用五维评分** — 维护活跃 / 实用度 / 生态热度 / 便捷度 / 信号质量，加权几何平均融合，每个插件附「为什么推荐」解释
+- **中文体验** — 所有插件自动生成中文简介与中文功能标签，中文搜索、中文筛选
+- **一键安装** — 插件版确定性脚本路由：skill 型 `git clone`，cordis 型 `dsh plugin add`；失败可重试、可回滚
+- **AI 安装（路由模式）** — 零 LLM 直装优先（配方缓存 / 解析命令 + 冒烟验证，75%+ 插件无需 AI），需要时交给极简协议子代理（JSON verdict 自动沉淀为配方）；安装度量本机记录（T0 命中率 / AI 参与率 / 成功率）
+- **🛡 安全模式** — 确认安装时可开启：AI 安装前强制安全扫描（危险命令 `curl|sh` / 混淆执行 / 敏感信息收集回传 / 配置篡改 / 网络暴露与信任围栏 / 来源存疑），发现风险即中止不安装；针对 DSH 插件供应链与网络暴露面风险（如 QVD-2026-57410 CVSS 9.8），来源不明插件建议开启（消耗 token）
+- **推荐体系** — 冷启动问卷 / 新手友好 / 猜你喜欢（个性化画像）/ 场景推荐（读会话上下文，详见 [DSH 插件版](#dsh-插件版)）
+- **整合包生态** — Web「整合包」分区 + 插件端整合包 Tab（浏览 / 条目解析率校验 / 装包入口）；配套 `dsh.pack.json` 整合包协议（详见 [dsh-bundler](https://github.com/2BingLing/dsh-bundler)）
+- **零 token 常驻** — 插件版纯被动运行，不打开面板不消耗任何资源
+
+## 使用
+
+### Web 版
+
+| 场景 | 怎么用 |
+|---|---|
+| 找插件 | 搜索框中文关键词 / 标签多选 / 类型与评分筛选 |
+| 看质量 | 卡片五边形雷达图 + 五维明细 + 推荐理由 |
+| 装插件 | 详情页复制真实安装命令，或复制「AI 安装提示词」 |
+
+### 插件版（5-Tab 面板）
+
+| Tab | 做什么 |
+|---|---|
+| 推荐 | 猜你喜欢 / 精选 / 场景推荐（手动触发，读会话上下文） |
+| 搜索 | 本地 Fuse 搜索 · 热门标签 · 200+ 结果分页 |
+| 收藏 | 星标收藏的插件，稍后安装 |
+| 已装 | 检测本机已装（skill 目录 + profile），一键卸载 |
+| 设置 | GitHub 绑定（PAT 加星 / 设备流只读）· 推荐模式 · 目标 profile |
+
+## 评分体系
+
+实用五维（权重加权几何平均，借鉴 StarRadar 融合机制、理念转向「实用、便捷」）：
+
+| 维度 | 权重 | 含义 |
+|---|---|---|
+| 维护活跃 | 30% | 近 90 天提交 + issue 健康度（DSH 迭代快，易坏的插件权重最高） |
+| 实用度 | 25% | README / 文档 / 示例完备度 |
+| 生态热度 | 20% | stars 对数归一化（p99 动态基准）+ fork 参与率（Wilson 小样本稳健） |
+| 便捷度 | 15% | 安装步骤清晰 + 无需额外配置 |
+| 信号质量 | 10% | license / topics / description / README 完备度 |
+
+每个插件附 `explanation`（一句话解释评分理由）。详见 [评分体系说明](https://dsh.market/)。
+
+## 收录机制
+
+**定位**：DSH Market 是 **DeepSeek Harness 生态**的插件收录与发现平台——只收 DSH 专属生态的插件，不做通用项目收录。
+
+每日 06:00 自动管道扫描以下数据源：
+
+```text
+GitHub Actions（每日 06:00 自动收录 + 部署）
+  └─ collector（Node，并发 10，24h 缓存）
+       ├─ 扫描数据源：
+       │    ├─ topic 扫描：dsh-plugin / dsh / deepseek-harness-plugin / dsh-bundle / dsh-skill
+       │    │    └─ 多路排序并集（stars + updated + created 各取前 1000，去重合并）
+       │    │    └─ GitHub Search API 单查询硬上限 1000 条，多路并集覆盖长尾（~72%+）
+       │    │    └─ 限流：Search API 30 次/分钟 → 每页间隔 2.3s，防 403
+       │    ├─ awesome 列表 ×2（人工策展社区列表）
+       │    ├─ dsh-external 组织
+       │    └─ 本仓库提交插件 issue（label: submission / 标题「[提交插件]」）
+       ├─ 收录条件（全部满足才收录）：
+       │    1. 不是 fork / archived / 官方本体（deepseek-ai/deepseek-harness）
+       │    2. 特征检测通过：根目录有 SKILL.md（skill 型）
+       │       或 skills/ 目录含 SKILL.md（技能集合）
+       │       或 dsh.profile / cordis.patch.yml 等 cordis 标记
+       │       或 package.json 依赖含 cordis 关键字（二次确认）
+       │    3. 无 stars / 评分门槛——检测通过即收录
+       ├─ 元数据 + README：GitHub API（stars / 描述 / 安装命令解析）
+       ├─ 实用五维评分 + 解释层
+       └─ DeepSeek 增量中文化（只翻译新插件，省 API 费用）
+            → data/plugins.json
+                 ├─ 同步到 web/public/plugins.json（Web 站 + 插件版共用）
+                 └─ 提交 → 构建 → 部署 GitHub Pages
+```
+
+**说明**：打了 `dsh-plugin` topic 只是进入候选池的入场券——收录还需要仓库**确实是 DSH 插件**（有 SKILL.md 或 cordis 标记）。topic 2000+ 仓库中大量并非 DSH 插件（随手打 tag / fork），特征检测会自动过滤。
+
+## 目录结构
+
+```text
+├─ collector/   # 数据管道（Node + tsx）：扫描 → 检测 → 评分 → 中文化
+├─ web/         # Web 站（Vite + React + TS + Fuse.js）
+├─ plugin/
+│  ├─ core/     # 插件核心层（纯 Node，零 DSH 依赖，可独立测试）
+│  └─ ui/       # 插件 UI 层（cordis Host RPC + 浏览器 Client 面板）
+├─ schema/      # 共享类型（DshPlugin / MarketData / PracticalScore）
+└─ scripts/     # 工具脚本（截图 / 数据注入 / 视觉评审）
+```
+
+## 本地开发
+
+```bash
+# 克隆与安装
+git clo

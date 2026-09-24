@@ -1,0 +1,60 @@
+total unique repos: 16026
+stars 100+: 312
+stars 20-99: 434
+stars 5-19: 1445
+stars 1-4: 6255
+stars 0: 7580
+languages: [('JavaScript', 9302), ('TypeScript', 5208), ('Python', 588), ('Rust', 113), ('PowerShell', 104), ('HTML', 98)]
+one-shot (pushed only on creation day): 6066/16026 = 37.9%
+no description: 1612/16026
+archived: 107
+
+activity anchor (breaking change @ 2026-09-23T13:30:24Z):
+  100+: 90/312 = 28.8%
+  20-99: 60/434 = 13.8%
+  5-19: 105/1445 = 7.3%
+  1-4: 174/6255 = 2.8%
+  0: 148/7580 = 2.0%
+  OVERALL: 577/16026 = 3.6%
+
+README-read repos: 985
+category pre-pass (NEEDS MANUAL CORRECTION via digest.txt):
+  eng-quality          425
+  model-provider       150
+  desktop-client       54
+  security             47
+  context-search       42
+  ui-theme             40
+  market-curation      37
+  memory-knowledge     33
+  usage-billing        32
+  office-docs          22
+  remote-access        20
+  orchestration        17
+  notify-im            15
+  vision               15
+  skills-pack          14
+  mobile-client        8
+  fun-novelty          7
+  voice-audio          6
+  uncategorized        1
+category x anchor cross-tab (maintenance discipline by category):
+  eng-quality          192/425 = 45%
+  model-provider       65/150 = 43%
+  desktop-client       25/54 = 46%
+  security             21/47 = 45%
+  context-search       16/42 = 38%
+  ui-theme             10/40 = 25%
+  market-curation      19/37 = 51%
+  memory-knowledge     21/33 = 64%
+  usage-billing        13/32 = 41%
+  office-docs          7/22 = 32%
+  remote-access        9/20 = 45%
+  orchestration        6/17 = 35%
+  notify-im            8/15 = 53%
+  vision               3/15 = 20%
+  skills-pack          4/14 = 29%
+  mobile-client        5/8 = 62%
+  fun-novelty          0/7 = 0%
+  voice-audio          2/6 = 33%
+  uncategorized        1/1 = 100%
