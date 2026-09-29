@@ -516,9 +516,21 @@ clean_axes(ax, grid="both"); footer(fig, f"数据：data/productivity_analysis.j
 terms = Counter(term for x in prod for term in x["evidence"]).most_common(15)[::-1]
 prod_bar("06_active_categories.png", "生产力筛选依赖的功能证据", "高频证据词帮助发现重复建设和分类偏差", [x[0] for x in terms], [x[1] for x in terms], "命中项目数", color=BLUE_LIGHT, height=7.0)
 
-# 07: exclusions
-excluded = sorted(PRODUCTIVITY.get("excluded_signals", {}).items(), key=lambda x: x[1])[-10:]
-prod_bar("07_native_adapted.png", "生产力榜单明确排除的内容", "排除项解释为什么 topic 总量不能直接当作工具数量", [x[0] for x in excluded], [x[1] for x in excluded], "被排除项目数", color=GREY, height=6.4)
+# 07: full community content map
+LANDSCAPE = json.loads((DATA_DIR / "plugin_landscape.json").read_text(encoding="utf-8"))
+all_families = list(LANDSCAPE["content_families"].items())
+active_families = LANDSCAPE["active_content_families"]
+all_families = sorted(all_families, key=lambda x: x[1])
+fig, ax = chart_canvas("整个插件社区在做什么", "全量 topic 内容家族与活跃有星切片；低信号仓库单独保留", height=8.0)
+y = list(range(len(all_families)))
+all_vals = [x[1] for x in all_families]
+active_vals = [active_families.get(x[0], 0) for x in all_families]
+ax.barh([v-.16 for v in y], all_vals, height=.28, color=GREY_LIGHT, label="全量枚举")
+ax.barh([v+.16 for v in y], active_vals, height=.28, color=BLUE, label="活跃且有星")
+ax.set_yticks(y, [x[0] for x in all_families]); ax.set_xlabel("仓库数")
+ax.legend(loc="lower center", bbox_to_anchor=(.5, 1.03), ncol=2); clean_axes(ax, grid="x")
+footer(fig, "数据：data/plugin_landscape.json；内容家族由仓库描述、名称和 README 摘要归类")
+save(fig, "07_native_adapted.png")
 
 # 08: installation leaders
 leaders = sorted(prod, key=lambda x: (x["npm_weekly"], x["release_downloads"]), reverse=True)[:15][::-1]

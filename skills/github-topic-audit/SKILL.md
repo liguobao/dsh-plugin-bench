@@ -172,7 +172,23 @@ Non-negotiables:
   referenced from the report.
 - Numbers in tables, judgments in prose. Cite repo full names.
 
-### 11. Run the productivity-tool pass
+### 11. Build the full community content map
+
+The topic census and the productivity ranking answer different questions. Run
+the content map before making recommendations:
+
+```bash
+python3 scripts/build_plugin_landscape.py audit-<topic>
+```
+
+`plugin_landscape.json` and `.md` assign every enumerated repository to a broad
+content family, then show the active-and-starred slice separately. The map
+must include low-signal and unclassified repositories instead of silently
+dropping them. Keep native, adapted, unrelated, and unclassified as separate
+dimensions; content family is about what a project does, while native status
+is about its relationship to the platform.
+
+### 12. Run the productivity-tool pass
 
 The ecosystem funnel is not a productivity ranking. Run the second pass when
 the user wants tools that improve recurring work rather than a census of every
@@ -195,6 +211,9 @@ Treat the productivity list as a screening layer. Read the README before
 calling a plugin useful, separate capability from marketing claims, and check
 installation and distribution evidence. Report adapted products separately so
 their stars and downloads do not define the native productivity ranking.
+
+The final report must contain both views: a full community content map and a
+native productivity shortlist. Never replace the first with the second.
 
 ## Timing expectations
 
