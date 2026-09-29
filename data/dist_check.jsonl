@@ -351,3 +351,4 @@
 {"repo": "crossoverthere/dsh-whale-desktop", "releases": 0, "rel_downloads": 0, "latest_release": null, "npm_name": "dsh-whale-desktop", "npm_exists": false, "npm_weekly": null}
 {"repo": "Theflowyears/dsh-arknights-theme", "releases": 2, "rel_downloads": 0, "latest_release": "2026-09-28T15:47:53Z", "npm_name": "dsh-arknights-theme", "npm_exists": true, "npm_weekly": null}
 {"repo": "yannicksong0106/dsh-550c-boot", "releases": 0, "rel_downloads": 0, "latest_release": null, "npm_name": "dsh-550c-boot", "npm_exists": false, "npm_weekly": null}
+{"repo": "liguobao/ds-harness-remote", "releases": 10, "rel_downloads": 840, "latest_release": "2026-09-29T15:20:55Z", "npm_name": "ds-harness-remote", "npm_exists": true, "npm_weekly": 1735}

@@ -1,9 +1,9 @@
 {
   "snapshot": {
     "enumerated": 16535,
-    "official": 16539,
-    "official_source": "GitHub Search API 结束后复查",
-    "coverage": 0.9997581474091541,
+    "official": 16670,
+    "official_source": "GitHub Search API 2026-09-30 复查",
+    "coverage": 0.9919016196760648,
     "readmes": 2177,
     "anchor": "2026-09-28T12:36:21Z",
     "anchor_label": "v0.2.0-rc.1"
@@ -53,13 +53,13 @@
     ]
   },
   "activity": {
-    "passed": 463,
-    "rate": 0.02800120955548836,
+    "passed": 464,
+    "rate": 0.02806168732990626,
     "tiers": {
       "100+": {
-        "passed": 65,
+        "passed": 66,
         "total": 326,
-        "rate": 0.19938650306748465
+        "rate": 0.20245398773006135
       },
       "20-99": {
         "passed": 49,
@@ -82,17 +82,17 @@
         "rate": 0.014124293785310734
       }
     },
-    "active_starred": 353,
-    "native_active_starred": 304
+    "active_starred": 354,
+    "native_active_starred": 305
   },
   "high_star": {
     "total": 1264,
-    "active": 139,
-    "stalled": 1125,
+    "active": 140,
+    "stalled": 1124,
     "native": 1059,
-    "native_active": 98,
+    "native_active": 99,
     "definite_stalled": 929,
-    "borderline_stalled": 196,
+    "borderline_stalled": 195,
     "top_definite": [
       {
         "repo": "freestylefly/awesome-gpt-image-2",
@@ -376,7 +376,7 @@
     "usage-billing": 11,
     "im-notify": 10,
     "vision-multimodal": 10,
-    "remote-access": 8,
+    "remote-access": 9,
     "tui-terminal": 7,
     "vertical-domain": 7,
     "file-workspace": 6,
@@ -657,21 +657,21 @@
       }
     },
     "remote-access": {
-      "repos": 8,
-      "stars": 189,
-      "star_10_plus": 1,
-      "native": 8,
+      "repos": 9,
+      "stars": 429,
+      "star_10_plus": 2,
+      "native": 9,
       "adapted": 0,
       "unrelated": 0,
       "distribution": {
-        "repos": 8,
-        "with_releases": 2,
-        "release_downloads": 0,
+        "repos": 9,
+        "with_releases": 3,
+        "release_downloads": 840,
         "zero_download_releases": 2,
-        "with_package_name": 7,
-        "published_npm": 5,
+        "with_package_name": 8,
+        "published_npm": 6,
         "named_unpublished": 2,
-        "npm_weekly": 1934,
+        "npm_weekly": 3669,
         "npm_weekly_median": 0
       }
     },
@@ -906,10 +906,10 @@
       "vision-multimodal": 3,
       "mcp-tooling": 2,
       "context-management": 2,
+      "remote-access": 2,
       "off-topic-squatter": 1,
       "fun-novelty": 1,
       "mobile-client": 1,
-      "remote-access": 1,
       "skills-presets": 1,
       "voice-audio": 1,
       "ide-integration": 1
@@ -1154,42 +1154,55 @@
     ]
   ],
   "remote_access": {
-    "repos": 8,
-    "stars": 189,
-    "star_10_plus": 1,
-    "native": 8,
+    "repos": 9,
+    "stars": 429,
+    "star_10_plus": 2,
+    "native": 9,
     "routes": {
       "cloudflare-tunnel": 2,
       "generic-remote": 2,
       "lan-gateway": 2,
+      "peer-to-peer": 1,
       "hosted-relay": 1,
       "reverse-proxy-self-hosted": 1
     },
     "distribution": {
       "all": {
-        "repos": 8,
-        "with_releases": 2,
-        "release_downloads": 0,
+        "repos": 9,
+        "with_releases": 3,
+        "release_downloads": 840,
         "zero_download_releases": 2,
-        "with_package_name": 7,
-        "published_npm": 5,
+        "with_package_name": 8,
+        "published_npm": 6,
         "named_unpublished": 2,
-        "npm_weekly": 1934,
+        "npm_weekly": 3669,
         "npm_weekly_median": 0
       },
       "native": {
-        "repos": 8,
-        "with_releases": 2,
-        "release_downloads": 0,
+        "repos": 9,
+        "with_releases": 3,
+        "release_downloads": 840,
         "zero_download_releases": 2,
-        "with_package_name": 7,
-        "published_npm": 5,
+        "with_package_name": 8,
+        "published_npm": 6,
         "named_unpublished": 2,
-        "npm_weekly": 1934,
+        "npm_weekly": 3669,
         "npm_weekly_median": 0
       }
     },
     "top": [
+      {
+        "repo": "liguobao/ds-harness-remote",
+        "stars": 240,
+        "pushed": "2026-09-29T16:26:34Z",
+        "created": "2026-08-14T15:33:53Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "一个基于 DeepSeek Harness 插件机制构建的多端远程访问方案，通过安全、低延迟、端到端加密的 P2P 优先网络，支持从 PC、Android 和 Web 随时访问并操作远程 Harness 和 CodeX。 (A multi-device remote access solution built on the DeepSeek Harness plugin system, enabling PC, Android, and Web clients to securely access and operate remote Harness and CodeX over a low-latency, end-to-end encrypted, P2P-first network.)",
+        "fork": false,
+        "cls": "native",
+        "route": "peer-to-peer"
+      },
       {
         "repo": "wenbin-wb/dsh-bridge",
         "stars": 177,
@@ -1319,25 +1332,25 @@
   },
   "distribution": {
     "all_active": {
-      "repos": 353,
-      "with_releases": 228,
-      "release_downloads": 188239,
+      "repos": 354,
+      "with_releases": 229,
+      "release_downloads": 189079,
       "zero_download_releases": 123,
-      "with_package_name": 301,
-      "published_npm": 222,
+      "with_package_name": 302,
+      "published_npm": 223,
       "named_unpublished": 79,
-      "npm_weekly": 1043580,
+      "npm_weekly": 1045315,
       "npm_weekly_median": 0
     },
     "native_active": {
-      "repos": 304,
-      "with_releases": 184,
-      "release_downloads": 108035,
+      "repos": 305,
+      "with_releases": 185,
+      "release_downloads": 108875,
       "zero_download_releases": 107,
-      "with_package_name": 278,
-      "published_npm": 210,
+      "with_package_name": 279,
+      "published_npm": 211,
       "named_unpublished": 68,
-      "npm_weekly": 853032,
+      "npm_weekly": 854767,
       "npm_weekly_median": 0
     }
   }
