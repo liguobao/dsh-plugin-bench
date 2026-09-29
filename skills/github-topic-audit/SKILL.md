@@ -172,6 +172,26 @@ Non-negotiables:
   referenced from the report.
 - Numbers in tables, judgments in prose. Cite repo full names.
 
+For the user's native-only report mode, create a filtered summary before
+writing the report:
+
+```bash
+python3 scripts/build_audit_summary.py audit-<topic> \
+  --native-only --native-file audit-<topic>/native_plugins.jsonl \
+  --official-count <native-count> \
+  --official-source 'native_plugins.jsonl 原生判定集合' \
+  --anchor <anchor> --anchor-label <release> \
+  --output audit-<topic>/native_audit_summary.json
+python3 scripts/write_audit_report.py \
+  audit-<topic>/native_audit_summary.json --date <date>
+```
+
+When native-only mode is requested, the report must not show adapted,
+unrelated, tag-squatting, or other non-native repositories in any table,
+ranking, chart, download total, stalled list, or recommendation. The report
+may state the native classification boundary once, but the excluded projects
+belong in raw audit data or a separate appendix.
+
 ### 11. Build the full community content map
 
 The topic census and the productivity ranking answer different questions. Run

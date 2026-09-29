@@ -90,6 +90,7 @@ def main() -> None:
     remote = summary["remote_access"]
     mobile = summary["mobile_client"]
     anchor_label = snapshot.get("anchor_label", "breaking release")
+    native_only = snapshot.get("native_only", False)
     classified_total = sum(classification["counts"].values())
     dist_complete = distribution["all_active"]["repos"] == activity["active_starred"]
     dist_all_label = "全部活跃有星" if dist_complete else "已检查活跃有星"
@@ -102,11 +103,13 @@ def main() -> None:
         "",
         f"> {args.date} 独立快照。数据来自 GitHub API 一手抓取；本文件由 `scripts/write_audit_report.py` 生成，历史报告不会被覆盖。",
         "",
-        f"- 官方 topic 计数：**{snapshot['official']:,}**",
-        f"- 官方计数来源：{snapshot.get('official_source', 'GitHub API')}",
+        (f"- 原生判定集合：**{snapshot['official']:,}**" if native_only else
+         f"- 官方 topic 计数：**{snapshot['official']:,}**"),
+        f"- 数据来源：{snapshot.get('official_source', 'GitHub API')}",
         f"- 实际去重枚举：**{snapshot['enumerated']:,}**，覆盖 **{snapshot['coverage'] * 100:.2f}%**",
         f"- README 覆盖：**{snapshot['readmes']:,}**",
-        f"- 原生 / 适配 / 无关判定覆盖：**{classified_total:,}** 个重点仓库",
+        (f"- 原生判定集合：**{classified_total:,}** 个仓库" if native_only else
+         f"- 原生 / 适配 / 无关判定覆盖：**{classified_total:,}** 个重点仓库"),
         f"- 活跃锚点：`{snapshot['anchor']}`",
         "- 本轮为自动化统计及初步分类；README 缓存每份最多保留前 8,000 字符，未完成全部摘要的逐条人工复核。下载与预分类不等于完整深读。",
         "",
@@ -115,14 +118,16 @@ def main() -> None:
         f"1. {anchor_label} 后有 push 的仓库为 **{activity['passed']:,}**，占 {pct(activity['rate'])}；其中“活跃 × 有星” **{activity['active_starred']:,}**，原生活跃 **{activity['native_active_starred']:,}**。",
         f"2. star ≥ 10 共 **{high['total']:,}**：活跃 {high['active']:,}，停滞 {high['stalled']:,}；原生且活跃 {high['native_active']:,}。",
         f"3. 一次性仓库 {scale['one_shot']:,}，占 {pct(scale['one_shot'] / snapshot['enumerated'])}；规模增长仍不能直接等价为可维护供给。",
-        f"4. 三桶分析集合中原生 {classification['counts'].get('native', 0):,}、适配型 {classification['counts'].get('adapted', 0):,}、无关 {classification['counts'].get('unrelated', 0):,}；适配型产品继续支配 star 总量。",
+        ("4. 本报告只在原生集合内比较插件内容、活跃度和分发完成度；非原生仓库不进入任何排名。" if native_only else
+         f"4. 三桶分析集合中原生 {classification['counts'].get('native', 0):,}、适配型 {classification['counts'].get('adapted', 0):,}、无关 {classification['counts'].get('unrelated', 0):,}；适配型产品继续支配 star 总量。"),
         f"5. **远程访问已作为独立一级品类统计：{remote['repos']:,} 个活跃仓库，原生 {remote['native']:,}，star ≥ 10 共 {remote['star_10_plus']:,}。** 移动端本机客户端另计 {mobile['repos']:,} 个。",
         "",
         "## 二、漏斗与活跃度",
         "",
         "| 阶段 | 数量 |",
         "|---|---:|",
-        f"| 官方 topic | {snapshot['official']:,} |",
+        (f"| 原生判定集合 | {snapshot['official']:,} |" if native_only else
+         f"| 官方 topic | {snapshot['official']:,} |"),
         f"| 精确枚举 | {snapshot['enumerated']:,} |",
         f"| {anchor_label} 后有 push | {activity['passed']:,} |",
         f"| 活跃 × 有星 | {activity['active_starred']:,} |",
@@ -140,15 +145,18 @@ def main() -> None:
             "",
             "固定锚点会把锚点后新建的一次性项目也计为活跃，因此总活跃率只用于跟进信号；选型更应关注“有星 × 锚点后 push × 可分发”的交集。",
             "",
-            "## 三、原生 / 适配 / 无关",
+            "## 三、原生插件范围",
             "",
-            f"本节覆盖高星、锚点活跃及历史已判定仓库，共 **{classified_total:,}** 个；不代表对全部 {snapshot['enumerated']:,} 个 topic 仓库逐一完成三桶判定。",
+            (f"本报告只保留已判定为 DSH 原生的仓库，共 **{classified_total:,}** 个。适配产品、蹭标签和其他非原生项目已从全部统计、排名、分发和图表中移除。"
+             if native_only else
+             f"本节覆盖高星、锚点活跃及历史已判定仓库，共 **{classified_total:,}** 个；不代表对全部 {snapshot['enumerated']:,} 个 topic 仓库逐一完成三桶判定。"),
             "",
             "| 桶 | 仓库数 | star |",
             "|---|---:|---:|",
         ]
     )
-    for key, label in (("native", "DSH 原生"), ("adapted", "适配型独立产品"), ("unrelated", "无关 / 蹭 tag")):
+    class_rows = (("native", "DSH 原生"),) if native_only else (("native", "DSH 原生"), ("adapted", "适配型独立产品"), ("unrelated", "无关 / 蹭 tag"))
+    for key, label in class_rows:
         lines.append(
             f"| {label} | {classification['counts'].get(key, 0):,} | {classification['stars'].get(key, 0):,} |"
         )
@@ -245,11 +253,15 @@ def main() -> None:
                 else f"本轮分发查询仅覆盖 **{distribution['all_active']['repos']:,} / {activity['active_starred']:,}** 个活跃有星仓库；未覆盖项目不计入下载与发布合计。"
             ),
             "",
-            "npm 周下载中位数为 0 时，不能直接解释成无人使用；长尾常通过 GitHub 依赖直装。Release 下载则更偏向桌面应用和适配型独立产品。",
+            ("npm 周下载中位数为 0 时，不能直接解释成无人使用；长尾常通过 GitHub 依赖直装。Release 下载更集中在原生桌面客户端和移动端。"
+             if native_only else
+             "npm 周下载中位数为 0 时，不能直接解释成无人使用；长尾常通过 GitHub 依赖直装。Release 下载则更偏向桌面应用和适配型独立产品。"),
             "",
             "## 七、高星停滞",
             "",
-            f"star ≥ 10 中，锚点后未观察到 push 的项目有 {high['stalled']:,} 个，其中最后 push 早于锚点 24 小时的有 {high['definite_stalled']:,} 个，锚点前 24 小时内的有 {high['borderline_stalled']:,} 个。此处混合原生、适配与无关项目，仅列时间信号，不代表已验证不兼容或停止维护。前一组头部如下：",
+            (f"star ≥ 10 的原生项目中，锚点后未观察到 push 的有 {high['stalled']:,} 个，其中最后 push 早于锚点 24 小时的有 {high['definite_stalled']:,} 个，锚点前 24 小时内的有 {high['borderline_stalled']:,} 个。这里只列时间信号，不代表已验证不兼容或停止维护。前一组头部如下："
+             if native_only else
+             f"star ≥ 10 中，锚点后未观察到 push 的项目有 {high['stalled']:,} 个，其中最后 push 早于锚点 24 小时的有 {high['definite_stalled']:,} 个，锚点前 24 小时内的有 {high['borderline_stalled']:,} 个。此处混合原生、适配与无关项目，仅列时间信号，不代表已验证不兼容或停止维护。前一组头部如下："),
             "",
         ]
     )

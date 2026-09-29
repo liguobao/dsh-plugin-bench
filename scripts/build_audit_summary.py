@@ -39,10 +39,18 @@ def main() -> None:
     parser.add_argument("--anchor", required=True, help="breaking-release ISO timestamp")
     parser.add_argument("--anchor-label", default="breaking release")
     parser.add_argument("--official-source", default="GitHub API end-of-run query")
+    parser.add_argument("--native-only", action="store_true", help="keep only repositories classified as native")
+    parser.add_argument("--native-file", type=Path, default=None, help="native_plugins.jsonl when --native-only is set")
+    parser.add_argument("--output", type=Path, default=None, help="summary output path")
     args = parser.parse_args()
     anchor = args.anchor
 
     repos = jsonl(args.audit_dir / "repos.jsonl")
+    native_names = None
+    if args.native_only:
+        native_path = args.native_file or (args.audit_dir / "native_plugins.jsonl")
+        native_names = {row["repo"] for row in jsonl(native_path)}
+        repos = [row for row in repos if row["repo"] in native_names]
     meta = {row["repo"]: row for row in repos}
     active = [row for row in repos if row["stars"] >= 1 and row["pushed"] >= anchor]
     active_names = {row["repo"] for row in active}
@@ -50,6 +58,8 @@ def main() -> None:
     categories = {row["repo"]: row["cat"] for row in inventory}
     inventory_by_repo = {row["repo"]: row for row in inventory}
     classified = jsonl(args.audit_dir / "classification.jsonl")
+    if args.native_only:
+        classified = [row for row in classified if row.get("cls") == "native"]
     class_by_repo = {row["repo"]: row["cls"] for row in classified}
 
     anchor_dt = datetime.fromisoformat(anchor.replace("Z", "+00:00"))
@@ -134,6 +144,7 @@ def main() -> None:
             "readmes": len(json.loads((args.audit_dir / "analysis.json").read_text())),
             "anchor": anchor,
             "anchor_label": args.anchor_label,
+            "native_only": args.native_only,
         },
         "scale": {
             "star_tiers": star_tiers,
@@ -210,7 +221,8 @@ def main() -> None:
             "native_active": distribution(native_dist),
         },
     }
-    (args.audit_dir / "audit_summary.json").write_text(
+    output_path = args.output or (args.audit_dir / "audit_summary.json")
+    output_path.write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n"
     )
     print(json.dumps(summary, ensure_ascii=False, indent=2))

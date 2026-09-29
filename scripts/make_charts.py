@@ -516,20 +516,21 @@ clean_axes(ax, grid="both"); footer(fig, f"数据：data/productivity_analysis.j
 terms = Counter(term for x in prod for term in x["evidence"]).most_common(15)[::-1]
 prod_bar("06_active_categories.png", "生产力筛选依赖的功能证据", "高频证据词帮助发现重复建设和分类偏差", [x[0] for x in terms], [x[1] for x in terms], "命中项目数", color=BLUE_LIGHT, height=7.0)
 
-# 07: full community content map
+# 07: native content map
 LANDSCAPE = json.loads((DATA_DIR / "plugin_landscape.json").read_text(encoding="utf-8"))
-all_families = list(LANDSCAPE["content_families"].items())
-active_families = LANDSCAPE["active_content_families"]
-all_families = sorted(all_families, key=lambda x: x[1])
-fig, ax = chart_canvas("整个插件社区在做什么", "全量 topic 内容家族与活跃有星切片；低信号仓库单独保留", height=8.0)
-y = list(range(len(all_families)))
-all_vals = [x[1] for x in all_families]
-active_vals = [active_families.get(x[0], 0) for x in all_families]
-ax.barh([v-.16 for v in y], all_vals, height=.28, color=GREY_LIGHT, label="全量枚举")
-ax.barh([v+.16 for v in y], active_vals, height=.28, color=BLUE, label="活跃且有星")
-ax.set_yticks(y, [x[0] for x in all_families]); ax.set_xlabel("仓库数")
+native_records = [x for x in LANDSCAPE["records"] if x["classification"] == "native"]
+all_native = Counter(x["content_family"] for x in native_records)
+active_native = Counter(x["content_family"] for x in native_records if x["active_starred"])
+native_families = sorted(all_native.items(), key=lambda x: x[1])
+fig, ax = chart_canvas("原生插件都在做什么", "只统计原生仓库；全量原生集合与活跃有星切片", height=8.0)
+y = list(range(len(native_families)))
+all_vals = [x[1] for x in native_families]
+active_vals = [active_native.get(x[0], 0) for x in native_families]
+ax.barh([v-.16 for v in y], all_vals, height=.28, color=GREY_LIGHT, label="原生全量")
+ax.barh([v+.16 for v in y], active_vals, height=.28, color=BLUE, label="原生活跃有星")
+ax.set_yticks(y, [x[0] for x in native_families]); ax.set_xlabel("仓库数")
 ax.legend(loc="lower center", bbox_to_anchor=(.5, 1.03), ncol=2); clean_axes(ax, grid="x")
-footer(fig, "数据：data/plugin_landscape.json；内容家族由仓库描述、名称和 README 摘要归类")
+footer(fig, "数据：data/plugin_landscape.json；非原生仓库不进入此图")
 save(fig, "07_native_adapted.png")
 
 # 08: installation leaders

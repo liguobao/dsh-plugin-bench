@@ -47,7 +47,8 @@ DeepSeek Harness（DSH）插件生态的独立基准评估：基于 GitHub API �
 | `data/dist_check.jsonl` | 354 个活跃仓库的 Release/npm 数据 |
 | `data/audit_summary.json` | 报告使用的结构化汇总 |
 | `data/productivity_analysis.json` / `.md` | 生产力工具筛选、类别、证据词和分发信号 |
-| `data/plugin_landscape.json` / `.md` | 全社区内容地图，以及活跃社区与生产力筛选的对应关系 |
+| `data/plugin_landscape.json` / `.md` | 原始社区内容地图，供分析过程追溯 |
+| `data/native_audit_summary.json` | 只含原生插件的报告汇总 |
 
 活跃品类使用历史人工标签、本轮人工复核、增量规则和仅元数据判断；`classification_source` 字段保留来源差异。本轮分发数据覆盖全部活跃有星仓库，README 覆盖 Top 2,000 高星仓库及全部活跃有星仓库的并集。
 
@@ -61,7 +62,7 @@ DeepSeek Harness（DSH）插件生态的独立基准评估：基于 GitHub API �
 | ![安装链路](charts/04_languages.png) | 各类别 npm 与 Release 覆盖率 |
 | ![关注度与安装量](charts/05_lifecycle.png) | GitHub Star 与 npm 周下载的关系 |
 | ![功能证据](charts/06_active_categories.png) | 生产力筛选使用的功能证据词 |
-| ![全社区内容地图](charts/07_native_adapted.png) | 全量社区内容家族与活跃有星切片 |
+| ![原生内容地图](charts/07_native_adapted.png) | 原生插件内容家族与活跃有星切片 |
 | ![安装信号](charts/08_remote_access.png) | npm 与 Release 下载量头部 |
 
 图表可通过 `python3 scripts/make_charts.py` 重新生成。
@@ -108,7 +109,7 @@ Top 2,000 之外的活跃有星仓库 README 补齐步骤见 `skills/github-topi
 
 生产力工具专项结果见 [生产力工具插件分析](report/DSH生产力工具插件分析-2026-09-30.md)。
 
-完整社区内容地图见 `data/plugin_landscape.md`；它先回答社区在做什么，再由生产力筛选回答哪些项目值得进入工作工具候选集。
+当前正式报告只使用 `native_audit_summary.json`，适配、蹭标签和其他非原生项目不进入报告统计。
 
 ## License
 
