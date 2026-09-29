@@ -1,46 +1,47 @@
 {
   "snapshot": {
-    "enumerated": 16535,
-    "official": 16670,
+    "enumerated": 16685,
+    "official": 16688,
     "official_source": "GitHub Search API 2026-09-30 复查",
-    "coverage": 0.9919016196760648,
-    "readmes": 2177,
-    "anchor": "2026-09-28T12:36:21Z",
-    "anchor_label": "v0.2.0-rc.1"
+    "coverage": 0.9998202301054651,
+    "readmes": 2407,
+    "anchor": "2026-09-29T09:42:36Z",
+    "anchor_label": "v0.2.0-rc.2",
+    "native_only": false
   },
   "scale": {
     "star_tiers": {
-      "100+": 326,
-      "20-99": 451,
-      "5-19": 1467,
-      "1-4": 6503,
-      "0": 7788
+      "100+": 329,
+      "20-99": 453,
+      "5-19": 1474,
+      "1-4": 6573,
+      "0": 7856
     },
-    "one_shot": 6088,
+    "one_shot": 6125,
     "languages": [
       [
         "JavaScript",
-        9715
+        9828
       ],
       [
         "TypeScript",
-        5286
+        5308
       ],
       [
         "Python",
-        595
+        601
       ],
       [
         "Unknown",
-        293
+        295
       ],
       [
         "Rust",
-        113
+        112
       ],
       [
         "PowerShell",
-        104
+        105
       ],
       [
         "HTML",
@@ -53,50 +54,50 @@
     ]
   },
   "activity": {
-    "passed": 464,
-    "rate": 0.02806168732990626,
+    "passed": 997,
+    "rate": 0.05975427030266706,
     "tiers": {
       "100+": {
-        "passed": 66,
-        "total": 326,
-        "rate": 0.20245398773006135
+        "passed": 93,
+        "total": 329,
+        "rate": 0.2826747720364742
       },
       "20-99": {
-        "passed": 49,
-        "total": 451,
-        "rate": 0.10864745011086474
+        "passed": 74,
+        "total": 453,
+        "rate": 0.16335540838852097
       },
       "5-19": {
-        "passed": 66,
-        "total": 1467,
-        "rate": 0.044989775051124746
+        "passed": 132,
+        "total": 1474,
+        "rate": 0.08955223880597014
       },
       "1-4": {
-        "passed": 173,
-        "total": 6503,
-        "rate": 0.026603106258649853
+        "passed": 395,
+        "total": 6573,
+        "rate": 0.06009432527004412
       },
       "0": {
-        "passed": 110,
-        "total": 7788,
-        "rate": 0.014124293785310734
+        "passed": 303,
+        "total": 7856,
+        "rate": 0.038569246435845216
       }
     },
-    "active_starred": 354,
-    "native_active_starred": 305
+    "active_starred": 694,
+    "native_active_starred": 630
   },
   "high_star": {
-    "total": 1264,
-    "active": 140,
-    "stalled": 1124,
-    "native": 1059,
-    "native_active": 99,
-    "definite_stalled": 929,
-    "borderline_stalled": 195,
+    "total": 1283,
+    "active": 222,
+    "stalled": 1061,
+    "native": 1078,
+    "native_active": 170,
+    "definite_stalled": 879,
+    "borderline_stalled": 182,
     "top_definite": [
       {
         "repo": "freestylefly/awesome-gpt-image-2",
-        "stars": 33651,
+        "stars": 33731,
         "pushed": "2026-09-24T08:01:10Z",
         "created": "2026-04-25T09:19:13Z",
         "lang": "JavaScript",
@@ -106,7 +107,7 @@
       },
       {
         "repo": "Molunerfinn/PicGo",
-        "stars": 27267,
+        "stars": 27271,
         "pushed": "2026-09-24T01:07:44Z",
         "created": "2017-12-12T08:39:44Z",
         "lang": "TypeScript",
@@ -116,7 +117,7 @@
       },
       {
         "repo": "titanwings/distilly",
-        "stars": 25091,
+        "stars": 25129,
         "pushed": "2026-09-22T14:01:08Z",
         "created": "2026-03-30T05:22:23Z",
         "lang": "Python",
@@ -126,7 +127,7 @@
       },
       {
         "repo": "walkinglabs/learn-harness-engineering",
-        "stars": 16617,
+        "stars": 16820,
         "pushed": "2026-08-26T01:08:59Z",
         "created": "2026-03-29T12:28:19Z",
         "lang": "TypeScript",
@@ -135,28 +136,18 @@
         "fork": false
       },
       {
-        "repo": "EverMind-AI/EverOS",
-        "stars": 13255,
-        "pushed": "2026-09-24T10:31:33Z",
-        "created": "2025-10-28T15:09:32Z",
-        "lang": "Python",
+        "repo": "YaoApp/yao",
+        "stars": 8048,
+        "pushed": "2026-09-28T01:38:42Z",
+        "created": "2021-09-06T09:20:27Z",
+        "lang": "Go",
         "archived": false,
-        "desc": "One portable memory layer for every AI agent: local-first, Markdown-native, user-owned, and self-evolving across apps, tools, and workflows.",
-        "fork": false
-      },
-      {
-        "repo": "MemTensor/MemOS",
-        "stars": 11620,
-        "pushed": "2026-09-23T05:55:52Z",
-        "created": "2025-07-06T09:51:27Z",
-        "lang": "TypeScript",
-        "archived": false,
-        "desc": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.",
+        "desc": "✨ All your agents and workspaces in one place, on every device you own. Track tasks on a board, accessible from desktop, mobile, browser, or API. Self-hosted.",
         "fork": false
       },
       {
         "repo": "yjh051108/dsh-routing-suite",
-        "stars": 7004,
+        "stars": 6998,
         "pushed": "2026-09-18T23:10:58Z",
         "created": "2026-08-14T21:20:55Z",
         "lang": "JavaScript",
@@ -165,8 +156,18 @@
         "fork": false
       },
       {
+        "repo": "liustack/modlens",
+        "stars": 4072,
+        "pushed": "2026-09-27T20:45:40Z",
+        "created": "2026-02-22T07:12:00Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OCR, layout, semantics). | 全网最强 DeepSeek Harness 外挂视觉插件，为 DeepSeek、GLM 等纯文本模型外挂视觉能力，粘贴图片即得结构化 JSON 证据（OCR、版面、语义）。",
+        "fork": false
+      },
+      {
         "repo": "xiaobright/dsh-anchored-standard",
-        "stars": 3793,
+        "stars": 3789,
         "pushed": "2026-09-10T05:00:13Z",
         "created": "2026-08-14T14:06:39Z",
         "lang": "JavaScript",
@@ -176,22 +177,12 @@
       },
       {
         "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "stars": 3479,
+        "stars": 3494,
         "pushed": "2026-08-31T13:52:09Z",
         "created": "2026-02-22T13:51:44Z",
         "lang": "Python",
         "archived": false,
         "desc": "Intelligent Skill routing and workflow orchestration for AI agents — +21.12 pp reward, −29.6% tokens on SkillsBench with DeepSeekV4Flash-VE.",
-        "fork": false
-      },
-      {
-        "repo": "whiteguo233/OpenBiliClaw",
-        "stars": 3362,
-        "pushed": "2026-09-26T19:10:43Z",
-        "created": "2026-03-07T13:46:10Z",
-        "lang": "Python",
-        "archived": false,
-        "desc": "本地私有、开源的自进化跨平台 AI 内容发现 Agent：先理解你，再主动从 B站、小红书、抖音、YouTube、X、知乎、Reddit、微博等平台与开放 Web 寻找内容。（支持 deepseek harness 插件） | Local-first open-source cross-platform AI content discovery agent: understands you, then proactively finds content across Bilibili, Xiaohongshu, Douyin, YouTube, X, Zhihu, Reddit, Weibo and the open web.（support deepseek harness plugin）",
         "fork": false
       },
       {
@@ -216,7 +207,7 @@
       },
       {
         "repo": "zilliztech/memsearch",
-        "stars": 2674,
+        "stars": 2681,
         "pushed": "2026-09-24T08:08:09Z",
         "created": "2026-02-09T02:29:16Z",
         "lang": "Python",
@@ -225,31 +216,41 @@
         "fork": false
       },
       {
-        "repo": "Minglink/dsh-infinite-gen-4",
-        "stars": 2115,
-        "pushed": "2026-09-23T15:22:22Z",
-        "created": "2026-08-15T15:47:15Z",
-        "lang": "JavaScript",
-        "archived": false,
-        "desc": "DeepSeek v4.1 flash 网络安全红队工具（无限四代） — jailbreak prompts and test suite for DeepSeek    求 Star 收藏 ⭐欢迎大家提交项目的改进",
-        "fork": false
-      },
-      {
         "repo": "Alisa0808/vox-director",
-        "stars": 2069,
+        "stars": 2082,
         "pushed": "2026-08-11T15:39:41Z",
         "created": "2026-07-10T15:32:05Z",
         "lang": "Python",
         "archived": false,
         "desc": "Turn one topic into a finished Vox-style paper-collage explainer/ad video — automated end to end on Atlas Cloud + ffmpeg. An agent skill.",
         "fork": false
+      },
+      {
+        "repo": "Jesseovo/last30days-skill-cn",
+        "stars": 1845,
+        "pushed": "2026-07-20T08:55:57Z",
+        "created": "2026-03-31T08:13:20Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "last30days-cn 是一个 AI Agent 技能（Skill），能够自动搜索中国互联网 8 大主流平台最近 30 天的内容，综合分析后生成有据可查的研究报告。",
+        "fork": false
+      },
+      {
+        "repo": "Devin-AXIS/deepseek-design",
+        "stars": 1689,
+        "pushed": "2026-09-04T10:40:28Z",
+        "created": "2026-08-15T13:08:53Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DeepSeek Harness 可编辑设计系统：AI 生成、可视化编辑、模板市场与 PPT｜Native Design & PPT Studio for DeepSeek Harness.",
+        "fork": false
       }
     ],
     "top_borderline": [
       {
         "repo": "deepseek-ai/deepseek-harness",
-        "stars": 238600,
-        "pushed": "2026-09-28T12:35:34Z",
+        "stars": 239845,
+        "pushed": "2026-09-29T09:41:57Z",
         "created": "2026-08-13T11:56:32Z",
         "lang": "TypeScript",
         "archived": false,
@@ -258,8 +259,8 @@
       },
       {
         "repo": "nexu-io/open-design",
-        "stars": 98472,
-        "pushed": "2026-09-28T10:22:08Z",
+        "stars": 98677,
+        "pushed": "2026-09-29T09:41:26Z",
         "created": "2026-04-28T04:25:20Z",
         "lang": "TypeScript",
         "archived": false,
@@ -267,18 +268,8 @@
         "fork": false
       },
       {
-        "repo": "reactive-resume/reactive-resume",
-        "stars": 43513,
-        "pushed": "2026-09-28T07:01:02Z",
-        "created": "2020-03-25T14:08:22Z",
-        "lang": "TypeScript",
-        "archived": false,
-        "desc": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
-        "fork": false
-      },
-      {
         "repo": "voyager-crew/voyager",
-        "stars": 20239,
+        "stars": 20251,
         "pushed": "2026-09-28T11:42:53Z",
         "created": "2025-10-04T23:42:35Z",
         "lang": "TypeScript",
@@ -287,49 +278,29 @@
         "fork": false
       },
       {
-        "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
-        "stars": 17145,
-        "pushed": "2026-09-27T16:21:44Z",
-        "created": "2026-08-13T13:55:31Z",
-        "lang": "JavaScript",
+        "repo": "EverMind-AI/EverOS",
+        "stars": 13289,
+        "pushed": "2026-09-29T01:35:59Z",
+        "created": "2025-10-28T15:09:32Z",
+        "lang": "Python",
         "archived": false,
-        "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+        "desc": "One portable memory layer for every AI agent: local-first, Markdown-native, user-owned, and self-evolving across apps, tools, and workflows.",
         "fork": false
       },
       {
-        "repo": "zhu1090093659/dsh-web",
-        "stars": 8112,
-        "pushed": "2026-09-28T02:43:27Z",
-        "created": "2026-08-12T05:15:20Z",
+        "repo": "MemTensor/MemOS",
+        "stars": 11646,
+        "pushed": "2026-09-29T03:09:34Z",
+        "created": "2025-07-06T09:51:27Z",
         "lang": "TypeScript",
         "archived": false,
-        "desc": "DeepSeek Harness (DSH) Web 插件聚合生态 · 万物皆插件，通过创意工坊分发｜｜DeepSeek Harness (DSH) Web Plugin Aggregation Ecosystem · Everything is a plugin, distributed via the Creative Workshop",
-        "fork": false
-      },
-      {
-        "repo": "YaoApp/yao",
-        "stars": 8041,
-        "pushed": "2026-09-28T01:38:42Z",
-        "created": "2021-09-06T09:20:27Z",
-        "lang": "Go",
-        "archived": false,
-        "desc": "✨ All your agents and workspaces in one place, on every device you own. Track tasks on a board, accessible from desktop, mobile, browser, or API. Self-hosted.",
-        "fork": false
-      },
-      {
-        "repo": "Tencent/BrowserSkill",
-        "stars": 7689,
-        "pushed": "2026-09-28T03:20:16Z",
-        "created": "2026-06-22T07:24:40Z",
-        "lang": "TypeScript",
-        "archived": false,
-        "desc": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+        "desc": "Self-evolving memory OS for LLM & AI Agents: ultra-persistent memory, hybrid-retrieval, and cross-task skill reuse, with 35.24% token savings and DeepSeek Harness support.",
         "fork": false
       },
       {
         "repo": "anbeime/skill",
-        "stars": 7320,
-        "pushed": "2026-09-28T08:20:49Z",
+        "stars": 7372,
+        "pushed": "2026-09-29T07:59:03Z",
         "created": "2026-02-02T09:12:57Z",
         "lang": "Python",
         "archived": false,
@@ -337,13 +308,43 @@
         "fork": false
       },
       {
-        "repo": "Devin-AXIS/iPolloWork",
-        "stars": 6822,
-        "pushed": "2026-09-28T09:31:48Z",
-        "created": "2025-08-25T03:57:40Z",
+        "repo": "lingfengQAQ/webnovel-writer",
+        "stars": 7267,
+        "pushed": "2026-09-28T13:29:20Z",
+        "created": "2026-01-02T15:15:58Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "基于 Claude Code 的长篇网文辅助创作系统，解决 AI 写作中的「遗忘」和「幻觉」问题，支持 200 万字量级 连载创作。",
+        "fork": false
+      },
+      {
+        "repo": "crafter-station/petdex",
+        "stars": 4167,
+        "pushed": "2026-09-28T21:17:19Z",
+        "created": "2026-05-02T07:51:35Z",
         "lang": "TypeScript",
         "archived": false,
-        "desc": "Enterprise-grade, local-first Agent Workbench for people and agent teams. A unified multi-engine workspace for Codex Harness, DeepSeek Harness, and OpenCode, with unified plugins and Skills, multi-agent projects and tasks, and editable code, documents, presentations, design, and video.",
+        "desc": "A public gallery of animated pets for Codex, Claude Code, DeepSeek Harness, Hermes, OpenCode, Gemini CLI, and more.",
+        "fork": false
+      },
+      {
+        "repo": "omdsh-dev/DSH-better-sidebar",
+        "stars": 3891,
+        "pushed": "2026-09-28T16:45:35Z",
+        "created": "2026-08-07T16:04:00Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages.",
+        "fork": false
+      },
+      {
+        "repo": "agentscope-ai/ReMe",
+        "stars": 3533,
+        "pushed": "2026-09-29T06:31:20Z",
+        "created": "2024-08-29T02:40:53Z",
+        "lang": "Python",
+        "archived": false,
+        "desc": "ReMe: Memory Management Kit for Agents - Remember Me, Refine Me.",
         "fork": false
       }
     ]
@@ -351,409 +352,447 @@
   "classification": {
     "counts": {
       "adapted": 87,
-      "native": 3948,
-      "unrelated": 271
+      "native": 4153,
+      "unrelated": 275
     },
     "stars": {
-      "adapted": 670915,
-      "native": 200947,
-      "unrelated": 51976
+      "adapted": 673333,
+      "native": 204077,
+      "unrelated": 52303
     },
     "first_native_rank": 9
   },
   "categories": {
-    "model-provider": 49,
-    "memory-knowledge": 33,
-    "other": 30,
-    "market-curation": 28,
-    "desktop-client": 25,
-    "search-web": 24,
-    "security-governance": 24,
-    "session-ui-ux": 20,
-    "eng-git-ci": 14,
-    "skills-presets": 13,
-    "orchestration-workflow": 12,
-    "usage-billing": 11,
-    "im-notify": 10,
-    "vision-multimodal": 10,
-    "remote-access": 9,
-    "tui-terminal": 7,
-    "vertical-domain": 7,
-    "file-workspace": 6,
-    "fun-novelty": 5,
+    "model-provider": 135,
+    "desktop-client": 60,
+    "market-curation": 54,
+    "memory-knowledge": 52,
+    "other": 52,
+    "search-web": 46,
+    "session-ui-ux": 46,
+    "security-governance": 42,
+    "usage-billing": 36,
+    "orchestration-workflow": 26,
+    "vision-multimodal": 22,
+    "fun-novelty": 16,
+    "skills-presets": 14,
+    "eng-git-ci": 13,
+    "vertical-domain": 12,
+    "context-management": 11,
+    "remote-access": 11,
+    "tui-terminal": 9,
+    "file-workspace": 9,
+    "im-notify": 8,
+    "mcp-tooling": 7,
     "adapted-independent": 4,
     "voice-audio": 4,
-    "mcp-tooling": 3,
-    "context-management": 3,
+    "ide-integration": 3,
     "off-topic-squatter": 1,
-    "mobile-client": 1,
-    "ide-integration": 1
+    "mobile-client": 1
   },
   "category_details": {
     "model-provider": {
-      "repos": 49,
-      "stars": 7972,
-      "star_10_plus": 19,
-      "native": 42,
+      "repos": 135,
+      "stars": 8540,
+      "star_10_plus": 29,
+      "native": 128,
       "adapted": 2,
       "unrelated": 5,
       "distribution": {
-        "repos": 49,
-        "with_releases": 32,
-        "release_downloads": 9701,
-        "zero_download_releases": 16,
-        "with_package_name": 44,
-        "published_npm": 35,
-        "named_unpublished": 9,
-        "npm_weekly": 10523,
-        "npm_weekly_median": 0
-      }
-    },
-    "memory-knowledge": {
-      "repos": 33,
-      "stars": 52170,
-      "star_10_plus": 17,
-      "native": 25,
-      "adapted": 6,
-      "unrelated": 2,
-      "distribution": {
-        "repos": 33,
-        "with_releases": 22,
-        "release_downloads": 8036,
-        "zero_download_releases": 10,
-        "with_package_name": 25,
-        "published_npm": 14,
-        "named_unpublished": 11,
-        "npm_weekly": 19508,
-        "npm_weekly_median": 0
-      }
-    },
-    "other": {
-      "repos": 30,
-      "stars": 6820,
-      "star_10_plus": 10,
-      "native": 28,
-      "adapted": 1,
-      "unrelated": 1,
-      "distribution": {
-        "repos": 30,
-        "with_releases": 15,
-        "release_downloads": 885,
-        "zero_download_releases": 10,
-        "with_package_name": 27,
-        "published_npm": 18,
-        "named_unpublished": 9,
-        "npm_weekly": 182674,
-        "npm_weekly_median": 0
-      }
-    },
-    "market-curation": {
-      "repos": 28,
-      "stars": 7056,
-      "star_10_plus": 12,
-      "native": 28,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 28,
-        "with_releases": 10,
-        "release_downloads": 235,
-        "zero_download_releases": 8,
-        "with_package_name": 22,
-        "published_npm": 15,
-        "named_unpublished": 7,
-        "npm_weekly": 142828,
+        "repos": 135,
+        "with_releases": 64,
+        "release_downloads": 12312,
+        "zero_download_releases": 37,
+        "with_package_name": 125,
+        "published_npm": 69,
+        "named_unpublished": 56,
+        "npm_weekly": 39285,
         "npm_weekly_median": 0
       }
     },
     "desktop-client": {
-      "repos": 25,
-      "stars": 40112,
-      "star_10_plus": 7,
-      "native": 23,
-      "adapted": 1,
+      "repos": 60,
+      "stars": 44589,
+      "star_10_plus": 15,
+      "native": 57,
+      "adapted": 2,
       "unrelated": 1,
       "distribution": {
-        "repos": 25,
-        "with_releases": 17,
-        "release_downloads": 65364,
-        "zero_download_releases": 3,
-        "with_package_name": 21,
-        "published_npm": 14,
-        "named_unpublished": 7,
-        "npm_weekly": 475,
+        "repos": 60,
+        "with_releases": 44,
+        "release_downloads": 92280,
+        "zero_download_releases": 17,
+        "with_package_name": 53,
+        "published_npm": 35,
+        "named_unpublished": 18,
+        "npm_weekly": 7244,
+        "npm_weekly_median": 30
+      }
+    },
+    "market-curation": {
+      "repos": 54,
+      "stars": 25480,
+      "star_10_plus": 22,
+      "native": 54,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 54,
+        "with_releases": 27,
+        "release_downloads": 8948,
+        "zero_download_releases": 19,
+        "with_package_name": 48,
+        "published_npm": 35,
+        "named_unpublished": 13,
+        "npm_weekly": 149799,
+        "npm_weekly_median": 0
+      }
+    },
+    "memory-knowledge": {
+      "repos": 52,
+      "stars": 44833,
+      "star_10_plus": 19,
+      "native": 45,
+      "adapted": 4,
+      "unrelated": 3,
+      "distribution": {
+        "repos": 52,
+        "with_releases": 31,
+        "release_downloads": 11872,
+        "zero_download_releases": 16,
+        "with_package_name": 46,
+        "published_npm": 28,
+        "named_unpublished": 18,
+        "npm_weekly": 35323,
+        "npm_weekly_median": 99
+      }
+    },
+    "other": {
+      "repos": 52,
+      "stars": 11486,
+      "star_10_plus": 20,
+      "native": 43,
+      "adapted": 3,
+      "unrelated": 6,
+      "distribution": {
+        "repos": 52,
+        "with_releases": 27,
+        "release_downloads": 2799,
+        "zero_download_releases": 13,
+        "with_package_name": 46,
+        "published_npm": 27,
+        "named_unpublished": 19,
+        "npm_weekly": 8358,
         "npm_weekly_median": 0
       }
     },
     "search-web": {
-      "repos": 24,
-      "stars": 8023,
-      "star_10_plus": 9,
-      "native": 18,
-      "adapted": 2,
-      "unrelated": 4,
+      "repos": 46,
+      "stars": 17626,
+      "star_10_plus": 17,
+      "native": 36,
+      "adapted": 3,
+      "unrelated": 7,
       "distribution": {
-        "repos": 24,
-        "with_releases": 19,
-        "release_downloads": 1273,
-        "zero_download_releases": 10,
-        "with_package_name": 20,
-        "published_npm": 16,
-        "named_unpublished": 4,
-        "npm_weekly": 333356,
+        "repos": 46,
+        "with_releases": 30,
+        "release_downloads": 1525602,
+        "zero_download_releases": 15,
+        "with_package_name": 39,
+        "published_npm": 29,
+        "named_unpublished": 10,
+        "npm_weekly": 183183,
+        "npm_weekly_median": 27
+      }
+    },
+    "session-ui-ux": {
+      "repos": 46,
+      "stars": 1542,
+      "star_10_plus": 17,
+      "native": 46,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 46,
+        "with_releases": 24,
+        "release_downloads": 13693,
+        "zero_download_releases": 15,
+        "with_package_name": 40,
+        "published_npm": 28,
+        "named_unpublished": 12,
+        "npm_weekly": 5928,
         "npm_weekly_median": 0
       }
     },
     "security-governance": {
-      "repos": 24,
-      "stars": 1717,
+      "repos": 42,
+      "stars": 4103,
+      "star_10_plus": 12,
+      "native": 37,
+      "adapted": 1,
+      "unrelated": 4,
+      "distribution": {
+        "repos": 42,
+        "with_releases": 28,
+        "release_downloads": 2064,
+        "zero_download_releases": 17,
+        "with_package_name": 36,
+        "published_npm": 22,
+        "named_unpublished": 14,
+        "npm_weekly": 8023,
+        "npm_weekly_median": 145
+      }
+    },
+    "usage-billing": {
+      "repos": 36,
+      "stars": 6797,
       "star_10_plus": 8,
-      "native": 20,
+      "native": 34,
       "adapted": 1,
-      "unrelated": 3,
+      "unrelated": 1,
       "distribution": {
-        "repos": 24,
-        "with_releases": 16,
-        "release_downloads": 1788,
-        "zero_download_releases": 6,
-        "with_package_name": 21,
-        "published_npm": 15,
-        "named_unpublished": 6,
-        "npm_weekly": 3996,
-        "npm_weekly_median": 0
-      }
-    },
-    "session-ui-ux": {
-      "repos": 20,
-      "stars": 4163,
-      "star_10_plus": 6,
-      "native": 20,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 20,
-        "with_releases": 12,
-        "release_downloads": 4601,
-        "zero_download_releases": 9,
-        "with_package_name": 18,
-        "published_npm": 14,
-        "named_unpublished": 4,
-        "npm_weekly": 171652,
-        "npm_weekly_median": 0
-      }
-    },
-    "eng-git-ci": {
-      "repos": 14,
-      "stars": 1655,
-      "star_10_plus": 5,
-      "native": 11,
-      "adapted": 1,
-      "unrelated": 2,
-      "distribution": {
-        "repos": 14,
-        "with_releases": 9,
-        "release_downloads": 177,
-        "zero_download_releases": 6,
-        "with_package_name": 12,
-        "published_npm": 11,
-        "named_unpublished": 1,
-        "npm_weekly": 55793,
-        "npm_weekly_median": 0
-      }
-    },
-    "skills-presets": {
-      "repos": 13,
-      "stars": 141,
-      "star_10_plus": 1,
-      "native": 13,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 13,
-        "with_releases": 6,
-        "release_downloads": 256,
-        "zero_download_releases": 4,
-        "with_package_name": 13,
-        "published_npm": 10,
-        "named_unpublished": 3,
-        "npm_weekly": 2893,
+        "repos": 36,
+        "with_releases": 23,
+        "release_downloads": 2766,
+        "zero_download_releases": 13,
+        "with_package_name": 34,
+        "published_npm": 24,
+        "named_unpublished": 10,
+        "npm_weekly": 8136,
         "npm_weekly_median": 0
       }
     },
     "orchestration-workflow": {
-      "repos": 12,
-      "stars": 981,
-      "star_10_plus": 7,
-      "native": 8,
-      "adapted": 0,
-      "unrelated": 4,
+      "repos": 26,
+      "stars": 15802,
+      "star_10_plus": 12,
+      "native": 19,
+      "adapted": 2,
+      "unrelated": 5,
       "distribution": {
-        "repos": 12,
-        "with_releases": 10,
-        "release_downloads": 3754,
-        "zero_download_releases": 6,
-        "with_package_name": 10,
-        "published_npm": 6,
-        "named_unpublished": 4,
-        "npm_weekly": 878,
+        "repos": 26,
+        "with_releases": 23,
+        "release_downloads": 66297,
+        "zero_download_releases": 13,
+        "with_package_name": 22,
+        "published_npm": 15,
+        "named_unpublished": 7,
+        "npm_weekly": 11164,
+        "npm_weekly_median": 33
+      }
+    },
+    "vision-multimodal": {
+      "repos": 22,
+      "stars": 2579,
+      "star_10_plus": 6,
+      "native": 21,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 22,
+        "with_releases": 12,
+        "release_downloads": 1652,
+        "zero_download_releases": 5,
+        "with_package_name": 18,
+        "published_npm": 9,
+        "named_unpublished": 9,
+        "npm_weekly": 13872,
+        "npm_weekly_median": 61
+      }
+    },
+    "fun-novelty": {
+      "repos": 16,
+      "stars": 11194,
+      "star_10_plus": 8,
+      "native": 15,
+      "adapted": 1,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 16,
+        "with_releases": 11,
+        "release_downloads": 5166,
+        "zero_download_releases": 5,
+        "with_package_name": 14,
+        "published_npm": 7,
+        "named_unpublished": 7,
+        "npm_weekly": 15360,
+        "npm_weekly_median": 586
+      }
+    },
+    "skills-presets": {
+      "repos": 14,
+      "stars": 210,
+      "star_10_plus": 4,
+      "native": 13,
+      "adapted": 0,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 14,
+        "with_releases": 8,
+        "release_downloads": 638,
+        "zero_download_releases": 5,
+        "with_package_name": 11,
+        "published_npm": 10,
+        "named_unpublished": 1,
+        "npm_weekly": 1436,
         "npm_weekly_median": 0
       }
     },
-    "usage-billing": {
-      "repos": 11,
-      "stars": 6528,
+    "eng-git-ci": {
+      "repos": 13,
+      "stars": 43729,
       "star_10_plus": 4,
+      "native": 11,
+      "adapted": 1,
+      "unrelated": 1,
+      "distribution": {
+        "repos": 13,
+        "with_releases": 7,
+        "release_downloads": 229,
+        "zero_download_releases": 5,
+        "with_package_name": 10,
+        "published_npm": 5,
+        "named_unpublished": 5,
+        "npm_weekly": 6084,
+        "npm_weekly_median": 133
+      }
+    },
+    "vertical-domain": {
+      "repos": 12,
+      "stars": 1278,
+      "star_10_plus": 3,
+      "native": 11,
+      "adapted": 1,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 12,
+        "with_releases": 9,
+        "release_downloads": 20148,
+        "zero_download_releases": 3,
+        "with_package_name": 12,
+        "published_npm": 8,
+        "named_unpublished": 4,
+        "npm_weekly": 1883,
+        "npm_weekly_median": 75
+      }
+    },
+    "context-management": {
+      "repos": 11,
+      "stars": 5252,
+      "star_10_plus": 2,
       "native": 10,
       "adapted": 1,
       "unrelated": 0,
       "distribution": {
         "repos": 11,
-        "with_releases": 6,
-        "release_downloads": 785,
-        "zero_download_releases": 4,
-        "with_package_name": 10,
-        "published_npm": 8,
-        "named_unpublished": 2,
-        "npm_weekly": 22597,
-        "npm_weekly_median": 0
-      }
-    },
-    "im-notify": {
-      "repos": 10,
-      "stars": 4431,
-      "star_10_plus": 6,
-      "native": 10,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 10,
-        "with_releases": 8,
-        "release_downloads": 20904,
+        "with_releases": 7,
+        "release_downloads": 11,
         "zero_download_releases": 6,
         "with_package_name": 10,
-        "published_npm": 9,
-        "named_unpublished": 1,
-        "npm_weekly": 19347,
-        "npm_weekly_median": 200
-      }
-    },
-    "vision-multimodal": {
-      "repos": 10,
-      "stars": 2312,
-      "star_10_plus": 3,
-      "native": 8,
-      "adapted": 0,
-      "unrelated": 2,
-      "distribution": {
-        "repos": 10,
-        "with_releases": 9,
-        "release_downloads": 1841,
-        "zero_download_releases": 2,
-        "with_package_name": 6,
-        "published_npm": 5,
-        "named_unpublished": 1,
-        "npm_weekly": 12817,
+        "published_npm": 6,
+        "named_unpublished": 4,
+        "npm_weekly": 31984,
         "npm_weekly_median": 0
       }
     },
     "remote-access": {
+      "repos": 11,
+      "stars": 615,
+      "star_10_plus": 3,
+      "native": 11,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 11,
+        "with_releases": 7,
+        "release_downloads": 4519,
+        "zero_download_releases": 1,
+        "with_package_name": 10,
+        "published_npm": 9,
+        "named_unpublished": 1,
+        "npm_weekly": 6599,
+        "npm_weekly_median": 322
+      }
+    },
+    "tui-terminal": {
       "repos": 9,
-      "stars": 429,
-      "star_10_plus": 2,
+      "stars": 4139,
+      "star_10_plus": 5,
       "native": 9,
       "adapted": 0,
       "unrelated": 0,
       "distribution": {
         "repos": 9,
-        "with_releases": 3,
-        "release_downloads": 840,
+        "with_releases": 6,
+        "release_downloads": 1381,
         "zero_download_releases": 2,
         "with_package_name": 8,
-        "published_npm": 6,
-        "named_unpublished": 2,
-        "npm_weekly": 3669,
-        "npm_weekly_median": 0
-      }
-    },
-    "tui-terminal": {
-      "repos": 7,
-      "stars": 3790,
-      "star_10_plus": 4,
-      "native": 7,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 7,
-        "with_releases": 6,
-        "release_downloads": 989,
-        "zero_download_releases": 3,
-        "with_package_name": 7,
-        "published_npm": 4,
-        "named_unpublished": 3,
-        "npm_weekly": 10117,
-        "npm_weekly_median": 0
-      }
-    },
-    "vertical-domain": {
-      "repos": 7,
-      "stars": 3392,
-      "star_10_plus": 3,
-      "native": 5,
-      "adapted": 1,
-      "unrelated": 1,
-      "distribution": {
-        "repos": 7,
-        "with_releases": 6,
-        "release_downloads": 19545,
-        "zero_download_releases": 2,
-        "with_package_name": 7,
-        "published_npm": 5,
-        "named_unpublished": 2,
-        "npm_weekly": 1368,
-        "npm_weekly_median": 0
+        "published_npm": 3,
+        "named_unpublished": 5,
+        "npm_weekly": 11779,
+        "npm_weekly_median": 1059
       }
     },
     "file-workspace": {
-      "repos": 6,
-      "stars": 1614,
-      "star_10_plus": 4,
-      "native": 5,
+      "repos": 9,
+      "stars": 1598,
+      "star_10_plus": 3,
+      "native": 8,
       "adapted": 0,
       "unrelated": 1,
       "distribution": {
-        "repos": 6,
-        "with_releases": 5,
-        "release_downloads": 2431,
-        "zero_download_releases": 3,
-        "with_package_name": 5,
-        "published_npm": 4,
+        "repos": 9,
+        "with_releases": 7,
+        "release_downloads": 2513,
+        "zero_download_releases": 4,
+        "with_package_name": 8,
+        "published_npm": 7,
         "named_unpublished": 1,
-        "npm_weekly": 1192,
+        "npm_weekly": 769,
         "npm_weekly_median": 0
       }
     },
-    "fun-novelty": {
-      "repos": 5,
-      "stars": 2261,
-      "star_10_plus": 1,
-      "native": 5,
+    "im-notify": {
+      "repos": 8,
+      "stars": 2892,
+      "star_10_plus": 2,
+      "native": 8,
       "adapted": 0,
       "unrelated": 0,
       "distribution": {
-        "repos": 5,
-        "with_releases": 5,
-        "release_downloads": 18,
+        "repos": 8,
+        "with_releases": 6,
+        "release_downloads": 23928,
         "zero_download_releases": 4,
-        "with_package_name": 4,
-        "published_npm": 3,
+        "with_package_name": 8,
+        "published_npm": 7,
         "named_unpublished": 1,
-        "npm_weekly": 0,
+        "npm_weekly": 774,
+        "npm_weekly_median": 0
+      }
+    },
+    "mcp-tooling": {
+      "repos": 7,
+      "stars": 3895,
+      "star_10_plus": 4,
+      "native": 6,
+      "adapted": 1,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 7,
+        "with_releases": 6,
+        "release_downloads": 37,
+        "zero_download_releases": 4,
+        "with_package_name": 7,
+        "published_npm": 6,
+        "named_unpublished": 1,
+        "npm_weekly": 1366,
         "npm_weekly_median": 0
       }
     },
     "adapted-independent": {
       "repos": 4,
-      "stars": 213378,
+      "stars": 214510,
       "star_10_plus": 4,
       "native": 0,
       "adapted": 4,
@@ -761,7 +800,7 @@
       "distribution": {
         "repos": 4,
         "with_releases": 4,
-        "release_downloads": 39590,
+        "release_downloads": 59674,
         "zero_download_releases": 2,
         "with_package_name": 1,
         "published_npm": 1,
@@ -772,64 +811,45 @@
     },
     "voice-audio": {
       "repos": 4,
-      "stars": 30,
-      "star_10_plus": 1,
+      "stars": 13,
+      "star_10_plus": 0,
       "native": 4,
       "adapted": 0,
       "unrelated": 0,
       "distribution": {
         "repos": 4,
-        "with_releases": 3,
-        "release_downloads": 0,
-        "zero_download_releases": 3,
-        "with_package_name": 4,
-        "published_npm": 4,
-        "named_unpublished": 0,
-        "npm_weekly": 0,
-        "npm_weekly_median": 0
-      }
-    },
-    "mcp-tooling": {
-      "repos": 3,
-      "stars": 3719,
-      "star_10_plus": 2,
-      "native": 2,
-      "adapted": 1,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 3,
         "with_releases": 1,
         "release_downloads": 0,
         "zero_download_releases": 1,
-        "with_package_name": 3,
+        "with_package_name": 4,
         "published_npm": 2,
+        "named_unpublished": 2,
+        "npm_weekly": 84,
+        "npm_weekly_median": 0
+      }
+    },
+    "ide-integration": {
+      "repos": 3,
+      "stars": 162,
+      "star_10_plus": 1,
+      "native": 3,
+      "adapted": 0,
+      "unrelated": 0,
+      "distribution": {
+        "repos": 3,
+        "with_releases": 2,
+        "release_downloads": 368,
+        "zero_download_releases": 1,
+        "with_package_name": 2,
+        "published_npm": 1,
         "named_unpublished": 1,
         "npm_weekly": 0,
         "npm_weekly_median": 0
       }
     },
-    "context-management": {
-      "repos": 3,
-      "stars": 5220,
-      "star_10_plus": 2,
-      "native": 2,
-      "adapted": 1,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 3,
-        "with_releases": 3,
-        "release_downloads": 11,
-        "zero_download_releases": 2,
-        "with_package_name": 2,
-        "published_npm": 2,
-        "named_unpublished": 0,
-        "npm_weekly": 31246,
-        "npm_weekly_median": 815
-      }
-    },
     "off-topic-squatter": {
       "repos": 1,
-      "stars": 24380,
+      "stars": 24398,
       "star_10_plus": 1,
       "native": 0,
       "adapted": 1,
@@ -848,7 +868,7 @@
     },
     "mobile-client": {
       "repos": 1,
-      "stars": 561,
+      "stars": 567,
       "star_10_plus": 1,
       "native": 1,
       "adapted": 0,
@@ -856,29 +876,10 @@
       "distribution": {
         "repos": 1,
         "with_releases": 1,
-        "release_downloads": 6055,
+        "release_downloads": 6201,
         "zero_download_releases": 0,
         "with_package_name": 0,
         "published_npm": 0,
-        "named_unpublished": 0,
-        "npm_weekly": 0,
-        "npm_weekly_median": 0
-      }
-    },
-    "ide-integration": {
-      "repos": 1,
-      "stars": 12,
-      "star_10_plus": 1,
-      "native": 1,
-      "adapted": 0,
-      "unrelated": 0,
-      "distribution": {
-        "repos": 1,
-        "with_releases": 0,
-        "release_downloads": 0,
-        "zero_download_releases": 0,
-        "with_package_name": 1,
-        "published_npm": 1,
         "named_unpublished": 0,
         "npm_weekly": 0,
         "npm_weekly_median": 0
@@ -887,63 +888,63 @@
   },
   "tier_categories": {
     "active_10_plus": {
-      "model-provider": 19,
-      "memory-knowledge": 17,
-      "market-curation": 12,
-      "other": 10,
-      "search-web": 9,
-      "security-governance": 8,
-      "desktop-client": 7,
-      "orchestration-workflow": 7,
-      "session-ui-ux": 6,
-      "im-notify": 6,
-      "eng-git-ci": 5,
+      "model-provider": 29,
+      "market-curation": 22,
+      "other": 20,
+      "memory-knowledge": 19,
+      "search-web": 17,
+      "session-ui-ux": 17,
+      "desktop-client": 15,
+      "orchestration-workflow": 12,
+      "security-governance": 12,
+      "fun-novelty": 8,
+      "usage-billing": 8,
+      "vision-multimodal": 6,
+      "tui-terminal": 5,
       "adapted-independent": 4,
-      "usage-billing": 4,
-      "tui-terminal": 4,
-      "file-workspace": 4,
+      "eng-git-ci": 4,
+      "mcp-tooling": 4,
+      "skills-presets": 4,
+      "file-workspace": 3,
       "vertical-domain": 3,
-      "vision-multimodal": 3,
-      "mcp-tooling": 2,
+      "remote-access": 3,
       "context-management": 2,
-      "remote-access": 2,
+      "im-notify": 2,
       "off-topic-squatter": 1,
-      "fun-novelty": 1,
       "mobile-client": 1,
-      "skills-presets": 1,
-      "voice-audio": 1,
       "ide-integration": 1
     },
     "active_1_9": {
-      "model-provider": 30,
-      "other": 20,
-      "desktop-client": 18,
-      "memory-knowledge": 16,
-      "market-curation": 16,
-      "security-governance": 16,
-      "search-web": 15,
-      "session-ui-ux": 14,
-      "skills-presets": 12,
+      "model-provider": 106,
+      "desktop-client": 45,
+      "memory-knowledge": 33,
+      "other": 32,
+      "market-curation": 32,
+      "security-governance": 30,
+      "search-web": 29,
+      "session-ui-ux": 29,
+      "usage-billing": 28,
+      "vision-multimodal": 16,
+      "orchestration-workflow": 14,
+      "skills-presets": 10,
       "eng-git-ci": 9,
-      "usage-billing": 7,
-      "vision-multimodal": 7,
-      "remote-access": 7,
-      "orchestration-workflow": 5,
-      "im-notify": 4,
-      "fun-novelty": 4,
-      "vertical-domain": 4,
-      "tui-terminal": 3,
-      "voice-audio": 3,
-      "file-workspace": 2,
-      "mcp-tooling": 1,
-      "context-management": 1
+      "vertical-domain": 9,
+      "context-management": 9,
+      "remote-access": 8,
+      "fun-novelty": 8,
+      "im-notify": 6,
+      "file-workspace": 6,
+      "voice-audio": 4,
+      "tui-terminal": 4,
+      "mcp-tooling": 3,
+      "ide-integration": 2
     }
   },
   "top_native_active": [
     {
       "repo": "anywhere-labs/dsh-desktop",
-      "stars": 29320,
-      "pushed": "2026-09-28T15:53:48Z",
+      "stars": 29508,
+      "pushed": "2026-09-29T17:15:24Z",
       "created": "2026-08-13T16:30:50Z",
       "lang": "TypeScript",
       "archived": false,
@@ -951,9 +952,19 @@
       "fork": false
     },
     {
+      "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "stars": 17279,
+      "pushed": "2026-09-29T16:28:58Z",
+      "created": "2026-08-13T13:55:31Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+      "fork": false
+    },
+    {
       "repo": "dataelement/dsh-desktop",
-      "stars": 10295,
-      "pushed": "2026-09-28T13:29:07Z",
+      "stars": 10713,
+      "pushed": "2026-09-29T14:05:28Z",
       "created": "2026-08-13T13:45:50Z",
       "lang": "TypeScript",
       "archived": false,
@@ -961,9 +972,19 @@
       "fork": false
     },
     {
+      "repo": "zhu1090093659/dsh-web",
+      "stars": 8162,
+      "pushed": "2026-09-29T16:14:39Z",
+      "created": "2026-08-12T05:15:20Z",
+      "lang": "TypeScript",
+      "archived": false,
+      "desc": "DeepSeek Harness (DSH) Web 插件聚合生态 · 万物皆插件，通过创意工坊分发｜｜DeepSeek Harness (DSH) Web Plugin Aggregation Ecosystem · Everything is a plugin, distributed via the Creative Workshop",
+      "fork": false
+    },
+    {
       "repo": "dsh-market/dsh-market",
-      "stars": 4783,
-      "pushed": "2026-09-28T15:21:06Z",
+      "stars": 4961,
+      "pushed": "2026-09-29T16:49:52Z",
       "created": "2026-08-14T04:58:15Z",
       "lang": "TypeScript",
       "archived": false,
@@ -971,19 +992,9 @@
       "fork": false
     },
     {
-      "repo": "omdsh-dev/DSH-better-sidebar",
-      "stars": 3857,
-      "pushed": "2026-09-28T15:28:56Z",
-      "created": "2026-08-07T16:04:00Z",
-      "lang": "TypeScript",
-      "archived": false,
-      "desc": "开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages.",
-      "fork": false
-    },
-    {
       "repo": "ccch1mneyyy/dsh-TUI",
-      "stars": 3722,
-      "pushed": "2026-09-28T16:06:11Z",
+      "stars": 3797,
+      "pushed": "2026-09-29T17:07:25Z",
       "created": "2026-08-13T12:49:31Z",
       "lang": "TypeScript",
       "archived": false,
@@ -992,8 +1003,8 @@
     },
     {
       "repo": "dsh-tauri/deepseek-harness-desktop",
-      "stars": 2796,
-      "pushed": "2026-09-28T16:03:41Z",
+      "stars": 2866,
+      "pushed": "2026-09-29T17:10:03Z",
       "created": "2026-08-14T02:36:29Z",
       "lang": "TypeScript",
       "archived": false,
@@ -1002,8 +1013,8 @@
     },
     {
       "repo": "YuJunZhiXue/dsh-purge",
-      "stars": 2535,
-      "pushed": "2026-09-28T13:46:11Z",
+      "stars": 2675,
+      "pushed": "2026-09-29T17:07:40Z",
       "created": "2026-08-19T07:41:12Z",
       "lang": "JavaScript",
       "archived": false,
@@ -1012,8 +1023,8 @@
     },
     {
       "repo": "Small-tailqwq/dsh-deep-whale",
-      "stars": 2249,
-      "pushed": "2026-09-28T15:53:20Z",
+      "stars": 2275,
+      "pushed": "2026-09-29T10:15:14Z",
       "created": "2026-08-13T13:02:14Z",
       "lang": "TypeScript",
       "archived": false,
@@ -1021,9 +1032,29 @@
       "fork": false
     },
     {
+      "repo": "Minglink/dsh-infinite-gen-4",
+      "stars": 2152,
+      "pushed": "2026-09-29T10:42:32Z",
+      "created": "2026-08-15T15:47:15Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "DeepSeek v4.1 flash 网络安全红队工具（无限四代）     求 Star 收藏 ⭐欢迎大家提交项目的改进",
+      "fork": false
+    },
+    {
+      "repo": "NanmiCoder/dsh-agent-teams",
+      "stars": 1846,
+      "pushed": "2026-09-29T13:47:43Z",
+      "created": "2026-08-12T13:41:50Z",
+      "lang": "JavaScript",
+      "archived": false,
+      "desc": "AgentTeams plugin for DeepSeek Harness",
+      "fork": false
+    },
+    {
       "repo": "bowenliang123/dsh-context",
-      "stars": 1553,
-      "pushed": "2026-09-28T14:21:01Z",
+      "stars": 1568,
+      "pushed": "2026-09-29T17:10:03Z",
       "created": "2026-08-14T08:23:28Z",
       "lang": "TypeScript",
       "archived": false,
@@ -1031,19 +1062,9 @@
       "fork": false
     },
     {
-      "repo": "xmanrui/dsh-im",
-      "stars": 1524,
-      "pushed": "2026-09-28T15:52:38Z",
-      "created": "2026-08-14T20:40:06Z",
-      "lang": "JavaScript",
-      "archived": false,
-      "desc": "通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord和WhatsApp）。 Connect IM bots to DeepSeek Harness via QR code or credentials (9 channels).",
-      "fork": false
-    },
-    {
       "repo": "AdamPlatin123/dsh-plugin-radar",
-      "stars": 1468,
-      "pushed": "2026-09-28T14:09:15Z",
+      "stars": 1464,
+      "pushed": "2026-09-29T17:15:13Z",
       "created": "2026-08-04T21:46:54Z",
       "lang": "Python",
       "archived": false,
@@ -1052,8 +1073,8 @@
     },
     {
       "repo": "anywhere-labs/Agents-Anywhere",
-      "stars": 1276,
-      "pushed": "2026-09-28T16:01:56Z",
+      "stars": 1308,
+      "pushed": "2026-09-29T17:09:46Z",
       "created": "2026-05-22T01:33:33Z",
       "lang": "TypeScript",
       "archived": false,
@@ -1062,139 +1083,130 @@
     },
     {
       "repo": "ysr666/dsh-vision-router",
-      "stars": 1121,
-      "pushed": "2026-09-28T16:05:28Z",
+      "stars": 1128,
+      "pushed": "2026-09-29T16:55:35Z",
       "created": "2026-08-13T18:57:47Z",
       "lang": "JavaScript",
       "archived": false,
       "desc": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) + pixel-level vision tools (Q&A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots). One-command install, no Python, image turns work like ordinary tool-calling turns.",
       "fork": false
-    },
-    {
-      "repo": "kelai141/dsh-mobile-apk",
-      "stars": 561,
-      "pushed": "2026-09-28T16:05:23Z",
-      "created": "2026-08-13T23:55:34Z",
-      "lang": "Kotlin",
-      "archived": false,
-      "desc": "dsh 安卓壳 APK——WebView UI + 内嵌 Termux 运行时快照（解压即跑），为dsh本地运行设计的高性能方案",
-      "fork": false
-    },
-    {
-      "repo": "flizzywine/dsh-tavern",
-      "stars": 540,
-      "pushed": "2026-09-28T15:28:15Z",
-      "created": "2026-08-16T13:07:23Z",
-      "lang": "JavaScript",
-      "archived": false,
-      "desc": "基于 DeepSeek Harness（DSH）的 SillyTavern 类文字游戏 Agent，支持候选项生成、对话式人物卡编辑、剧本模式与素材抽取。",
-      "fork": false
     }
   ],
   "owner_concentration": [
     [
-      "STARDUSTLC666",
-      17
+      "173787247",
+      71
     ],
     [
-      "MichengAI",
-      10
-    ],
-    [
-      "Ln1m",
-      10
+      "ddtcorex",
+      12
     ],
     [
       "omdsh-dev",
+      10
+    ],
+    [
+      "fan56",
+      10
+    ],
+    [
+      "drscrewdriver",
+      9
+    ],
+    [
+      "aa2246740",
       8
     ],
     [
-      "better-er",
+      "lhh010",
+      6
+    ],
+    [
+      "dsh-external",
+      6
+    ],
+    [
+      "zhengjy01",
+      6
+    ],
+    [
+      "Ln1m",
+      6
+    ],
+    [
+      "dhicoc",
       5
     ],
     [
-      "FeatherHunter",
+      "Scorp1o117",
       4
     ],
     [
-      "GooDAnDReaDY",
+      "MoonlitDropOfBlood",
       4
     ],
     [
-      "WSL043",
-      3
-    ],
-    [
-      "OMSociety",
-      3
-    ],
-    [
-      "moxingovo",
-      3
-    ],
-    [
-      "yangzhe1991",
+      "zhu1090093659",
       3
     ],
     [
       "JohnXu22786",
       3
-    ],
-    [
-      "clarkzhao",
-      3
-    ],
-    [
-      "anywhere-labs",
-      2
-    ],
-    [
-      "plastic-labs",
-      2
     ]
   ],
   "remote_access": {
-    "repos": 9,
-    "stars": 429,
-    "star_10_plus": 2,
-    "native": 9,
+    "repos": 11,
+    "stars": 615,
+    "star_10_plus": 3,
+    "native": 11,
     "routes": {
-      "cloudflare-tunnel": 2,
-      "generic-remote": 2,
-      "lan-gateway": 2,
+      "lan-gateway": 3,
+      "generic-remote": 3,
+      "cloudflare-tunnel": 3,
       "peer-to-peer": 1,
-      "hosted-relay": 1,
       "reverse-proxy-self-hosted": 1
     },
     "distribution": {
       "all": {
-        "repos": 9,
-        "with_releases": 3,
-        "release_downloads": 840,
-        "zero_download_releases": 2,
-        "with_package_name": 8,
-        "published_npm": 6,
-        "named_unpublished": 2,
-        "npm_weekly": 3669,
-        "npm_weekly_median": 0
+        "repos": 11,
+        "with_releases": 7,
+        "release_downloads": 4519,
+        "zero_download_releases": 1,
+        "with_package_name": 10,
+        "published_npm": 9,
+        "named_unpublished": 1,
+        "npm_weekly": 6599,
+        "npm_weekly_median": 322
       },
       "native": {
-        "repos": 9,
-        "with_releases": 3,
-        "release_downloads": 840,
-        "zero_download_releases": 2,
-        "with_package_name": 8,
-        "published_npm": 6,
-        "named_unpublished": 2,
-        "npm_weekly": 3669,
-        "npm_weekly_median": 0
+        "repos": 11,
+        "with_releases": 7,
+        "release_downloads": 4519,
+        "zero_download_releases": 1,
+        "with_package_name": 10,
+        "published_npm": 9,
+        "named_unpublished": 1,
+        "npm_weekly": 6599,
+        "npm_weekly_median": 322
       }
     },
     "top": [
       {
+        "repo": "saya-ch/dsh-mobile",
+        "stars": 341,
+        "pushed": "2026-09-29T13:46:35Z",
+        "created": "2026-08-15T05:28:38Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "DeepSeek Harness 的 Android App 与安全远程访问插件，支持局域网/远程连接和高度自定义的移动界面与扩展能力。",
+        "fork": false,
+        "cls": "native",
+        "route": "lan-gateway"
+      },
+      {
         "repo": "liguobao/ds-harness-remote",
-        "stars": 240,
-        "pushed": "2026-09-29T16:26:34Z",
+        "stars": 241,
+        "pushed": "2026-09-29T17:20:43Z",
         "created": "2026-08-14T15:33:53Z",
         "lang": "TypeScript",
         "archived": false,
@@ -1204,93 +1216,69 @@
         "route": "peer-to-peer"
       },
       {
-        "repo": "wenbin-wb/dsh-bridge",
-        "stars": 177,
-        "pushed": "2026-09-28T14:11:37Z",
-        "created": "2026-08-18T03:29:50Z",
+        "repo": "xbzbing/dsh-auth-gateway",
+        "stars": 13,
+        "pushed": "2026-09-29T13:46:06Z",
+        "created": "2026-08-14T19:39:20Z",
         "lang": "JavaScript",
         "archived": false,
-        "desc": "🚀 DeepSeek Harness 多通道远程访问与安全守护插件 | 局域网扫码直连、Cloudflare / 自建公网隧道、微信 / QQ / 飞书 / Telegram 机器人全生命周期对话 | 内置全协议访问安全认证、后台防篡改与容灾保命体系",
-        "fork": false,
-        "cls": "native",
-        "route": "cloudflare-tunnel"
-      },
-      {
-        "repo": "zdx8637-gitdog/dshmobile",
-        "stars": 3,
-        "pushed": "2026-09-28T13:51:56Z",
-        "created": "2026-08-16T09:51:26Z",
-        "lang": "JavaScript",
-        "archived": false,
-        "desc": "Remotely control DeepSeek Harness from your phone: Android App + cloud relay + PC plugin. One persistent QR code, three uses — download, pairing, and login/grant.",
-        "fork": false,
-        "cls": "native",
-        "route": "hosted-relay"
-      },
-      {
-        "repo": "better-er/dsh-remote-file-system",
-        "stars": 2,
-        "pushed": "2026-09-28T16:27:23Z",
-        "created": "2026-09-13T18:31:38Z",
-        "lang": "TypeScript",
-        "archived": false,
-        "desc": "dsh·远程文件系统插件。给模型提供 read_remote、write_remote、edit_remote 三个工具，经 ssh 读写远程主机文件，不用再在 PowerShell 里套 bash 命令；write_remote 只允许新建。纯插件自包含，不改 DSH 源码。",
-        "fork": false,
-        "cls": "native",
-        "route": "generic-remote"
-      },
-      {
-        "repo": "Ln1m/dsh-wifi-access",
-        "stars": 2,
-        "pushed": "2026-09-28T15:02:22Z",
-        "created": "2026-09-26T05:45:27Z",
-        "lang": "JavaScript",
-        "archived": false,
-        "desc": "Host-side mobile access for DSH: 3081 reverse proxy (0.0.0.0:3081 -> 127.0.0.1:3080) + mobile browser shims; the UI lives in dsh-pocket · 移动端访问 host 侧实现与 3081 反代热备（界面由 dsh-pocket 提供）",
+        "desc": "为 DeepSeek Harness 增加远程访问能力，并通过密码和 OTP 进行安全加固。 Adds secure remote access to DeepSeek Harness with password auth and TOTP two-factor authentication (2FA).",
         "fork": false,
         "cls": "native",
         "route": "reverse-proxy-self-hosted"
       },
       {
-        "repo": "Ln1m/dsh-lan-services",
-        "stars": 2,
-        "pushed": "2026-09-28T15:57:58Z",
-        "created": "2026-09-26T05:45:23Z",
-        "lang": "JavaScript",
+        "repo": "CrazyShout/dsh-ssh-remote",
+        "stars": 5,
+        "pushed": "2026-09-29T13:59:59Z",
+        "created": "2026-08-13T19:30:54Z",
+        "lang": "TypeScript",
         "archived": false,
-        "desc": "LAN service manager: probes ports 3090-3099, lists titles and LAN URLs, one-click start/stop · 局域网服务管理器：探测 3090~3099 端口段的本地 HTTP 服务，一键启停",
-        "fork": false,
-        "cls": "native",
-        "route": "lan-gateway"
-      },
-      {
-        "repo": "chai1110/dsh-ssh-remote",
-        "stars": 1,
-        "pushed": "2026-09-28T13:44:27Z",
-        "created": "2026-08-20T14:45:29Z",
-        "lang": "JavaScript",
-        "archived": true,
-        "desc": "DeepSeek Harness SSH 远程工作区插件（多机并行）：同时连接多台服务器，Agent 直接查看/编辑/执行远程文件。基于 flymysql/dsh-remote (MIT) 适配 0.1.1-rc.2",
+        "desc": "SSH remote workspaces for DeepSeek Harness: browse/read/write remote files, run remote commands, with connection status dots.",
         "fork": false,
         "cls": "native",
         "route": "generic-remote"
       },
       {
-        "repo": "jayantTang/DSH_Mobile",
-        "stars": 1,
-        "pushed": "2026-09-28T13:58:53Z",
-        "created": "2026-09-17T08:31:45Z",
-        "lang": "Swift",
+        "repo": "lunaship/dsh-links",
+        "stars": 5,
+        "pushed": "2026-09-29T15:51:00Z",
+        "created": "2026-08-18T14:04:31Z",
+        "lang": "Kotlin",
         "archived": false,
-        "desc": "在 iPhone 上远程使用电脑的 DeepSeek Harness：WSS 经公网中转，4G/5G 可用，电脑不需要公网 IP。Native iOS client for remote DSH sessions.",
+        "desc": "Android companion for DeepSeek Harness: trusted-LAN pairing, mobile sessions, SSE approvals, experimental tunnels, and DeepLinks Relay (private testing).",
         "fork": false,
         "cls": "native",
         "route": "lan-gateway"
       },
       {
+        "repo": "NevermindZZT/dsh-manager-plugin",
+        "stars": 2,
+        "pushed": "2026-09-29T12:21:45Z",
+        "created": "2026-08-23T15:52:39Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "dsh manger 远程工具对应使用的 dsh 插件，直接完成 dsh 远程访问",
+        "fork": false,
+        "cls": "native",
+        "route": "cloudflare-tunnel"
+      },
+      {
+        "repo": "hakimedes/dsh-easyremote",
+        "stars": 2,
+        "pushed": "2026-09-29T15:25:39Z",
+        "created": "2026-08-25T11:37:37Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "Local-first Android remote workspace with one-command Cloudflare Tunnel setup",
+        "fork": false,
+        "cls": "native",
+        "route": "cloudflare-tunnel"
+      },
+      {
         "repo": "xingzhen199186/dsh-mini-remote",
-        "stars": 1,
-        "pushed": "2026-09-28T13:35:11Z",
+        "stars": 2,
+        "pushed": "2026-09-29T14:18:00Z",
         "created": "2026-09-22T15:15:11Z",
         "lang": "JavaScript",
         "archived": false,
@@ -1298,18 +1286,54 @@
         "fork": false,
         "cls": "native",
         "route": "cloudflare-tunnel"
+      },
+      {
+        "repo": "Ln1m/dsh-side-suite",
+        "stars": 2,
+        "pushed": "2026-09-29T17:00:16Z",
+        "created": "2026-09-26T05:45:23Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DSH left column suite: file tree, file opener, tools tab, LAN services, long-running tasks · DSH 左栏家族：文件树 / 文件打开 / 工具 Tab / 局域网服务 / 长期任务",
+        "fork": false,
+        "cls": "native",
+        "route": "lan-gateway"
+      },
+      {
+        "repo": "173787247/dsh-remote-ssh",
+        "stars": 1,
+        "pushed": "2026-09-29T15:31:49Z",
+        "created": "2026-09-24T06:07:59Z",
+        "lang": "JavaScript",
+        "archived": false,
+        "desc": "DeepSeek Harness plugin: dsh-remote-ssh",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
+      },
+      {
+        "repo": "yh4922/dsh-workspace",
+        "stars": 1,
+        "pushed": "2026-09-29T12:37:11Z",
+        "created": "2026-09-29T08:26:09Z",
+        "lang": "TypeScript",
+        "archived": false,
+        "desc": "A remote workspace plugin for DeepSeek Harness (DSH). It manages SSH hosts inside DSH, opens remote terminals, lets you browse and edit remote files and inspect remote Git, and adds remote directories as workspaces, so the Agent's file operations and commands run on the remote machine.",
+        "fork": false,
+        "cls": "native",
+        "route": "generic-remote"
       }
     ]
   },
   "mobile_client": {
     "repos": 1,
-    "stars": 561,
+    "stars": 567,
     "star_10_plus": 1,
     "native": 1,
     "distribution": {
       "repos": 1,
       "with_releases": 1,
-      "release_downloads": 6055,
+      "release_downloads": 6201,
       "zero_download_releases": 0,
       "with_package_name": 0,
       "published_npm": 0,
@@ -1320,8 +1344,8 @@
     "top": [
       {
         "repo": "kelai141/dsh-mobile-apk",
-        "stars": 561,
-        "pushed": "2026-09-28T16:05:23Z",
+        "stars": 567,
+        "pushed": "2026-09-29T17:15:31Z",
         "created": "2026-08-13T23:55:34Z",
         "lang": "Kotlin",
         "archived": false,
@@ -1332,25 +1356,25 @@
   },
   "distribution": {
     "all_active": {
-      "repos": 354,
-      "with_releases": 229,
-      "release_downloads": 189079,
-      "zero_download_releases": 123,
-      "with_package_name": 302,
-      "published_npm": 223,
-      "named_unpublished": 79,
-      "npm_weekly": 1045315,
+      "repos": 694,
+      "with_releases": 416,
+      "release_downloads": 1865098,
+      "zero_download_releases": 224,
+      "with_package_name": 613,
+      "published_npm": 394,
+      "named_unpublished": 219,
+      "npm_weekly": 566819,
       "npm_weekly_median": 0
     },
     "native_active": {
-      "repos": 305,
-      "with_releases": 185,
-      "release_downloads": 108875,
-      "zero_download_releases": 107,
-      "with_package_name": 279,
-      "published_npm": 211,
-      "named_unpublished": 68,
-      "npm_weekly": 854767,
+      "repos": 630,
+      "with_releases": 355,
+      "release_downloads": 147852,
+      "zero_download_releases": 208,
+      "with_package_name": 578,
+      "published_npm": 371,
+      "named_unpublished": 207,
+      "npm_weekly": 371569,
       "npm_weekly_median": 0
     }
   }
