@@ -32,6 +32,7 @@ DeepSeek Harness（DSH）插件生态的独立基准评估：基于 GitHub API �
 - 原生活跃仓库贡献 854,767 次 npm 周下载；分发数据已覆盖全部 354 个活跃有星仓库。
 - 核心远程访问按“从另一台设备经网络访问并操作正在运行的 DSH”严格统计：9 个活跃仓库、429★；远端工作区开发、实例运维、插件救援及移动端本机客户端均另计。
 - 79 个活跃有星仓库写有 package name 却未发布 npm，安装链路仍是明确的生态工程债。
+- 新增生产力筛选层：354 个活跃有星候选中筛出 208 个原生生产力工具，按知识检索、文档办公、工程交付、工作流自动化、协作通知、安全访问、模型成本和视觉生产分类。
 
 ## 数据文件
 
@@ -45,6 +46,7 @@ DeepSeek Harness（DSH）插件生态的独立基准评估：基于 GitHub API �
 | `data/native_plugins.jsonl` | 3,948 个原生仓库 |
 | `data/dist_check.jsonl` | 354 个活跃仓库的 Release/npm 数据 |
 | `data/audit_summary.json` | 报告使用的结构化汇总 |
+| `data/productivity_analysis.json` / `.md` | 生产力工具筛选、类别、证据词和分发信号 |
 
 活跃品类使用历史人工标签、本轮人工复核、增量规则和仅元数据判断；`classification_source` 字段保留来源差异。本轮分发数据覆盖全部活跃有星仓库，README 覆盖 Top 2,000 高星仓库及全部活跃有星仓库的并集。
 
@@ -102,6 +104,8 @@ python3 scripts/write_audit_report.py \
 Top 2,000 之外的活跃有星仓库 README 补齐步骤见 `skills/github-topic-audit/SKILL.md` 第 4 步；补齐后需重新运行 `stats.py`。
 
 完整流程与分类边界见 `skills/github-topic-audit/SKILL.md`。
+
+生产力工具专项结果见 [生产力工具插件分析](report/DSH生产力工具插件分析-2026-09-30.md)。
 
 ## License
 

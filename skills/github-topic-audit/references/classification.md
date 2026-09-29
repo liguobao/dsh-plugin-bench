@@ -140,5 +140,12 @@ opposite stories (DSH numbers):
 15. Risks & recommendations (users vs authors), keyed to unfilled gaps
 16. Appendix: data files, reproduction commands, license note for snapshots
 
+When the user asks for productivity tools, add the generated productivity
+screening as the main recommendation layer: show the native-only candidate
+count, category counts, top projects with evidence terms, excluded theme/fun/
+catalog groups, and installation signals. Keep the full ecosystem funnel as
+context, but do not rank shells, skins, novelty projects, or adapted products
+alongside native workflow tools.
+
 Keep ONE document; fold earlier partial reports into it rather than linking
 sibling versions.

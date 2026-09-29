@@ -172,6 +172,30 @@ Non-negotiables:
   referenced from the report.
 - Numbers in tables, judgments in prose. Cite repo full names.
 
+### 11. Run the productivity-tool pass
+
+The ecosystem funnel is not a productivity ranking. Run the second pass when
+the user wants tools that improve recurring work rather than a census of every
+tagged project:
+
+```bash
+python3 scripts/build_productivity_analysis.py audit-<topic> --min-stars 1
+```
+
+This pass starts from active-and-starred repositories, keeps native plugins in
+the primary list, and requires at least two concrete workflow signals in the
+README or metadata. It groups evidence into knowledge/research,
+documents/office, engineering/delivery, workflow/automation,
+communication/collaboration, security/access, model/cost, and visual
+production. Themes, novelty, catalog-only repositories, and standalone shells
+are reported as exclusions. The output is `productivity_analysis.json` and
+`productivity_analysis.md` inside the audit directory.
+
+Treat the productivity list as a screening layer. Read the README before
+calling a plugin useful, separate capability from marketing claims, and check
+installation and distribution evidence. Report adapted products separately so
+their stars and downloads do not define the native productivity ranking.
+
 ## Timing expectations
 
 10k-repo topic: enumeration ~3-5 min (rate-limit sleeps), 700 READMEs ~2 min,
