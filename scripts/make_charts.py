@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """为 DSH 插件生态评估报告生成中文图表。
 
-输入：data/repos.jsonl、data/analysis.json、data/active_inventory.json
+输入：data/audit_summary.json、data/productivity_analysis.json
 输出：charts/*.png
 运行：python3 scripts/make_charts.py
 """
@@ -462,3 +462,71 @@ save(fig, "08_remote_access.png")
 
 
 print("完成：共生成 8 张中文图表")
+
+# Productivity-tool view: overwrite the historical ecosystem images with charts
+# that answer the current selection question.
+PRODUCTIVITY = json.loads((DATA_DIR / "productivity_analysis.json").read_text(encoding="utf-8"))
+prod = PRODUCTIVITY["all"]
+scope = PRODUCTIVITY["scope"]
+
+def prod_bar(filename, title, subtitle, labels, values, xlabel, color=BLUE, height=6.4):
+    fig, ax = chart_canvas(title, subtitle, height=height)
+    bars = ax.barh(labels[::-1], values[::-1], color=color, height=.56)
+    for bar, value in zip(bars, values[::-1]):
+        ax.text(value + max(values) * .015, bar.get_y()+bar.get_height()/2, f"{value:,}", va="center", color=INK, fontsize=9.5)
+    ax.set_xlabel(xlabel); ax.set_xlim(0, max(values) * 1.18 if max(values) else 1)
+    clean_axes(ax, grid="x"); footer(fig, "数据：data/productivity_analysis.json")
+    save(fig, filename)
+
+# 01: funnel
+f_labels = ["活跃有星候选", "原生插件", "生产力工具", "有 Release", "已发布 npm"]
+f_values = [scope["candidates"], scope["native_productive"], scope["productive"], PRODUCTIVITY["distribution"]["with_release"], PRODUCTIVITY["distribution"]["npm_published"]]
+prod_bar("01_daily_creation.png", "从活跃插件到可安装生产力工具", "每一步都是一个明确的筛选条件", f_labels, f_values, "仓库数", height=6.2)
+
+# 02: categories
+cats = sorted(PRODUCTIVITY["categories"].items(), key=lambda x: x[1])
+prod_bar("02_star_pyramid.png", "生产力插件集中在工程交付、模型成本和安全访问", "仅统计原生插件；类别由 README 证据词归类", [x[0] for x in cats], [x[1] for x in cats], "生产力插件数", height=6.8)
+
+# 03: top by stars
+top = sorted(prod, key=lambda x: x["stars"], reverse=True)[:15]
+prod_bar("03_rc1_activity.png", "生产力工具头部：按 Star 排序", "Star 表示关注度；安装信号单独呈现", [x["repo"].split("/", 1)[-1] for x in top], [x["stars"] for x in top], "GitHub Star", height=8.0)
+
+# 04: installability by category
+install = []
+for category, _ in cats:
+    group = [x for x in prod if x["category"] == category]
+    install.append((category, sum(x["npm_published"] for x in group)/len(group)*100, sum(x["has_release"] for x in group)/len(group)*100))
+fig, ax = chart_canvas("生产力插件的安装链路仍不完整", "按类别比较 npm 发布率与 Release 覆盖率", height=7.0)
+y = list(range(len(install)))
+ax.barh([v-.16 for v in y], [x[1] for x in install], height=.28, color=BLUE, label="npm 已发布")
+ax.barh([v+.16 for v in y], [x[2] for x in install], height=.28, color=GOLD, label="有 Release")
+ax.set_yticks(y, [x[0] for x in install]); ax.set_xlim(0, 100); ax.set_xlabel("覆盖率")
+ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:.0f}%")); ax.legend(loc="lower center", bbox_to_anchor=(.5, 1.03), ncol=2)
+clean_axes(ax, grid="x"); footer(fig, "数据：data/productivity_analysis.json"); save(fig, "04_languages.png")
+
+# 05: attention vs installation
+fig, ax = chart_canvas("关注度和安装量不是同一件事", "对数坐标显示 Star 与 npm 周下载的关系", height=7.0)
+ax.scatter([max(x["stars"], 1) for x in prod], [max(x["npm_weekly"], .5) for x in prod], s=28, c=[ORANGE if x["repo"] == "liguobao/ds-harness-remote" else BLUE for x in prod], alpha=.65, edgecolors="none")
+target = next((x for x in prod if x["repo"] == "liguobao/ds-harness-remote"), None)
+if target: ax.annotate("ds-harness-remote", (target["stars"], max(target["npm_weekly"], .5)), xytext=(10, 10), textcoords="offset points", color=ORANGE, fontsize=9)
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("GitHub Star（对数）"); ax.set_ylabel("npm 周下载（对数；0 显示为 0.5）")
+clean_axes(ax, grid="both"); footer(fig, f"数据：data/productivity_analysis.json；n={len(prod):,}"); save(fig, "05_lifecycle.png")
+
+# 06: evidence terms
+terms = Counter(term for x in prod for term in x["evidence"]).most_common(15)[::-1]
+prod_bar("06_active_categories.png", "生产力筛选依赖的功能证据", "高频证据词帮助发现重复建设和分类偏差", [x[0] for x in terms], [x[1] for x in terms], "命中项目数", color=BLUE_LIGHT, height=7.0)
+
+# 07: exclusions
+excluded = sorted(PRODUCTIVITY.get("excluded_signals", {}).items(), key=lambda x: x[1])[-10:]
+prod_bar("07_native_adapted.png", "生产力榜单明确排除的内容", "排除项解释为什么 topic 总量不能直接当作工具数量", [x[0] for x in excluded], [x[1] for x in excluded], "被排除项目数", color=GREY, height=6.4)
+
+# 08: installation leaders
+leaders = sorted(prod, key=lambda x: (x["npm_weekly"], x["release_downloads"]), reverse=True)[:15][::-1]
+fig, ax = chart_canvas("生产力工具的安装信号头部", "npm 周下载与 Release 下载分开显示", height=8.0)
+y = list(range(len(leaders)))
+ax.barh([v-.16 for v in y], [x["npm_weekly"] for x in leaders], height=.28, color=BLUE, label="npm 周下载")
+ax.barh([v+.16 for v in y], [x["release_downloads"] for x in leaders], height=.28, color=ORANGE, label="Release 下载")
+ax.set_yticks(y, [x["repo"].split("/", 1)[-1] for x in leaders]); ax.set_xscale("symlog", linthresh=10); ax.set_xlabel("下载量（对数刻度）")
+ax.legend(loc="lower center", bbox_to_anchor=(.5, 1.03), ncol=2); clean_axes(ax, grid="x"); footer(fig, "数据：data/productivity_analysis.json；下载量不能直接代表活跃用户数"); save(fig, "08_remote_access.png")
+
+print("完成：已用生产力工具视图覆盖 8 张图表")

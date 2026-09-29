@@ -54,14 +54,14 @@ DeepSeek Harness（DSH）插件生态的独立基准评估：基于 GitHub API �
 
 | 图 | 内容 |
 |---|---|
-| ![每日新建仓库](charts/01_daily_creation.png) | 每日创建量与三日移动平均 |
-| ![星标分层](charts/02_star_pyramid.png) | star 金字塔 |
-| ![v0.2.0-rc.1 活跃率](charts/03_rc1_activity.png) | 各星级段 v0.2.0-rc.1 跟进率 |
-| ![语言构成](charts/04_languages.png) | 仓库主语言 |
-| ![生命周期](charts/05_lifecycle.png) | 一次性 push 与 v0.2.0-rc.1 跟进交叉 |
-| ![活跃品类](charts/06_active_categories.png) | 354 个活跃有星仓库的主要类别与远程访问 |
-| ![三桶对比](charts/07_native_adapted.png) | 原生 / 适配 / 无关的仓库数与星标份额 |
-| ![远程访问](charts/08_remote_access.png) | 9 个核心远程访问项目的主要技术路线 |
+| ![生产力筛选漏斗](charts/01_daily_creation.png) | 从活跃候选到可安装生产力工具 |
+| ![生产力类别](charts/02_star_pyramid.png) | 生产力工具的工作场景分布 |
+| ![生产力头部](charts/03_rc1_activity.png) | 按 Star 排序的原生生产力工具 |
+| ![安装链路](charts/04_languages.png) | 各类别 npm 与 Release 覆盖率 |
+| ![关注度与安装量](charts/05_lifecycle.png) | GitHub Star 与 npm 周下载的关系 |
+| ![功能证据](charts/06_active_categories.png) | 生产力筛选使用的功能证据词 |
+| ![排除项](charts/07_native_adapted.png) | 生产力榜单排除的内容类型 |
+| ![安装信号](charts/08_remote_access.png) | npm 与 Release 下载量头部 |
 
 图表可通过 `python3 scripts/make_charts.py` 重新生成。
 
